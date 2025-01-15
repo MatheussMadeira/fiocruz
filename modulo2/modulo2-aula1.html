@@ -1,0 +1,934 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>HTLV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+
+    <link href="../assets/css/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <link href="../assets/css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Toolbar -->
+    <header>
+        <img id="menuSuperior" class="img-fluid " src="../assets/images/logos/logoCurso.jpg"
+            alt="Capa das páginas do curso">
+    </header>
+
+    <div class="row" id="row-main">
+        <!-- Sidebar -->
+        <div class="col-md-2" id="sidebar">
+            <!-- Botão p/ Recolher Sidebar-->
+            <span class="toggle-sidebar" id="sidebarButton"><i class="fas fa-chevron-left"></i></span>
+
+            <!-- Botão Secundário p/ Recolher Sidebar -->
+            <span class="toggle-sidebar" id="sidebarButton2"><i class="fas fa-bars"></i></span>
+
+            <nav id="menuLateral">
+                <ul class="listaMenu">
+                    <li>
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <img src="../assets/images/logos/logoCampus.png" class="img-fluid logoMenu"
+                                    alt="Logo Campus Virtual">
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <a href="../index.html" class="tituloLista" style="padding-top: 0 !important;"><i
+                                        class="fas fa-home"></i>Página
+                                    Inicial</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <div class="accordionMenu" id="headingModulo1">
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <span class="tituloLista collapsed" data-toggle="collapse"
+                                    data-target="#collapseModulo1" aria-expanded="false"
+                                    aria-controls="collapseModulo1">Módulo 1<i
+                                        class="fas fa-caret-up caretDown"></i></span>
+                            </div>
+                        </div>
+
+                        <div id="collapseModulo1" class="collapse" aria-labelledby="headingModulo1">
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper active">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 1</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper active">
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="../modulo1/modulo1-aula1.html" class="subItem">Introdução ao HTLV:
+                                            Histórico,
+                                            Transmissão, Aspectos Virais, Epidemiologia e Prevenção da Transmissão</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper active">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 2</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper active"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="../modulo1/modulo1-aula2.html" class="subItem">Doenças associadas ao
+                                            HTLV-1 e
+                                            coinfecções relevantes</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper active">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 3</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper active"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="../modulo1/modulo1-aula3.html" class="subItem">Diagnóstico Laboratorial
+                                            da
+                                            Infecção pelo HTLV</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper" style="background-color: #7F0C21;">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem"><a href="../modulo1/modulo1-atividade.html">Atividades
+                                                Módulo
+                                                1</a></span>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+
+
+                    <div class="accordionMenu" id="headingModulo2">
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <span class="tituloLista" data-toggle="collapse" data-target="#collapseModulo2"
+                                    aria-expanded="false" aria-controls="collapseModulo2">Módulo 2<i
+                                        class="fas fa-caret-up caretDown"></i></span>
+                            </div>
+                        </div>
+                        <div id="collapseModulo2" class="collapse show" aria-labelledby="headingModulo2">
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 1</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="../modulo2/modulo2-aula1.html" class="subItem">Política Nacional de
+                                            HIV/AIDS, tuberculose, hepatites virais e IST: onde o HTLV se insere?</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper">
+                                        <div class="item"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 2</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="../modulo2/modulo2-aula2.html" class="subItem">Cenários da transmissão
+                                            do HTLV em populações vulneráveis: Indígenas e Quilombolas</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper">
+                                        <div class="item"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 3</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="../modulo2/modulo2-aula3.html" class="subItem">Políticas de prevenção
+                                            da transmissão vertical do HTLV</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper">
+                                        <div class="item"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 4</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="../modulo2/modulo2-aula4.html" class="subItem">O Papel das Organizações
+                                            da Sociedade Civil no Enfrentamento ao HTLV</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper" style="background-color: #7F0C21;">
+                                        <div class="item"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem"><a href="../modulo2/modulo2-atividade.html">Atividades
+                                                Módulo 2</a></span>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+
+                    <div class="accordionMenu" id="headingModulo3">
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <span class="tituloLista collapsed" data-toggle="collapse"
+                                    data-target="#collapseModulo3" aria-expanded="false"
+                                    aria-controls="collapseModulo3">Módulo 3<i
+                                        class="fas fa-caret-up caretDown"></i></span>
+                            </div>
+                        </div>
+                        <div id="collapseModulo3" class="collapse" aria-labelledby="headingModulo3">
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper">
+                                        <div class="item"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 1</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="../modulo3/modulo3-aula1.html" class="subItem">Fluxos portarias e
+                                            protocolos</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper">
+                                        <div class="item"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 2</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="../modulo3/modulo3-aula2.html" class="subItem">Abordagem da infecção na
+                                            atenção primária e nos demais níveis da Rede de Atenção</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper">
+                                        <div class="item"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 3</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="../modulo3/modulo3-aula3.html" class="subItem">Cuidado Integral às
+                                            Pessoas Vivendo com HTLV: experiência da Bahia</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper">
+                                        <div class="item"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 4</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="../modulo3/modulo3-aula4.html" class="subItem">Construção Coletiva para
+                                            implantar ações de controle da transmissão do HTLV</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper" style="background-color: #7F0C21;">
+                                        <div class="item"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem"><a href="../modulo3/modulo3-atividade.html">Atividades
+                                                Módulo 3</a></span>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+
+                    <li>
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <a class="tituloLista" role="button" href="../encerramento.html">ENCERRAMENTO</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <a class="tituloLista" role="button" href="../referencias.html"><i
+                                        class="fas fa-file-alt"></i>Referências</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <a class="tituloLista" role="button" href="../material-complementar.html"><i
+                                        class="fas fa-book"></i>Material Complementar</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <a class="tituloLista" role="button" href="../creditos.html"><i
+                                        class="fas fa-list"></i>Créditos</a>
+                            </div>
+                        </div>
+                    </li>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <a class="tituloLista" role="button" href="referencias.html"><i
+                                        class="fas fa-file-alt"></i>Referências</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <a class="tituloLista" role="button" href="material-complementar.html"><i
+                                        class="fas fa-book"></i>Material Complementar</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <a class="tituloLista" role="button" href="creditos.html"><i
+                                        class="fas fa-list"></i>Créditos</a>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Conteúdo principal -->
+        <div class="col-md-10" id="content">
+            <div class="conteudo">
+
+                <p class="indice">Módulo 2 | Aula 1</p>
+
+                <h1>Política Nacional de HIV/AIDS, tuberculose, hepatites virais e IST: onde o HTLV se insere?</h1>
+
+                <div class="row centro">
+                    <div class="col-md-10 objetivos">
+                        <h3>Objetivos de aprendizagem</h3>
+                        <ul>
+                            <li class="icon circle">Compreender como o HTLV se insere na Política Nacional de HIV/AIDS,
+                                tuberculose, hepatites virais e Infecções sexualmente transmissíveis (IST).</li>
+                            <li class="icon circle">Compreender a perspectiva de ações na inclusão do HTLV no grupo das
+                                IST.</li>
+                            <li class="icon circle">Compreender a importância da implementação de políticas públicas
+                                para o controle do HTLV.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2>Integração do HTLV com outras prioridades de saúde em nível global</h2>
+
+                <p>O HTLV-1 representa um problema de saúde significativo para a maioria dos países, com consequências
+                    relevantes tanto para a saúde dos pacientes quanto para sua condição socioeconômica. Identificado em
+                    1980 como o primeiro retrovírus oncogênico humano, poucas estratégias foram implementadas para seu
+                    controle desde então. As principais regiões endêmicas para esses vírus incluem o sudoeste do Japão,
+                    a África Subsaariana, a América do Sul, incluindo o Brasil, a região do Caribe, o Oriente Médio e a
+                    Australo-Melanésia.</p>
+
+                <p>A incidência e morbidade do HTLV-1 podem ser reduzidas pela incorporação de medidas de controle em
+                    intervenções de controle de doenças existentes e estratégias de saúde pública, como a promoção do
+                    uso de preservativos e a triagem de segurança sanguínea. A prevenção e o manejo das condições
+                    associadas ao HTLV-1 podem estar integrados em outras áreas de programas, como serviços para IST,
+                    prevenção e manejo de câncer e distúrbios do sistema nervoso.</p>
+
+                <p>Um marco importante para a visibilidade do HTLV começou com a inserção, pela Organização Mundial da
+                    Saúde (OMS), de ações para o controle do HTLV nas Políticas de HIV/AIDS, tuberculose, hepatites
+                    virais e IST com a perspectiva de ações junto às unidades de controle das IST. As respostas globais
+                    ao HIV, hepatites virais e IST demonstram que:</p>
+
+                <ul>
+                    <li class="icon circle">o progresso substancial alcançado na resposta ao HIV desacelerou nos últimos
+                        anos;</li>
+                    <li class="icon circle">a resposta às hepatites virais mostrou uma melhora significativa em alguns
+                        países.</li>
+                </ul>
+
+                <p>Isso gera grandes desafios e oportunidades pela frente e a resposta às epidemias das diversas IST
+                    abordadas pela estratégia do setor de saúde global está ganhando ritmo lentamente, mas ainda está
+                    atrasada na maioria dos países.</p>
+
+                <p>Vamos assistir ao Dr Bernardo Galvão para entender a importância da pesquisa em HTLV associada a
+                    outras ISTs para prevenção e controle da transmissão atualmente no Brasil.</p>
+
+                <!-- Video 1 -->
+                <div class="row justify-content-center video">
+                    <div class="col-md-8">
+                        <h3>Histórico de HTLV e HIV por Dr Bernardo Galvão</h3>
+                        <div class="embed-responsive embed-responsive-16by9 ratio-16x9">
+                            <video width="1090" height="1090" controls poster="../assets/images/icones/capaVideo.png">
+                                <source src="https://educare.fiocruz.br/file-storage/Xd7nbHuv" type="video/mp4"
+                                    frameborder="0" allow="encrypted-media" allowfullscreen="allowfullscreen"
+                                    autostart="false" title="depoimento do pesquisador sobre perfil atual do HTLV" />
+                            </video>
+                        </div>
+                        <small class="text-muted">Fonte: CVF</small>
+                    </div>
+                </div>
+
+                <p>O Grupo Consultivo Estratégico e Técnico da OMS sobre HIV, hepatites virais e IST (STAG-HHS) reiterou
+                    a importância de usar abordagens sindrômicas para IST e de integração entre as políticas de controle
+                    para avançar a agenda das IST. No entanto, ressaltou uma falta de integração atual, apesar das
+                    oportunidades encontradas, como por exemplo, serviços de HIV e compartilhamento de recursos
+                    laboratoriais, como plataformas multiplex. O Grupo Consultivo Estratégico e Técnico da OMS sobre HIV
+                    é composto por especialistas de todas as regiões da OMS.</p>
+
+                <!-- Bloco Texto -->
+                <div class="row centro">
+                    <div class="col-md-10 blocoTexto">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img class="img-fluid" src="../assets/images/icones/virusSombrancelha.png">
+                            </div>
+                            <div class="col-md-9">
+                                <b>
+                                    <p style="text-transform: uppercase;">O que é abordagem sindrômica?</p>
+                                    <p>Abordagem sindrômica é um método de tratamento de IST que consiste em incluí-la
+                                        dentro de síndromes pré-estabelecidas, com base em sinais e sintomas, e
+                                        instituir tratamento imediato sem aguardar resultados de exames confirmatórios.
+                                    </p>
+                                </b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p>O Grupo Consultivo Estratégico e Técnico da OMS sobre HIV, hepatites virais e IST recomendou a
+                    programação integrada das IST, a prestação de serviços e o uso da capacidade laboratorial (incluindo
+                    cuidados pré-natais, resistência antimicrobiana, saúde sexual e reprodutiva, HIV, hepatite viral e
+                    desenvolvimento de vacinas). Também foi recomendada a integração dos serviços de IST nos pacotes
+                    essenciais de cobertura universal de saúde e na prestação de cuidados de saúde primários.</p>
+
+                <p>O grupo consultivo pediu à OMS que continuasse a desenvolver seu trabalho sobre o HTLV-1, em conjunto
+                    com as outras IST, aproveitando as oportunidades e sinergias entre as três estratégias do setor de
+                    saúde. Essa estratégia da OMS, de inclusão do HTLV no grupo das IST, tem sido uma oportunidade para
+                    dar visibilidade e promover as ações de prevenção e cuidado.</p>
+
+                <h2>Políticas Públicas para o enfrentamento do HTLV no Brasil</h2>
+
+                <p>No Brasil, embora a implementação de políticas de saúde pública para o HTLV-1 tenha avançado
+                    consideravelmente nos últimos anos, ainda há muitos desafios a serem superados para alcançar uma
+                    resposta significativa em relação à eliminação desse vírus.</p>
+
+                <p>Veja a análise das forças, oportunidades, fraquezas e ameaças (FOFA) para a implementação de
+                    políticas públicas para HTLV no Brasil.</p>
+
+
+                <!-- Imagem 1 -->
+                <div class="row centro">
+                    <div class="col-md-7 imagem">
+                        <h3>Análise FOFA da implementação de políticas públicas para HTLV no Brasil</h3>
+                        <img src="../assets/images/modulo2/aula1/img1.png"
+                            alt="Forças: Sistema Único de Saúde (SUS); Programas bem-sucedidos implementados para outros problemas de saúde; Políticas já estabelecidas; Sólida colaboração com especialistas em HTLV e representações de pacientes. Oportunidades: Aumento do interesse de organizações internacionais; Integração com outros programas; Financiamento externo; Plataformas on-line; Dados de vigilância do HTLV;  Políticas de HTLV implementadas de forma independente por estados e municípios. Fraquezas: Falta de conscientização sobre o HTLV; Insuficiência de dados epidemiológicos; Falta de centros de referência para a assistência aos pacientes; Indisponibilidade de testes confirmatórios; Ausência de triagem universal no pré-natal em nível nacional; Falta de estudos de custo-efetividade. Ameaças: Diversidade geográfica e socioeconômica brasileira; Pandemia de Covid-19; Outras demandas de diferentes doenças; Instabilidade da equipe técnica responsável pelo HTLV."
+                            class="img-fluid">
+                        <div><small>Fonte: Adaptado de Miranda et al. Front Med (Lausanne).</small></div>
+                    </div>
+                </div>
+
+                <p>O Brasil possui um sistema universal e descentralizado de saúde pública, o Sistema Único de Saúde
+                    (SUS), proposto no final dos anos 1980 e amplamente reconhecido como um exemplo bem-sucedido de
+                    reforma do sistema de saúde na América Latina. Temos uma rede variada e bem estabelecida de atenção
+                    à saúde, com a assistência às pessoas com doenças gerais por meio de uma rede de testagem,
+                    aconselhamento, assistência e monitoramento de gestantes, experiência única da aplicação de cuidados
+                    imunobiológicos sequenciais e universais, conforme preconizado pelos programas nacionais de
+                    vacinação contra a poliomielite, sarampo e hepatite B, entre outros.</p>
+
+                <!-- Imagem 2 -->
+                <div class="row centro">
+                    <div class="col-md-7 imagem">
+                        <h3>Princípios do SUS</h3>
+                        <div class="centro">
+                            <img src="../assets/images/modulo2/aula1/img2.png"
+                                alt="A imagem ilustra um diagrama de Venn com três círculos que representam princípios do SUS: a Universalidade, a Equidade e a Integridade. UNIVERSALIDADE: acolher e garantir saúde a todos, sem diferenciação excludente. EQUIDADE: ofertar o cuidado em função das necessidades individuais de cada usuário. INTEGRALIDADE: reconhecer o paciente como um todo e promover cuidado além da área da saude."
+                                class="img-fluid">
+                        </div>
+                        <div><small>Fonte: CVF</small></div>
+                    </div>
+                </div>
+
+                <p>A baixa conscientização sobre o HTLV-1/2 é um dos principais obstáculos para a implementação de
+                    políticas relacionadas a essa infecção. Esse desconhecimento retarda o diagnóstico, resultando em
+                    consequências graves, como o início tardio do tratamento, o que compromete a resposta terapêutica e
+                    as oportunidades de prevenção da transmissão. Além disso, a falta de informação também aumenta o
+                    estigma e o sentimento de abandono.</p>
+
+                <p>Grupos organizados da sociedade civil em defesa das pessoas vivendo com HTLV podem desempenhar um
+                    papel importante para ajudar a suprir tais lacunas, mas são limitados no país.</p>
+
+                <!-- Imagem 3 -->
+                <div class="row centro">
+                    <div class="col-md-7 imagem">
+                        <div class="centro">
+                            <img src="../assets/images/modulo2/aula1/img3.png"
+                                alt="Imagem mostra o perfil do Instragram da HTLVida." class="img-fluid">
+                        </div>
+                        <div class="centro">
+                            <small>Fonte: Instagram da HTLVida @<a
+                                    href="https://www.instagram.com/htlvida/?igsh=OHNsdm8xYXU0MW4w" target="_blank"
+                                    rel="noopener noreferrer">htlvida</a></small>
+                        </div>
+                    </div>
+                </div>
+
+                <p>Um estudo mostrou que o HTLVida, um grupo de pacientes da Bahia, teve uma participação essencial na
+                    implementação de políticas de HTLV nesse estado.</p>
+
+                <h2>HTLV e as políticas Públicas para HIV, hepatites virais e IST</h2>
+
+                <p>A associação do HTLV-1/2 com outras agendas como IST, saúde materna e saúde indígena pode otimizar o
+                    uso dos recursos. A inclusão do HTLV-1/2 no Departamento de HIV/AIDS, tuberculose, hepatites virais
+                    e IST do Ministério da Saúde tem contribuído para conscientização sobre o problema no país. Integrar
+                    o HTLV-1/2 em campanhas para outras IST é uma oportunidade importante. Os agentes políticos devem
+                    utilizar a rede e os recursos humanos disponíveis nesses programas para implementar políticas de
+                    saúde pública para o HTLV.</p>
+
+                <p>No Brasil, o HTLV foi incluído na Coordenação Geral de Vigilância das IST, uma das coordenações do
+                    Departamento de HIV/AIDS, Tuberculose, Hepatites Virais e Infecções Sexualmente Transmissíveis, do
+                    Ministério da Saúde. Com isso, o HTLV recebeu um capítulo no Protocolo Clínico e Diretrizes
+                    Terapêuticas para Infecções Sexualmente Transmissíveis (IST). O Guia de Manejo Clínico da Infecção
+                    pelo HTLV também foi revisado em 2021</p>
+
+                <!-- Imagem 4 -->
+                <div class="row centro">
+                    <div class="col-md-10 imagem">
+                        <div class="row centro">
+                            <div class="col-md-4">
+                                <img src="../assets/images/modulo2/aula1/img4.png"
+                                    alt="Imagem mostra a capa do Guia de Manejo Clínico da Infecção pelo HTLV"
+                                    class="img-fluid">
+                                <div>
+                                    <small>Fonte: <a
+                                            href="https://www.gov.br/aids/pt-br/central-de-conteudo/publicacoes/2022/guia_htlv_internet_24-11-21-2_3.pdf/view"
+                                            target="_blank" rel="noopener noreferrer">Portal gov.br</a></small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <p><span style="color: #7F0C21; font-weight: bold;">Guia do Manejo Clínico da Infecção
+                                        pelo
+                                        HTLV</span> <br>O Guia do Manejo Clínico da Infecção
+                                    pelo HTLV está disponível no <a
+                                        href="https://www.gov.br/aids/pt-br/central-de-conteudo/publicacoes/2022/guia_htlv_internet_24-11-21-2_3.pdf/view"
+                                        target="_blank" rel="noopener noreferrer">Portal gov.br</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <p>O Departamento de HIV/Aids e IST foi criado em 1986 e tornou-se referência mundial no tratamento e
+                    atenção à Aids e outras IST. A partir do Decreto nº 9795, de 17 de maio de 2019, que aprova a
+                    Estrutura Regimental e o Quadro Demonstrativo dos Cargos em Comissão e das Funções de Confiança do
+                    Ministério da Saúde e dá outras providências, o Departamento de DST/HIV/Aids e Hepatites virais
+                    passa a integrar outros agravos como, Tuberculose e Hanseníase e a ser reconhecido como Departamento
+                    de Doenças de Condições Crônicas e Infecções Sexualmente Transmissíveis. Atualmente, a hanseníase
+                    deixou de fazer parte do departamento.</p>
+
+                <p>O departamento tem entre suas competências propor a formulação e a implementação de políticas,
+                    diretrizes e projetos estratégicos no que se refere à promoção das ações de vigilância, de
+                    prevenção, de assistência e de garantia do direito à saúde das populações vulneráveis e das pessoas
+                    com HIV/Aids/HV/IST e tuberculose, e promover o fortalecimento da integração com as organizações da
+                    sociedade civil, nos assuntos relacionados às HIV/Aids/HV/IST e tuberculose. O Departamento de
+                    HIV/Aids e IST passou a ser denominado DATHI.</p>
+
+                <p>Ao longo dos anos várias ações foram implementadas para contribuir com as políticas públicas
+                    direcionadas ao HTLV. Veja a linha do tempo da implementação de políticas públicas para o controle
+                    do HTLV no Brasil.</p>
+
+
+                <!-- Vertical Stepper -->
+                <div class="row centro">
+                    <div class="col-md-10">
+                        <h3 style="color: #7F0C21;">Linha do tempo da implementação de políticas públicas para o
+                            controle do HTLV no Brasil</h3>
+                        <ul class="listaConteudo">
+                            <li>
+                                <div class="row">
+                                    <div class="itemConteudo"></div>
+                                    <div class="barraStepperConteudo"></div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItemConteudo"><b>1993</b><br>Publicação da Portaria nº
+                                            1376/93, que estabeleceu a triagem de HTLV em doadores de derivados de
+                                            sangue</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="itemConteudo"></div>
+                                    <div class="barraStepperConteudo"></div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItemConteudo"><b>1998</b><br>Publicação do Relatório Técnico
+                                            de HTLV para serviços hemoterápicos e laboratórios de saúde pública</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="itemConteudo"></div>
+                                    <div class="barraStepperConteudo"></div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItemConteudo"><b>2003</b><br>Publicação da primeira edição do
+                                            Guia de Manejo Clínico da Infecção pelo HTLV, do Ministério da Saúde</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="itemConteudo"></div>
+                                    <div class="barraStepperConteudo"></div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItemConteudo"><b>2009</b><br>Publicação da Portaria nº
+                                            2.600/09, que estabeleceu a triagem para HTLV em doadores de tecidos e
+                                            derivados celulares</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="itemConteudo"></div>
+                                    <div class="barraStepperConteudo"></div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItemConteudo"><b>2013</b><br>Publicação da segunda edição do
+                                            Guia de Manejo Clínico da Infecção pelo HTLV, do Ministério da Saúde</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="itemConteudo"></div>
+                                    <div class="barraStepperConteudo"></div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItemConteudo"><b>2014</b><br>Publicação da Portaria nº
+                                            371/14, que estabeleceu orientações para a atenção aos recém-nascidos</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="itemConteudo"></div>
+                                    <div class="barraStepperConteudo"></div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItemConteudo"><b>2016</b><br>Publicação de protocolo que
+                                            estabeleceu testes confirmatórios para pessoas com ATLL e a regulamentação
+                                            do uso do AZT</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="itemConteudo"></div>
+                                    <div class="barraStepperConteudo"></div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItemConteudo"><b>2019</b><br>(1) Integração do HTLV à
+                                            Coordenação-Geral de Vigilância das IST, do Ministério da Saúde; (2)
+                                            participação do MS na reunião da OMS no Japão para discutir políticas de
+                                            HTLV</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="itemConteudo"></div>
+                                    <div class="barraStepperConteudo"></div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItemConteudo"><b>2020</b><br>(1) Distribuição de fluxogramas
+                                            de mesa sobre diagnóstico e tratamento de IST; (2) inclusão do HTLV no Curso
+                                            de IST do AVA-SUS para as Américas; (3) publicação de um artigo no
+                                            suplemento do periódico IST em português, espanhol e inglês; (4) publicação
+                                            da terceira edição do Guia de Manejo Clínico da Infecção pelo HTLV, do
+                                            Ministério da Saúde; (5) realização da Campanha Nacional de Conscientização
+                                            sobre o HTLV; (6) realização de webinário no Dia Mundial do HTLV, em
+                                            parceria com OPAS/MS/HTLV Channel</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="itemConteudo"></div>
+                                    <div class="barraStepperConteudo"></div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItemConteudo"><b>2022</b><br>Consolidação de documentos para
+                                            solicitação de incorporação do teste em gestantes no SUS</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="itemConteudo"></div>
+                                    <div class="barraStepperConteudo"></div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItemConteudo"><b>2023</b><br>Reunião com grupos de
+                                            especialistas, sociedade civil e gestores para definição de estratégias no
+                                            escopo do Programa de eliminação de doenças no país - Brasil Saudável</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="itemConteudo"></div>
+                                    <div class="barraStepperConteudo" style="background-color: white;"></div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItemConteudo"><b>2024</b><br>(1) Portaria Ministerial nº 13,
+                                            de 3 de abril de 2024 que estabelece o rastreio do HTLV e testes
+                                            confirmatórios para mulheres grávidas. (2) Notificação compulsória para HTLV
+                                            na gestação e para crianças expostas</span>
+                                    </div>
+                                </div>
+                            </li>
+                    </div>
+                </div>
+
+                <p>No contexto da Coordenação Geral de Vigilância das IST, as políticas públicas de HTLV no Brasil têm
+                    como foco principal a prevenção, o diagnóstico precoce, o tratamento e o acompanhamento das PvHTLV.
+                </p>
+
+                <p><b>Principais pontos das políticas públicas de HTLV no Brasil</b></p>
+
+                <p style="color: #7F0C21;"><b>• Prevenção e Educação</b></p>
+
+                <p>A criação de campanhas de conscientização para a população sobre os modos de transmissão do HTLV
+                    (transmissão sexual, de mãe para filho, por transfusão de sangue e por compartilhamento de agulhas)
+                    e educação em saúde para reduzir o risco de transmissão, especialmente em populações de maior risco
+                    é um ponto importante. A inclusão do HTLV nas campanhas de IST do Ministério da Saúde dá
+                    visibilidade à agenda em um outro grupo de profissionais de saúde e à outra parcela da população.
+                </p>
+
+                <p>Em relação à educação em saúde, o <a href="https://www.unasus.gov.br/" target="_blank"
+                        rel="noopener noreferrer">Sistema de Universidade Aberta do SUS (UNA-SUS)</a> foi implementado
+                    para oferecer capacitação profissional e atender às necessidades de educação continuada. Na mesma
+                    perspectiva, foi implementado o <a href="https://avasus.ufrn.br/" target="_blank"
+                        rel="noopener noreferrer">Ambiente Virtual de Aprendizado do Sistema Único de Saúde
+                        (AVA-SUS)</a>,
+                    um espaço de aprendizagem virtual desenvolvido para profissionais e estudantes da área da saúde e
+                    para a sociedade civil. Esses sistemas atuam no treinamento, gestão e assistência no SUS e podem
+                    ampliar a capacidade de educação em saúde em HTLV. O AVASUS tem um Curso de Atenção Integral às
+                    Pessoas com Infecções Sexualmente Transmissíveis que inclui um módulo sobre a infecção pelo HTLV.
+                </p>
+
+                <p style="color: #7F0C21;"><b>• Triagem e Diagnóstico</b></p>
+
+                <p>Testagem obrigatória de doadores de sangue e órgãos para HTLV, para evitar a transmissão através de
+                    transfusões e transplantes e testagem de gestantes para HTLV, com a finalidade de prevenir a
+                    transmissão vertical (de mãe para filho). O diagnóstico e tratamento precoce também contribuem para
+                    a prevenção de cânceres causados por algumas infecções sexualmente transmissíveis, como o vírus do
+                    papiloma humano e o HTLV-1.</p>
+
+                <p>A utilização da Atenção Primária em Saúde em atuação integrada com os serviços especializados,
+                    incluindo fluxos de referência e contrarreferência bem definidos junto à atenção secundária e
+                    terciária promove uma redução das internações desnecessárias. Vale lembrar que a Atenção Primária é
+                    a porta de entrada preferencial para pessoas com HTLV-1/2 e as outras IST no SUS.</p>
+
+                <p>A testagem confirmatória para a infecção pelo HTLV-1/2 é necessária, mas não é oferecida a todos os
+                    indivíduos com resultado positivo no teste de triagem. A PCR e o Western Blot são incluídos no SUS
+                    para confirmar a infecção, mas sua realização é limitada àqueles com suspeita clínica de ATLL
+                    (Leucemia/Linfoma de Células T do Adulto), e mais recentemente, para confirmar a infecção em
+                    gestantes. O rastreamento em gestantes fará parte do processo de certificação para a eliminação da
+                    transmissão vertical no país, que hoje inclui HIV, sífilis, hepatite B e Doença de Chagas.</p>
+
+                <p style="color: #7F0C21;"><b>• Tratamento e Acompanhamento</b></p>
+
+                <p>É importante disponibilizar atendimento especializado para pessoas vivendo com HTLV nas redes
+                    públicas de saúde e monitoramento clínico regular dos pacientes para detectar precocemente
+                    complicações associadas ao HTLV. Neste sentido é necessário que a referência secundária ou que os
+                    serviços de atenção especializada estejam aptos a fornecer assistência multidisciplinar, incluindo
+                    apoio psicológico e fisioterapia, e possam ser utilizados para o apoio a pacientes com doenças
+                    associadas ao HTLV-1.</p>
+
+                <p>O desafio é estabelecer centros de referência que ofereçam adequada atenção em saúde aos pacientes
+                    com HTLV no Brasil, já que a assistência se encontra espalhada por diferentes clínicas. Um primeiro
+                    passo deve ser o estabelecimento de centros de referência locais e regionais para diagnóstico e
+                    tratamento do HTLV-1/2, aproveitando a capacidade instalada da rede nacional de Laboratórios
+                    Centrais de Saúde Pública (LACEN) e as redes nacionais de HIV-1 e hepatite B (HBV) que podem ser
+                    implementadas em conjunto.</p>
+
+                <p style="color: #7F0C21;"><b>• Pesquisa e Desenvolvimento</b></p>
+
+                <p>Outro ponto da política pública é o apoio a pesquisas científicas para melhor compreensão sobre o
+                    HTLV, para o desenvolvimento de novos tratamentos e aprimoramento das políticas públicas. Junto a
+                    isso, a colaboração com instituições internacionais para intercâmbio de informações e avanços
+                    científicos sobre o vírus e doenças associadas à rede de pesquisa, pode estar relacionada com a rede
+                    de HIV, hepatites e outras IST para a otimização de recursos.</p>
+
+                <h2>Notificação e Vigilância Epidemiológica</h2>
+
+                <p>A implementação de sistemas de notificação e vigilância epidemiológica para monitorar a prevalência
+                    do HTLV no país e a utilização desses dados para ajustar e melhorar as estratégias de controle e
+                    prevenção são medidas adotadas no contexto da notificação do DATHI. Em 2024 foi instituída a ficha
+                    de notificação da gestante com HTLV e recém-nascidos. Essa foi uma medida importante para prover
+                    dados sobre essa infecção neste grupo populacional.</p>
+
+                <p>A análise situacional da infecção é importante para elaborar políticas de saúde eficazes. Um boletim
+                    epidemiológico sobre a prevalência e distribuição do HTLV no país foi publicado pelo Ministério da
+                    Saúde, em colaboração com especialistas em HTLV. A maior parte das informações vem de populações
+                    específicas, como doadores de sangue, gestantes, pacientes com doenças associadas ao HTLV,
+                    familiares de indivíduos infectados e outros grupos específicos, como usuários de drogas injetáveis
+                    (UDI) e profissionais do sexo.</p>
+
+                <h2>Colaboração com especialistas e representações da sociedade civil</h2>
+
+                <p>O Departamento de HIV/Aids e IST (DATHI) possui uma longa história de colaboração com especialistas e
+                    entidades representativas de pacientes, principalmente no contexto de HIV, e posteriormente com
+                    tuberculose, hepatites virais e HTLV. Essa parceria foi reforçada nos últimos anos e resultou em
+                    grandes conquistas.</p>
+
+                <p>Os especialistas em HTLV e as representações da sociedade civil também apoiam o MS na identificação
+                    de ações prioritárias e na solução de lacunas na compreensão da magnitude do HTLV no país. Além
+                    disso, as políticas, com base na identificação de ações prioritárias, são implementadas pelo
+                    Ministério da Saúde em parceria com secretarias estaduais e municipais de saúde, e são parte de um
+                    esforço contínuo para controlar a disseminação do HTLV e mitigar seus impactos na população
+                    brasileira.</p>
+
+                <p>A inserção do HTLV nas políticas de prevenção e assistência de HIV, hepatites virais e IST é
+                    importante para abordar a prevenção de infecções sexualmente transmissíveis de maneira abrangente.
+                </p>
+
+                <p>O HTLV, embora menos conhecido que o HIV, pode causar doenças graves. Integrar a política de controle
+                    do HTLV nas estratégias existentes de HIV e IST permite o uso de recursos compartilhados, como
+                    campanhas de conscientização e serviços de testagem, melhorando a eficiência e a eficácia dos
+                    programas de saúde pública. Além disso, sensibiliza a população e os profissionais de saúde sobre a
+                    importância do diagnóstico precoce e da prevenção, promovendo práticas seguras e reduzindo a
+                    transmissão desses vírus.</p>
+
+                <!-- Encerramento -->
+                <div class="row centro" style="margin: 10px 0px 50px 0px !important;">
+                    <div class="col-md-10 encerramento">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <p style="color: #7F0C21;"><b>Você chegou ao final da aula</b></p>
+                                <p>Nessa aula você viu como o HTLV se insere na Política Nacional de HIV/AIDS,
+                                    tuberculose, hepatites virais e Infecções sexualmente transmissíveis (IST). Também
+                                    viu a perspectiva de ações na inclusão do HTLV no grupo das IST e compreendeu a
+                                    importância da implementação de políticas públicas para o controle do vírus.</p>
+                            </div>
+                            <div class="col-md-3">
+                                <img class="img-fluid" src="../assets/images/icones/virusFeliz.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Autor -->
+                <div class="centro">
+                    <p class="autor">AUTORA: Angelica Miranda</p>
+                </div>
+
+                <!-- Botões de navegação -->
+                <div class="row botao">
+                    <a href="../modulo1/modulo1-atividade.html" class="btn btn-sm" id="botaoVoltar" role="button"
+                        alt="Voltar">
+                        <strong><i class="fas fa-chevron-left"></i>Atividades Módulo 1</strong></a>
+                    <a href="modulo2-aula2.html" class="btn btn-sm" id="botaoAvancar" role="button" alt="Avançar">
+                        <strong>Módulo 2 Aula 2<i class="fas fa-chevron-right"></i></strong></a>
+                </div>
+            </div>
+
+            <!-- Rodapé -->
+            <footer id="rodape">
+                <div class="row-main">
+                    <div class="col-md-12 centro">
+                        <img class="img-fluid centro" src="../assets/images/rodape/rodape.jpg" alt="Rodapé">
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Arquivos JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>

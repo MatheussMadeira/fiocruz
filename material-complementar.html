@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>HTLV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+    <link href="./assets/css/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <link href="./assets/css/styles.css" rel="stylesheet">
+    <style>
+        p {
+            margin-bottom: 0px !important;
+            margin-top: 30px !important;
+        }
+
+        h2 {
+            font-size: 15px !important;
+            margin-top: 30px !important;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Toolbar -->
+    <header>
+        <img id="menuSuperior" class="img-fluid " src="assets/images/logos/logoCurso.jpg"
+            alt="Capa das páginas do curso">
+    </header>
+
+    <div class="row" id="row-main">
+        <!-- Sidebar -->
+        <div class="col-md-2" id="sidebar">
+            <!-- Botão p/ Recolher Sidebar-->
+            <span class="toggle-sidebar" id="sidebarButton"><i class="fas fa-chevron-left"></i></span>
+
+            <!-- Botão Secundário p/ Recolher Sidebar -->
+            <span class="toggle-sidebar" id="sidebarButton2"><i class="fas fa-bars"></i></span>
+
+            <nav id="menuLateral">
+                <ul class="listaMenu">
+                    <li>
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <img src="assets/images/logos/logoCampus.png" class="img-fluid logoMenu"
+                                    alt="Logo Campus Virtual">
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <a href="index.html" class="tituloLista" style="padding-top: 0 !important;"><i
+                                        class="fas fa-home"></i>Página
+                                    Inicial</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <div class="accordionMenu" id="headingModulo1">
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <span class="tituloLista collapsed" data-toggle="collapse"
+                                    data-target="#collapseModulo1" aria-expanded="false"
+                                    aria-controls="collapseModulo1">Módulo 1<i
+                                        class="fas fa-caret-up caretDown"></i></span>
+                            </div>
+                        </div>
+
+                        <div id="collapseModulo1" class="collapse" aria-labelledby="headingModulo1">
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper active">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 1</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper active">
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="modulo1/modulo1-aula1.html" class="subItem">Introdução ao HTLV:
+                                            Histórico,
+                                            Transmissão, Aspectos Virais, Epidemiologia e Prevenção da Transmissão</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper active">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 2</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper active"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="modulo1/modulo1-aula2.html" class="subItem">Doenças associadas ao
+                                            HTLV-1 e
+                                            coinfecções relevantes</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper active">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 3</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper active"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="modulo1/modulo1-aula3.html" class="subItem">Diagnóstico Laboratorial
+                                            da
+                                            Infecção pelo HTLV</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper" style="background-color: #7F0C21;">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem"><a href="modulo1/modulo1-atividade.html">Atividades
+                                                Módulo
+                                                1</a></span>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+
+
+                    <div class="accordionMenu" id="headingModulo2">
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <span class="tituloLista collapsed" data-toggle="collapse"
+                                    data-target="#collapseModulo2" aria-expanded="false"
+                                    aria-controls="collapseModulo2">Módulo 2<i
+                                        class="fas fa-caret-up caretDown"></i></span>
+                            </div>
+                        </div>
+                        <div id="collapseModulo2" class="collapse" aria-labelledby="headingModulo2">
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper active">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 1</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper active"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="modulo2/modulo2-aula1.html" class="subItem">Política Nacional de
+                                            HIV/AIDS, tuberculose, hepatites virais e IST: onde o HTLV se insere?</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper active">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 2</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper active"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="modulo2/modulo2-aula2.html" class="subItem">Cenários da transmissão
+                                            do HTLV em populações vulneráveis: Indígenas e Quilombolas</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper active">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 3</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper active"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="modulo2/modulo2-aula3.html" class="subItem">Políticas de prevenção
+                                            da transmissão vertical do HTLV</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper active">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 4</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper active"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="modulo2/modulo2-aula4.html" class="subItem">O Papel das Organizações
+                                            da Sociedade Civil no Enfrentamento ao HTLV</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper" style="background-color: #7F0C21;">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem"><a href="modulo2/modulo2-atividade.html">Atividades
+                                                Módulo 2</a></span>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+
+                    <div class="accordionMenu" id="headingModulo3">
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <span class="tituloLista collapsed" data-toggle="collapse"
+                                    data-target="#collapseModulo3" aria-expanded="false"
+                                    aria-controls="collapseModulo3">Módulo 3<i
+                                        class="fas fa-caret-up caretDown"></i></span>
+                            </div>
+                        </div>
+                        <div id="collapseModulo3" class="collapse" aria-labelledby="headingModulo3">
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper active">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 1</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper active"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="modulo3/modulo3-aula1.html" class="subItem">Fluxos portarias e
+                                            protocolos</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper active">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 2</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper active"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="modulo3/modulo3-aula2.html" class="subItem">Abordagem da infecção na
+                                            atenção primária e nos demais níveis da Rede de Atenção</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper active">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 3</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper active"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="modulo3/modulo3-aula3.html" class="subItem">Cuidado Integral às
+                                            Pessoas Vivendo com HTLV: experiência da Bahia</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper active">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 4</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper active"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="modulo3/modulo3-aula4.html" class="subItem">Construção Coletiva para
+                                            implantar ações de controle da transmissão do HTLV</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper" style="background-color: #7F0C21;">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem"><a href="modulo3/modulo3-atividade.html">Atividades
+                                                Módulo 3</a></span>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+
+                    <li>
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <a class="tituloLista" role="button" href="encerramento.html">ENCERRAMENTO</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <a class="tituloLista" role="button" href="referencias.html"><i
+                                        class="fas fa-file-alt"></i>Referências</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <a class="tituloLista" role="button" href="material-complementar.html"><i
+                                        class="fas fa-book"></i>Material Complementar</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <a class="tituloLista" role="button" href="creditos.html"><i
+                                        class="fas fa-list"></i>Créditos</a>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Conteúdo Principal -->
+        <div class="col-md-10" id="content">
+            <div class="conteudo">
+
+                <h1>Material Complementar</h1>
+
+                <p style="text-transform: uppercase;"><b>Módulo 1 - Aula 3</b></p>
+
+                <p><b>Relatório de reunião - Diagnóstico do vírus linfotrópico de células T humanas (HTLV e estratégias
+                        para expandir a triagem do HTLV no contexto da saúde materno-infantil)</b><br>Disponível
+                    em<br><a
+                        href="https://iris.paho.org/bitstream/handle/10665.2/59462/OPASCDEHT230014_por.pdf?sequence=1&isAllowed=y"
+                        target="_blank"
+                        rel="noopener noreferrer">https://iris.paho.org/bitstream/handle/10665.2/59462/OPASCDEHT230014_por.pdf?sequence=1&isAllowed=y</a>
+                </p>
+
+                <p><b>Guia de Manejo Clínico da Infecção pelo HTLV</b><br>Disponível em<br><a
+                        href="https://www.gov.br/aids/pt-br/central-de-conteudo/publicacoes/2022/guia_htlv_internet_24-11-21-2_3.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer">https://www.gov.br/aids/pt-br/central-de-conteudo/publicacoes/2022/guia_htlv_internet_24-11-21-2_3.pdf</a>
+                </p>
+
+                <p style="text-transform: uppercase;"><b>Módulo 2 - Aula 1</b></p>
+
+                <p><b>Curso de atenção integral às pessoas com infecções sexualmente transmissíveis. Unidade 11 – HTLV.
+                    </b><br>Disponível em <br><a href="https://avasus.ufrn.br/local/avasplugin/cursos/curso.php?id=500"
+                        target="_blank"
+                        rel="noopener noreferrer">https://avasus.ufrn.br/local/avasplugin/cursos/curso.php?id=500</a>
+                </p>
+
+                <p><b>Estratégias do setor de saúde global sobre, respectivamente, HIV, hepatite viral e infecções
+                        sexualmente transmissíveis para o período de 2022-2030 <br></b>Disponível em <br><a
+                        href="https://www.who.int/publications/i/item/9789240053779" target="_blank"
+                        rel="noopener noreferrer">https://www.who.int/publications/i/item/9789240053779</a></p>
+
+                <p><b>Guia de Manejo Clínico da Infecção pelo HTLV, 2021 <br></b>Disponível em <br><a
+                        href="https://www.gov.br/aids/pt-br/central-de-conteudo/publicacoes/2022/guia_htlv_internet_24-11-21-2_3.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer">https://www.gov.br/aids/pt-br/central-de-conteudo/publicacoes/2022/guia_htlv_internet_24-11-21-2_3.pdf</a>
+                </p>
+
+                <p><b>Relatório Grupo Técnico OMS – HTLV <br></b> Disponível em <br><a
+                        href="https://www.who.int/publications/i/item/9789240020221" target="_blank"
+                        rel="noopener noreferrer">https://www.who.int/publications/i/item/9789240020221</a></p>
+
+                <p style="text-transform: uppercase;"><b>Módulo 2 - Aula 2</b></p>
+
+                <p><b><i>International health policy forum for the elimination of HTLV </i><br></b> Disponível em <br><a
+                        href="https://www.paho.org/en/international-health-policy-forum-elimination-htlv"
+                        target="_blank"
+                        rel="noopener noreferrer">https://www.paho.org/en/international-health-policy-forum-elimination-htlv</a>
+                </p>
+
+                <p><b><i>The diagnosis of human T lymphotropic virus (HTLV) and strategies to expand HTLV screening in
+                            the
+                            context of maternal and child health. Meeting Report (virtual), 7 July 2023
+                        </i></b><br>Disponível
+                    em <br><a
+                        href="https://www.paho.org/en/documents/diagnosis-human-t-lymphotropic-virus-htlv-and-strategies-expand-htlv-screening-context"
+                        target="_blank"
+                        rel="noopener noreferrer">https://www.paho.org/en/documents/diagnosis-human-t-lymphotropic-virus-htlv-and-strategies-expand-htlv-screening-context</a><br>E
+                    também disponível em <br> <a href="https://pesquisa.bvsalud.org/portal/resource/pt/phr-59463"
+                        target="_blank"
+                        rel="noopener noreferrer">https://pesquisa.bvsalud.org/portal/resource/pt/phr-59463</a>
+                </p>
+
+                <p><b><i>The Response to HTLV in the Framework of Maternal and Child Health. Meeting Report, 18 August
+                            2022 (virtual) <br></i></b>Disponível em <br><a
+                        href="https://iris.paho.org/handle/10665.2/56888" target="_blank"
+                        rel="noopener noreferrer">https://iris.paho.org/handle/10665.2/56888</a></p>
+
+                <p><b><i>International Health Policy Forum for the Elimination of HTLV. Advancing HTLV Health Policies
+                            around the World. Meeting Report <br></i></b>Disponível em <br><a
+                        href="https://www.paho.org/en/documents/international-health-policy-forum-elimination-htlv-advancing-htlv-health-policies-around"
+                        target="_blank"
+                        rel="noopener noreferrer">https://www.paho.org/en/documents/international-health-policy-forum-elimination-htlv-advancing-htlv-health-policies-around</a>
+                </p>
+
+                <p style="text-transform: uppercase;"><b>Módulo 3 - Aula 3</b></p>
+
+                <p><b>Portaria N° 460 de 19 de novembro de 2020. Linha de Cuidado Integral às Pessoas Vivendo com o
+                        vírus HTLV <br></b> Disponível em <br><a
+                        href="http://www.saude.ba.gov.br/wp-content/uploads/2020/11/Portaria-no-460-de-19-de-novembro-de-2020-Linha-doCuidado-HTLV.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer">http://www.saude.ba.gov.br/wp-content/uploads/2020/11/Portaria-no-460-de-19-de-novembro-de-2020-Linha-doCuidado-HTLV.pdf</a>
+                </p>
+
+                <p style="text-transform: uppercase;"><b>Módulo 3 - Aula 4</b></p>
+
+                <p><b>HTLV Channel no Youtube</b><br>Disponível em <br><a href="https://www.youtube.com/c/HTLVChannel"
+                        target="_blank" rel="noopener noreferrer">https://www.youtube.com/c/HTLVChannel</a></p>
+
+                <p><b>HTLV Brasil no Instagram <br></b> Disponível em <br><a
+                        href="https://www.instagram.com/HTLVBrasil/" target="_blank"
+                        rel="noopener noreferrer">https://www.instagram.com/HTLVBrasil/</a></p>
+
+                <!-- Botões de navegação -->
+                <div class="row centro" id="botao">
+                    <a style="text-decoration: none; margin-bottom: 80px;" href="index.html" class="btn btn-sm"
+                        id="botaoVoltar" role="button" alt="Voltar">
+                        <strong>VOLTAR</strong></a>
+                </div>
+            </div>
+            <!-- Rodapé -->
+            <footer id="rodape">
+                <div class="row-main">
+                    <div class="col-md-12 centro">
+                        <img class="img-fluid centro" src="assets/images/rodape/rodape.jpg" alt="Rodapé">
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- Arquivos JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>

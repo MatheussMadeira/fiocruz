@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>HTLV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+    <link href="./assets/css/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <link href="./assets/css/styles.css" rel="stylesheet">
+    <style>
+        p {
+            margin-bottom: 0px !important;
+            margin-top: 30px !important;
+        }
+
+        h2 {
+            font-size: 15px !important;
+            margin-top: 30px !important;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Toolbar -->
+    <header>
+        <img id="menuSuperior" class="img-fluid " src="assets/images/logos/logoCurso.jpg"
+            alt="Capa das páginas do curso">
+    </header>
+
+    <div class="row" id="row-main">
+        <!-- Sidebar -->
+        <div class="col-md-2" id="sidebar">
+            <!-- Botão p/ Recolher Sidebar-->
+            <span class="toggle-sidebar" id="sidebarButton"><i class="fas fa-chevron-left"></i></span>
+
+            <!-- Botão Secundário p/ Recolher Sidebar -->
+            <span class="toggle-sidebar" id="sidebarButton2"><i class="fas fa-bars"></i></span>
+
+            <nav id="menuLateral">
+                <ul class="listaMenu">
+                    <li>
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <img src="assets/images/logos/logoCampus.png" class="img-fluid logoMenu"
+                                    alt="Logo Campus Virtual">
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <a href="index.html" class="tituloLista" style="padding-top: 0 !important;"><i
+                                        class="fas fa-home"></i>Página
+                                    Inicial</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <div class="accordionMenu" id="headingModulo1">
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <span class="tituloLista collapsed" data-toggle="collapse"
+                                    data-target="#collapseModulo1" aria-expanded="false"
+                                    aria-controls="collapseModulo1">Módulo 1<i
+                                        class="fas fa-caret-up caretDown"></i></span>
+                            </div>
+                        </div>
+
+                        <div id="collapseModulo1" class="collapse" aria-labelledby="headingModulo1">
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper active">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 1</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper active">
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="modulo1/modulo1-aula1.html" class="subItem">Introdução ao HTLV:
+                                            Histórico,
+                                            Transmissão, Aspectos Virais, Epidemiologia e Prevenção da Transmissão</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper active">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 2</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper active"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="modulo1/modulo1-aula2.html" class="subItem">Doenças associadas ao
+                                            HTLV-1 e
+                                            coinfecções relevantes</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper active">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 3</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper active"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="modulo1/modulo1-aula3.html" class="subItem">Diagnóstico Laboratorial
+                                            da
+                                            Infecção pelo HTLV</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper" style="background-color: #7F0C21;">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem"><a href="modulo1/modulo1-atividade.html">Atividades
+                                                Módulo
+                                                1</a></span>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+
+
+                    <div class="accordionMenu" id="headingModulo2">
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <span class="tituloLista collapsed" data-toggle="collapse"
+                                    data-target="#collapseModulo2" aria-expanded="false"
+                                    aria-controls="collapseModulo2">Módulo 2<i
+                                        class="fas fa-caret-up caretDown"></i></span>
+                            </div>
+                        </div>
+                        <div id="collapseModulo2" class="collapse" aria-labelledby="headingModulo2">
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper active">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 1</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper active"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="modulo2/modulo2-aula1.html" class="subItem">Política Nacional de
+                                            HIV/AIDS, tuberculose, hepatites virais e IST: onde o HTLV se insere?</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper active">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 2</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper active"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="modulo2/modulo2-aula2.html" class="subItem">Cenários da transmissão
+                                            do HTLV em populações vulneráveis: Indígenas e Quilombolas</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper active">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 3</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper active"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="modulo2/modulo2-aula3.html" class="subItem">Políticas de prevenção
+                                            da transmissão vertical do HTLV</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper active">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 4</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper active"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="modulo2/modulo2-aula4.html" class="subItem">O Papel das Organizações
+                                            da Sociedade Civil no Enfrentamento ao HTLV</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper" style="background-color: #7F0C21;">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem"><a href="modulo2/modulo2-atividade.html">Atividades
+                                                Módulo 2</a></span>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+
+                    <div class="accordionMenu" id="headingModulo3">
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <span class="tituloLista collapsed" data-toggle="collapse"
+                                    data-target="#collapseModulo3" aria-expanded="false"
+                                    aria-controls="collapseModulo3">Módulo 3<i
+                                        class="fas fa-caret-up caretDown"></i></span>
+                            </div>
+                        </div>
+                        <div id="collapseModulo3" class="collapse" aria-labelledby="headingModulo3">
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper active">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 1</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper active"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="modulo3/modulo3-aula1.html" class="subItem">Fluxos portarias e
+                                            protocolos</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper active">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 2</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper active"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="modulo3/modulo3-aula2.html" class="subItem">Abordagem da infecção na
+                                            atenção primária e nos demais níveis da Rede de Atenção</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper active">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 3</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper active"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="modulo3/modulo3-aula3.html" class="subItem">Cuidado Integral às
+                                            Pessoas Vivendo com HTLV: experiência da Bahia</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper active">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem">Aula 4</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="barraStepper active"></div>
+                                    <div class="sectionTitle">
+                                        <div class="iconeMenu"></div>
+                                        <a href="modulo3/modulo3-aula4.html" class="subItem">Construção Coletiva para
+                                            implantar ações de controle da transmissão do HTLV</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="barraStepper" style="background-color: #7F0C21;">
+                                        <div class="item active"></div>
+                                    </div>
+                                    <div class="sectionTitle">
+                                        <span class="tituloItem"><a href="modulo3/modulo3-atividade.html">Atividades
+                                                Módulo 3</a></span>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+
+                    <li>
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <a class="tituloLista" role="button" href="encerramento.html">ENCERRAMENTO</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <a class="tituloLista" role="button" href="referencias.html"><i
+                                        class="fas fa-file-alt"></i>Referências</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <a class="tituloLista" role="button" href="material-complementar.html"><i
+                                        class="fas fa-book"></i>Material Complementar</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="sectionTitle">
+                                <a class="tituloLista" role="button" href="creditos.html"><i
+                                        class="fas fa-list"></i>Créditos</a>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Conteúdo Principal -->
+        <div class="col-md-10" id="content">
+            <div class="conteudo">
+
+                <h1>Créditos</h1>
+                <div class="text-center">
+                    <h2>Ministério da Saúde</h2>
+
+                    <p>Nísia Trindade Lima</p>
+                    <i>Ministra</i>
+
+                    <p>Ethel Maciel</p>
+                    <i>Secretária de Vigilância em Saúde e Ambiente (SVSA)</i>
+
+                    <p>Draurio Barreira Cravo Neto</p>
+                    <i>Diretor do Departamento de HIV/Aids,Tuberculose, Hepatites Virais e Infecções Sexualmente
+                        Transmissíveis (Dathi)</i>
+
+                    <h2>Fundação Oswaldo Cruz – Fiocruz</h2>
+
+                    <p>Mario Moreira</p>
+                    <i>Presidente</i>
+
+                    <p>Cristiani Vieira Machado</p>
+                    <i>Vice-Presidência de Educação, Informação e Comunicação (VPEIC)</i>
+
+                    <p>Tânia Maria Peixoto Fonseca</p>
+                    <i>Coordenação de Vigilância em Saúde e Laboratórios de Referência (CVSLR)</i>
+
+                    <p>Pedro Miguel dos Santos Neto</p>
+                    <i>Instituto Aggeu Magalhães (IAM)-Fiocruz Pernambuco<br>Diretor</i>
+
+                    <p>Sheilla Andrade de Oliveira</p>
+                    <i>Instituto Aggeu Magalhães (IAM)-Fiocruz Pernambuco<br>Vice-diretora de Ensino e Divulgação
+                        Científica</i>
+
+                    <h2>Campus Virtual Fiocruz</h2>
+
+                    <p>Ana Cristina da Matta Furniel</p>
+                    <i>Coordenadora Geral</i>
+
+                    <p>Rosane Mendes</p>
+                    <i>Coordenadora Adjunta e Coordenadora da Plataforma Educare</i>
+
+                    <p>Renata Bernardes David</p>
+                    <i>Coordenadora de Produção</i>
+
+                    <p>Juliana Dutra</p>
+                    <i>Revisora Técnica de Conteúdo</i>
+
+                    <p>Isabela Schincariol</p>
+                    <i>Assessora de Comunicação</i>
+
+                    <p>Laura Gris</p>
+                    <i>Designer Educacional</i>
+
+                    <p>Daniela Botelho</p>
+                    <i>Designer UX/UI</i>
+
+                    <p>Eberthyn Marques</p>
+                    <i>Desenvolvedor</i>
+
+                    <p><b>Recursos Audiovisuais</b></p>
+
+                    <p>Teo Venerando</p>
+                    <i>Producão e Edição de Vídeo</i>
+
+                    <p><b>Recursos Educacionais</b></p>
+
+                    <p>Carmélia Brito</p>
+                    <i>Bibliotecária</i>
+
+                    <p>Natália Rasina</p>
+                    <i>Audiodescrição</i>
+
+                    <p>Maria Angélica Marcondes Drska</p>
+                    <i>Revisão de Português</i>
+
+                    <p><b>Suporte Técnico de Tecnologia da Informação</b></p>
+
+                    <p>Bruno Alexandre de Oliveira</p>
+                    <i>Desenvolvedor</i>
+
+                    <p>Eduardo Xavier da Silva</p>
+                    <i>Desenvolvedor</i>
+
+                    <p>Adriano Lourenço</p>
+                    <i>Analista de Tecnologias Educacionais</i>
+
+                    <p>Orlando Terra</p>
+                    <i>Analista de Tecnologias Educacionais</i>
+
+                    <h2>Coordenação do Curso</h2>
+
+                    <p>Clarice Neuenschwander Lins de Morais</p>
+                    <i>Instituto Aggeu Magalhães (IAM)-Fiocruz Pernambuco<br>Coordenadora geral</i>
+
+                    <p>Maria Fernanda Rios Grassi</p>
+                    <i>Instituto Gonçalo Moniz (IGM)-Fiocruz Bahia<br>Coordenadora Adjunta</i>
+
+                    <p>Evania Freires Galindo</p>
+                    <i>Instituto Aggeu Magalhães (IAM)-Fiocruz Pernambuco<br>Coordenadora Acadêmica</i>
+
+                    <p>Christian Robson de Souza Reis</p>
+                    <i>Instituto Aggeu Magalhães (IAM)-Fiocruz Pernambuco<br>Coordenador Acadêmico</i>
+
+                    <p>Heytor Victor Pereira da Costa Neco</p>
+                    <i>Centro Universitário Maurício de Nassau (UNINASSAU)-Pernambuco<br>Coordenador Acadêmico</i>
+
+                    <h2>Conteudistas</h2>
+
+                    <p>Adjieane Oliveira</p>
+                    <i>HTLVida-BA</i>
+
+                    <p>Angelica Espinosa Barbosa Miranda</p>
+                    <i>Universidade Federal do Espírito Santo (UFES)</i>
+
+                    <p>Antonio Carlos Rosario Vallinoto</p>
+                    <i>Universidade Federal do Pará (UFPA)</i>
+
+                    <p>Augusto Cesar Penalva de Oliveira</p>
+                    <i>Instituto de Infectologia Emílio Ribas (IIER)/SP</i>
+
+                    <p>Carolina Rosadas</p>
+                    <i>Imperial College London</i>
+
+                    <p>Clarice Neuenschwander Lins de Morais</p>
+                    <i>Instituto Aggeu Magalhães (IAM)-Fiocruz Pernambuco</i>
+
+                    <p>Eleuzina Falcão</p>
+                    <i>Secretaria de Saúde do Estado da Bahia (Sesab)</i>
+
+                    <p>Heytor Victor Pereira da Costa Neco</p>
+                    <i>Centro Universitário Maurício de Nassau (UNINASSAU)-Pernambuco</i>
+
+                    <p>Jorge Simão do Rosário Casseb</p>
+                    <i>Departamento de Dermatologia, Faculdade de Medicina da Universidade de São Paulo (FMUSP, São
+                        Paulo, Brasil.)</i>
+
+                    <p>Maria Fernanda Rios Grassi</p>
+                    <i>Instituto Gonçalo Moniz- Fiocruz BA</i>
+
+                    <p>Mayra Gonçalves Aragón</p>
+                    <i>Departamento de HIV/Aids, Tuberculose, Hepatites Virais e Infecções Sexualmente Transmissíveis
+                        (Dathi) do Ministério da Saúde</i>
+
+                    <p>Pâmela Cristina Gaspar</p>
+                    <i>Departamento de HIV/Aids, Tuberculose, Hepatites Virais e Infecções Sexualmente Transmissíveis
+                        (Dathi) do Ministério da Saúde</i>
+
+                    <p>Renata Olívia Gadelha Romero</p>
+                    <i>Secretaria Estadual de Saúde do Rio Grande do Norte</i>
+
+                    <p>Tatiane Assone Casseb</p>
+                    <i>Departamento de Medicina Legal, Bioética, Medicina do Trabalho e Medicina Física e Reabilitação,
+                        Faculdade de Medicina da Universidade de São Paulo (FMUSP), São Paulo, Brasil.</i>
+                </div>
+
+                <!-- Botões de navegação -->
+                <div class="row centro" id="botao">
+                    <a style="text-decoration: none; margin-bottom: 80px;" href="index.html" class="btn btn-sm"
+                        id="botaoVoltar" role="button" alt="Voltar">
+                        <strong>VOLTAR</strong></a>
+                </div>
+            </div>
+            <!-- Rodapé -->
+            <footer id="rodape">
+                <div class="row-main">
+                    <div class="col-md-12 centro">
+                        <img class="img-fluid centro" src="assets/images/rodape/rodape.jpg" alt="Rodapé">
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- Arquivos JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
