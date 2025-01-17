@@ -83,8 +83,8 @@ header {
 }
 
 #botaoComecar {
-    background-color: #00ABCB;
-    color: white;
+    background-color: #05314A;
+    color: #FFDEC0;
     padding: 8px;
     min-width: 200px;
 }
@@ -102,7 +102,7 @@ header {
 }
 
 #botaoAvancar {
-    background-color: #7F0C21;
+    background-color: #C40F17;
     /* border-radius: 25px; */
     color: white;
     width: 260px;
@@ -121,8 +121,8 @@ header {
 #botaoVoltar {
     background-color: white;
     /* border-radius: 25px; */
-    border: 1px solid #7F0C21;
-    color: #7F0C21;
+    border: 1px solid #C40F17;
+    color: #C40F17;
     width: 260px;
     height: 40px;
     display: flex;
@@ -1005,7 +1005,7 @@ footer img {
 }
 
 .card-header p {
-    color: #00ABCB;
+    color: #05314A;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -1127,7 +1127,7 @@ footer img {
 
 /* barra */
 .barraStepperConteudo {
-    background-color: #7F0C21;
+    background-color: #C40F17;
     width: 3.5px;
     margin-left: -14px;
 }
@@ -1138,7 +1138,7 @@ footer img {
 }
 
 .itemConteudo {
-    border: solid 3.5px #7F0C21;
+    border: solid 3.5px #C40F17;
     background-color: white;
     border-radius: 100%;
     width: 25px;
@@ -1152,7 +1152,7 @@ span.tituloItemConteudo {
     padding-left: 20px;
 
     & b {
-        color: #7F0C21;
+        color: #C40F17;
     }
 }
 
@@ -1163,7 +1163,7 @@ span.tituloItemConteudo {
 }
 
 nav#menuLateral {
-    background-color: #7F0C21;
+    background-color: #C40F17;
     color: white;
     padding-top: 32px;
     padding-left: 8px;
@@ -1274,7 +1274,7 @@ a.tituloItem {
 
 .item.active,
 .barraStepper.active {
-    background-color: #17A1C2;
+    background-color: #05314A;
 }
 
 .sectionTitle {
@@ -1288,7 +1288,7 @@ a.tituloItem {
 #sidebarButton {
     position: fixed;
     color: white;
-    background-color: #7F0C21;
+    background-color: #C40F17;
     border-radius: 0 0 5px 0;
     padding: 0px !important;
     margin-left: 16.667%;
@@ -1314,7 +1314,7 @@ a.tituloItem {
 #sidebarButton2 {
     position: fixed;
     color: white;
-    background-color: #7F0C21;
+    background-color: #C40F17;
     border-radius: 0 0 5px 0;
     padding: 0% !important;
     margin-left: 50%;
@@ -1456,18 +1456,22 @@ input[type="radio"] {
     max-width: 390px;
     position: relative;
     margin: 65px 0px;
-    background-color: #00ABCB;
+    background-color: #05314A;
     font-weight: bold;
     border-radius: 6px;
 
     & p {
         margin: 0px 0px 18px 0px !important;
-        color: white;
+        color: #FFDEC0;
     }
 
     & h2 {
         margin: 0px !important;
-        color: white;
+        color: #FFDEC0;
+    }
+
+    & a{
+        text-decoration: none;
     }
 }
 
