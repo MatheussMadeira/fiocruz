@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+@font-face {
+  font-family: "Prelo Book";
+  src: url(../fonts/Prelo-Book.ttf) format("truetype");
+  font-family: "Prelo Bold";
+  src: url(../fonts/Prelo-Bold.ttf) format("truetype");
+}
+
+ul li {
+  list-style: none;
+}
+
+ol li::marker {
+  color: #7f0c21;
+  font-weight: 800;
+  font-size: 17px;
+}
+
+.icon {
+  display: flex;
+  vertical-align: text-top;
+}
+
+.icon.arrow::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f061";
+  font-weight: 900;
+  margin-right: 15px;
+  color: #35637f;
+}
+
+.icon.checkmark::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  font-weight: 900;
+  margin-right: 15px;
+}
+
+.icon.circle::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f111";
+  font-weight: 900;
+  margin-right: 15px;
+  margin-top: 8px;
+  font-size: 5px;
+}
+
+.icon.circle-color::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f111";
+  font-weight: 900;
+  margin-right: 15px;
+  margin-top: 8px;
+  font-size: 5px;
+  color: #7f0c21;
+}
+
+.circle-color p {
+  margin: 0 !important;
+}
+
+.fa-home,
+.fa-file-alt,
+.fa-list,
+.fa-book {
+  margin-right: 6px;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+  font-size: 10px;
+  padding: 5px;
+}
+
+.caretDown,
+.caretUp {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  float: right;
+  margin-top: 6px;
+  margin-left: 6px;
+}
+
+.chevronUp {
+  font-family: "Font Awesome 5 Free";
+  float: right;
+  margin: 6px 6px 0 6px;
+}
+
+#botaoConhecer.collapsed i::before {
+  content: "\f078";
+}

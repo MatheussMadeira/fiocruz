@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+@font-face {
+  font-family: "Prelo Book";
+  src: url(../fonts/Prelo-Book.ttf) format("truetype");
+  font-family: "Prelo Bold";
+  src: url(../fonts/Prelo-Bold.ttf) format("truetype");
+}
+.row.botao {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 65px;
+}
+
+#botaoConhecer {
+  background-color: white;
+  font-size: 18px;
+  color: #7f0c21;
+  padding: 8px 32px;
+  min-width: 160px;
+  /*margin-bottom: 50px !important;*/
+
+  & .chevronUp {
+    font-size: 16px;
+  }
+
+  & .collapsed {
+    margin-bottom: 0px !important;
+  }
+}
+
+#botaoComecar {
+  background-color: #05314a;
+  color: #ffdec0;
+  padding: 8px;
+  min-width: 200px;
+}
+
+.botaoExtras {
+  background-color: white;
+  color: #7f0c21 !important;
+  border: rgba(5, 69, 166, 0.05) solid;
+  padding: 8px;
+  min-width: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 65px 30px 0px 30px;
+}
+
+#botaoAvancar {
+  background-color: #c40f17;
+  /* border-radius: 25px; */
+  color: white;
+  width: 260px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0px 0px 15px;
+}
+
+#botaoAvancar.desabilitado {
+  background-color: #e4e4e4 !important;
+  cursor: not-allowed;
+}
+
+#botaoVoltar {
+  background-color: white;
+  /* border-radius: 25px; */
+  border: 1px solid #c40f17;
+  color: #c40f17;
+  width: 260px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 15px 0px 0px;
+}
+
+.botaoMenuHome {
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.botoesEncerramento {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 65px;
+}
+
+.botaoAvaliacao {
+  background-color: #17a1c2;
+}
+
+.botaoMatricula {
+  background-color: #7f0c21;
+}
+
+.botaoAvaliacao,
+.botaoMatricula {
+  width: 180px;
+  height: 44px;
+  color: white;
+  cursor: pointer;
+  border: 0;
+}
+
+.instrucaoBtn {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 10px 0px;
+  text-align: center;
+}
+#sidebarButton {
+  position: fixed;
+  color: white;
+  background-color: #c40f17;
+  border-radius: 0 0 5px 0;
+  padding: 0px !important;
+  margin-left: 16.667%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 35px;
+  width: 35px;
+  z-index: 2;
+}
+
+#sidebarButton.open {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  border-radius: 5px 0 0 0;
+}
+
+/* Botão fixo no conteúdo apos recolher*/
+#sidebarButton2 {
+  position: fixed;
+  color: white;
+  background-color: #c40f17;
+  border-radius: 0 0 5px 0;
+  padding: 0% !important;
+  margin-left: 50%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 35px;
+  width: 35px;
+  z-index: 2;
+}
+
+#sidebarButton2 i {
+  margin-bottom: 0px !important;
+  max-width: 50%;
+}
+
+.esconder {
+  display: none;
+}

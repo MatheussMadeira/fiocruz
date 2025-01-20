@@ -1,0 +1,72 @@
+.carousel-item {
+    text-align: left;
+}
+
+
+@media (max-width: 480px) {
+    .sliderCard {
+        height: 330px;
+        width: 180px;
+        margin: 32px 52px;
+    }
+
+    .carousel {
+        height: 145px !important;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        height: 32px !important;
+        width: 32px !important;
+    }
+}
+
+
+.carousel {
+    /*height: 110px;
+    margin-top: 15px;*/
+    margin-bottom: 75px;
+
+    & p {
+        font-size: 17px;
+        font-weight: bold;
+    }
+}
+
+
+.carousel-indicators {
+    bottom: -44px !important;
+}
+
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 25px;
+    border: 1px solid #707070;
+    list-style: none;
+}
+
+.carousel-indicators .active {
+    background-color: #17A1C2;
+}
+
+.carousel-control-next-icon {
+    background-image: url('../../assets/images/icones/next.png');
+}
+
+.carousel-control-prev-icon {
+    background-image: url('../../assets/images/icones/prev.png');
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 42px;
+    width: 42px;
+    outline: #2F6C48;
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    background-color: #2F6C48;
+    position: absolute;
+    cursor: pointer;
+    margin: -32px;
+}

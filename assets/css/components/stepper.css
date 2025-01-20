@@ -1,0 +1,34 @@
+.stepperConteudo {
+  padding: 0;
+  margin: 0;
+  padding-bottom: 150px;
+}
+
+.stepperConteudo .subItem {
+  padding-top: 0 !important;
+}
+.barraStepper {
+  background-color: white;
+  width: 2px;
+  margin-left: 14px;
+}
+
+.item {
+  background-color: #fff;
+  border-radius: 100%;
+  width: 14px;
+  height: 14px;
+  margin-left: -6px;
+}
+
+.item.active,
+.barraStepper.active {
+  background-color: #05314a;
+}
+
+.sectionTitle {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}

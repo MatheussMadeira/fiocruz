@@ -1,0 +1,15 @@
+.tooltip-inner {
+  background-color: white;
+  color: black;
+  text-align: left;
+  border: 1px solid black;
+  font-weight: bold;
+}
+
+.tooltip .arrow:before {
+  border-top-color: black !important;
+}
+
+area {
+  cursor: pointer;
+}

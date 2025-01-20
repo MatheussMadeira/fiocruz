@@ -1,0 +1,35 @@
+@media (max-width: 980px) {
+  nav#menuLateral {
+    width: 50% !important;
+  }
+
+  #sidebarButton {
+    display: none;
+  }
+
+  .esconder {
+    display: block;
+    margin-left: -50%;
+  }
+}
+
+@media (min-width: 980px) {
+  .esconder {
+    display: block;
+    margin-left: -16.6667%;
+  }
+
+  #sidebarButton2 {
+    display: none;
+  }
+}
+
+.nobr {
+  white-space: nowrap;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+:focus {
+  outline: none;
+}
