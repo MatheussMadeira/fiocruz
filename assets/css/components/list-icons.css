@@ -7,7 +7,10 @@
   src: url(../fonts/Prelo-Bold.ttf) format("truetype");
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 477464ae3a2ed559e2a572bf8517373b90b14ef3
 ol li::marker {
   color: #7f0c21;
   font-weight: 800;
