@@ -7,9 +7,6 @@
   src: url(../fonts/Prelo-Bold.ttf) format("truetype");
 }
 
-ul li {
-  list-style: none;
-}
 
 ol li::marker {
   color: #7f0c21;
