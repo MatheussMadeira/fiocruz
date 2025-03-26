@@ -1,625 +1,1013 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>HTLV</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
 
-    <link href="../assets/css/normalize.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
-    <link href="../assets/css/styles.css" rel="stylesheet">
-</head>
+    <link href="../assets/css/normalize.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    />
+    <link href="../assets/css/styles.css" rel="stylesheet" />
+  </head>
 
-<body>
+  <body>
     <!-- Toolbar -->
     <header>
-        <img id="menuSuperior" class="img-fluid " src="../assets/images/logos/logoCurso.jpg"
-            alt="Capa das páginas do curso">
+      <img
+        id="menuSuperior"
+        class="img-fluid"
+        src="../assets/images/logos/logoCurso.jpg"
+        alt="Capa das páginas do curso"
+      />
     </header>
 
     <div class="row" id="row-main">
-        <!-- Sidebar -->
-        <div class="col-md-2" id="sidebar">
-            <!-- Botão p/ Recolher Sidebar-->
-            <span class="toggle-sidebar" id="sidebarButton"><i class="fas fa-chevron-left"></i></span>
+      <!-- Sidebar -->
+      <div class="col-md-2" id="sidebar">
+        <!-- Botão p/ Recolher Sidebar-->
+        <span class="toggle-sidebar" id="sidebarButton"
+          ><i class="fas fa-chevron-left"></i
+        ></span>
 
-            <!-- Botão Secundário p/ Recolher Sidebar -->
-            <span class="toggle-sidebar" id="sidebarButton2"><i class="fas fa-bars"></i></span>
+        <!-- Botão Secundário p/ Recolher Sidebar -->
+        <span class="toggle-sidebar" id="sidebarButton2"
+          ><i class="fas fa-bars"></i
+        ></span>
 
-            <nav id="menuLateral">
-                <ul class="listaMenu">
-                    <li>
-                        <div class="row">
-                            <div class="sectionTitle">
-                                <img src="../assets/images/logos/logoCampus.png" class="img-fluid logoMenu"
-                                    alt="Logo Campus Virtual">
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="row">
-                            <div class="sectionTitle">
-                                <a href="../index.html" class="tituloLista" style="padding-top: 0 !important;"><i
-                                        class="fas fa-home"></i>Página
-                                    Inicial</a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <div class="accordionMenu" id="headingModulo1">
-                        <div class="row">
-                            <div class="sectionTitle">
-                                <span class="tituloLista collapsed" data-toggle="collapse"
-                                    data-target="#collapseModulo1" aria-expanded="false"
-                                    aria-controls="collapseModulo1">Módulo 1<i
-                                        class="fas fa-caret-up caretDown"></i></span>
-                            </div>
-                        </div>
-
-                        <div id="collapseModulo1" class="collapse" aria-labelledby="headingModulo1">
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper active">
-                                        <div class="item active"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem">Aula 1</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="barraStepper active">
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <div class="iconeMenu"></div>
-                                        <a href="../modulo1/modulo1-aula1.html" class="subItem">Conceito de leishmaniose</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper active">
-                                        <div class="item active"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem">Aula 2</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="barraStepper active"></div>
-                                    <div class="sectionTitle">
-                                        <div class="iconeMenu"></div>
-                                        <a href="../modulo1/modulo1-aula2.html" class="subItem">Distribuição das leishmanioses no Brasil</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper active">
-                                        <div class="item active"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem">Aula 3</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="barraStepper active"></div>
-                                    <div class="sectionTitle">
-                                        <div class="iconeMenu"></div>
-                                        <a href="../modulo1/modulo1-aula3.html" class="subItem">Incidência e Prevalência</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper active">
-                                        <div class="item active"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem">Aula 4</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="barraStepper active"></div>
-                                    <div class="sectionTitle">
-                                        <div class="iconeMenu"></div>
-                                        <a href="../modulo1/modulo1-aula3.html" class="subItem">Aspectos dos vetores e reservatórios- Ciclos de transmissão</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper" style="background-color: #C40F17;">
-                                        <div class="item active"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem"><a href="../modulo1/modulo1-atividade.html">Atividades
-                                                Módulo
-                                                1</a></span>
-                                    </div>
-                                </div>
-                            </li>
-                        </div>
-                    </div>
-
-
-                    <div class="accordionMenu" id="headingModulo2">
-                        <div class="row">
-                            <div class="sectionTitle">
-                                <span class="tituloLista collapsed" data-toggle="collapse"
-                                    data-target="#collapseModulo2" aria-expanded="false"
-                                    aria-controls="collapseModulo2">Módulo 2<i
-                                        class="fas fa-caret-up caretDown"></i></span>
-                            </div>
-                        </div>
-                        <div id="collapseModulo2" class="collapse" aria-labelledby="headingModulo2">
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper active">
-                                        <div class="item active"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem">Aula 1</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="barraStepper active"></div>
-                                    <div class="sectionTitle">
-                                        <div class="iconeMenu"></div>
-                                        <a href="../modulo2/modulo2-aula1.html" class="subItem">Período de incubação e primeiros sintomas (homem e cão)</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper active">
-                                        <div class="item active"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem">Aula 2</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="barraStepper active"></div>
-                                    <div class="sectionTitle">
-                                        <div class="iconeMenu"></div>
-                                        <a href="../modulo2/modulo2-aula2.html" class="subItem">Sinais e sintomas comuns (homem e cão)</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper active">
-                                        <div class="item active"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem">Aula 3</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="barraStepper active"></div>
-                                    <div class="sectionTitle">
-                                        <div class="iconeMenu"></div>
-                                        <a href="../modulo2/modulo2-aula3.html" class="subItem">Rede de assistência pública para prevenção, diagnóstico, tratamento e controle das leishmanioses em humanos e caninos</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper" style="background-color: #C40F17;">
-                                        <div class="item active"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem"><a href="../modulo2/modulo2-atividade.html">Atividades
-                                                Módulo 2</a></span>
-                                    </div>
-                                </div>
-                            </li>
-                        </div>
-                    </div>
-
-                    <div class="accordionMenu" id="headingModulo3">
-                        <div class="row">
-                            <div class="sectionTitle">
-                                <span class="tituloLista" data-toggle="collapse" data-target="#collapseModulo3"
-                                    aria-expanded="false" aria-controls="collapseModulo3">Módulo 3<i
-                                        class="fas fa-caret-up caretDown"></i></span>
-                            </div>
-                        </div>
-                        <div id="collapseModulo3" class="collapse show" aria-labelledby="headingModulo3">
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper active">
-                                        <div class="item active"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem">Aula 1</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="barraStepper active"></div>
-                                    <div class="sectionTitle">
-                                        <div class="iconeMenu"></div>
-                                        <a href="../modulo3/modulo3-aula1.html" class="subItem">Abordagem ecológica e social das leishmanioses</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper active">
-                                        <div class="item active"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem">Aula 2</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="barraStepper active"></div>
-                                    <div class="sectionTitle">
-                                        <div class="iconeMenu"></div>
-                                        <a href="../modulo3/modulo3-aula2.html" class="subItem">Medidas de prevenção e controle da doença</a>
-                                    </div>
-                                </div>
-                            </li> 
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper" style="background-color: #C40F17;">
-                                        <div class="item active"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem"><a href="../modulo3/modulo3-atividade.html">Atividades
-                                                Módulo 3</a></span>
-                                    </div>
-                                </div>
-                            </li>
-                        </div>
-                    </div>
-
-                    <div class="accordionMenu" id="headingModulo4">
-                        <div class="row">
-                            <div class="sectionTitle">
-                                <span class="tituloLista collapsed" data-toggle="collapse"
-                                    data-target="#collapseModulo4" aria-expanded="false"
-                                    aria-controls="collapseModulo4">Módulo 4<i
-                                        class="fas fa-caret-up caretDown"></i></span>
-                            </div>
-                        </div>
-
-                        <div id="collapseModulo4" class="collapse" aria-labelledby="headingModulo4">
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper">
-                                        <div class="item"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem">Aula 1</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="barraStepper">
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <div class="iconeMenu"></div>
-                                        <a href="../modulo4/modulo4-aula1.html" class="subItem">Conceito de Saúde Única</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper">
-                                        <div class="item"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem">Aula 2</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="barraStepper"></div>
-                                    <div class="sectionTitle">
-                                        <div class="iconeMenu"></div>
-                                        <a href="../modulo4/modulo4-aula2.html" class="subItem">Intersetorialidade nas ações de enfrentamento às leishmanioses</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper">
-                                        <div class="item"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem">Aula 3</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="barraStepper"></div>
-                                    <div class="sectionTitle">
-                                        <div class="iconeMenu"></div>
-                                        <a href="../modulo4/modulo4-aula3.html" class="subItem">Participação cidadã nas ações de enfrentamento às leishmanioses</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper">
-                                        <div class="item"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem">Aula 4</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="barraStepper"></div>
-                                    <div class="sectionTitle">
-                                        <div class="iconeMenu"></div>
-                                        <a href="../modulo4/modulo4-aula4.html" class="subItem">Desafios do SUS nas ações de prevenção, diagnóstico, tratamento e controle da doença no Brasil</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper" style="background-color: #C40F17;">
-                                        <div class="item"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem"><a href="../modulo4/modulo4-atividade.html">Atividades
-                                                Módulo
-                                                4</a></span>
-                                    </div>
-                                </div>
-                            </li>
-                        </div>
-                    </div>
-
-                    <li>
-                        <div class="row">
-                            <div class="sectionTitle">
-                                <a class="tituloLista" role="button" href="../encerramento.html">ENCERRAMENTO</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="sectionTitle">
-                                <a class="tituloLista" role="button" href="../referencias.html"><i
-                                        class="fas fa-file-alt"></i>Referências</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="sectionTitle">
-                                <a class="tituloLista" role="button" href="../material-complementar.html"><i
-                                        class="fas fa-book"></i>Material Complementar</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="sectionTitle">
-                                <a class="tituloLista" role="button" href="../creditos.html"><i
-                                        class="fas fa-list"></i>Créditos</a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-
-        <div class="col-md-10" id="content">
-            <div class="conteudo">
-                <p class="indice">Módulo 3 | Atividades</p>
-
-                <div class="quiz">
-                    <h1></h1>
-
-                    <p>1. São recomendações para prevenção da transmissão do HTLV, descritas em PCDT-IST e PCDT-TV,
-                        exceto:</p>
-
-                    <div class="alternativas">
-                        <div class="input-radio">
-                            <input name="questao1" type="radio" value="A1">
-                            <label id="A1">
-                                <div class="radio-btn"></div>a) Uso de cabergolina para inibição de lactação em mães
-                                vivendo com HTLV.
-                            </label>
-                        </div>
-                        <div class="input-radio">
-                            <input name="questao1" type="radio" value="B1">
-                            <label id="B1">
-                                <div class="radio-btn"></div>b) Uso de terapia antiretroviral (TARV) em gestantes
-                                vivendo com HTLV
-                            </label>
-                        </div>
-                        <div class="input-radio">
-                            <input name="questao1" type="radio" value="C1">
-                            <label id="C1">
-                                <div class="radio-btn"></div>c) Uso de preservativo em todas as relações sexuais.
-                            </label>
-                        </div>
-                        <div class="input-radio">
-                            <input name="questao1" type="radio" value="D1">
-                            <label id="D1">
-                                <div class="radio-btn"></div>d) Redução de danos para pessoas que usam drogas
-                                injetáveis.
-                            </label>
-                        </div>
-                        <div class="input-radio">
-                            <input name="questao1" type="radio" value="E1">
-                            <label id="E1">
-                                <div class="radio-btn"></div>e) Substituição de leite materno por fórmula infantil em
-                                crianças nascidas de mães vivendo com HTLV.
-                            </label>
-                        </div>
-                    </div>
-                    <br>
-                    <div id="feedback1" class="feedback escondeFeedback">
-                        <p id="mensagem1"></p>
-                    </div>
-
-                    <p>2. Qual diretriz da Rede Cegonha (atual Rede Alyne), tomada como balizadora das ações da SMI na
-                        Linha do Cuidado às pessoas com HTLV está incorreta?</p>
-
-                    <div class="alternativas">
-                        <div class="input-radio">
-                            <input name="questao2" type="radio" value="A2">
-                            <label id="A2">
-                                <div class="radio-btn"></div>a) Garantia do acolhimento com avaliação e classificação de
-                                risco e vulnerabilidade.
-                            </label>
-                        </div>
-                        <div class="input-radio">
-                            <input name="questao2" type="radio" value="B2">
-                            <label id="B2">
-                                <div class="radio-btn"></div>b) Garantia da atenção à saúde das crianças de zero a doze
-                                meses com qualidade e resolutividade e a garantia de acesso às ações do planejamento
-                                reprodutivo.
-                            </label>
-                        </div>
-                        <div class="input-radio">
-                            <input name="questao2" type="radio" value="C2">
-                            <label id="C2">
-                                <div class="radio-btn"></div>c) Ampliação do acesso e melhoria da qualidade do
-                                pré-natal.
-                            </label>
-                        </div>
-                        <div class="input-radio">
-                            <input name="questao2" type="radio" value="D2">
-                            <label id="D2">
-                                <div class="radio-btn"></div>d) Garantia de vinculação da gestante à unidade de
-                                referência e ao transporte seguro.
-                            </label>
-                        </div>
-                        <div class="input-radio">
-                            <input name="questao2" type="radio" value="E2">
-                            <label id="E2">
-                                <div class="radio-btn"></div>e) Garantia das boas práticas e segurança na atenção ao
-                                parto e nascimento, incluindo local e transporte seguro.
-                            </label>
-                        </div>
-                    </div>
-                    <br>
-                    <div id="feedback2" class="feedback escondeFeedback">
-                        <p id="mensagem2"></p>
-                    </div>
-
-                    <p>3. Sobre iniciativas para o seu enfrentamento do HTLV apresentados, podemos afirmar que:</p>
-
-                    <div class="alternativas">
-                        <div class="input-radio">
-                            <input name="questao3" type="radio" value="A3">
-                            <label id="A3">
-                                <div class="radio-btn"></div>a) Para 2025, está prevista a inclusão do HTLV nesta
-                                estratégia de certificação subnacional de certificação da eliminação da transmissão
-                                vertical. Até 2040 o Brasil almeja alcançar a eliminação da transmissão vertical de HIV,
-                                sífilis, Hepatite B, doença de Chagas e HTLV.
-                            </label>
-                        </div>
-                        <div class="input-radio">
-                            <input name="questao3" type="radio" value="B3">
-                            <label id="B3">
-                                <div class="radio-btn"></div>b) Com a estratégia de certificação de eliminação da
-                                transmissão vertical de doenças determinadas socialmente, o Ministério da Saúde concede
-                                certificados de eliminação e selos de boas práticas rumo à eliminação a estados e
-                                municípios acima de 1 milhão de habitantes que alcançam metas de impacto e de processo.
-                            </label>
-                        </div>
-                        <div class="input-radio">
-                            <input name="questao3" type="radio" value="C3">
-                            <label id="C3">
-                                <div class="radio-btn"></div>c) O Programa Brasil Saudável, concentra ações
-                                intersetoriais voltadas para a eliminação da transmissão vertical de HTLV e de outras
-                                infecções transmitidas verticalmente e determinadas socialmente, como a hepatite B, HIV,
-                                sífilis, e doença de Chagas, por meio de políticas públicas.
-                            </label>
-                        </div>
-                        <div class="input-radio">
-                            <input name="questao3" type="radio" value="D3">
-                            <label id="D3">
-                                <div class="radio-btn"></div>d) O Programa Brasil Saudável é uma importante iniciativa
-                                voltada para a erradicação de doenças e infecções que acometem com maior intensidade
-                                populações mais vulnerabilizadas.
-                            </label>
-                        </div>
-                        <div class="input-radio">
-                            <input name="questao3" type="radio" value="E3">
-                            <label id="E3">
-                                <div class="radio-btn"></div>e) É importante a realização de campanhas e produção de
-                                materiais de divulgação para os dias alusivos ao enfrentamento do HTLV, sendo eles o Dia
-                                Internacional do HTLV, que ocorre todo ano em 23 de março, e o Dia Nacional do HTLV,
-                                celebrado em 10 de novembro.
-                            </label>
-                        </div>
-                    </div>
-                    <br>
-                    <div id="feedback3" class="feedback escondeFeedback">
-                        <p id="mensagem3"></p>
-                    </div>
-
-                    <p>4. Qual é a função dos Centros de Testagem e Aconselhamento (CTAs) na linha de cuidado para a
-                        prevenção da transmissão vertical do HTLV?</p>
-
-                    <div class="alternativas">
-                        <div class="input-radio">
-                            <input name="questao4" type="radio" value="A4">
-                            <label id="A4">
-                                <div class="radio-btn"></div>a) Realizar apenas os testes sorológicos.
-                            </label>
-                        </div>
-                        <div class="input-radio">
-                            <input name="questao4" type="radio" value="B4">
-                            <label id="B4">
-                                <div class="radio-btn"></div>b) Realizar tratamento e acompanhamento longitudinal.
-                            </label>
-                        </div>
-                        <div class="input-radio">
-                            <input name="questao4" type="radio" value="C4">
-                            <label id="C4">
-                                <div class="radio-btn"></div>c) Realizar aconselhamento, testes sorológicos e
-                                encaminhamentos para outros níveis de atenção.
-                            </label>
-                        </div>
-                        <div class="input-radio">
-                            <input name="questao4" type="radio" value="D4">
-                            <label id="D4">
-                                <div class="radio-btn"></div>d) Realizar o planejamento estratégico de prevenção.
-                            </label>
-                        </div>
-                        <div class="input-radio">
-                            <input name="questao4" type="radio" value="E4">
-                            <label id="E4">
-                                <div class="radio-btn"></div>e) Nenhuma das opções acima.
-                            </label>
-                        </div>
-                    </div>
-                    <br>
-                    <div id="feedback4" class="feedback escondeFeedback">
-                        <p id="mensagem4"></p>
-                    </div>
+        <nav id="menuLateral">
+          <ul class="listaMenu">
+            <li>
+              <div class="row">
+                <div class="sectionTitle">
+                  <img
+                    src="../assets/images/logos/logoCampus.png"
+                    class="img-fluid logoMenu"
+                    alt="Logo Campus Virtual"
+                  />
                 </div>
+              </div>
+            </li>
 
-                <!-- Botões de navegação -->
-                <div class="row botao">
-                    <a href="modulo3-aula4.html" class="btn btn-sm" id="botaoVoltar" role="button" alt="Voltar">
-                        <strong><i class="fas fa-chevron-left"></i>Módulo 3 Aula 4</strong></a>
-                    <a href="../modulo4/modulo4-aula1.html" class="btn btn-sm" id="botaoAvancar" role="button" alt="Avançar">
-                        <strong>Módulo 4 Aula 1<i class="fas fa-chevron-right"></i></strong></a>
+            <li>
+              <div class="row">
+                <div class="sectionTitle">
+                  <a
+                    href="../index.html"
+                    class="tituloLista"
+                    style="padding-top: 0 !important"
+                    ><i class="fas fa-home"></i>Página Inicial</a
+                  >
                 </div>
+              </div>
+            </li>
+
+            <div class="accordionMenu" id="headingModulo1">
+              <div class="row">
+                <div class="sectionTitle">
+                  <span
+                    class="tituloLista collapsed"
+                    data-toggle="collapse"
+                    data-target="#collapseModulo1"
+                    aria-expanded="false"
+                    aria-controls="collapseModulo1"
+                    >Módulo 1<i class="fas fa-caret-up caretDown"></i
+                  ></span>
+                </div>
+              </div>
+
+              <div
+                id="collapseModulo1"
+                class="collapse"
+                aria-labelledby="headingModulo1"
+              >
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 1</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo1/modulo1-aula1.html" class="subItem"
+                        >Conceito de leishmaniose</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 2</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo1/modulo1-aula2.html" class="subItem"
+                        >Distribuição das leishmanioses no Brasil</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 3</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo1/modulo1-aula3.html" class="subItem"
+                        >Incidência e Prevalência</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 4</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo1/modulo1-aula4.html" class="subItem"
+                        >Aspectos dos vetores e reservatórios- Ciclos de
+                        transmissão</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 5</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo1/modulo1-aula5.html" class="subItem"
+                        >Conceito de leishmaniose</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 6</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo1/modulo1-aula6.html" class="subItem"
+                        >Conceito de leishmaniose</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 7</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo1/modulo1-aula7.html" class="subItem"
+                        >Conceito de leishmaniose</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div
+                      class="barraStepper active"
+                      style="background-color: #c40f17"
+                    >
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem"
+                        ><a href="../modulo1/modulo1-atividade.html"
+                          >Atividades Módulo 1</a
+                        ></span
+                      >
+                    </div>
+                  </div>
+                </li>
+              </div>
             </div>
 
-            <!-- Rodapé -->
-
-            <footer id="rodape">
-                <div class="row-main">
-                    <div class="col-md-12 centro">
-                        <img class="img-fluid centro" src="../assets/images/rodape/rodape.jpg" alt="Rodapé">
-                    </div>
+            <div class="accordionMenu" id="headingModulo2">
+              <div class="row">
+                <div class="sectionTitle">
+                  <span
+                    class="tituloLista collapsed"
+                    data-toggle="collapse"
+                    data-target="#collapseModulo2"
+                    aria-expanded="false"
+                    aria-controls="collapseModulo2"
+                    >Módulo 2<i class="fas fa-caret-up caretDown"></i
+                  ></span>
                 </div>
-            </footer>
+              </div>
+              <div
+                id="collapseModulo2"
+                class="collapse"
+                aria-labelledby="headingModulo2"
+              >
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 1</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo2/modulo2-aula1.html" class="subItem"
+                        >Período de incubação e primeiros sintomas (homem e
+                        cão)</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 2</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo2/modulo2-aula2.html" class="subItem"
+                        >Sinais e sintomas comuns (homem e cão)</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 3</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo2/modulo2-aula3.html" class="subItem"
+                        >Rede de assistência pública para prevenção,
+                        diagnóstico, tratamento e controle das leishmanioses em
+                        humanos e caninos</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 4</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo2/modulo2-aula4.html" class="subItem"
+                        >Rede de assistência pública para prevenção,
+                        diagnóstico, tratamento e controle das leishmanioses em
+                        humanos e caninos</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 5</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo2/modulo2-aula5.html" class="subItem"
+                        >Rede de assistência pública para prevenção,
+                        diagnóstico, tratamento e controle das leishmanioses em
+                        humanos e caninos</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 6</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo2/modulo2-aula6.html" class="subItem"
+                        >Rede de assistência pública para prevenção,
+                        diagnóstico, tratamento e controle das leishmanioses em
+                        humanos e caninos</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 7</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo2/modulo2-aula7.html" class="subItem"
+                        >Rede de assistência pública para prevenção,
+                        diagnóstico, tratamento e controle das leishmanioses em
+                        humanos e caninos</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 8</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo2/modulo2-aula8.html" class="subItem"
+                        >Rede de assistência pública para prevenção,
+                        diagnóstico, tratamento e controle das leishmanioses em
+                        humanos e caninos</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper" style="background-color: #c40f17">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem"
+                        ><a href="../modulo2/modulo2-atividade.html"
+                          >Atividades Módulo 2</a
+                        ></span
+                      >
+                    </div>
+                  </div>
+                </li>
+              </div>
+            </div>
+
+            <div class="accordionMenu" id="headingModulo3">
+              <div class="row">
+                <div class="sectionTitle">
+                  <span
+                    class="tituloLista"
+                    data-toggle="collapse"
+                    data-target="#collapseModulo3"
+                    aria-expanded="false"
+                    aria-controls="collapseModulo3"
+                    >Módulo 3<i class="fas fa-caret-up caretDown"></i
+                  ></span>
+                </div>
+              </div>
+              <div
+                id="collapseModulo3"
+                class="collapse show"
+                aria-labelledby="headingModulo3"
+              >
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 1</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo3/modulo3-aula1.html" class="subItem"
+                        >Abordagem ecológica e social das leishmanioses</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 2</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo3/modulo3-aula2.html" class="subItem"
+                        >Medidas de prevenção e controle da doença</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 3</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo3/modulo3-aula3.html" class="subItem"
+                        >Medidas de prevenção e controle da doença</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 4</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo3/modulo3-aula4.html" class="subItem"
+                        >Medidas de prevenção e controle da doença</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 5</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo3/modulo3-aula5.html" class="subItem"
+                        >Medidas de prevenção e controle da doença</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper" style="background-color: #c40f17">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem"
+                        ><a href="../modulo3/modulo3-atividade.html"
+                          >Atividades Módulo 3</a
+                        ></span
+                      >
+                    </div>
+                  </div>
+                </li>
+              </div>
+            </div>
+
+            <div class="accordionMenu" id="headingModulo4">
+              <div class="row">
+                <div class="sectionTitle">
+                  <span
+                    class="tituloLista collapsed"
+                    data-toggle="collapse"
+                    data-target="#collapseModulo4"
+                    aria-expanded="false"
+                    aria-controls="collapseModulo4"
+                    >Módulo 4<i class="fas fa-caret-up caretDown"></i
+                  ></span>
+                </div>
+              </div>
+
+              <div
+                id="collapseModulo4"
+                class="collapse"
+                aria-labelledby="headingModulo4"
+              >
+                <li>
+                  <div class="row">
+                    <div class="barraStepper">
+                      <div class="item"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 1</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo4/modulo4-aula1.html" class="subItem"
+                        >Conceito de Saúde Única</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper">
+                      <div class="item"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 2</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo4/modulo4-aula2.html" class="subItem"
+                        >Intersetorialidade nas ações de enfrentamento às
+                        leishmanioses</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper">
+                      <div class="item"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 3</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo4/modulo4-aula3.html" class="subItem"
+                        >Participação cidadã nas ações de enfrentamento às
+                        leishmanioses</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper">
+                      <div class="item"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 4</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo4/modulo4-aula4.html" class="subItem"
+                        >Desafios do SUS nas ações de prevenção, diagnóstico,
+                        tratamento e controle da doença no Brasil</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper" style="background-color: #c40f17">
+                      <div class="item"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem"
+                        ><a href="../modulo4/modulo4-atividade.html"
+                          >Atividades Módulo 4</a
+                        ></span
+                      >
+                    </div>
+                  </div>
+                </li>
+              </div>
+            </div>
+
+            <li>
+              <div class="row">
+                <div class="sectionTitle">
+                  <a
+                    class="tituloLista"
+                    role="button"
+                    href="../encerramento.html"
+                    >ENCERRAMENTO</a
+                  >
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div class="sectionTitle">
+                  <a
+                    class="tituloLista"
+                    role="button"
+                    href="../referencias.html"
+                    ><i class="fas fa-file-alt"></i>Referências</a
+                  >
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div class="sectionTitle">
+                  <a
+                    class="tituloLista"
+                    role="button"
+                    href="../material-complementar.html"
+                    ><i class="fas fa-book"></i>Material Complementar</a
+                  >
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div class="sectionTitle">
+                  <a class="tituloLista" role="button" href="../creditos.html"
+                    ><i class="fas fa-list"></i>Créditos</a
+                  >
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="col-md-10" id="content">
+        <div class="conteudo">
+          <p class="indice" style="padding-bottom: 15px">
+            Módulo 3 | Atividades
+          </p>
+
+          <div class="quiz">
+            <h1></h1>
+
+            <p>
+              1. São recomendações para prevenção da transmissão do HTLV,
+              descritas em PCDT-IST e PCDT-TV, exceto:
+            </p>
+
+            <div class="alternativas">
+              <div class="input-radio">
+                <input name="questao1" type="radio" value="A1" />
+                <label id="A1">
+                  <div class="radio-btn"></div>
+                  a) Uso de cabergolina para inibição de lactação em mães
+                  vivendo com HTLV.
+                </label>
+              </div>
+              <div class="input-radio">
+                <input name="questao1" type="radio" value="B1" />
+                <label id="B1">
+                  <div class="radio-btn"></div>
+                  b) Uso de terapia antiretroviral (TARV) em gestantes vivendo
+                  com HTLV
+                </label>
+              </div>
+              <div class="input-radio">
+                <input name="questao1" type="radio" value="C1" />
+                <label id="C1">
+                  <div class="radio-btn"></div>
+                  c) Uso de preservativo em todas as relações sexuais.
+                </label>
+              </div>
+              <div class="input-radio">
+                <input name="questao1" type="radio" value="D1" />
+                <label id="D1">
+                  <div class="radio-btn"></div>
+                  d) Redução de danos para pessoas que usam drogas injetáveis.
+                </label>
+              </div>
+              <div class="input-radio">
+                <input name="questao1" type="radio" value="E1" />
+                <label id="E1">
+                  <div class="radio-btn"></div>
+                  e) Substituição de leite materno por fórmula infantil em
+                  crianças nascidas de mães vivendo com HTLV.
+                </label>
+              </div>
+            </div>
+            <br />
+            <div id="feedback1" class="feedback escondeFeedback">
+              <p id="mensagem1"></p>
+            </div>
+
+            <p>
+              2. Qual diretriz da Rede Cegonha (atual Rede Alyne), tomada como
+              balizadora das ações da SMI na Linha do Cuidado às pessoas com
+              HTLV está incorreta?
+            </p>
+
+            <div class="alternativas">
+              <div class="input-radio">
+                <input name="questao2" type="radio" value="A2" />
+                <label id="A2">
+                  <div class="radio-btn"></div>
+                  a) Garantia do acolhimento com avaliação e classificação de
+                  risco e vulnerabilidade.
+                </label>
+              </div>
+              <div class="input-radio">
+                <input name="questao2" type="radio" value="B2" />
+                <label id="B2">
+                  <div class="radio-btn"></div>
+                  b) Garantia da atenção à saúde das crianças de zero a doze
+                  meses com qualidade e resolutividade e a garantia de acesso às
+                  ações do planejamento reprodutivo.
+                </label>
+              </div>
+              <div class="input-radio">
+                <input name="questao2" type="radio" value="C2" />
+                <label id="C2">
+                  <div class="radio-btn"></div>
+                  c) Ampliação do acesso e melhoria da qualidade do pré-natal.
+                </label>
+              </div>
+              <div class="input-radio">
+                <input name="questao2" type="radio" value="D2" />
+                <label id="D2">
+                  <div class="radio-btn"></div>
+                  d) Garantia de vinculação da gestante à unidade de referência
+                  e ao transporte seguro.
+                </label>
+              </div>
+              <div class="input-radio">
+                <input name="questao2" type="radio" value="E2" />
+                <label id="E2">
+                  <div class="radio-btn"></div>
+                  e) Garantia das boas práticas e segurança na atenção ao parto
+                  e nascimento, incluindo local e transporte seguro.
+                </label>
+              </div>
+            </div>
+            <br />
+            <div id="feedback2" class="feedback escondeFeedback">
+              <p id="mensagem2"></p>
+            </div>
+
+            <p>
+              3. Sobre iniciativas para o seu enfrentamento do HTLV
+              apresentados, podemos afirmar que:
+            </p>
+
+            <div class="alternativas">
+              <div class="input-radio">
+                <input name="questao3" type="radio" value="A3" />
+                <label id="A3">
+                  <div class="radio-btn"></div>
+                  a) Para 2025, está prevista a inclusão do HTLV nesta
+                  estratégia de certificação subnacional de certificação da
+                  eliminação da transmissão vertical. Até 2040 o Brasil almeja
+                  alcançar a eliminação da transmissão vertical de HIV, sífilis,
+                  Hepatite B, doença de Chagas e HTLV.
+                </label>
+              </div>
+              <div class="input-radio">
+                <input name="questao3" type="radio" value="B3" />
+                <label id="B3">
+                  <div class="radio-btn"></div>
+                  b) Com a estratégia de certificação de eliminação da
+                  transmissão vertical de doenças determinadas socialmente, o
+                  Ministério da Saúde concede certificados de eliminação e selos
+                  de boas práticas rumo à eliminação a estados e municípios
+                  acima de 1 milhão de habitantes que alcançam metas de impacto
+                  e de processo.
+                </label>
+              </div>
+              <div class="input-radio">
+                <input name="questao3" type="radio" value="C3" />
+                <label id="C3">
+                  <div class="radio-btn"></div>
+                  c) O Programa Brasil Saudável, concentra ações intersetoriais
+                  voltadas para a eliminação da transmissão vertical de HTLV e
+                  de outras infecções transmitidas verticalmente e determinadas
+                  socialmente, como a hepatite B, HIV, sífilis, e doença de
+                  Chagas, por meio de políticas públicas.
+                </label>
+              </div>
+              <div class="input-radio">
+                <input name="questao3" type="radio" value="D3" />
+                <label id="D3">
+                  <div class="radio-btn"></div>
+                  d) O Programa Brasil Saudável é uma importante iniciativa
+                  voltada para a erradicação de doenças e infecções que acometem
+                  com maior intensidade populações mais vulnerabilizadas.
+                </label>
+              </div>
+              <div class="input-radio">
+                <input name="questao3" type="radio" value="E3" />
+                <label id="E3">
+                  <div class="radio-btn"></div>
+                  e) É importante a realização de campanhas e produção de
+                  materiais de divulgação para os dias alusivos ao enfrentamento
+                  do HTLV, sendo eles o Dia Internacional do HTLV, que ocorre
+                  todo ano em 23 de março, e o Dia Nacional do HTLV, celebrado
+                  em 10 de novembro.
+                </label>
+              </div>
+            </div>
+            <br />
+            <div id="feedback3" class="feedback escondeFeedback">
+              <p id="mensagem3"></p>
+            </div>
+
+            <p>
+              4. Qual é a função dos Centros de Testagem e Aconselhamento (CTAs)
+              na linha de cuidado para a prevenção da transmissão vertical do
+              HTLV?
+            </p>
+
+            <div class="alternativas">
+              <div class="input-radio">
+                <input name="questao4" type="radio" value="A4" />
+                <label id="A4">
+                  <div class="radio-btn"></div>
+                  a) Realizar apenas os testes sorológicos.
+                </label>
+              </div>
+              <div class="input-radio">
+                <input name="questao4" type="radio" value="B4" />
+                <label id="B4">
+                  <div class="radio-btn"></div>
+                  b) Realizar tratamento e acompanhamento longitudinal.
+                </label>
+              </div>
+              <div class="input-radio">
+                <input name="questao4" type="radio" value="C4" />
+                <label id="C4">
+                  <div class="radio-btn"></div>
+                  c) Realizar aconselhamento, testes sorológicos e
+                  encaminhamentos para outros níveis de atenção.
+                </label>
+              </div>
+              <div class="input-radio">
+                <input name="questao4" type="radio" value="D4" />
+                <label id="D4">
+                  <div class="radio-btn"></div>
+                  d) Realizar o planejamento estratégico de prevenção.
+                </label>
+              </div>
+              <div class="input-radio">
+                <input name="questao4" type="radio" value="E4" />
+                <label id="E4">
+                  <div class="radio-btn"></div>
+                  e) Nenhuma das opções acima.
+                </label>
+              </div>
+            </div>
+            <br />
+            <div id="feedback4" class="feedback escondeFeedback">
+              <p id="mensagem4"></p>
+            </div>
+          </div>
+
+          <!-- Botões de navegação -->
+          <div class="row botao">
+            <a
+              href="modulo3-aula4.html"
+              class="btn btn-sm"
+              id="botaoVoltar"
+              role="button"
+              alt="Voltar"
+            >
+              <strong
+                ><i class="fas fa-chevron-left"></i>Módulo 3 Aula 4</strong
+              ></a
+            >
+            <a
+              href="../modulo4/modulo4-aula1.html"
+              class="btn btn-sm"
+              id="botaoAvancar"
+              role="button"
+              alt="Avançar"
+            >
+              <strong
+                >Módulo 4 Aula 1<i class="fas fa-chevron-right"></i></strong
+            ></a>
+          </div>
         </div>
+
+        <!-- Rodapé -->
+
+        <footer id="rodape">
+          <div class="row-main">
+            <div class="col-md-12 centro">
+              <img
+                class="img-fluid centro"
+                src="../assets/images/rodape/rodape.jpg"
+                alt="Rodapé"
+              />
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
 
     <!-- Arquivos JS -->
@@ -628,4 +1016,5 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="../assets/js/modulo3-atividade.js"></script>
     <script src="../assets/js/main.js"></script>
-</body>
+  </body>
+</html>

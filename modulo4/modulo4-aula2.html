@@ -1,1272 +1,1048 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>HTLV</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
 
-    <link href="../assets/css/normalize.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
-    <link href="../assets/css/styles.css" rel="stylesheet">
-</head>
+    <link href="../assets/css/normalize.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    />
+    <link href="../assets/css/styles.css" rel="stylesheet" />
+  </head>
 
-<body>
+  <body>
     <!-- Toolbar -->
     <header>
-        <img id="menuSuperior" class="img-fluid " src="../assets/images/logos/logoCurso.jpg"
-            alt="Capa das páginas do curso">
+      <img
+        id="menuSuperior"
+        class="img-fluid"
+        src="../assets/images/logos/logoCurso.jpg"
+        alt="Capa das páginas do curso"
+      />
     </header>
 
     <div class="row" id="row-main">
-        <!-- Sidebar -->
-        <div class="col-md-2" id="sidebar">
-            <!-- Botão p/ Recolher Sidebar-->
-            <span class="toggle-sidebar" id="sidebarButton"><i class="fas fa-chevron-left"></i></span>
+      <!-- Sidebar -->
+      <div class="col-md-2" id="sidebar">
+        <!-- Botão p/ Recolher Sidebar-->
+        <span class="toggle-sidebar" id="sidebarButton"
+          ><i class="fas fa-chevron-left"></i
+        ></span>
 
-            <!-- Botão Secundário p/ Recolher Sidebar -->
-            <span class="toggle-sidebar" id="sidebarButton2"><i class="fas fa-bars"></i></span>
+        <!-- Botão Secundário p/ Recolher Sidebar -->
+        <span class="toggle-sidebar" id="sidebarButton2"
+          ><i class="fas fa-bars"></i
+        ></span>
 
-            <nav id="menuLateral">
-                <ul class="listaMenu">
-                    <li>
-                        <div class="row">
-                            <div class="sectionTitle">
-                                <img src="../assets/images/logos/logoCampus.png" class="img-fluid logoMenu"
-                                    alt="Logo Campus Virtual">
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="row">
-                            <div class="sectionTitle">
-                                <a href="../index.html" class="tituloLista" style="padding-top: 0 !important;"><i
-                                        class="fas fa-home"></i>Página
-                                    Inicial</a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <div class="accordionMenu" id="headingModulo1">
-                        <div class="row">
-                            <div class="sectionTitle">
-                                <span class="tituloLista collapsed" data-toggle="collapse"
-                                    data-target="#collapseModulo1" aria-expanded="false"
-                                    aria-controls="collapseModulo1">Módulo 1<i
-                                        class="fas fa-caret-up caretDown"></i></span>
-                            </div>
-                        </div>
-
-                        <div id="collapseModulo1" class="collapse" aria-labelledby="headingModulo1">
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper active">
-                                        <div class="item active"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem">Aula 1</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="barraStepper active">
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <div class="iconeMenu"></div>
-                                        <a href="../modulo1/modulo1-aula1.html" class="subItem">Conceito de leishmaniose</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper active">
-                                        <div class="item active"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem">Aula 2</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="barraStepper active"></div>
-                                    <div class="sectionTitle">
-                                        <div class="iconeMenu"></div>
-                                        <a href="../modulo1/modulo1-aula2.html" class="subItem">Distribuição das leishmanioses no Brasil</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper active">
-                                        <div class="item active"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem">Aula 3</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="barraStepper active"></div>
-                                    <div class="sectionTitle">
-                                        <div class="iconeMenu"></div>
-                                        <a href="../modulo1/modulo1-aula3.html" class="subItem">Incidência e Prevalência</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper active">
-                                        <div class="item active"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem">Aula 4</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="barraStepper active"></div>
-                                    <div class="sectionTitle">
-                                        <div class="iconeMenu"></div>
-                                        <a href="../modulo1/modulo1-aula3.html" class="subItem">Aspectos dos vetores e reservatórios- Ciclos de transmissão</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper" style="background-color: #C40F17;">
-                                        <div class="item active"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem"><a href="../modulo1/modulo1-atividade.html">Atividades
-                                                Módulo
-                                                1</a></span>
-                                    </div>
-                                </div>
-                            </li>
-                        </div>
-                    </div>
-
-
-                    <div class="accordionMenu" id="headingModulo2">
-                        <div class="row">
-                            <div class="sectionTitle">
-                                <span class="tituloLista collapsed" data-toggle="collapse"
-                                    data-target="#collapseModulo2" aria-expanded="false"
-                                    aria-controls="collapseModulo2">Módulo 2<i
-                                        class="fas fa-caret-up caretDown"></i></span>
-                            </div>
-                        </div>
-                        <div id="collapseModulo2" class="collapse" aria-labelledby="headingModulo2">
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper active">
-                                        <div class="item active"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem">Aula 1</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="barraStepper active"></div>
-                                    <div class="sectionTitle">
-                                        <div class="iconeMenu"></div>
-                                        <a href="../modulo2/modulo2-aula1.html" class="subItem">Período de incubação e primeiros sintomas (homem e cão)</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper active">
-                                        <div class="item active"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem">Aula 2</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="barraStepper active"></div>
-                                    <div class="sectionTitle">
-                                        <div class="iconeMenu"></div>
-                                        <a href="../modulo2/modulo2-aula2.html" class="subItem">Sinais e sintomas comuns (homem e cão)</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper active">
-                                        <div class="item active"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem">Aula 3</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="barraStepper active"></div>
-                                    <div class="sectionTitle">
-                                        <div class="iconeMenu"></div>
-                                        <a href="../modulo2/modulo2-aula3.html" class="subItem">Rede de assistência pública para prevenção, diagnóstico, tratamento e controle das leishmanioses em humanos e caninos</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper" style="background-color: #C40F17;">
-                                        <div class="item active"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem"><a href="../modulo2/modulo2-atividade.html">Atividades
-                                                Módulo 2</a></span>
-                                    </div>
-                                </div>
-                            </li>
-                        </div>
-                    </div>
-
-                    <div class="accordionMenu" id="headingModulo3">
-                        <div class="row">
-                            <div class="sectionTitle">
-                                <span class="tituloLista collapsed" data-toggle="collapse" data-target="#collapseModulo3"
-                                    aria-expanded="false" aria-controls="collapseModulo3">Módulo 3<i
-                                        class="fas fa-caret-up caretDown"></i></span>
-                            </div>
-                        </div>
-                        <div id="collapseModulo3" class="collapse" aria-labelledby="headingModulo3">
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper active">
-                                        <div class="item active"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem">Aula 1</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="barraStepper active"></div>
-                                    <div class="sectionTitle">
-                                        <div class="iconeMenu"></div>
-                                        <a href="../modulo3/modulo3-aula1.html" class="subItem">Abordagem ecológica e social das leishmanioses</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper active">
-                                        <div class="item active"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem">Aula 2</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="barraStepper active"></div>
-                                    <div class="sectionTitle">
-                                        <div class="iconeMenu"></div>
-                                        <a href="../modulo3/modulo3-aula2.html" class="subItem">Medidas de prevenção e controle da doença</a>
-                                    </div>
-                                </div>
-                            </li> 
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper" style="background-color: #C40F17;">
-                                        <div class="item active"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem"><a href="../modulo3/modulo3-atividade.html">Atividades
-                                                Módulo 3</a></span>
-                                    </div>
-                                </div>
-                            </li>
-                        </div>
-                    </div>
-
-                    <div class="accordionMenu" id="headingModulo4">
-                        <div class="row">
-                            <div class="sectionTitle">
-                                <span class="tituloLista" data-toggle="collapse"
-                                    data-target="#collapseModulo4" aria-expanded="false"
-                                    aria-controls="collapseModulo4">Módulo 4<i
-                                        class="fas fa-caret-up caretDown"></i></span>
-                            </div>
-                        </div>
-
-                        <div id="collapseModulo4" class="collapse show" aria-labelledby="headingModulo4">
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper active">
-                                        <div class="item active"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem">Aula 1</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="barraStepper active">
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <div class="iconeMenu"></div>
-                                        <a href="../modulo4/modulo4-aula1.html" class="subItem">Conceito de Saúde Única</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper">
-                                        <div class="item active"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem">Aula 2</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="barraStepper"></div>
-                                    <div class="sectionTitle">
-                                        <div class="iconeMenu"></div>
-                                        <a href="../modulo4/modulo4-aula2.html" class="subItem">Intersetorialidade nas ações de enfrentamento às leishmanioses</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper">
-                                        <div class="item"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem">Aula 3</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="barraStepper"></div>
-                                    <div class="sectionTitle">
-                                        <div class="iconeMenu"></div>
-                                        <a href="../modulo4/modulo4-aula3.html" class="subItem">Participação cidadã nas ações de enfrentamento às leishmanioses</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper">
-                                        <div class="item"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem">Aula 4</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="barraStepper"></div>
-                                    <div class="sectionTitle">
-                                        <div class="iconeMenu"></div>
-                                        <a href="../modulo4/modulo4-aula4.html" class="subItem">Desafios do SUS nas ações de prevenção, diagnóstico, tratamento e controle da doença no Brasil</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row">
-                                    <div class="barraStepper" style="background-color: #C40F17;">
-                                        <div class="item"></div>
-                                    </div>
-                                    <div class="sectionTitle">
-                                        <span class="tituloItem"><a href="../modulo4/modulo4-atividade.html">Atividades
-                                                Módulo
-                                                4</a></span>
-                                    </div>
-                                </div>
-                            </li>
-                        </div>
-                    </div>
-
-                    <li>
-                        <div class="row">
-                            <div class="sectionTitle">
-                                <a class="tituloLista" role="button" href="../encerramento.html">ENCERRAMENTO</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="sectionTitle">
-                                <a class="tituloLista" role="button" href="../referencias.html"><i
-                                        class="fas fa-file-alt"></i>Referências</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="sectionTitle">
-                                <a class="tituloLista" role="button" href="../material-complementar.html"><i
-                                        class="fas fa-book"></i>Material Complementar</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="sectionTitle">
-                                <a class="tituloLista" role="button" href="../creditos.html"><i
-                                        class="fas fa-list"></i>Créditos</a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-
-        <!-- Conteúdo principal -->
-        <div class="col-md-10" id="content">
-            <div class="conteudo">
-                <p class="indice">Módulo 4 | Aula 2</p>
-
-                <h1>Abordagem da infecção na atenção primária e nos demais níveis da Rede de Atenção</h1>
-
-                <!-- Objetivos -->
-                <div class="row centro">
-                    <div class="col-md-10 objetivos">
-                        <h3>Objetivos de aprendizagem</h3>
-                        <ul>
-                            <li class="icon circle">Identificar os componentes da Rede de Atenção à Saúde para a
-                                implantação/implementação da linha de cuidado de prevenção à transmissão vertical do
-                                HTLV.</li>
-                        </ul>
-                    </div>
+        <nav id="menuLateral">
+          <ul class="listaMenu">
+            <li>
+              <div class="row">
+                <div class="sectionTitle">
+                  <img
+                    src="../assets/images/logos/logoCampus.png"
+                    class="img-fluid logoMenu"
+                    alt="Logo Campus Virtual"
+                  />
                 </div>
+              </div>
+            </li>
 
-                <h2>Avanços e desafios</h2>
-
-                <p>Embora descoberto na década de 1980, a infecção pelo HTLV ainda permanece desconhecida para muitos
-                    gestores, profissionais de saúde e para a população e é invisível para boa parte das políticas
-                    públicas em saúde. Apesar de décadas de lacuna de ações efetivas de enfrentamento à infecção, a
-                    Organização Pan-Americana de Saúde (OPAS) instituiu o HTLV-1 como motivo de preocupação e a
-                    prevenção da transmissão materno-infantil como prioridade.</p>
-
-                <p>Frente ao desafio de instituir a prevenção da transmissão vertical do HTLV no SUS e, por se tratar de
-                    nova linha de cuidado, as ações do Ministério da Saúde, por meio do Departamento de HIV/Aids,
-                    Tuberculose, Hepatites Virais e Infecções Sexualmente Transmissíveis (DATHI), têm angariado
-                    notoriedade internacional na resposta ao HTLV-1. Além disso, destaca-se a forte colaboração entre o
-                    governo federal, os cientistas e as PvHTLV.</p>
-
-                <p>Apesar dos avanços significativos da resposta brasileira ao enfrentamento do HTLV, como a instituição
-                    da notificação compulsória em todo território nacional, a elaboração de protocolo sobre a prevenção
-                    da transmissão vertical, a instituição de nota informativa com a recomendação da cabergolina
-                    (fármaco utilizado como inibidor da secreção de leite) e da fórmula láctea infantil na prevenção da
-                    transmissão vertical do HTLV, ainda se faz necessário ampliar e fortalecer as políticas públicas no
-                    país.</p>
-
-                <h2>Rede de Atenção à Saúde</h2>
-
-                <p>As Redes de Atenção à Saúde (RASs) são organizações poliárquicas de conjuntos de serviços de saúde,
-                    que promovem e asseguram a integralidade do cuidado por meio de arranjos organizativos de ações e
-                    serviços de saúde, de diferentes densidades tecnológicas.</p>
-
-                <!-- Bloco Texto -->
-                <div class="row centro">
-                    <div class="col-md-10 blocoTexto">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <img class="img-fluid" src="../assets/images/icones/virusFeliz.png">
-                            </div>
-                            <div class="col-md-9">
-                                <b>
-                                    <p style="text-transform: uppercase;">O que é uma organização poliárquica</p>
-                                    <p>Uma organização poliárquica é uma estrutura organizacional caracterizada por uma
-                                        distribuição descentralizada, permitindo que múltiplos centros de decisão operem
-                                        de forma independente e simultânea. Ela difere de uma organização hierárquica
-                                        tradicional, na qual as tomadas de decisão são centralizadas nos níveis
-                                        superiores de uma gestão.</p>
-                                </b>
-                            </div>
-                        </div>
-                    </div>
+            <li>
+              <div class="row">
+                <div class="sectionTitle">
+                  <a
+                    href="../index.html"
+                    class="tituloLista"
+                    style="padding-top: 0 !important"
+                    ><i class="fas fa-home"></i>Página Inicial</a
+                  >
                 </div>
+              </div>
+            </li>
 
-                <!-- Imagem 1 -->
-                <div class="row centro">
-                    <div class="col-md-7 imagem">
-                        <h3>A mudança dos sistemas piramidais e hierárquicos para as redes de atenção à saúde</h3>
-                        <div>
-                            <img src="../assets/images/modulo3/aula2/img1.png" alt="Sistema piramidal"
-                                class="img-fluid">
-                        </div>
-                        <small>Fonte: DIAHV/SVS/MS (2017), baseado em Mendes (2011).</small>
-                    </div>
+            <div class="accordionMenu" id="headingModulo1">
+              <div class="row">
+                <div class="sectionTitle">
+                  <span
+                    class="tituloLista collapsed"
+                    data-toggle="collapse"
+                    data-target="#collapseModulo1"
+                    aria-expanded="false"
+                    aria-controls="collapseModulo1"
+                    >Módulo 1<i class="fas fa-caret-up caretDown"></i
+                  ></span>
                 </div>
+              </div>
 
-                <p>Os níveis de atenção à saúde são arranjos produtivos que são diferenciados conforme a densidade
-                    tecnológica, da seguinte forma:</p>
-
-                <ul>
-                    <li class="icon circle">Menor complexidade ⇒ Atenção Primária à Saúde</li>
-                    <li class="icon circle">Complexidade intermediária ⇒ Atenção Especializada</li>
-                    <li class="icon circle">Alta complexidade ⇒ Atenção Terciária</li>
-                </ul>
-
-                <p>Os níveis de atenção são essenciais para promover o uso racional de recursos e para determinar a
-                    gestão dos entes de governança da RASs. Eles prezam pela distribuição equilibrada dos pontos de
-                    atenção entre os territórios sanitários, de acordo com os níveis de atenção à saúde.</p>
-
-                <p>O objetivo das RASs é oferecer o cuidado de qualidade, de forma contínua, integral, responsável e
-                    humanizado. No desempenho do sistema, ele deve ser otimizado em termos de equidade, acesso e
-                    eficácia clínica, sanitária e econômica.</p>
-
-                <p>Compondo os arranjos organizativos da RASs, os pontos de atenção à saúde são espaços onde ofertam
-                    serviços de saúde, de forma singular e se comunicam entre si (referência e contrarreferência) por
-                    meio de instrumentos pactuados.</p>
-
-                <p>Os pontos de atenção à saúde se caracterizam pelas suas relações verticais, diferenciando-se apenas
-                    pela densidade tecnológica, e são igualmente importantes na integralidade do cuidado. Os sistemas de
-                    apoio e logístico estão dispostos em forma horizontal com os demais pontos de atenção da RASs.</p>
-
-                <!-- Imagem 2 -->
-                <div class="row centro">
-                    <div class="col-md-7 imagem">
-                        <h3>A estrutura operacional das redes de atenção à saúde</h3>
-                        <div>
-                            <img src="../assets/images/modulo3/aula2/img2.png"
-                                alt="A imagem mostra, de forma esquemática, a estrutura operacional das redes de atenção à saúde e as interligações entre sistemas de governança, sistemas logísticos e de apoio."
-                                class="img-fluid">
-                        </div>
-                        <small>Fonte: Mendes, 2012.</small>
+              <div
+                id="collapseModulo1"
+                class="collapse"
+                aria-labelledby="headingModulo1"
+              >
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
                     </div>
-                </div>
-
-                <p>A utilização estratégica dos pontos de atenção à saúde é fundamental para assegurar o cuidado com
-                    qualidade e integralidade, promovendo intervenções de promoção e prevenção à saúde, curativas,
-                    reabilitadoras e paliativas. Além disso, os pontos de atenção à saúde são estratégicos para a
-                    otimização da efetividade do sistema.</p>
-
-                <!-- FLIP CARDS 1 -->
-                <!-- Flip Card 1 -->
-                <div class="row rowFlipCards">
-                    <div class="card flipCard col-md-3" onclick="flip()">
-                        <div class="front text-center">
-                            <p><b>Rede Cegonha* <br>(saúde materna e infantil)</b></p>
-                        </div>
-                        <div class="back text-center">
-                            <p>Qualificar a assistência à saúde materna e infantil;<br>
-                                Mitigar as mortalidades materna, infantil e fetal;<br>
-                                Garantir o acesso às ações de planejamento sexual e reprodutivo, pré-natal, parto e
-                                nascimento, puerpério e primeira infância.</p>
-                            <p>* desde setembro/2024 a Rede Cegonha passou a ser Rede Alyne</p>
-                        </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 1</span>
                     </div>
-                    <!-- Flip Card 2 -->
-                    <div class="card flipCard col-md-3" onclick="flip()">
-                        <div class="front text-center">
-                            <p><b>Rede de Urgência e Emergência (RUE)</b></p>
-                        </div>
-                        <div class="back text-center">
-                            <p>Ampliar e qualificar o acesso humanizado e integral aos usuários em situação de urgência
-                                e emergência de forma ágil e oportuna, tanto no componente pré-hospitalar e hospitalar.
-                            </p>
-                        </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo1/modulo1-aula1.html" class="subItem"
+                        >Conceito de leishmaniose</a
+                      >
                     </div>
-                    <!-- Flip Card 3 -->
-                    <div class="card flipCard col-md-3" onclick="flip()">
-                        <div class="front text-center">
-                            <p><b>Rede de Atenção à Saúde das Pessoas com Doenças Crônicas</b></p>
-                        </div>
-                        <div class="back text-center">
-                            <p>Garantir o acesso às ações e serviços de saúde de forma integral, humanizada e
-                                equitativa.</p>
-                        </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
                     </div>
-                    <!-- Flip Card 4 -->
-                    <div class="card flipCard col-md-3" onclick="flip()">
-                        <div class="front text-center">
-                            <p><b>Rede de Cuidados à Pessoa com Deficiência</b></p>
-                        </div>
-                        <div class="back text-center">
-                            <p>Proteger a saúde e reabilitar as pessoas com deficiência em relação a suas capacidades
-                                funcionais (física, auditiva, intelectual e visual).</p>
-                        </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 2</span>
                     </div>
-                    <!-- Flip Card 5 -->
-                    <div class="card flipCard col-md-3" onclick="flip()">
-                        <div class="front text-center">
-                            <p><b>Rede de Atenção Psicossocial</b></p>
-                        </div>
-                        <div class="back text-center">
-                            <p>Acolher e acompanhar as pessoas com sofrimento ou transtorno mental e com necessidades
-                                decorrentes do uso de álcool e outras drogas no âmbito do SUS.</p>
-                        </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo1/modulo1-aula2.html" class="subItem"
+                        >Distribuição das leishmanioses no Brasil</a
+                      >
                     </div>
-                    <!-- <div>
-                        <small>Fonte: Brasil, 2017.</small>
-                    </div> -->
-                </div>
-                <!-- Fim Flip Cards 1 -->
-
-                <h2>Linhas de cuidado</h2>
-
-                <p>As Linhas de Cuidado (LC) são formas de articulação para estabelecer o cuidado integral, por meio de
-                    pactuações das responsabilidades dos diferentes pontos de atenção à saúde. As Linhas de Cuidado
-                    promovem uma conexão de práticas de produção de saúde e de recursos existentes, orientadas por
-                    diretrizes clínicas e pactuações de gestão. Elas também são elaboradas para dar respostas às
-                    necessidades epidemiológicas de maior relevância e promover o contínuo assistencial, superando as
-                    fragmentações no processo do cuidado.</p>
-
-                <p>A implantação de uma linha de cuidado deve começar pela Atenção Primária à Saúde (APS), que é o
-                    primeiro nível de coordenação do cuidado e ordenamento da RASs. Para a operacionalização da LC,
-                    devem ser observados alguns pressupostos:</p>
-
-                <ul>
-                    <li class="icon circle">Assegurar recursos humanos e materiais necessários;</li>
-                    <li class="icon circle">Integração entre os pontos de atenção à saúde;</li>
-                    <li class="icon circle">Corresponsabilização dos profissionais e gestores dos níveis de atenção;
-                    </li>
-                    <li class="icon circle">Processos de Educação Permanente contínuos;</li>
-                    <li class="icon circle">Pactuação da Linha de Cuidado e das responsabilidades em instâncias gestoras
-                        - Comissão Intergestora Regional (CIR), Conselho Estadual de Saúde (CES), Comissão Intergestora
-                        Bipartite (CIB).</li>
-                </ul>
-
-                <p>O Ministério da Saúde instituiu 25 Linhas de Cuidado voltadas a condições em saúde, com o objetivo de
-                    fortalecer as redes de atenção e qualificar o contínuo assistencial. Neste escopo das linhas de
-                    cuidado, quanto a infecções transmissíveis, apenas as infecções pelo HIV/aids no adulto e hepatites
-                    virais foram contempladas.</p>
-
-                <!-- Imagem 3 -->
-                <div class="row centro">
-                    <div class="col-md-10 imagem">
-                        <h3>A estrutura operacional das redes de atenção à saúde</h3>
-                        <div>
-                            <img src="../assets/images/modulo3/aula2/img3.png"
-                                alt="A imagem mostra uma agrupamento de elipses representando a estrutura operacional das redes de atenção à saúde."
-                                class="img-fluid">
-                        </div>
-                        <small>Fonte: Adaptado do Instituto de Avaliação de Tecnologia em Saúde. Desenvolvimento de
-                            Linhas de Cuidado à Saúde no Brasil.</small>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
                     </div>
-                </div>
-
-                <p><b>Linha de Cuidado de Prevenção à Transmissão Vertical do HTLV</b></p>
-
-                <p>Para elaborar uma nova linha de cuidado é preciso conhecer as estratégias, as pactuações vigentes e
-                    os pontos da Rede de Atenção à Saúde. Apesar de existirem algumas Linhas de Cuidado que podem servir
-                    de instrumentos norteadores, a elaboração de uma nova LC exige vontade técnica e decisão política
-                    para a sua implantação.</p>
-
-                <p>A Política Nacional das Infecções Sexualmente Transmissíveis (ISTs) é de competência do Ministério da
-                    Saúde. Contudo, em consonância com a descentralização político-administrativa do SUS, estados e
-                    municípios têm autonomia para planejar, organizar, controlar e avaliar as ações e os serviços de
-                    saúde, gerir e executar os serviços públicos de saúde de acordo com a disposição da RASs e
-                    pactuações locorregionais.</p>
-
-                <p>Devido a descentralização das ações da Política das ISTs, os estados e municípios brasileiros
-                    apresentam expertise no manejo clínico, na promoção e prevenção e na vigilância das infecções
-                    sexualmente transmissíveis. Este know-how com as demais ISTs é de grande valia para a
-                    instrumentalização da linha de cuidado de prevenção à transmissão vertical do HTLV.</p>
-
-                <p>Desse modo, a gestão local também tem a responsabilidade de induzir a implantação de uma linha de
-                    cuidado em seu território, de acordo com sua RASs e pactuações em instâncias gestoras. Apesar dos
-                    avanços alcançados no enfrentamento à infecção pelo HTLV, o Ministério da Saúde ainda não
-                    estabeleceu a LC de prevenção à transmissão vertical à infecção. Todavia, por meio de diretrizes já
-                    instituídas, é possível esboçar uma LC pensando nos seguintes objetivos:</p>
-
-                <!-- Imagem 4 -->
-                <div class="row centro">
-                    <div class="col-md-7 imagem">
-                        <h3>Objetivos da LC</h3>
-                        <div>
-                            <img src="../assets/images/modulo3/aula2/img4.png"
-                                alt="ORIENTAR: Os profissionais de saúde de forma a centralizar o cuidado no paciente vivendo com HTLV e em suas necessidades; ESTABELECER: A pactuação dos fluxos do contínuo assistencial nos níveis de atenção à saúde; INCLUIR: A assistência as pessoas convivendo com HTLV dentro das RASs."
-                                class="img-fluid">
-                        </div>
-                        <small>Fonte: Própria autora</small>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 3</span>
                     </div>
-                </div>
-
-                <p>Para a implantação e implementação da linha de cuidado de prevenção à transmissão vertical do HTLV é
-                    preciso inserir intervenções nos três níveis de atenção à saúde (Primária, Secundária e Terciária) e
-                    utilizar os pontos de atenção das redes temáticas de atenção à saúde já estabelecidos no território
-                    para atender às necessidades globais dos pacientes vivendo com HTLV. As redes temáticas que devem
-                    ser articuladas são:</p>
-
-                <ul>
-                    <li class="icon circle">Rede materna e infantil;</li>
-                    <li class="icon circle">Rede de Urgência e Emergência;</li>
-                    <li class="icon circle">Rede de Atenção à Saúde das Pessoas com Doenças Crônicas;</li>
-                    <li class="icon circle">Rede de Cuidados à Pessoa com Deficiência; e</li>
-                    <li class="icon circle">Rede de Atenção Psicossocial.</li>
-                </ul>
-
-                <h2>Atenção Primária à Saúde</h2>
-
-                <p>A Atenção Primária à Saúde (APS) é o primeiro nível de atenção responsável pelo ordenamento da RASs e
-                    pela coordenação do cuidado, pois está inserida no território adscrito e está mais próximo da
-                    população. A APS executa um conjunto de ações de promoção e proteção à saúde, de prevenção de
-                    agravos e no diagnóstico, no tratamento, na reabilitação e na paliação, tanto no âmbito individual
-                    quanto no coletivo.</p>
-
-                <p>Como primeiro nível de atenção à saúde, a APS precisa atender a três funções primordiais:</p>
-
-                <ul>
-                    <li class="icon circle"><span><b>Resolutividade </b></span>- solucionar a grande parte dos problemas
-                        de saúde da população.</li>
-                    <li class="icon circle"><span><b>Organização </b></span>- organizar os fluxos de referência e
-                        contrarreferência dos usuários, nos diversos pontos de atenção.</li>
-                    <li class="icon circle"><span><b>Responsabilização </b></span>- corresponsável pelo usuário em
-                        qualquer ponto de atenção à saúde que esteja.</li>
-                </ul>
-
-                <p>O planejamento familiar e as orientações sobre saúde sexual e reprodutiva são estratégias
-                    desenvolvidas na APS. Elas são de extrema importância no cuidado à saúde integral da mulher,
-                    principalmente no que diz respeito a orientações pré-concepcionais, para prevenir agravos durante a
-                    gestação, parto e puerpério, em especial no rastreio das infecções sexualmente transmissíveis.</p>
-
-                <p>De modo semelhante à abordagem ao HIV, as equipes multiprofissionais da APS deverão orientar as
-                    gestantes, durante o pré-natal, sobre a importância da testagem para o HTLV e os benefícios do
-                    diagnóstico precoce, principalmente para a prevenção da transmissão vertical. Durante o pré-natal,
-                    os profissionais de saúde da APS deverão realizar ações direcionadas à prevenção da transmissão
-                    vertical do HTLV conjuntamente com as ações já desenvolvidas durante a rotina do pré-natal.</p>
-
-                <p>Existem várias ações, algumas em comum com outros níveis de atenção para uma gestante vivendo com
-                    HTLV. Confira:</p>
-
-                <!-- Tabela 1 -->
-                <div class="row tabela centro">
-                    <div class="col-md-10">
-                        <h3>Ações em comum realizadas pela Atenção Primária e pelos Centros de Testagem e Aconselhamento
-                        </h3>
-                        <table class="text-center">
-                            <tr>
-                                <th style="border-right: 1px solid white; background-color: #00ABCB;">Atenção Primária à
-                                    Saúde</th>
-                                <th style="border-left: 1px solid white; background-color: #015973;">Centros de Testagem
-                                    e Aconselhamento</th>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Acolher a gestante no serviço</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Estabelecer um vínculo acolhedor e humanização e uma comunicação eficaz.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span><b>Solicitar</b> a testagem sorológica para o HTLV para todas as
-                                        gestantes</span></td>
-                                <td><span><b>Realizar</b> a testagem sorológica para o diagnóstico do HTLV em todas as
-                                        gestantes</span></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Realizar o aconselhamento pré e pós-teste</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Preencher adequadamente a caderneta da gestante com o resultado da
-                                    testagem para HTLV</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Orientar para as estratégias de promoção à saúde</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Investigar a infecção pelo HTLV nas parcerias sexuais</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Fortalecer a atenção às gestantes de populações-chave e populações
-                                    prioritárias convivendo com HTLV</td>
-                            </tr>
-                            <tr>
-                                <td>Notificar os casos de gestante com diagnóstico confirmado para HTLV e estabelecer os
-                                    respectivos fluxos assistenciais juntamente com a área de vigilância epidemiológica
-                                    local</td>
-                                <td>Notificar os casos de gestante com diagnóstico confirmado e criança exposta ao HTLV,
-                                    conforme fluxos e pactuações com a vigilância epidemiológica local</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Oferecer os insumos de prevenção às ISTs – preservativos, gel
-                                    lubrificante</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Participar de campanhas alusivas e desenvolver atividades de prevenção
-                                    da infecção pelo HTLV</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Disponibilizar materiais informativos e educativos sobre a infecção pelo
-                                    HTLV</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Promover articulação com a sociedade civil sobre a infecção pelo HTLV
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Contribuir para a redução do preconceito, estigma e discriminação das
-                                    pessoas vivendo com HTLV</td>
-                            </tr>
-                        </table>
-                        <div><small>Fonte: Heytor Neco. Adaptado de Gadelha.</small></div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo1/modulo1-aula3.html" class="subItem"
+                        >Incidência e Prevalência</a
+                      >
                     </div>
-                </div>
-
-                <!-- Tabela 2 -->
-                <div class="row tabela centro">
-                    <div class="col-md-10">
-                        <h3>Ações mais específicas realizadas pelos níveis de atenção primária e especializada em uma
-                            linha de cuidado de prevenção à transmissão vertical do HTLV</h3>
-                        <table class="text-center">
-                            <tr>
-                                <th style="border-right: 1px solid white; background-color: #00ABCB;">Atenção Primária à
-                                    Saúde</th>
-                                <th style="border-left: 1px solid white; background-color: #015973;">Centros de Testagem
-                                    e Aconselhamento</th>
-                            </tr>
-                            <tr>
-                                <td>Orientar a gestante vivendo com HTLV sobre os motivos da NÃO amamentação, o direito
-                                    de receber fórmula láctea infantil e a cabergolina (inibidor da lactação), conforme
-                                    pactuação local</td>
-                                <td>Realizar a contrarreferência para a APS</td>
-                            </tr>
-                            <tr>
-                                <td>Promover o acesso às ações de prevenção e diagnóstico às ISTs</td>
-                                <td>Produzir informações para o planejamento das ações de enfrentamento de prevenção da
-                                    transmissão vertical do HTLV em nível local</td>
-                            </tr>
-                            <tr>
-                                <td>Orientar familiares e acompanhantes sobre a infecção pelo HTLV</td>
-                                <td>Contribuir para a construção de estratégias de educação em saúde de prevenção ao
-                                    HTLV que envolvam a comunidade</td>
-                            </tr>
-                            <tr>
-                                <td>Referenciar as gestantes com diagnóstico e a criança exposta ao HTLV para o serviço
-                                    especializado, mantendo o cuidado compartilhado na Atenção Primária</td>
-                                <td>Apoiar matricialmente os serviços da Atenção Básica (AB) para implantação e
-                                    implementação das ações de prevenção ao HTLV</td>
-                            </tr>
-                            <tr>
-                                <td>Realizar a investigação dos casos de gestante com diagnóstico confirmado e criança
-                                    exposta ao HTLV</td>
-                                <td>Referenciar para o SAE as gestantes com teste confirmatório positivo para HTLV</td>
-                            </tr>
-                            <tr>
-                                <td>Construir um planejamento terapêutico com a participação da gestante</td>
-                                <td>Apoiar as ações de educação permanente sobre prevenção ao HTLV para os profissionais
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Fortalecer a Linha de Cuidado Materno-infantil, por meio da integração da APS com a
-                                    atenção especializada, em consonância com a linha de prevenção à transmissão
-                                    vertical do HTLV</td>
-                            </tr>
-                        </table>
-                        <div style="margin-bottom: 50px;"><small>Fonte: Heytor Neco. Adaptado de Gadelha.</small></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
                     </div>
-                </div>
-
-                <p><b>Atenção Especializada</b></p>
-
-                <p>A Atenção Especializada é compreendida pelos componentes da Atenção Secundária (média complexidade –
-                    ambulatórios, Unidades de Pronto Atendimento, Centro de Testagens e Aconselhamento e Serviços de
-                    Atenção Especializada) e Atenção Terciária (alta complexidade - hospitais).</p>
-
-                <p>Os Centro de Testagem e Aconselhamento (CTAs) e os Serviços de Atendimento Especializados (SAEs) são
-                    pontos de atenção à saúde que prestam ações direcionadas à prevenção e ao manejo clínico das
-                    infecções sexualmente transmissíveis. Estes serviços devem dar suporte às redes de atenção à saúde.
-                    As gestantes também poderão ser encaminhadas para seguimento no pré-natal de alto risco, tendo o
-                    acompanhamento equivalente ao realizado no SAE.</p>
-
-                <p>Os CTAs são serviços que realizam aconselhamento, orientações e testes para as ISTs, cujos
-                    atendimentos são realizados por demanda espontânea ou referenciada. Os CTAs também podem realizar
-                    ações extramuros – nas escolas, igrejas, universidades etc. A depender dos contextos locais e da
-                    capacidade de resposta, estes serviços podem realizar as ações que você viu nos quadros anteriores.
-                </p>
-
-                <p>Já os SAEs, serviços ambulatoriais para fazer o acompanhamento clínico das pessoas convivendo com
-                    ISTs por meio de uma equipe multidisciplinar, têm a função de diagnosticar e acompanhar
-                    longitudinalmente as pessoas convivendo com ISTs. Nesses serviços, os atendimentos são realizados
-                    por demanda espontânea ou referenciada.</p>
-
-                <p>Pensando na linha de cuidado de prevenção à transmissão vertical do HTLV, e comparando com as ações
-                    dos CTAs no mesmo nível de atenção, veja as ações que tanto os CTAs quanto os SAEs podem realizar:
-                </p>
-
-                <!-- Tabela 3 -->
-                <div class="row tabela centro">
-                    <div class="col-md-10">
-                        <table class="text-center">
-                            <tr>
-                                <th style="border-right: 1px solid white; background-color: #015973;">Centros de
-                                    Testagem e Aconselhamento</th>
-                                <th style="border-left: 1px solid white; background-color: #8A0016;">Serviços de
-                                    Atendimento Especializado</th>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Acolher a gestante no serviço</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Estabelecer um vínculo acolhedor e humanização e uma comunicação eficaz
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Investigar a infecção pelo HTLV nas parcerias sexuais</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Oferecer os insumos de prevenção às ISTs – preservativos, gel
-                                    lubrificante</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Contribuir para a redução do preconceito, estigma e discriminação das
-                                    pessoas vivendo com HTLV</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Realizar a contrarreferência para a APS</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Produzir informações para o planejamento das ações de enfrentamento de
-                                    prevenção da transmissão vertical do HTLV em nível local</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Orientar para as estratégias de promoção à saúde</td>
-                            </tr>
-                            <tr>
-                                <td><span>Notificar os casos de <b>gestante</b> com diagnóstico confirmado e criança
-                                        exposta ao HTLV, conforme fluxos e pactuações com a vigilância epidemiológica
-                                        local</span></td>
-                                <td><span>Notificar os casos de <b>gestante/puérpera</b> com diagnóstico confirmado para
-                                        HTLV e criança exposta à infecção, conforme fluxos e pactuações com a vigilância
-                                        epidemiológica local</span></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Participar de campanhas alusivas e desenvolver atividades de prevenção
-                                    da infecção pelo HTLV</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Contribuir para a construção de estratégias de educação em saúde de
-                                    prevenção ao HTLV que envolvam a comunidade</td>
-                            </tr>
-                        </table>
-                        <div style="margin-bottom: 50px;"><small>Fonte: Heytor Neco. Adaptado de Gadelha.</small></div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 4</span>
                     </div>
-                </div>
-
-                <p>Agora, veja a ações mais específicas de cada um desses serviços:</p>
-
-                <!-- Tabela 4 -->
-                <div class="row tabela centro">
-                    <div class="col-md-10">
-                        <table class="text-center">
-                            <tr>
-                                <th style="border-right: 1px solid white; background-color: #015973;">Centros de
-                                    Testagem e Aconselhamento</th>
-                                <th style="border-left: 1px solid white; background-color: #8A0016;">Serviços de
-                                    Atendimento Especializado</th>
-                            </tr>
-                            <tr>
-                                <td>Realizar a testagem sorológica para o diagnóstico do HTLV em todas as gestantes</td>
-                                <td>Realizar o seguimento da mulher/gestante/puérpera convivendo com HTLV e da criança
-                                    exposta à infecção</td>
-                            </tr>
-                            <tr>
-                                <td>Realizar o aconselhamento pré e pós-teste</td>
-                                <td>Fornecer fórmulas lácteas infantis, conforme pactuação local</td>
-                            </tr>
-                            <tr>
-                                <td>Preencher adequadamente a caderneta da gestante com o resultado da testagem para
-                                    HTLV</td>
-                                <td>Oferecer atendimento especializado, com resolutividade diagnóstica, tratamento e
-                                    acompanhamento às pessoas convivendo com o HTLV</td>
-                            </tr>
-                            <tr>
-                                <td>Fortalecer a atenção às gestantes de populações-chave e populações prioritárias
-                                    convivendo com HTLV</td>
-                                <td>Promover um atendimento multidisciplinar – Enfermagem, Assistência Psicológica,
-                                    Social, Farmacêutica, Nutricional, Odontológica e Fisioterapêutica</td>
-                            </tr>
-                            <tr>
-                                <td>Disponibilizar materiais informativos e educativos sobre o HTLV</td>
-                                <td>Construir Projetos Terapêuticos Singulares com a participação da pessoa com HTLV
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Promover articulação com a sociedade civil sobre a infecção pelo HTLV</td>
-                                <td>Promover a qualidade de vida das pessoas convivendo com HTLV</td>
-                            </tr>
-                            <tr>
-                                <td>Apoiar matricialmente os serviços da Atenção Básica (AB) para implantação e
-                                    implementação das ações de prevenção ao HTLV</td>
-                                <td>Realizar o diagnóstico e manejo clínico das comorbidades e infecções oportunistas
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Referenciar para o SAE as gestantes com teste confirmatório positivo para HTLV</td>
-                                <td>Promover articulação com a sociedade civil</td>
-                            </tr>
-                            <tr>
-                                <td>Apoiar as ações de educação permanente sobre prevenção ao HTLV para os profissionais
-                                </td>
-                                <td>Disponibilizar materiais informativos e educativos sobre a infecção pelo HTLV</td>
-                            </tr>
-                        </table>
-                        <div style="margin-bottom: 50px;"><small>Fonte: Heytor Neco. Adaptado de Gadelha.</small></div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo1/modulo1-aula4.html" class="subItem"
+                        >Aspectos dos vetores e reservatórios- Ciclos de
+                        transmissão</a
+                      >
                     </div>
-                </div>
-
-                <p><b>Atenção Terciária</b></p>
-
-                <p>A Política Nacional de Atenção Hospitalar estabelece diretrizes para a organização do componente
-                    hospitalar dentro da Rede de Atenção à Saúde. Ela atua de forma articulada com a APS. No âmbito do
-                    SUS, a assistência hospitalar é organizada de acordo com as necessidades da população, na
-                    horizontalização do cuidado, na regulação do acesso e em consonância com as linhas de cuidado
-                    locorregionais estabelecidas.</p>
-
-                <p>Neste cenário, a maternidade constitui uma tipologia da atenção hospitalar, de alta complexidade, que
-                    visa garantir o cuidado à saúde da mulher (direito ao planejamento reprodutivo e à atenção
-                    humanizada à gravidez, ao parto e ao puerpério) e a saúde da criança (direito ao nascimento seguro e
-                    ao crescimento e ao desenvolvimento saudáveis). Sua organização deve estar direcionada ao continuum
-                    de ações de atenção à saúde materna e infantil, em consonância com a realidade locorregional,
-                    conforme a articulação dos distintos pontos de atenção à saúde.</p>
-
-                <p>As maternidades, como componentes da Rede Cegonha (atualmente Rede Alyne) na atenção especializada,
-                    podem atuar na atenção secundária – atendimento ambulatorial e na atenção terciária – atendimento
-                    hospitalar.</p>
-
-                <!-- Bloco Texto -->
-                <div class="row centro">
-                    <div class="col-md-10 blocoTexto">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <img class="img-fluid" src="../assets/images/icones/virusFeliz.png">
-                            </div>
-                            <div class="col-md-9">
-                                <b>
-                                    <p style="text-transform: uppercase;">O que é a Rede Cegonha?</p>
-                                    <p>Focando na qualidade dos cuidados à saúde materno-infantil, a Rede Cegonha foi
-                                        instituída com o objetivo de tecer uma rede assistencial e garantir à mulher o
-                                        direito ao planejamento reprodutivo e à atenção humanizada durante a gravidez,
-                                        parto e puerpério assim como assegurar à criança o direito ao nascimento seguro,
-                                        ao crescimento e ao desenvolvimento saudáveis. Ela é estruturada em quatro
-                                        componentes: pré-natal; parto, nascimento e puerpério; atenção integral à saúde
-                                        da criança e sistema logístico – transporte sanitário e regulação.</p>
-
-                                    <p>Recentemente, o Governo Federal publicou a <a
-                                            href="https://www.in.gov.br/en/web/dou/-/portaria-gm/ms-n-5.350-de-12-de-setembro-de-2024-584287025"
-                                            target="_blank" rel="noopener noreferrer">Portaria GM/MS Nº 5.350, de 12 de
-                                            setembro de 2024</a> que dispõe sobre a Rede Alyne como estratégia de
-                                        reestruturação
-                                        da antiga Rede Cegonha, cujo objetivo é reduzir a mortalidade materna em 25%.
-                                        Além da expansão das ações voltadas para saúde materno-infantil, a nova rede
-                                        busca diminuir a mortalidade materna de mulheres negras em 50% até 2027. A
-                                        iniciativa homenageia a jovem negra Alyne Pimentel, que morreu aos 28 anos,
-                                        gestante e vítima de negligência médica.</p>
-                                </b>
-                            </div>
-                        </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
                     </div>
-                </div>
-
-                <p>Dentro da linha de cuidado de prevenção à transmissão vertical do HTLV, o quadro a seguir exibe um
-                    descritivo e comparação das ações que podem ser desenvolvidas na Atenção Terciária. Conheça as ações
-                    comuns aos SAE e atenção terciária:</p>
-
-                <!-- Tabela 5 -->
-                <div class="row tabela centro">
-                    <div class="col-md-10">
-                        <table class="text-center">
-                            <tr>
-                                <th style="border-right: 1px solid white; background-color: #8A0016;">Serviços de
-                                    Atendimento Especializado</th>
-                                <th style="border-left: 1px solid white; background-color: #F27484;">Atenção Terciária
-                                </th>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Acolher a gestante no serviço</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Estabelecer um vínculo acolhedor e humanização e uma comunicação eficaz
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Oferecer os insumos de prevenção às ISTs – preservativos, gel
-                                    lubrificante</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Contribuir para a redução do preconceito, estigma e discriminação das
-                                    pessoas vivendo com HTLV </td>
-                            </tr>
-                            <tr>
-                                <td>Realizar a contrarreferência para a APS</td>
-                                <td>Realizar a contrarreferência para a APS e SAE</td>
-                            </tr>
-                            <tr>
-                                <td>Produzir informações para o planejamento das ações de enfrentamento de prevenção da
-                                    transmissão vertical do HTLV em nível local</td>
-                                <td>Participar de campanhas alusivas e desenvolver atividades de prevenção da infecção
-                                    pelo HTLV</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Orientar para as estratégias de promoção à saúde</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Notificar os casos de gestante/puérpera com diagnóstico confirmado para
-                                    HTLV e
-                                    criança exposta à infecção, conforme fluxos e pactuações com a vigilância
-                                    epidemiológica local</td>
-                            </tr>
-                            <tr>
-                                <td>Participar de campanhas alusivas e desenvolver atividades de prevenção da infecção
-                                    pelo HTLV</td>
-                                <td>Promover um atendimento multidisciplinar – Enfermagem, Assistência Psicológica,
-                                    Social, Farmacêutica, Nutricional, Odontológica e Fisioterapêutica</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Fornecer fórmulas lácteas infantis, conforme pactuação local</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Promover a qualidade de vida das pessoas convivendo com HTLV</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Realizar o diagnóstico e manejo clínico das comorbidades e infecções
-                                    oportunistas</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">Disponibilizar materiais informativos e educativos sobre a infecção pelo
-                                    HTLV</td>
-                            </tr>
-                        </table>
-                        <div style="margin-bottom: 50px;"><small>Fonte: Heytor Neco. Adaptado de Gadelha.</small></div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 5</span>
                     </div>
-                </div>
-
-                <p>Agora, veja a ações mais específicas de cada um desses serviços:</p>
-
-                <!-- Tabela 6 -->
-                <div class="row tabela centro">
-                    <div class="col-md-10">
-                        <table class="text-center">
-                            <tr>
-                                <th style="border-right: 1px solid white; background-color: #8A0016;">Serviços de
-                                    Atendimento Especializado</th>
-                                <th style="border-left: 1px solid white; background-color: #F27484;">Atenção Terciária
-                                </th>
-                            </tr>
-                            <tr>
-                                <td>Realizar o seguimento da mulher/gestante/puérpera convivendo com HTLV e da criança
-                                    exposta à infecção</td>
-                                <td>Participar de campanhas alusivas e desenvolver atividades de prevenção da infecção
-                                    pelo HTLV</td>
-                            </tr>
-                            <tr>
-                                <td>Oferecer atendimento especializado, com resolutividade diagnóstica, tratamento e
-                                    acompanhamento às pessoas convivendo com o HTLV</td>
-                                <td>Preencher a caderneta da gestante com informações sobre o parto e pós-parto</td>
-                            </tr>
-                            <tr>
-                                <td>Promover um atendimento multidisciplinar – Enfermagem, Assistência Psicológica,
-                                    Social, Farmacêutica, Nutricional, Odontológica e Fisioterapêutica</td>
-                                <td>Administrar a cabergolina para inibição da lactação em todas as gestantes com
-                                    diagnóstico confirmado para a infecção pelo HTLV</td>
-                            </tr>
-                            <tr>
-                                <td>Promover articulação com a sociedade civil</td>
-                                <td>Realizar o agendamento da consulta com o SAE do recém-exposto ao HIV e da puérpera,
-                                    conforme pactuações locais quanto ao referenciamento</td>
-                            </tr>
-                            <tr>
-                                <td>Investigar a infecção pelo HTLV nas parcerias sexuais</td>
-                            </tr>
-                            <tr>
-                                <td>Contribuir para a construção de estratégias de educação em saúde de prevenção ao
-                                    HTLV que envolvam a comunidade</td>
-                            </tr>
-                        </table>
-                        <div style="margin-bottom: 50px;"><small>Fonte: Heytor Neco. Adaptado de Gadelha.</small></div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo1/modulo1-aula5.html" class="subItem"
+                        >Conceito de leishmaniose</a
+                      >
                     </div>
-                </div>
-
-                <p><b>Vigilância Epidemiológica</b></p>
-
-                <p>A Vigilância Epidemiológica (VE) é definida pela <a
-                        href="https://www.planalto.gov.br/ccivil_03/leis/l8080.htm#:~:text=LEI%20N%C2%BA%208.080%2C%20DE%2019%20DE%20SETEMBRO%20DE%201990.&text=Disp%C3%B5e%20sobre%20as%20condi%C3%A7%C3%B5es%20para,correspondentes%20e%20d%C3%A1%20outras%20provid%C3%AAncias"
-                        target="_blank" rel="noopener noreferrer">Lei nº 8080 de 19 de setembro de 1990</a> como “um
-                    conjunto de ações que proporciona o conhecimento, a detecção ou prevenção de qualquer mudança nos
-                    fatores determinantes e condicionantes de saúde individual ou coletiva, com a finalidade de
-                    recomendar e adotar as medidas de prevenção e controle das doenças ou agravos”. As ações de
-                    vigilância epidemiológica são realizadas de forma descentralizada, universal e equânime.</p>
-
-                <p>O objetivo das ações de vigilância das infecções sexualmente transmissíveis é analisar de forma
-                    contínua e sistemática a situação epidemiológica dos agravos, articulando as intervenções de
-                    promoção, prevenção e recuperação da saúde. Também tem a premissa de produzir informações para
-                    subsidiar processos de formulação, gestão e avaliação das políticas e ações públicas de importância
-                    estratégica.</p>
-
-                <p>Em fevereiro de 2024, o Ministério da Saúde incluiu a infecção pelo HTLV em gestante, parturiente ou
-                    puérpera e em criança exposta na lista nacional de notificação compulsória de doenças, agravos e
-                    eventos de Saúde Pública. Todavia, ainda serão discutidos e pactuados entre os entes federal,
-                    estaduais e municipais, o rastreamento universal das gestantes durante o pré-natal e testes
-                    confirmatórios – conforme aprovação da Comissão Nacional de Incorporação de Tecnologias no Sistema
-                    Único de Saúde (Conitec). Também serão discutidos a definição de caso, instrumentos e fluxos de
-                    notificação, qualificação das equipes da APS e da vigilância epidemiológica e o monitoramento dos
-                    casos.</p>
-
-                <p>Ainda não foi possível estabelecer e pactuar os indicadores de saúde pertinentes ao monitoramento da
-                    transmissão vertical do HTLV. <a href="https://www.gov.br/saude/pt-br/composicao/svsa/ciedds"
-                        target="_blank" rel="noopener noreferrer">O Comitê Interministerial para a Eliminação da
-                        Tuberculose e de Outras
-                        Doenças Determinadas Socialmente</a> (CIEDDS) foi instituído com o objetivo de promover ações
-                    intersetoriais para acelerar o processo de eliminação de doenças determinadas socialmente como
-                    problemas de saúde pública no Brasil até 2030, dentre elas, a transmissão vertical do HTLV.</p>
-
-                <!-- Imagem 5 -->
-                <div class="row centro">
-                    <div class="col-md-7 imagem">
-                        <h3>Estados e municípios brasileiros que já realizam testagens para HTLV em gestantes durante a
-                            consulta de pré-natal no SUS</h3>
-                        <div>
-                            <img src="../assets/images/modulo3/aula2/img5.png"
-                                alt="Governo do Estado da Bahia, 2020 - Miranda et al., 2022 - Opas, 2022 - Secretaria de Estado de Saúde da Paraíba, 2023."
-                                class="img-fluid">
-                        </div>
-                        <small>Governo do Estado da Bahia, 2020 - Miranda et al., 2022 - Opas, 2022 - Secretaria de
-                            Estado de Saúde da Paraíba, 2023.</small>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
                     </div>
-                </div>
-
-                <p>Os estados da Bahia e Paraíba utilizam o Sistema de Informação de Agravos de Notificação (Sinan) e o
-                    Sistema próprio do estado, respectivamente, para notificar os casos diagnosticados de infecção pelo
-                    HTLV.</p>
-
-                <p>Os Laboratórios Centrais de Saúde Pública (Lacens) constituem a Rede Nacional de Laboratórios de
-                    Vigilância Epidemiológica e Vigilância Ambiental do SUS e são responsáveis pelo monitoramento
-                    epidemiológico de doenças e agravos de interesse para a saúde pública. Desta forma, é possível
-                    estabelecer centros de referência locorregional de diagnóstico laboratorial para o HTLV,
-                    aproveitando a rede dos Lacens.</p>
-
-                <!-- Encerramento -->
-                <div class="row centro" style="margin: 10px 0px 50px 0px !important;">
-                    <div class="col-md-10 encerramento">
-                        <div class="row">
-                            <div class="col-md-9">
-                                <p style="color: #7F0C21;"><b>Você chegou ao final da aula</b></p>
-                                <p>Nessa aula você conheceu aspectos das Redes de Atenção à Saúde e das Linhas de
-                                    Cuidado e, agora, já é capaz de identificar os componentes da Rede de Atenção à
-                                    Saúde para a implantação/implementação da Linha de Cuidado de prevenção à
-                                    transmissão vertical do HTLV.</p>
-                            </div>
-                            <div class="col-md-3">
-                                <img class="img-fluid" src="../assets/images/icones/virusFeliz.png">
-                            </div>
-                        </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 6</span>
                     </div>
-                </div>
-
-                <!-- Autor -->
-                <div class="row centro">
-                    <p class="autor">AUTORA: Renata Gadelha</p>
-                </div>
-
-                <!-- Botões de navegação -->
-                <div class="row botao">
-                    <a href="./modulo4-aula1.html" class="btn btn-sm" id="botaoVoltar" role="button" alt="Voltar">
-                        <strong><i class="fas fa-chevron-left"></i>Módulo 4 Aula 1</strong></a>
-                    <a href="./modulo4-aula3.html" class="btn btn-sm" id="botaoAvancar" role="button" alt="Avançar">
-                        <strong>Módulo 4 Aula 3<i class="fas fa-chevron-right"></i></strong></a>
-                </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo1/modulo1-aula6.html" class="subItem"
+                        >Conceito de leishmaniose</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 7</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo1/modulo1-aula7.html" class="subItem"
+                        >Conceito de leishmaniose</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div
+                      class="barraStepper active"
+                      style="background-color: #c40f17"
+                    >
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem"
+                        ><a href="../modulo1/modulo1-atividade.html"
+                          >Atividades Módulo 1</a
+                        ></span
+                      >
+                    </div>
+                  </div>
+                </li>
+              </div>
             </div>
 
-            <!-- Rodapé -->
-            <footer id="rodape">
-                <div class="row-main">
-                    <div class="col-md-12 centro">
-                        <img class="img-fluid centro" src="../assets/images/rodape/rodape.jpg" alt="Rodapé">
-                    </div>
+            <div class="accordionMenu" id="headingModulo2">
+              <div class="row">
+                <div class="sectionTitle">
+                  <span
+                    class="tituloLista collapsed"
+                    data-toggle="collapse"
+                    data-target="#collapseModulo2"
+                    aria-expanded="false"
+                    aria-controls="collapseModulo2"
+                    >Módulo 2<i class="fas fa-caret-up caretDown"></i
+                  ></span>
                 </div>
-            </footer>
+              </div>
+              <div
+                id="collapseModulo2"
+                class="collapse"
+                aria-labelledby="headingModulo2"
+              >
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 1</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo2/modulo2-aula1.html" class="subItem"
+                        >Período de incubação e primeiros sintomas (homem e
+                        cão)</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 2</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo2/modulo2-aula2.html" class="subItem"
+                        >Sinais e sintomas comuns (homem e cão)</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 3</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo2/modulo2-aula3.html" class="subItem"
+                        >Rede de assistência pública para prevenção,
+                        diagnóstico, tratamento e controle das leishmanioses em
+                        humanos e caninos</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 4</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo2/modulo2-aula4.html" class="subItem"
+                        >Rede de assistência pública para prevenção,
+                        diagnóstico, tratamento e controle das leishmanioses em
+                        humanos e caninos</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 5</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo2/modulo2-aula5.html" class="subItem"
+                        >Rede de assistência pública para prevenção,
+                        diagnóstico, tratamento e controle das leishmanioses em
+                        humanos e caninos</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 6</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo2/modulo2-aula6.html" class="subItem"
+                        >Rede de assistência pública para prevenção,
+                        diagnóstico, tratamento e controle das leishmanioses em
+                        humanos e caninos</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 7</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo2/modulo2-aula7.html" class="subItem"
+                        >Rede de assistência pública para prevenção,
+                        diagnóstico, tratamento e controle das leishmanioses em
+                        humanos e caninos</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 8</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo2/modulo2-aula8.html" class="subItem"
+                        >Rede de assistência pública para prevenção,
+                        diagnóstico, tratamento e controle das leishmanioses em
+                        humanos e caninos</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper" style="background-color: #c40f17">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem"
+                        ><a href="../modulo2/modulo2-atividade.html"
+                          >Atividades Módulo 2</a
+                        ></span
+                      >
+                    </div>
+                  </div>
+                </li>
+              </div>
+            </div>
+
+            <div class="accordionMenu" id="headingModulo3">
+              <div class="row">
+                <div class="sectionTitle">
+                  <span
+                    class="tituloLista"
+                    data-toggle="collapse"
+                    data-target="#collapseModulo3"
+                    aria-expanded="false"
+                    aria-controls="collapseModulo3"
+                    >Módulo 3<i class="fas fa-caret-up caretDown"></i
+                  ></span>
+                </div>
+              </div>
+              <div
+                id="collapseModulo3"
+                class="collapse show"
+                aria-labelledby="headingModulo3"
+              >
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 1</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo3/modulo3-aula1.html" class="subItem"
+                        >Abordagem ecológica e social das leishmanioses</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 2</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo3/modulo3-aula2.html" class="subItem"
+                        >Medidas de prevenção e controle da doença</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 3</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo3/modulo3-aula3.html" class="subItem"
+                        >Medidas de prevenção e controle da doença</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 4</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo3/modulo3-aula4.html" class="subItem"
+                        >Medidas de prevenção e controle da doença</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 5</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo3/modulo3-aula5.html" class="subItem"
+                        >Medidas de prevenção e controle da doença</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper" style="background-color: #c40f17">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem"
+                        ><a href="../modulo3/modulo3-atividade.html"
+                          >Atividades Módulo 3</a
+                        ></span
+                      >
+                    </div>
+                  </div>
+                </li>
+              </div>
+            </div>
+
+            <div class="accordionMenu" id="headingModulo4">
+              <div class="row">
+                <div class="sectionTitle">
+                  <span
+                    class="tituloLista"
+                    data-toggle="collapse"
+                    data-target="#collapseModulo4"
+                    aria-expanded="false"
+                    aria-controls="collapseModulo4"
+                    >Módulo 4<i class="fas fa-caret-up caretDown"></i
+                  ></span>
+                </div>
+              </div>
+
+              <div
+                id="collapseModulo4"
+                class="collapse show"
+                aria-labelledby="headingModulo4"
+              >
+                <li>
+                  <div class="row">
+                    <div class="barraStepper active">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 1</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper active"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo4/modulo4-aula1.html" class="subItem"
+                        >Conceito de Saúde Única</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper">
+                      <div class="item active"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 2</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo4/modulo4-aula2.html" class="subItem"
+                        >Intersetorialidade nas ações de enfrentamento às
+                        leishmanioses</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="barraStepper">
+                      <div class="item"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem">Aula 3</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="barraStepper"></div>
+                    <div class="sectionTitle">
+                      <div class="iconeMenu"></div>
+                      <a href="../modulo4/modulo4-aula3.html" class="subItem"
+                        >Participação cidadã nas ações de enfrentamento às
+                        leishmanioses</a
+                      >
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="row">
+                    <div class="barraStepper" style="background-color: #c40f17">
+                      <div class="item"></div>
+                    </div>
+                    <div class="sectionTitle">
+                      <span class="tituloItem"
+                        ><a href="../modulo4/modulo4-atividade.html"
+                          >Atividades Módulo 4</a
+                        ></span
+                      >
+                    </div>
+                  </div>
+                </li>
+              </div>
+            </div>
+
+            <li>
+              <div class="row">
+                <div class="sectionTitle">
+                  <a
+                    class="tituloLista"
+                    role="button"
+                    href="../encerramento.html"
+                    >ENCERRAMENTO</a
+                  >
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div class="sectionTitle">
+                  <a
+                    class="tituloLista"
+                    role="button"
+                    href="../referencias.html"
+                    ><i class="fas fa-file-alt"></i>Referências</a
+                  >
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div class="sectionTitle">
+                  <a
+                    class="tituloLista"
+                    role="button"
+                    href="../material-complementar.html"
+                    ><i class="fas fa-book"></i>Material Complementar</a
+                  >
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div class="sectionTitle">
+                  <a class="tituloLista" role="button" href="../creditos.html"
+                    ><i class="fas fa-list"></i>Créditos</a
+                  >
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Conteúdo principal -->
+      <div class="col-md-10" id="content">
+        <div class="conteudo">
+          <p class="indice">Módulo 4 | Aula 2</p>
+
+          <h1>
+            INTERSETORIALIDADE NAS AÇÕES DE ENFRENTAMENTO ÀS LEISHMANIOSES
+          </h1>
+          <p>
+            As ações intersetoriais são definidas como um processo de
+            colaboração compartilhada entre diversos setores, visando
+            estabelecer responsabilidade conjunta e gestão compartilhada para
+            melhorar a qualidade de vida da população. Na saúde, essa prática
+            permite criar espaços compartilhados de decisões entre instituições
+            e diversos setores envolvido na promoção da saúde, com potencial de
+            impactar positivamente a população.
+          </p>
+          <p>
+            Na estratégia de saúde em áreas endêmicas para leishmanioses, a
+            intersetorialidade é fundamental, pois reconhece que melhorar a
+            saúde não é tarefa isolada. Para prevenir e controlar efetivamente
+            as leishmanioses, é essencial integrar várias secretarias, espaços
+            comunitários e outros setores ligados às políticas públicas, levando
+            em consideração os determinantes sociais do processo saúde-doença.
+          </p>
+          <p>
+            A intersetorialidade (Figura 34) também é um princípio da Política
+            Nacional de Atenção Básica no Brasil, destacando a responsabilidade
+            de todos os profissionais que compõem as equipes da Estratégia Saúde
+            da Família em desenvolver ações conjuntas com parcerias e recursos
+            da comunidade para potencializar iniciativas de saúde e integrar
+            projetos sociais.
+          </p>
+          <p>
+            Esse princípio implica reciprocidade entre os atores envolvidos na
+            saúde coletiva, promovendo o compartilhamento de significados,
+            conhecimentos, compromissos, valores, afetos, responsabilidades e
+            ações. Isso representa um movimento para superar visões e práticas
+            fragmentadas, construindo estratégias de saúde mais integradas entre
+            diferentes segmentos, tanto internamente, quanto externamente.
+          </p>
+          <!--Imagem 1-->
+          <div class="row centro">
+            <div class="col-md-7 imagem">
+              <img
+                src="../assets/images/modulo4/aula2/mod4foto2.jpg"
+                class="img-fluid"
+              />
+              <div>
+                <small>
+                  <strong>Figura 34.</strong> Interconexão entre as seis trilhas
+                  que representam a síntese plural: Intersetorialidades!
+                  <strong><i>Fonte:</i></strong
+                  >Adaptado de Alkerman et al. 2014
+                </small>
+              </div>
+            </div>
+          </div>
+          <p>
+            A complexidade da realidade sanitária evidência que ações isoladas e
+            desconectadas da realidade local não são eficazes para transformar
+            as condições de saúde da população. Portanto, equipes
+            multiprofissionais em áreas endêmicas para leishmanioses devem
+            basear seu trabalho no conhecimento da realidade local e das
+            necessidades específicas da população deste território.
+          </p>
+          <p>
+            A ação intersetorial é essencial para a implantar intervenções que
+            abordem aspectos psicológicos, biológicos e sociais dos problemas de
+            saúde, promovendo efetivamente a saúde pública. Ela envolve a
+            articulação entre diferentes setores para pensar a saúde,
+            estimulando a troca e a construção coletiva de saberes, linguagens e
+            práticas na tentativa de resolver questões sanitárias complexas,
+            estabelecendo vínculos de corresponsabilidade e cogestão.
+          </p>
+          <p>
+            Todos os atores neste processo devem organizar-se de acordo com seus
+            interesses diante do problema, gerando cooperação ou conflito. A
+            cooperação ocorre quando há engajamento voluntário e comunicação
+            clara entre os atores. Já o conflito surge quando há discordância
+            quanto à realidade, interesses, valores e sentimentos envolvidos
+            (Figura 35).
+          </p>
+          <!--Imagem 2-->
+          <div class="row centro">
+            <div class="col-md-7 imagem">
+              <img
+                src="../assets/images/modulo4/aula2/mod4foto3.jpg"
+                class="img-fluid"
+              />
+              <div>
+                <small>
+                  <strong>Figura 35.</strong> Sem título
+                  <strong><i>Fonte:</i></strong
+                  >Chris Browne 6-1.
+                </small>
+              </div>
+            </div>
+          </div>
+          <p>
+            Nesse contexto, o jogo social das ações intersetoriais deve ser
+            compreendido dentro de três variáveis que influenciam a relação
+            entre os atores, suas estratégias e os resultados esperados: o
+            projeto de governo, a governabilidade e a capacidade de governo,
+            formando o triângulo de governo proposto por Matus (1993). O projeto
+            de governo apresenta os objetivos e os meios para alcançar os
+            resultados desejados, refletindo os interesses dos atores
+            envolvidos. A governabilidade resulta da equação entre as variáveis
+            controladas e não controladas pelos atores, enquanto a capacidade de
+            governo refere-se à habilidade técnica para executar ações
+            conjuntas, incluindo a formação dos atores envolvidos (Figura 36).
+          </p>
+          <!--Imagem 3-->
+          <div class="row centro">
+            <div class="col-md-7 imagem">
+              <img
+                src="../assets/images/modulo4/aula2/mod4foto4.jpg"
+                class="img-fluid"
+              />
+              <div>
+                <small>
+                  <strong>Figura 36.</strong> Para entrar no jogo!
+                  <strong><i>Fonte:</i></strong
+                  >Thaves 11-2.
+                </small>
+              </div>
+            </div>
+          </div>
+          <p>
+            Portanto, as ações intersetoriais devem ser parte de um jogo
+            estratégico que envolve atores do setor saúde e de diversos setores
+            da sociedade, planejando, executando e avaliando iniciativas para
+            melhorar o controle das leishmanioses. Considerando as
+            características do problema, os atores sociais e os tipos de
+            interação entre os setores, além das variáveis do triângulo de
+            governo, é possível compreender os fatores que restringem ou
+            facilitam o desenvolvimento dessas ações integradas para o controle
+            das leishmanioses.
+          </p>
+          <h2>
+            Articulando a intersetorialidade no enfrentamento das leishmanioses
+          </h2>
+          <p>
+            Para enfrentar as leishmanioses em áreas endêmicas, é essencial
+            aplicar ações intersetoriais, que são processos organizados e
+            coletivos, respeitando a diversidade e as particularidades locais e
+            dos atores envolvidos.
+          </p>
+          <p class="tituloLista">O que é intersetorialidade?</p>
+          <p>
+            Intersetorialidade refere-se à colaboração entre diferentes setores
+            da sociedade, como saúde, educação, ambiente e outros. Isso
+            significa juntar diferentes conhecimentos e poderes para trabalhar
+            em conjunto (Figura 37). É uma forma de construir políticas públicas
+            que consideram não só o espaço e o social, mas também o biológico.
+          </p>
+          <!--Imagem 4-->
+          <div class="row centro">
+            <div class="col-md-7 imagem">
+              <img
+                src="../assets/images/modulo4/aula2/mod4foto5.jpg"
+                class="img-fluid"
+              />
+              <div>
+                <small>
+                  <strong>Figura 37.</strong> Interconexão entre as seis trilhas
+                  que representam a síntese plural: Intersetorialidades!
+                  <strong><i>Fonte:</i></strong
+                  >Adaptado de Alkerman et al. 2014
+                </small>
+              </div>
+            </div>
+          </div>
+          <p>
+            Trabalhar intersetorialmente requer a criação de espaços onde
+            diferentes setores possam se comunicar e negociar. O objetivo é
+            chegar a um resultado significativo, mesmo que não seja a solução
+            final do problema, mas que contribua para fortalecer as ações e
+            construir novas práticas sociais.
+          </p>
+          <p class="tituloLista">Desafios da intersetorialidade</p>
+          <p>
+            Ainda existem muitas políticas públicas que funcionam de maneira
+            isolada e centralizada. Muitas vezes, as instituições e serviços
+            operam de forma paralela, atendendo aos mesmos usuários, mas sem
+            coordenação. Refletir e propor o trabalho em rede é um grande
+            desafio para os profissionais de políticas públicas.
+          </p>
+          <p>
+            A gestão intersetorial e integrada demanda modelos flexíveis e
+            descentralizados, que incentivem a participação da sociedade civil
+            nas ações e decisões políticas. Isso favorece a criação de parcerias
+            que atendam de forma mais eficaz aos diferentes grupos sociais.
+          </p>
+          <p class="tituloLista">Trabalhando em rede</p>
+          <p>
+            O conceito de trabalhar em rede significa conectar instituições de
+            ensino, serviços de saúde e organizações comunitárias. Essas
+            conexões podem variar em profundidade e alcance, mas todas têm
+            potencial para contribuir significativamente para uma abordagem mais
+            holística da saúde pública.
+          </p>
+          <p class="tituloLista">Implementando a intersetorialidade</p>
+          <p>
+            Para implementar ações intersetoriais, é fundamental reconhecer que
+            cada setor possui apenas uma parte do conhecimento necessário para
+            enfrentar as leishmanioses. Portanto, é crucial que todos colaborem,
+            compartilhando poder e recursos para alcançar um impacto maior.
+          </p>
+          <p>
+            Quando surgem problemas complexos, a resposta não deve ser limitada
+            a uma única perspectiva. É essencial que todos os envolvidos
+            trabalhem juntos, superando barreiras de comunicação e técnicas, e
+            ajustando a percepção de urgência para compreender que processos
+            intersetoriais podem ser mais lentos, mas são mais robustos e
+            eficazes.
+          </p>
+          <p class="tituloLista">O Triângulo de Governo de Matus</p>
+          <p>
+            Para entender melhor a articulação intersetorial, podemos utilizar o
+            "Triângulo de Governo" de Matus, que inclui:
+          </p>
+          <ul>
+            <li style="padding-top: 15px; list-style: none">
+              1. <strong>Projeto de Governo:</strong>define objetivos e meios
+              para alcançar os resultados desejados, refletindo os interesses
+              dos atores envolvidos;
+            </li>
+            <li style="padding-top: 15px; list-style: none">
+              2. <strong>Governabilidade:</strong>capacidade de controlar
+              variáveis que influenciam as decisões e a execução das ações;
+            </li>
+            <li style="padding-top: 15px; list-style: none">
+              3. <strong>Capacidade de Governo:</strong>habilidades técnicas e
+              organizacionais necessárias para implementar ações de forma
+              eficaz.
+            </li>
+          </ul>
+          <p class="tituloLista">Espaços de interação e ação</p>
+          <p>
+            A intersetorialidade cria espaços de compartilhamento de saberes e
+            poderes. Nesses espaços, novas formas de ação são desenvolvidas por
+            meio da colaboração entre diferentes atores. Este processo é
+            contínuo e dinâmico, requerendo paciência, negociação e uma mente
+            aberta para novas ideias.
+          </p>
+          <p class="tituloLista">Desafios e possibilidades</p>
+          <p>
+            Embora trabalhar intersetorialmente possa ser desafiador e incerto,
+            oferece oportunidades para descobrir soluções inovadoras e eficazes.
+            É importante reconhecer nossas limitações individuais e setoriais e
+            buscar construir ações mais integradas e potentes.
+          </p>
+          <p class="tituloLista">Impacto na qualidade de vida</p>
+          <p>
+            Melhorar a qualidade de vida e saúde da população depende de como a
+            sociedade se organiza e prioriza suas necessidades. As cidades criam
+            diferentes dinâmicas de risco para suas populações, e ações
+            articuladas entre vários setores são essenciais para enfrentar esses
+            desafios.
+          </p>
+          <p class="tituloLista">Estratégia democratizadora</p>
+          <p>
+            A intersetorialidade é uma estratégia que permite compartilhar
+            diversos conhecimentos e poderes para enfrentar problemas complexos.
+            É um processo de construção contínua e colaboração entre todos os
+            envolvidos.
+          </p>
+          <p class="tituloLista">Formação e capacitação</p>
+          <p>
+            Para controlar as leishmanioses de forma eficaz, é necessário que
+            profissionais de várias áreas, como medicina humana, veterinária e
+            ciências ambientais, trabalhem juntos. Eles devem participar de
+            treinamentos contínuos e interdisciplinares para desenvolver
+            habilidades que promovam o trabalho em equipe e a integralidade no
+            cuidado em saúde.
+          </p>
+
+          <!-- Autor -->
+          <div class="row centro">
+            <p class="autor">AUTORA: Renata Gadelha</p>
+          </div>
+
+          <!-- Botões de navegação -->
+          <div class="row botao">
+            <a
+              href="./modulo4-aula1.html"
+              class="btn btn-sm"
+              id="botaoVoltar"
+              role="button"
+              alt="Voltar"
+            >
+              <strong
+                ><i class="fas fa-chevron-left"></i>Módulo 4 Aula 1</strong
+              ></a
+            >
+            <a
+              href="./modulo4-aula3.html"
+              class="btn btn-sm"
+              id="botaoAvancar"
+              role="button"
+              alt="Avançar"
+            >
+              <strong
+                >Módulo 4 Aula 3<i class="fas fa-chevron-right"></i></strong
+            ></a>
+          </div>
         </div>
+
+        <!-- Rodapé -->
+        <footer id="rodape">
+          <div class="row-main">
+            <div class="col-md-12 centro">
+              <img
+                class="img-fluid centro"
+                src="../assets/images/rodape/rodape.jpg"
+                alt="Rodapé"
+              />
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
 
     <!-- Arquivos JS -->
@@ -1274,4 +1050,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="../assets/js/main.js"></script>
-</body>
+  </body>
+</html>
