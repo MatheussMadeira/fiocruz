@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Leishmania</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../assets/images/favicon.ico"
+    />
+
+    <link href="../../assets/css/utilities/normalize.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    />
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <link href="../styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.5/dist/style.css"
+    />
+  </head>
+  <body>
+    <main class="content">
+      <img
+        src="../../assets/images/home/LOGOMARCA.svg"
+        class="top-image"
+        style="height: 200px"
+      />
+      <svg id="mindmap"></svg>
+    </main>
+    <div class="container">
+      <aside class="sidebar">
+        <img
+          src="../../assets/images/logos/logoCampus.png"
+          alt="Logo"
+          class="logo"
+        />
+        <button onclick="window.history.back()">Voltar</button>
+        <button onclick="window.location.href='../../index.html'">
+          Página Inicial
+        </button>
+      </aside>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.5/dist/browser/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.5/dist/index.js"></script>
+    <script>
+      (() => {
+        setTimeout(() => {
+          const { markmap: x, mm: K } = window,
+            P = new x.Toolbar();
+          P.attach(K);
+          const F = P.render();
+          F.setAttribute("style", "position:absolute;bottom:20px;right:20px"),
+            document.body.append(F);
+        });
+      })();
+    </script>
+    <script>
+      ((b, L, T, D) => {
+        const H = b();
+        window.mm = H.Markmap.create(
+          "svg#mindmap",
+          (L || H.deriveOptions)(D),
+          T
+        );
+      })(
+        () => window.markmap,
+        null,
+        {
+          content: "6. Reservatórios das Leishmanioses",
+          children: [
+            {
+              content: "1. Conceito",
+              children: [
+                {
+                  content:
+                    '\n<p data-lines="4,5"><strong>Diferença entre Reservatório e Hospedeiro</strong>:</p>',
+                  children: [
+                    {
+                      content:
+                        '<strong>Hospedeiros</strong>: Animais ou seres humanos que "hospedam" o parasita <em><i>Leishmania</i> spp.</em>',
+                      children: [],
+                      payload: { tag: "li", lines: "5,6" },
+                    },
+                    {
+                      content:
+                        "<strong>Reservatórios</strong>: Hospedeiros especiais que, além de se infectarem, servem de fonte de infecção para os vetores (fêmeas de flebotomíneos), mantendo o ciclo de transmissão.",
+                      children: [],
+                      payload: { tag: "li", lines: "6,8" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "4,8" },
+                },
+                {
+                  content:
+                    '\n<p data-lines="8,9"><strong>Homem como Hospedeiro Acidental</strong>:</p>',
+                  children: [
+                    {
+                      content:
+                        "Humanos podem se infectar e adoecer, mas <strong>não transmitem</strong> a infecção aos vetores.",
+                      children: [],
+                      payload: { tag: "li", lines: "9,10" },
+                    },
+                    {
+                      content:
+                        "Considerados <strong>hospedeiros acidentais</strong>, não fazendo parte do ciclo de transmissão original da <em><i>Leishmania</i> spp.</em>.",
+                      children: [],
+                      payload: { tag: "li", lines: "10,12" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "8,12" },
+                },
+              ],
+              payload: { tag: "h2", lines: "3,4" },
+            },
+            {
+              content: "2. Reservatórios de Leishmaniose Tegumentar (LTA)",
+              children: [
+                {
+                  content:
+                    '\n<p data-lines="13,14"><strong>Sistema de Reservatórios</strong>:</p>',
+                  children: [
+                    {
+                      content:
+                        "Não se trata de uma única espécie de animal, mas de um <strong>sistema</strong> composto por várias espécies que mantêm o parasita na natureza.",
+                      children: [],
+                      payload: { tag: "li", lines: "14,15" },
+                    },
+                    {
+                      content:
+                        "O papel de cada espécie pode variar dependendo da localidade e das características do ambiente.",
+                      children: [],
+                      payload: { tag: "li", lines: "15,17" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "13,17" },
+                },
+                {
+                  content:
+                    '\n<p data-lines="17,18"><strong>Ciclo de Transmissão</strong>:</p>',
+                  children: [
+                    {
+                      content:
+                        "Inicialmente <strong>silvestre ou rural</strong>, mas com a <strong>urbanização</strong>, tem afetado mais diretamente os seres humanos.",
+                      children: [],
+                      payload: { tag: "li", lines: "18,19" },
+                    },
+                    {
+                      content:
+                        "Humanos são <strong>hospedeiros acidentais</strong>, não participando da transmissão para os vetores.",
+                      children: [],
+                      payload: { tag: "li", lines: "19,21" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "17,21" },
+                },
+                {
+                  content:
+                    '\n<p data-lines="21,22"><strong>Tipos de Mamíferos Reservatórios</strong>:</p>',
+                  children: [
+                    {
+                      content: "<strong>Mamíferos Silvestres</strong>:",
+                      children: [
+                        {
+                          content:
+                            "Vivem na natureza com pouco ou nenhum contato com humanos.",
+                          children: [],
+                          payload: { tag: "li", lines: "23,24" },
+                        },
+                        {
+                          content:
+                            "Exemplos: Lobo Guará, Tamanduá bandeira, Tatu, Bicho preguiça.",
+                          children: [],
+                          payload: { tag: "li", lines: "24,25" },
+                        },
+                      ],
+                      payload: { tag: "li", lines: "22,25" },
+                    },
+                    {
+                      content: "<strong>Mamíferos Urbanos</strong>:",
+                      children: [
+                        {
+                          content:
+                            "<strong>Sinantrópicos</strong>: Mamíferos que se aproximam de ambientes urbanos.",
+                          children: [
+                            {
+                              content:
+                                "Exemplos: Gambá de orelha branca, Rato de telhado, Camundongo.",
+                              children: [],
+                              payload: { tag: "li", lines: "27,28" },
+                            },
+                          ],
+                          payload: { tag: "li", lines: "26,28" },
+                        },
+                        {
+                          content:
+                            "<strong>Domésticos</strong>: Mamíferos domesticados pelo ser humano.",
+                          children: [
+                            {
+                              content: "Exemplos: Cachorro, Gato, Cavalo.",
+                              children: [],
+                              payload: { tag: "li", lines: "29,31" },
+                            },
+                          ],
+                          payload: { tag: "li", lines: "28,31" },
+                        },
+                      ],
+                      payload: { tag: "li", lines: "25,31" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "21,31" },
+                },
+                {
+                  content:
+                    '\n<p data-lines="31,32"><strong>Outros Hospedeiros</strong>:</p>',
+                  children: [
+                    {
+                      content:
+                        "Espécies de <strong>macacos</strong> e <strong>morcegos</strong> também podem ser hospedeiros de <em><i>Leishmania</i> spp.</em>, mas não necessariamente <strong>reservatórios</strong>.",
+                      children: [],
+                      payload: { tag: "li", lines: "32,34" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "31,34" },
+                },
+              ],
+              payload: { tag: "h2", lines: "12,13" },
+            },
+            {
+              content: "3. Reservatórios de Leishmaniose Visceral (LV)",
+              children: [
+                {
+                  content:
+                    '\n<p data-lines="35,36"><strong>Reservatórios Silvestres</strong>:</p>',
+                  children: [
+                    {
+                      content:
+                        "Marsupiais (gambás), Canídeos silvestres (lobinhos, cachorros do mato).",
+                      children: [],
+                      payload: { tag: "li", lines: "36,38" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "35,38" },
+                },
+                {
+                  content:
+                    '\n<p data-lines="38,39"><strong>Reservatórios Urbanos</strong>:</p>',
+                  children: [
+                    {
+                      content:
+                        "<strong>Cães domésticos</strong>: Principais reservatórios na urbanização da doença.",
+                      children: [],
+                      payload: { tag: "li", lines: "39,40" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "38,40" },
+                },
+              ],
+              payload: { tag: "h2", lines: "34,35" },
+            },
+          ],
+          payload: { tag: "h1", lines: "1,2" },
+        },
+        null
+      );
+    </script>
+  </body>
+</html>

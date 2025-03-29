@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Leishmania</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../assets/images/favicon.ico"
+    />
+
+    <link href="../../assets/css/utilities/normalize.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    />
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <link href="../styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.5/dist/style.css"
+    />
+  </head>
+  <body>
+    <main class="content">
+      <img
+        src="../../assets/images/home/LOGOMARCA.svg"
+        class="top-image"
+        style="height: 200px"
+      />
+      <svg id="mindmap"></svg>
+    </main>
+    <div class="container">
+      <aside class="sidebar">
+        <img
+          src="../../assets/images/logos/logoCampus.png"
+          alt="Logo"
+          class="logo"
+        />
+        <button onclick="window.history.back()">Voltar</button>
+        <button onclick="window.location.href='../../index.html'">
+          Página Inicial
+        </button>
+      </aside>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.5/dist/browser/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.5/dist/index.js"></script>
+    <script>
+      (() => {
+        setTimeout(() => {
+          const { markmap: x, mm: K } = window,
+            P = new x.Toolbar();
+          P.attach(K);
+          const F = P.render();
+          F.setAttribute("style", "position:absolute;bottom:20px;right:20px"),
+            document.body.append(F);
+        });
+      })();
+    </script>
+    <script>
+      ((b, L, T, D) => {
+        const H = b();
+        window.mm = H.Markmap.create(
+          "svg#mindmap",
+          (L || H.deriveOptions)(D),
+          T
+        );
+      })(
+        () => window.markmap,
+        null,
+        {
+          content: " 5. Vetores das Leishmanioses",
+          children: [
+            {
+              content: "1. Conceito",
+              children: [
+                {
+                  content:
+                    "<strong>Vetores</strong>: Organismos que transmitem um patógeno de um hospedeiro para outro.",
+                  children: [],
+                  payload: { tag: "li", lines: "4,6" },
+                },
+              ],
+              payload: { tag: "h2", lines: "3,4" },
+            },
+            {
+              content: "2. Vetor Biológico",
+              children: [
+                {
+                  content:
+                    "<strong>Definição</strong>: Organismo vivo que serve de local para a multiplicação do agente causador de doenças e transmite o patógeno a outro ser vivo.",
+                  children: [],
+                  payload: { tag: "li", lines: "7,9" },
+                },
+              ],
+              payload: { tag: "h2", lines: "6,7" },
+            },
+            {
+              content: "3. Importância Médica dos Flebotomíneos",
+              children: [
+                {
+                  content:
+                    "<strong>Flebotomíneos</strong>: Vetores responsáveis pela transmissão de diversas doenças:",
+                  children: [
+                    {
+                      content: "<strong>Bartonelose</strong> (bactéria).",
+                      children: [],
+                      payload: { tag: "li", lines: "11,12" },
+                    },
+                    {
+                      content: "<strong>Arboviroses</strong> (vírus).",
+                      children: [],
+                      payload: { tag: "li", lines: "12,13" },
+                    },
+                    {
+                      content: "<strong>Leishmanioses</strong> (protozoário).",
+                      children: [],
+                      payload: { tag: "li", lines: "13,15" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "10,15" },
+                },
+              ],
+              payload: { tag: "h2", lines: "9,10" },
+            },
+            {
+              content: "4. Classificação Taxonômica dos Flebotomíneos",
+              children: [
+                {
+                  content: "<strong>Ordem</strong>: Diptera.",
+                  children: [],
+                  payload: { tag: "li", lines: "16,17" },
+                },
+                {
+                  content: "<strong>Família</strong>: Psychodidae.",
+                  children: [],
+                  payload: { tag: "li", lines: "17,18" },
+                },
+                {
+                  content: "<strong>Subfamília</strong>: Phlebotominae.",
+                  children: [],
+                  payload: { tag: "li", lines: "18,19" },
+                },
+                {
+                  content: "<strong>Gêneros</strong>: Vários gêneros.",
+                  children: [],
+                  payload: { tag: "li", lines: "19,21" },
+                },
+              ],
+              payload: { tag: "h2", lines: "15,16" },
+            },
+            {
+              content: "5. Patógenos Transmitidos pelos Flebotomíneos",
+              children: [
+                {
+                  content: "<strong>Bactéria</strong>: Bartonella.",
+                  children: [],
+                  payload: { tag: "li", lines: "22,23" },
+                },
+                {
+                  content: "<strong>Protozoário</strong>: <i>Leishmania</i>.",
+                  children: [],
+                  payload: { tag: "li", lines: "23,24" },
+                },
+                {
+                  content: "<strong>Vírus</strong>: Arbovírus.",
+                  children: [],
+                  payload: { tag: "li", lines: "24,26" },
+                },
+              ],
+              payload: { tag: "h2", lines: "21,22" },
+            },
+            {
+              content: "6. Características dos Flebotomíneos",
+              children: [
+                {
+                  content: "6.1. Nomes Populares",
+                  children: [
+                    {
+                      content:
+                        "Mosquito-palha, tatuquira, cangalhinha, birigui, etc.",
+                      children: [],
+                      payload: { tag: "li", lines: "29,31" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "28,29" },
+                },
+                {
+                  content: "6.2. Tamanho e Características do Corpo",
+                  children: [
+                    {
+                      content: "<strong>Tamanho</strong>: Pequenos, 2-3 mm.",
+                      children: [],
+                      payload: { tag: "li", lines: "32,33" },
+                    },
+                    {
+                      content: "<strong>Cor</strong>: Castanha ou amarelada.",
+                      children: [],
+                      payload: { tag: "li", lines: "33,34" },
+                    },
+                    {
+                      content:
+                        "<strong>Corpo</strong>: Coberto de cerdas, delgado, com pernas longas e finas.",
+                      children: [],
+                      payload: { tag: "li", lines: "34,36" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "31,32" },
+                },
+                {
+                  content: "6.3. Diferença Morfológica entre Machos e Fêmeas",
+                  children: [
+                    {
+                      content:
+                        "<strong>Machos</strong>: Estruturas abdominais desenvolvidas, aparelho bucal curto.",
+                      children: [],
+                      payload: { tag: "li", lines: "37,38" },
+                    },
+                    {
+                      content:
+                        "<strong>Fêmeas</strong>: Genitália arredondada, aparelho bucal longo e adaptado para picar e sugar, cibário para alimentação sanguínea.",
+                      children: [],
+                      payload: { tag: "li", lines: "38,40" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "36,37" },
+                },
+                {
+                  content: "6.4. Hábitos de Voo",
+                  children: [
+                    {
+                      content: "Voo saltado, asas eretas em repouso.",
+                      children: [],
+                      payload: { tag: "li", lines: "41,43" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "40,41" },
+                },
+                {
+                  content:
+                    "6.5. Hematofagia das Fêmeas e Alimentação dos Machos",
+                  children: [
+                    {
+                      content:
+                        "<strong>Fêmeas</strong>: Necessitam de sangue para maturação dos ovários.",
+                      children: [],
+                      payload: { tag: "li", lines: "44,45" },
+                    },
+                    {
+                      content:
+                        "<strong>Machos</strong>: Alimentam-se de açúcares (néctar, frutos, etc.).",
+                      children: [],
+                      payload: { tag: "li", lines: "45,47" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "43,44" },
+                },
+                {
+                  content: "6.6. Locais de Abrigo e Descanso",
+                  children: [
+                    {
+                      content:
+                        "<strong>Silvestres</strong>: Entre folhas caídas, tocas de animais, troncos de árvores.",
+                      children: [],
+                      payload: { tag: "li", lines: "48,49" },
+                    },
+                    {
+                      content:
+                        "<strong>Urbanos</strong>: Galinheiros, pocilgas, abrigos de animais.",
+                      children: [],
+                      payload: { tag: "li", lines: "49,51" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "47,48" },
+                },
+                {
+                  content: "6.7. Criadouros Naturais",
+                  children: [
+                    {
+                      content:
+                        "Ovos em locais ricos em matéria orgânica (pedras, fendas de rochas, buracos de árvores, etc.).",
+                      children: [],
+                      payload: { tag: "li", lines: "52,53" },
+                    },
+                    {
+                      content:
+                        "<strong>Condições de desenvolvimento</strong>: Temperatura ótima de 25º a 27ºC.",
+                      children: [],
+                      payload: { tag: "li", lines: "53,55" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "51,52" },
+                },
+              ],
+              payload: { tag: "h2", lines: "26,27" },
+            },
+            {
+              content: "7. Criação em Laboratório",
+              children: [
+                {
+                  content:
+                    "<strong>Importância</strong>: Estudo do ciclo vital e biologia dos flebotomíneos.",
+                  children: [],
+                  payload: { tag: "li", lines: "56,57" },
+                },
+                {
+                  content:
+                    "<strong>Dificuldade</strong>: Encontrar criadouros na natureza.",
+                  children: [],
+                  payload: { tag: "li", lines: "57,59" },
+                },
+              ],
+              payload: { tag: "h2", lines: "55,56" },
+            },
+            {
+              content:
+                "8. Critérios para Incriminar Flebotomíneos como Vetores de Leishmanioses",
+              children: [
+                {
+                  content: "<strong>Critérios</strong>:",
+                  children: [
+                    {
+                      content: "Antropofilia (preferência por humanos).",
+                      children: [],
+                      payload: { tag: "li", lines: "61,62" },
+                    },
+                    {
+                      content:
+                        "Distribuição espacial compatível com a ocorrência de casos humanos.",
+                      children: [],
+                      payload: { tag: "li", lines: "62,63" },
+                    },
+                    {
+                      content:
+                        "Atração por mamíferos reservatórios de <em><i>Leishmania</i></em>.",
+                      children: [],
+                      payload: { tag: "li", lines: "63,64" },
+                    },
+                    {
+                      content:
+                        "Capacidade de se infectar e transmitir <em><i>Leishmania</i></em>.",
+                      children: [],
+                      payload: { tag: "li", lines: "64,66" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "60,66" },
+                },
+              ],
+              payload: { tag: "h2", lines: "59,60" },
+            },
+            {
+              content:
+                "9. Espécies Incriminadas como Vetores de Leishmaniose Visceral (LV)",
+              children: [
+                {
+                  content: "<strong>Espécies no Brasil</strong>:",
+                  children: [
+                    {
+                      content: "<em>Lutzomyia longipalpis</em>.",
+                      children: [],
+                      payload: { tag: "li", lines: "68,69" },
+                    },
+                    {
+                      content: "<em>Lutzomyia cruzi</em> (Mato Grosso do Sul).",
+                      children: [],
+                      payload: { tag: "li", lines: "69,70" },
+                    },
+                    {
+                      content: "<em>Migonemyia migonei</em> (compet",
+                      children: [],
+                      payload: { tag: "li", lines: "70,71" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "67,71" },
+                },
+              ],
+              payload: { tag: "h2", lines: "66,67" },
+            },
+          ],
+          payload: { tag: "h1", lines: "1,2" },
+        },
+        null
+      );
+    </script>
+  </body>
+</html>

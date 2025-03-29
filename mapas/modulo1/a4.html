@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title><i>Leishmania</i></title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../assets/images/favicon.ico"
+    />
+
+    <link href="../../assets/css/utilities/normalize.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    />
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <link href="../styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.5/dist/style.css"
+    />
+  </head>
+  <body>
+    <main class="content">
+      <img
+        src="../../assets/images/home/LOGOMARCA.svg"
+        class="top-image"
+        style="height: 200px"
+      />
+      <svg id="mindmap"></svg>
+    </main>
+    <div class="container">
+      <aside class="sidebar">
+        <img
+          src="../../assets/images/logos/logoCampus.png"
+          alt="Logo"
+          class="logo"
+        />
+        <button onclick="window.history.back()">Voltar</button>
+        <button onclick="window.location.href='../../index.html'">
+          Página Inicial
+        </button>
+      </aside>
+    </div>
+    <svg id="mindmap"></svg>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.5/dist/browser/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.5/dist/index.js"></script>
+    <script>
+      (() => {
+        setTimeout(() => {
+          const { markmap: x, mm: K } = window,
+            P = new x.Toolbar();
+          P.attach(K);
+          const F = P.render();
+          F.setAttribute("style", "position:absolute;bottom:20px;right:20px"),
+            document.body.append(F);
+        });
+      })();
+    </script>
+    <script>
+      ((b, L, T, D) => {
+        const H = b();
+        window.mm = H.Markmap.create(
+          "svg#mindmap",
+          (L || H.deriveOptions)(D),
+          T
+        );
+      })(
+        () => window.markmap,
+        null,
+        {
+          content: "4. Cadeia de Transmissão das Leishmanioses",
+          children: [
+            {
+              content: "1. Conceito",
+              children: [
+                {
+                  content:
+                    "<strong>Transmissão</strong>: Ocorre através da picada de flebotomíneos fêmeas hematófagas, conhecidos como mosquito-palha.",
+                  children: [],
+                  payload: { tag: "li", lines: "4,5" },
+                },
+                {
+                  content: "<strong>Mecanismo de transmissão</strong>:",
+                  children: [
+                    {
+                      content:
+                        "Ao sugar o sangue, o inseto injeta as formas infectantes de <em><i>Leishmania</i></em> (promastigotas metacíclicas) no hospedeiro.",
+                      children: [],
+                      payload: { tag: "li", lines: "6,7" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "5,7" },
+                },
+                {
+                  content:
+                    "<strong>Importante</strong>: Não ocorre transmissão direta de pessoa a pessoa; apenas através da picada do inseto vetor.",
+                  children: [],
+                  payload: { tag: "li", lines: "7,9" },
+                },
+              ],
+              payload: { tag: "h2", lines: "3,4" },
+            },
+            {
+              content: "2. Agente Etiológico",
+              children: [
+                {
+                  content: "2.1. Classificação Taxonômica",
+                  children: [
+                    {
+                      content: "<strong>Reino</strong>: Protista.",
+                      children: [],
+                      payload: { tag: "li", lines: "13,14" },
+                    },
+                    {
+                      content: "<strong>Ordem</strong>: Kinetoplastida.",
+                      children: [],
+                      payload: { tag: "li", lines: "14,15" },
+                    },
+                    {
+                      content: "<strong>Família</strong>: Trypanosomatidae.",
+                      children: [],
+                      payload: { tag: "li", lines: "15,16" },
+                    },
+                    {
+                      content:
+                        "<strong>Gênero</strong>: <em><i>Leishmania</i></em>.",
+                      children: [],
+                      payload: { tag: "li", lines: "16,17" },
+                    },
+                    {
+                      content:
+                        "<strong>Espécies de <em><i>Leishmania</i></em></strong>: Causam tanto leishmaniose tegumentar quanto visceral.",
+                      children: [],
+                      payload: { tag: "li", lines: "17,19" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "12,13" },
+                },
+              ],
+              payload: { tag: "h2", lines: "9,10" },
+            },
+            {
+              content:
+                "3. Espécies de <i>Leishmania</i> Causadoras de Leishmaniose Tegumentar (LT)",
+              children: [
+                {
+                  content: "3.1. Espécies Importantes no Brasil",
+                  children: [
+                    {
+                      content:
+                        '\n<p data-lines="23,24"><strong><i>Leishmania</i> (L.) amazonensis</strong>:</p>',
+                      children: [
+                        {
+                          content:
+                            "Distribuição: Florestas primárias e secundárias da Amazônia (Amazonas, Pará, Rondônia, Tocantins e Maranhão).",
+                          children: [],
+                          payload: { tag: "li", lines: "24,25" },
+                        },
+                        {
+                          content:
+                            "Presença também no Nordeste, Sudeste, Centro-Oeste e Sul do Brasil.",
+                          children: [],
+                          payload: { tag: "li", lines: "25,27" },
+                        },
+                      ],
+                      payload: { tag: "li", lines: "23,27" },
+                    },
+                    {
+                      content:
+                        '\n<p data-lines="27,28"><strong><i>Leishmania</i> (V.) guyanensis</strong>:</p>',
+                      children: [
+                        {
+                          content:
+                            "Distribuição: Região Norte (Acre, Amapá, Roraima, Amazonas, e Pará) e Guianas.",
+                          children: [],
+                          payload: { tag: "li", lines: "28,29" },
+                        },
+                        {
+                          content:
+                            "Encontrada principalmente em florestas de terra firme, áreas que não se alagam no período de chuvas.",
+                          children: [],
+                          payload: { tag: "li", lines: "29,31" },
+                        },
+                      ],
+                      payload: { tag: "li", lines: "27,31" },
+                    },
+                    {
+                      content:
+                        '\n<p data-lines="31,32"><strong><i>Leishmania</i> (V.) braziliensis</strong>:</p>',
+                      children: [
+                        {
+                          content:
+                            "Primeira espécie descrita como agente etiológico da LT.",
+                          children: [],
+                          payload: { tag: "li", lines: "32,33" },
+                        },
+                        {
+                          content:
+                            "Ampla distribuição: Desde a América Central até o norte da Argentina.",
+                          children: [],
+                          payload: { tag: "li", lines: "33,34" },
+                        },
+                        {
+                          content: "Presença em todo o Brasil.",
+                          children: [],
+                          payload: { tag: "li", lines: "34,36" },
+                        },
+                      ],
+                      payload: { tag: "li", lines: "31,36" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "22,23" },
+                },
+                {
+                  content: "3.2. Outras Espécies Envolvidas na LT",
+                  children: [
+                    {
+                      content:
+                        "<strong>Outras espécies</strong>: <em><i>Leishmania</i> (V.) lainsoni</em>, <em>L. (V.) naiffi</em>, <em>L. (V.) shawi</em>, <em>L. (V.) lindenberg</em>.",
+                      children: [],
+                      payload: { tag: "li", lines: "37,38" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "36,37" },
+                },
+              ],
+              payload: { tag: "h2", lines: "19,20" },
+            },
+          ],
+          payload: { tag: "h1", lines: "1,2" },
+        },
+        null
+      );
+    </script>
+  </body>
+</html>

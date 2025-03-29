@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Leishmania</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../assets/images/favicon.ico"
+    />
+
+    <link href="../../assets/css/utilities/normalize.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    />
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <link href="../styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.5/dist/style.css"
+    />
+  </head>
+  <body>
+    <main class="content">
+      <img
+        src="../../assets/images/home/LOGOMARCA.svg"
+        class="top-image"
+        style="height: 200px"
+      />
+      <svg id="mindmap"></svg>
+    </main>
+    <div class="container">
+      <aside class="sidebar">
+        <img
+          src="../../assets/images/logos/logoCampus.png"
+          alt="Logo"
+          class="logo"
+        />
+        <button onclick="window.history.back()">Voltar</button>
+        <button onclick="window.location.href='../../index.html'">
+          Página Inicial
+        </button>
+      </aside>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.5/dist/browser/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.5/dist/index.js"></script>
+    <script>
+      (() => {
+        setTimeout(() => {
+          const { markmap: x, mm: K } = window,
+            P = new x.Toolbar();
+          P.attach(K);
+          const F = P.render();
+          F.setAttribute("style", "position:absolute;bottom:20px;right:20px"),
+            document.body.append(F);
+        });
+      })();
+    </script>
+    <script>
+      ((b, L, T, D) => {
+        const H = b();
+        window.mm = H.Markmap.create(
+          "svg#mindmap",
+          (L || H.deriveOptions)(D),
+          T
+        );
+      })(
+        () => window.markmap,
+        null,
+        {
+          content: "Leishmanioses",
+          children: [
+            {
+              content: "1. O que são as leishmanioses?",
+              children: [
+                {
+                  content: "1.1. Conceito",
+                  children: [
+                    {
+                      content:
+                        "<strong>Leishmaniose</strong>: Conjunto de doenças causadas por protozoários parasitas do gênero <em><i>Leishmania</i></em>.",
+                      children: [],
+                      payload: { tag: "li", lines: "5,7" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "4,5" },
+                },
+              ],
+              payload: { tag: "h2", lines: "3,4" },
+            },
+            {
+              content: "2. Características principais",
+              children: [
+                {
+                  content:
+                    "<strong>Gênero dos parasitas</strong>: <em><i>Leishmania</i></em>.",
+                  children: [],
+                  payload: { tag: "li", lines: "8,9" },
+                },
+                {
+                  content:
+                    "<strong>Vetores</strong>: Insetos flebotomíneos (subfamília Phlebotominae).",
+                  children: [],
+                  payload: { tag: "li", lines: "9,11" },
+                },
+              ],
+              payload: { tag: "h2", lines: "7,8" },
+            },
+            {
+              content: "3. Ciclo das leishmanioses",
+              children: [
+                {
+                  content:
+                    "<strong>Ciclo de ocorrência</strong>: Parasitismo entre diferentes espécies de animais vertebrados.",
+                  children: [],
+                  payload: { tag: "li", lines: "12,13" },
+                },
+                {
+                  content:
+                    "<strong>Originalmente</strong>: Doenças de animais silvestres, sem interferência humana.",
+                  children: [],
+                  payload: { tag: "li", lines: "13,15" },
+                },
+              ],
+              payload: { tag: "h2", lines: "11,12" },
+            },
+            {
+              content: "4. Transmissão e causas",
+              children: [
+                {
+                  content:
+                    "<strong>Mudanças antrópicas</strong>: Expansão das áreas urbanas e contato com vetores infectados.",
+                  children: [],
+                  payload: { tag: "li", lines: "16,17" },
+                },
+                {
+                  content:
+                    "<strong>Antropozoonoses</strong>: Doenças que afetam animais silvestres, mas podem ser transmitidas para os humanos.",
+                  children: [],
+                  payload: { tag: "li", lines: "17,19" },
+                },
+              ],
+              payload: { tag: "h2", lines: "15,16" },
+            },
+            {
+              content: "5. Importância",
+              children: [
+                {
+                  content:
+                    "<strong>Leishmanioses</strong>: Doenças transmitidas por vetores (flebotomíneos) para seres humanos, com origem em animais silvestres.",
+                  children: [],
+                  payload: { tag: "li", lines: "20,22" },
+                },
+              ],
+              payload: { tag: "h2", lines: "19,20" },
+            },
+            {
+              content: "1.2. Doenças Negligenciadas",
+              children: [
+                {
+                  content: "O que são doenças negligenciadas?",
+                  children: [
+                    {
+                      content:
+                        "<strong>Definição</strong>: Doenças com pouco investimento em diagnóstico, tratamento e controle.",
+                      children: [],
+                      payload: { tag: "li", lines: "26,27" },
+                    },
+                    {
+                      content:
+                        "<strong>Impacto</strong>: Afetam populações social e economicamente desfavorecidas.",
+                      children: [],
+                      payload: { tag: "li", lines: "27,28" },
+                    },
+                    {
+                      content:
+                        "<strong>Falta de investimento</strong>: Devido ao baixo lucro no tratamento, os investimentos não são feitos.",
+                      children: [],
+                      payload: { tag: "li", lines: "28,29" },
+                    },
+                    {
+                      content:
+                        "<strong>Consequência</strong>: Adoecimento contínuo de populações marginalizadas.",
+                      children: [],
+                      payload: { tag: "li", lines: "29,30" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "25,26" },
+                },
+              ],
+              payload: { tag: "h2", lines: "22,23" },
+            },
+          ],
+          payload: { tag: "h1", lines: "1,2" },
+        },
+        null
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* CONTAINER PRINCIPAL */
+.container {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* SIDEBAR LATERAL */
+.sidebar {
+  width: 200px; /* Define a largura fixa da sidebar */
+  background-color: #c40f17;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.sidebar button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: white;
+  color: #c40f17;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sidebar button:hover {
+  background-color: #e0e0e0;
+}
+
+/* ÁREA PRINCIPAL */
+.content {
+  float: right;
+  width: 90%;
+}
+
+/* IMAGEM ACIMA DO MAPA */
+.top-image {
+  display: block;
+  margin: 0 auto;
+}
+
+/* MAPA MENTAL */
+.mindmap {
+  width: 100%; /* Ocupa toda a largura disponível */
+  height: 80vh; /* Altura de 80% da tela */
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  flex: 1;
+  width: 100%;
+}
+
+#mindmap {
+  flex: 1;
+  width: 100%;
+}
+#mindmap svg {
+  transform: scale(1.5); /* Aumenta o tamanho */
+  transform-origin: center; /* Mantém o centro como referência */
+  width: 100%;
+}
+body {
+  overflow: hidden;
+}

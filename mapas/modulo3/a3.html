@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Leishmania</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../assets/images/favicon.ico"
+    />
+
+    <link href="../../assets/css/utilities/normalize.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    />
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <link href="../styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.5/dist/style.css"
+    />
+  </head>
+  <body>
+    <main class="content">
+      <img
+        src="../../assets/images/home/LOGOMARCA.svg"
+        class="top-image"
+        style="height: 200px"
+      />
+      <svg id="mindmap"></svg>
+    </main>
+    <div class="container">
+      <aside class="sidebar">
+        <img
+          src="../../assets/images/logos/logoCampus.png"
+          alt="Logo"
+          class="logo"
+        />
+        <button onclick="window.history.back()">Voltar</button>
+        <button onclick="window.location.href='../../index.html'">
+          Página Inicial
+        </button>
+      </aside>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.5/dist/browser/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.5/dist/index.js"></script>
+    <script>
+      (() => {
+        setTimeout(() => {
+          const { markmap: x, mm: K } = window,
+            P = new x.Toolbar();
+          P.attach(K);
+          const F = P.render();
+          F.setAttribute("style", "position:absolute;bottom:20px;right:20px"),
+            document.body.append(F);
+        });
+      })();
+    </script>
+    <script>
+      ((b, L, T, D) => {
+        const H = b();
+        window.mm = H.Markmap.create(
+          "svg#mindmap",
+          (L || H.deriveOptions)(D),
+          T
+        );
+      })(
+        () => window.markmap,
+        null,
+        {
+          content: "3. Ciclos de Transmissão da Leishmaniose",
+          children: [
+            {
+              content: "1. Transmissão principal",
+              children: [
+                {
+                  content:
+                    "<strong>Vetores principais</strong>: Flebotomíneos (mosquito-palha, asa-dura, birigui)",
+                  children: [
+                    {
+                      content:
+                        "Inoculação do parasita <i>Leishmania</i> ao picar hospedeiros (humanos, cães)",
+                      children: [],
+                      payload: { tag: "li", lines: "4,5" },
+                    },
+                    {
+                      content:
+                        "Ciclo completo quando outro flebotomíneo pica um hospedeiro infectado",
+                      children: [],
+                      payload: { tag: "li", lines: "5,6" },
+                    },
+                    {
+                      content:
+                        "<strong>Fatores envolvidos</strong>: Biológicos e não biológicos",
+                      children: [],
+                      payload: { tag: "li", lines: "6,8" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "3,8" },
+                },
+              ],
+              payload: { tag: "h2", lines: "2,3" },
+            },
+            {
+              content: "2. Outras formas de transmissão",
+              children: [
+                {
+                  content: "<strong>Em áreas sem flebotomíneos</strong>:",
+                  children: [
+                    {
+                      content: "Transmissão vertical (mãe para filhote)",
+                      children: [],
+                      payload: { tag: "li", lines: "10,11" },
+                    },
+                    {
+                      content: "Transmissão venérea (durante o acasalamento)",
+                      children: [],
+                      payload: { tag: "li", lines: "11,12" },
+                    },
+                    {
+                      content: "Transmissão por transfusão sanguínea",
+                      children: [],
+                      payload: { tag: "li", lines: "12,13" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "9,13" },
+                },
+                {
+                  content:
+                    "<strong>Importância</strong>: Entender a distribuição da doença onde flebotomíneos são raros",
+                  children: [],
+                  payload: { tag: "li", lines: "13,15" },
+                },
+              ],
+              payload: { tag: "h2", lines: "8,9" },
+            },
+            {
+              content: "3. Reservatórios e hospedeiros",
+              children: [
+                {
+                  content: "<strong>Animais domésticos</strong>:",
+                  children: [
+                    {
+                      content:
+                        "<strong>Cães</strong>: Reservatório crucial (L. braziliensis, L. amazonensis, L. chagasi)",
+                      children: [],
+                      payload: { tag: "li", lines: "17,18" },
+                    },
+                    {
+                      content:
+                        "<strong>Gatos</strong>: Infeção possível, mas não considerados principais reservatórios",
+                      children: [],
+                      payload: { tag: "li", lines: "18,19" },
+                    },
+                    {
+                      content:
+                        "<strong>Equinos, asininos e suínos</strong>: Casos raros de infecção",
+                      children: [],
+                      payload: { tag: "li", lines: "19,20" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "16,20" },
+                },
+                {
+                  content: "<strong>Animais silvestres</strong>:",
+                  children: [
+                    {
+                      content:
+                        "<strong>Gambá (Didelphis marsupialis)</strong>: Possível reservatório de L. guyanensis e L. amazonensis",
+                      children: [],
+                      payload: { tag: "li", lines: "21,22" },
+                    },
+                    {
+                      content:
+                        "<strong>Outros animais</strong>: Bicho-preguiça, macacos, cotias, quatis, tamanduás",
+                      children: [],
+                      payload: { tag: "li", lines: "22,23" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "20,23" },
+                },
+                {
+                  content:
+                    "<strong>Hospedeiros acidentais</strong>: Animais que podem abrigar o parasita sem atuar como reservatórios",
+                  children: [],
+                  payload: { tag: "li", lines: "23,25" },
+                },
+              ],
+              payload: { tag: "h2", lines: "15,16" },
+            },
+            {
+              content: "4. Ambiente Silvestre",
+              children: [
+                {
+                  content:
+                    "<strong>Importância ecológica</strong>: Habitats naturais abrigam vetores e hospedeiros naturais",
+                  children: [],
+                  payload: { tag: "li", lines: "26,27" },
+                },
+                {
+                  content: "<strong>Animais vulneráveis</strong>:",
+                  children: [
+                    {
+                      content: "Bichos-preguiça, macacos, cotias, entre outros",
+                      children: [],
+                      payload: { tag: "li", lines: "28,29" },
+                    },
+                    {
+                      content:
+                        "Adaptação a ambientes urbanos e periurbanos aumenta a transmissão",
+                      children: [],
+                      payload: { tag: "li", lines: "29,30" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "27,30" },
+                },
+                {
+                  content:
+                    "<strong>Gambá</strong>: Principal reservatório urbano e possível vetor de Trypanosoma cruzi",
+                  children: [],
+                  payload: { tag: "li", lines: "30,32" },
+                },
+              ],
+              payload: { tag: "h2", lines: "25,26" },
+            },
+            {
+              content: "5. Ambiente Urbano",
+              children: [
+                {
+                  content:
+                    "<strong>Expansão das leishmanioses</strong>: De áreas rurais para urbanas a partir da década de 1980",
+                  children: [
+                    {
+                      content:
+                        "Crescimento desordenado das cidades, migração e falta de saneamento",
+                      children: [],
+                      payload: { tag: "li", lines: "34,35" },
+                    },
+                    {
+                      content:
+                        "<strong>Flebotomíneos urbanos</strong>: Adaptação à vida perto de humanos",
+                      children: [],
+                      payload: { tag: "li", lines: "35,36" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "33,36" },
+                },
+                {
+                  content: "<strong>Reservatórios urbanos</strong>:",
+                  children: [
+                    {
+                      content:
+                        "Cães domésticos são principais reservatórios urbanos",
+                      children: [],
+                      payload: { tag: "li", lines: "37,38" },
+                    },
+                    {
+                      content:
+                        "A migração e a urbanização facilitam a disseminação",
+                      children: [],
+                      payload: { tag: "li", lines: "38,39" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "36,39" },
+                },
+                {
+                  content:
+                    "<strong>Mudanças Climáticas</strong>: Alterações no clima afetam a distribuição dos flebotomíneos",
+                  children: [],
+                  payload: { tag: "li", lines: "39,41" },
+                },
+              ],
+              payload: { tag: "h2", lines: "32,33" },
+            },
+            {
+              content: "6. Controle e Prevenção",
+              children: [
+                {
+                  content: "<strong>Medidas principais</strong>:",
+                  children: [
+                    {
+                      content: "Redução da população de flebotomíneos",
+                      children: [],
+                      payload: { tag: "li", lines: "43,44" },
+                    },
+                    {
+                      content: "Monitoramento e tratamento de cães infectados",
+                      children: [],
+                      payload: { tag: "li", lines: "44,45" },
+                    },
+                    {
+                      content: "Educação e conscientização pública",
+                      children: [],
+                      payload: { tag: "li", lines: "45,46" },
+                    },
+                    {
+                      content:
+                        "Melhoria das condições sanitárias e de infraestrutura",
+                      children: [],
+                      payload: { tag: "li", lines: "46,47" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "42,47" },
+                },
+                {
+                  content:
+                    "<strong>Histórico no Brasil</strong>: Identificação da <i>Leishmania</i> visceral em 1913, disseminação a partir dos anos 80",
+                  children: [],
+                  payload: { tag: "li", lines: "47,49" },
+                },
+              ],
+              payload: { tag: "h2", lines: "41,42" },
+            },
+            {
+              content: "7. Fatores que Contribuem para Disseminação",
+              children: [
+                {
+                  content: "<strong>Infraestrutura</strong>:",
+                  children: [
+                    {
+                      content:
+                        "Construção de rodovias e gasodutos facilita a movimentação de trabalhadores e cães infectados",
+                      children: [],
+                      payload: { tag: "li", lines: "51,52" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "50,52" },
+                },
+                {
+                  content:
+                    "<strong>Desmatamento</strong>: Destruição de florestas desloca os vetores",
+                  children: [],
+                  payload: { tag: "li", lines: "52,53" },
+                },
+                {
+                  content:
+                    "<strong>Mudanças Climáticas</strong>: Alterações no clima favorecem a propagação",
+                  children: [],
+                  payload: { tag: "li", lines: "53,55" },
+                },
+              ],
+              payload: { tag: "h2", lines: "49,50" },
+            },
+            {
+              content: "8. Ambiente Periurbano",
+              children: [
+                {
+                  content:
+                    "<strong>Definição</strong>: Área de transição entre cidades e áreas rurais, com baixa a média densidade populacional",
+                  children: [],
+                  payload: { tag: "li", lines: "56,57" },
+                },
+                {
+                  content: "<strong>Características</strong>:",
+                  children: [
+                    {
+                      content: "Combinação de atividades urbanas e rurais",
+                      children: [],
+                      payload: { tag: "li", lines: "58,59" },
+                    },
+                    {
+                      content:
+                        "Áreas dinâmicas com rápidas transformações econômicas e sociais",
+                      children: [],
+                      payload: { tag: "li", lines: "59,60" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "57,60" },
+                },
+                {
+                  content:
+                    "<strong>Leishmaniose no ambiente periurbano</strong>:",
+                  children: [
+                    {
+                      content:
+                        "Histórico de transmissão em áreas rurais e agora nas periferias urbanas",
+                      children: [],
+                      payload: { tag: "li", lines: "61,62" },
+                    },
+                    {
+                      content:
+                        "Foco de transmissão com casos antigos e novos surtos devido à expansão de atividades econômicas (mineração, expansão agrícola, migração)",
+                      children: [],
+                      payload: { tag: "li", lines: "62,63" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "60,63" },
+                },
+                {
+                  content: "<strong>Fatores de transmissão</strong>:",
+                  children: [
+                    {
+                      content:
+                        "Falta de saneamento básico e condições econômicas precárias",
+                      children: [],
+                      payload: { tag: "li", lines: "64,65" },
+                    },
+                    {
+                      content:
+                        "Migração e convivência com animais (silvestres e domésticos)",
+                      children: [],
+                      payload: { tag: "li", lines: "65,66" },
+                    },
+                    {
+                      content:
+                        "Acúmulo de lixo favorece a proliferação de roedores e insetos",
+                      children: [],
+                      payload: { tag: "li", lines: "66,67" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "63,67" },
+                },
+                {
+                  content: "<strong>Controle e Prevenção</strong>:",
+                  children: [
+                    {
+                      content:
+                        "Redução de contato com vetores (uso de inseticidas, mosquiteiros, repelentes)",
+                      children: [],
+                      payload: { tag: "li", lines: "68,69" },
+                    },
+                    {
+                      content:
+                        "Melhoria das condições ambientais (saneamento básico, gestão do lixo)",
+                      children: [],
+                      payload: { tag: "li", lines: "69,70" },
+                    },
+                    {
+                      content:
+                        "Educação e conscientização pública sobre riscos e prevenção",
+                      children: [],
+                      payload: { tag: "li", lines: "70,71" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "67,71" },
+                },
+                {
+                  content: "<strong>Papel do poder público</strong>:",
+                  children: [
+                    {
+                      content:
+                        "Desenvolvimento de políticas de saúde adaptadas às características locais",
+                      children: [],
+                      payload: { tag: "li", lines: "72,73" },
+                    },
+                    {
+                      content:
+                        "Programas de prevenção envolvendo a comunidade na tomada de decisões",
+                      children: [],
+                      payload: { tag: "li", lines: "73,75" },
+                    },
+                  ],
+                  payload: { tag: "li", lines: "71,75" },
+                },
+              ],
+              payload: { tag: "h2", lines: "55,56" },
+            },
+          ],
+          payload: { tag: "h1", lines: "0,1" },
+        },
+        null
+      );
+    </script>
+  </body>
+</html>

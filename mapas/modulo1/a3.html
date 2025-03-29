@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Leishmania</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico" />
+
+    <link href="../../assets/css/utilities/normalize.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    />
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <link href="../styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.5/dist/style.css"
+    />
+  </head>
+  <body>
+    <main class="content">
+      <img
+        src="../../assets/images/home/LOGOMARCA.svg"
+        class="top-image"
+        style="height: 200px"
+      />
+      <svg id="mindmap"></svg>
+    </main>
+    <div class="container">
+      <aside class="sidebar">
+        <img
+          src="../../assets/images/logos/logoCampus.png"
+          alt="Logo"
+          class="logo"
+        />
+        <button onclick="window.history.back()">Voltar</button>
+        <button onclick="window.location.href='../../index.html'">
+          Página Inicial
+        </button>
+      </aside>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.5/dist/browser/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.5/dist/index.js"></script>
+    <script>
+      (() => {
+        setTimeout(() => {
+          const { markmap: x, mm: K } = window,
+            P = new x.Toolbar();
+          P.attach(K);
+          const F = P.render();
+          F.setAttribute("style", "position:absolute;bottom:20px;right:20px"),
+            document.body.append(F);
+        });
+      })();
+    </script>
+    <script>
+      ((b, L, T, D) => {
+        const H = b();
+        window.mm = H.Markmap.create(
+          "svg#mindmap",
+          (L || H.deriveOptions)(D),
+          T
+        );
+      })(
+        () => window.markmap,
+        null,
+        {
+          content: "3. Distribuição Geográfica das Leishmanioses",
+          children: [
+            {
+              content: "1. No Mundo e nas Américas",
+              children: [
+                {
+                  content: "1.1. Dados da OMS",
+                  children: [
+                    {
+                      content:
+                        "<strong>Risco</strong>: Mais de 1 bilhão de pessoas vivem em áreas endêmicas.",
+                      children: [],
+                      payload: { tag: "li", lines: "9,10" },
+                    },
+                    {
+                      content: "<strong>Novos casos anuais</strong>:",
+                      children: [
+                        {
+                          content: "30.000 casos de leishmaniose visceral.",
+                          children: [],
+                          payload: { tag: "li", lines: "11,12" },
+                        },
+                        {
+                          content:
+                            "1 milhão de casos de leishmaniose tegumentar.",
+                          children: [],
+                          payload: { tag: "li", lines: "12,14" },
+                        },
+                      ],
+                      payload: { tag: "li", lines: "10,14" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "8,9" },
+                },
+                {
+                  content: "1.2. Localização dos Casos",
+                  children: [
+                    {
+                      content: "<strong>Leishmaniose Visceral</strong>:",
+                      children: [
+                        {
+                          content:
+                            "Maioria dos casos ocorre no Brasil, Leste da África e Índia.",
+                          children: [],
+                          payload: { tag: "li", lines: "16,17" },
+                        },
+                        {
+                          content:
+                            "90% dos casos na América Latina acontecem no Brasil.",
+                          children: [],
+                          payload: { tag: "li", lines: "17,19" },
+                        },
+                      ],
+                      payload: { tag: "li", lines: "15,19" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "14,15" },
+                },
+              ],
+              payload: { tag: "h2", lines: "3,4" },
+            },
+            {
+              content: "2. No Brasil",
+              children: [
+                {
+                  content: "2.1. Leishmaniose Visceral no Brasil",
+                  children: [
+                    {
+                      content:
+                        "<strong>Distribuição de casos</strong>: Casos concentrados principalmente na Região Nordeste do Brasil.",
+                      children: [],
+                      payload: { tag: "li", lines: "24,25" },
+                    },
+                    {
+                      content:
+                        "<strong>Hipótese a ser explorada</strong>: O que pode explicar essa concentração histórica na região?",
+                      children: [],
+                      payload: { tag: "li", lines: "25,27" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "23,24" },
+                },
+                {
+                  content: "2.2. Leishmaniose Tegumentar no Brasil",
+                  children: [
+                    {
+                      content:
+                        "<strong>Média anual</strong>: 21.000 casos registrados por ano.",
+                      children: [],
+                      payload: { tag: "li", lines: "28,29" },
+                    },
+                    {
+                      content:
+                        "<strong>Região Norte</strong>: Responsável pela maior parte dos casos.",
+                      children: [
+                        {
+                          content:
+                            "Em 2022, 12.878 casos, sendo 6.019 na Região Norte.",
+                          children: [],
+                          payload: { tag: "li", lines: "30,31" },
+                        },
+                      ],
+                      payload: { tag: "li", lines: "29,31" },
+                    },
+                  ],
+                  payload: { tag: "h3", lines: "27,28" },
+                },
+              ],
+              payload: { tag: "h2", lines: "19,20" },
+            },
+          ],
+          payload: { tag: "h1", lines: "1,2" },
+        },
+        null
+      );
+    </script>
+  </body>
+</html>
