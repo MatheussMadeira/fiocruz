@@ -738,48 +738,63 @@
         <div class="conteudo">
           <p class="indice">Encerramento</p>
           <h1 style="margin-top: 40px">
-            Parabéns! </br>Você chegou ao final do curso!
+            Parabéns, você chegou ao final do curso!
           </h1>
           <div class="row centro">
             <h2>Veja o nosso video de conclusão:</h2>
           </div>
-          <div class="row centro" style="height: 54vh;">
+          <div
+            class="row centro"
+            style="
+              width: 100%;
+              position: relative;
+              padding-bottom: 56.25%;
+              height: 0;
+              overflow: hidden;
+            "
+          >
             <iframe
-            src="https://drive.google.com/file/d/1BOlCMSYItzJOfa6QqCINulijZ7EZ4QoP/preview"
-            controls
-            width="70%"
-              height="100%"
-            style="margin-bottom: 50px"
-          ></iframe>
+              src="https://drive.google.com/file/d/1BOlCMSYItzJOfa6QqCINulijZ7EZ4QoP/preview"
+              controls
+              allowfullscreen
+              style="
+                position: absolute;
+                width: 60%;
+                height: 60%;
+                top: 0;
+                left: 22%;
+              "
+            ></iframe>
           </div>
-          <!-- Botões de navegação -->
-          <div class="row botao centro" id="botao">
-            <a
+          <div style="margin-top: -20%"></div>
+        </div>
+        <!-- Botões de navegação -->
+        <div class="row botao centro" id="botao">
+          <a
             style="text-decoration: none; margin-bottom: 80px"
-              onclick="window.history.back()"
-              class="btn btn-sm"
-              id="botaoVoltar"
-              role="button"
-              alt="Voltar"
-            >
-              <strong>VOLTAR</strong></a
-            >
+            onclick="window.history.back()"
+            class="btn btn-sm"
+            id="botaoVoltar"
+            role="button"
+            alt="Voltar"
+          >
+            <strong>VOLTAR</strong></a
+          >
+        </div>
+      </div>
+
+      <!-- Rodapé -->
+      <footer id="rodape">
+        <div class="row-main">
+          <div class="col-md-12 centro">
+            <img
+              class="img-fluid centro"
+              src="assets/images/rodape/rodape.jpg"
+              alt="Rodapé"
+            />
           </div>
         </div>
-
-        <!-- Rodapé -->
-        <footer id="rodape">
-          <div class="row-main">
-            <div class="col-md-12 centro">
-              <img
-                class="img-fluid centro"
-                src="assets/images/rodape/rodape.jpg"
-                alt="Rodapé"
-              />
-            </div>
-          </div>
-        </footer>
-      </div>
+      </footer>
     </div>
 
     <!-- Arquivos JS -->
