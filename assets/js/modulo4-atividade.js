@@ -26,16 +26,38 @@ $("input[name=questao1]").on("click", function () {
     if (value === "A1") {
       $("#A1").addClass("resposta-incorreta");
       $("#B1").removeClass("resposta-correta");
-    } else if (value === "B1") {
+      $("#C1").removeClass("resposta-incorreta");
+      $("#D1").removeClass("resposta-incorreta");
+    }
+    if (value === "B1") {
       $("#A1").removeClass("resposta-incorreta");
       $("#B1").addClass("resposta-correta");
+      $("#C1").removeClass("resposta-incorreta");
+      $("#D1").removeClass("resposta-incorreta");
+    }
+    if (value === "C1") {
+      $("#A1").removeClass("resposta-incorreta");
+      $("#B1").removeClass("resposta-correta");
+      $("#C1").addClass("resposta-incorreta");
+      $("#D1").removeClass("resposta-incorreta");
+    }
+    if (value === "D1") {
+      $("#A1").removeClass("resposta-incorreta");
+      $("#B1").removeClass("resposta-correta");
+      $("#C1").removeClass("resposta-incorreta");
+      $("#D1").addClass("resposta-incorreta");
     }
 
     var mensagem = "";
 
     if (resposta1 == value) {
-      mensagem = "Correta.    ";
+      mensagem =
+        "Correta. O controle do vetor e a redução de criadouros são as estratégias mais eficazes para prevenção da leishmaniose.   ";
     } else if (value == "A1") {
+      mensagem = "Falsa. ";
+    } else if (value == "C1") {
+      mensagem = "Falsa. ";
+    } else if (value == "D1") {
       mensagem = "Falsa. ";
     }
 
@@ -47,7 +69,7 @@ $("input[name=questao1]").on("click", function () {
 });
 
 // QUIZ QUESTÃO 2
-var resposta2 = "C2"; // Resposta correta
+var resposta2 = "A2"; // Resposta correta
 $("input[name=questao2]").on("click", function () {
   var value = "";
   // seleciona apenas o que foi checado
@@ -59,7 +81,7 @@ $("input[name=questao2]").on("click", function () {
       value += $(this).val();
     });
     // Altera cor mensagem da resposta
-    if (value !== "C2") {
+    if (value !== "A2") {
       $("#feedback2").addClass("resposta-incorreta");
       $("#feedback2").removeClass("resposta-correta");
       $("input[name=questao2]").css({ "background-color": "", border: "" });
@@ -74,34 +96,17 @@ $("input[name=questao2]").on("click", function () {
     if (value === "A2") {
       $("#A2").addClass("resposta-correta");
       $("#B2").removeClass("resposta-incorreta");
-      $("#C2").removeClass("resposta-correta");
-      $("#D2").removeClass("resposta-correta");
     } else if (value === "B2") {
       $("#A2").removeClass("resposta-correta");
       $("#B2").addClass("resposta-incorreta");
-      $("#C2").removeClass("resposta-correta");
-      $("#D2").removeClass("resposta-correta");
-    } else if (value === "C2") {
-      $("#A2").removeClass("resposta-correta");
-      $("#C2").addClass("resposta-incorreta");
-      $("#B2").removeClass("resposta-correta");
-      $("#D2").removeClass("resposta-correta");
-    } else if (value === "D2") {
-      $("#A2").removeClass("resposta-correta");
-      $("#D2").addClass("resposta-incorreta");
-      $("#B2").removeClass("resposta-correta");
-      $("#C2").removeClass("resposta-correta");
     }
 
     var mensagem = "";
 
     if (resposta2 == value) {
-      mensagem = "Correta.  ";
+      mensagem =
+        "Correta. As coleiras impregnadas reduzem a chance de picadas por flebotomíneos infectados, protegendo os cães. ";
     } else if (value == "B2") {
-      mensagem = "Falsa. ";
-    } else if (value == "C2") {
-      mensagem = "Falsa. ";
-    } else if (value == "D2") {
       mensagem = "Falsa. ";
     }
 
@@ -129,26 +134,49 @@ $("input[name=questao3]").on("click", function () {
       $("#feedback3").addClass("resposta-incorreta");
       $("#feedback3").removeClass("resposta-correta");
       $("input[name=questao3]").css({ "background-color": "", border: "" });
-      $(this).css({ "background-color": "#F8062C" });
+      $(this).css({ "background-color": "#F8032C" });
     } else {
       $("#feedback3").removeClass("resposta-incorreta");
       $("#feedback3").addClass("resposta-correta");
       $("input[name=questao3]").css({ "background-color": "", border: "" });
       $(this).css({ "background-color": "#0ABC3A" });
     }
+
     if (value === "A3") {
       $("#A3").addClass("resposta-correta");
       $("#B3").removeClass("resposta-incorreta");
-    } else if (value === "B3") {
+      $("#C3").removeClass("resposta-incorreta");
+      $("#D3").removeClass("resposta-incorreta");
+    }
+    if (value === "B3") {
       $("#A3").removeClass("resposta-correta");
       $("#B3").addClass("resposta-incorreta");
+      $("#C3").removeClass("resposta-incorreta");
+      $("#D3").removeClass("resposta-incorreta");
+    }
+    if (value === "C3") {
+      $("#A3").removeClass("resposta-correta");
+      $("#B3").removeClass("resposta-incorreta");
+      $("#C3").addClass("resposta-incorreta");
+      $("#D3").removeClass("resposta-incorreta");
+    }
+    if (value === "D3") {
+      $("#A3").removeClass("resposta-correta");
+      $("#B3").removeClass("resposta-incorreta");
+      $("#C3").removeClass("resposta-incorreta");
+      $("#D3").addClass("resposta-incorreta");
     }
 
     var mensagem = "";
 
     if (resposta3 == value) {
-      mensagem = "Correta.  ";
+      mensagem =
+        "Correta.  Habitações em áreas florestais podem aumentar o contato com os vetores da Leishmaniose Tegumentar.  ";
     } else if (value == "B3") {
+      mensagem = "Falsa. ";
+    } else if (value == "C3") {
+      mensagem = "Falsa. ";
+    } else if (value == "D3") {
       mensagem = "Falsa. ";
     }
 
@@ -209,8 +237,13 @@ $("input[name=questao4]").on("click", function () {
     var mensagem = "";
 
     if (resposta4 == value) {
-      mensagem = "Correta.   ";
+      mensagem =
+        "Correta.  Os cães são importantes reservatórios do parasito, contribuindo para a manutenção da infecção na comunidade. ";
     } else if (value == "A4") {
+      mensagem = "Falsa. ";
+    } else if (value == "C4") {
+      mensagem = "Falsa. ";
+    } else if (value == "D4") {
       mensagem = "Falsa. ";
     }
 
@@ -222,7 +255,7 @@ $("input[name=questao4]").on("click", function () {
 });
 
 // QUIZ QUESTÃO 5
-var resposta5 = "A5"; // Resposta correta
+var resposta5 = "B5"; // Resposta correta
 $("input[name=questao5]").on("click", function () {
   var value = "";
   // seleciona apenas o que foi checado
@@ -234,7 +267,7 @@ $("input[name=questao5]").on("click", function () {
       value += $(this).val();
     });
     // Altera cor mensagem da resposta
-    if (value !== "A5") {
+    if (value !== "B5") {
       $("#feedback5").addClass("resposta-incorreta");
       $("#feedback5").removeClass("resposta-correta");
       $("input[name=questao5]").css({ "background-color": "", border: "" });
@@ -247,18 +280,19 @@ $("input[name=questao5]").on("click", function () {
     }
 
     if (value === "A5") {
-      $("#A5").addClass("resposta-correta");
-      $("#B5").removeClass("resposta-incorreta");
+      $("#A5").addClass("resposta-incorreta");
+      $("#B5").removeClass("resposta-correta");
     } else if (value === "B5") {
-      $("#A5").removeClass("resposta-correta");
-      $("#B5").addClass("resposta-incorreta");
+      $("#A5").removeClass("resposta-incorreta");
+      $("#B5").addClass("resposta-correta");
     }
 
     var mensagem = "";
 
     if (resposta5 == value) {
-      mensagem = "Correta.  ";
-    } else if (value == "B5") {
+      mensagem =
+        "Correta. O controle eficaz da leishmaniose depende de múltiplas estratégias, incluindo manejo ambiental e controle do vetor. ";
+    } else if (value == "A5") {
       mensagem = "Falsa. ";
     }
 
@@ -269,7 +303,7 @@ $("input[name=questao5]").on("click", function () {
   }
 });
 // QUIZ QUESTÃO 6
-var resposta6 = "B6"; // Resposta correta
+var resposta6 = "A6"; // Resposta correta
 $("input[name=questao6]").on("click", function () {
   var value = "";
   // seleciona apenas o que foi checado
@@ -281,7 +315,7 @@ $("input[name=questao6]").on("click", function () {
       value += $(this).val();
     });
     // Altera cor mensagem da resposta
-    if (value !== "B6") {
+    if (value !== "A6") {
       $("#feedback6").addClass("resposta-incorreta");
       $("#feedback6").removeClass("resposta-correta");
       $("input[name=questao6]").css({ "background-color": "", border: "" });
@@ -294,23 +328,23 @@ $("input[name=questao6]").on("click", function () {
     }
 
     if (value === "C6") {
-      $("#A6").removeClass("resposta-incorreta");
-      $("#B6").removeClass("resposta-correta");
+      $("#A6").removeClass("resposta-correta");
+      $("#B6").removeClass("resposta-incorreta");
       $("#C6").addClass("resposta-incorreta");
       $("#D6").removeClass("resposta-incorreta");
     } else if (value === "A6") {
-      $("#A6").addClass("resposta-incorreta");
-      $("#B6").removeClass("resposta-correta");
+      $("#A6").addClass("resposta-correta");
+      $("#B6").removeClass("resposta-incorreta");
       $("#C6").removeClass("resposta-incorreta");
       $("#D6").removeClass("resposta-incorreta");
     } else if (value === "B6") {
-      $("#A6").removeClass("resposta-incorreta");
-      $("#B6").addClass("resposta-correta");
+      $("#A6").removeClass("resposta-correta");
+      $("#B6").addClass("resposta-incorreta");
       $("#C6").removeClass("resposta-incorreta");
       $("#D6").removeClass("resposta-incorreta");
     } else if (value === "D6") {
-      $("#A6").removeClass("resposta-incorreta");
-      $("#B6").removeClass("resposta-correta");
+      $("#A6").removeClass("resposta-correta");
+      $("#B6").removeClass("resposta-incorreta");
       $("#C6").removeClass("resposta-incorreta");
       $("#D6").addClass("resposta-incorreta");
     }
@@ -318,10 +352,11 @@ $("input[name=questao6]").on("click", function () {
     var mensagem = "";
 
     if (resposta6 == value) {
-      mensagem = "Correta.   ";
+      mensagem =
+        "Correta. Repelentes e telas reduzem o contato com vetores, prevenindo infecções.  ";
     } else if (value == "C6") {
       mensagem = "Falsa. ";
-    } else if (value == "A6") {
+    } else if (value == "B6") {
       mensagem = "Falsa. ";
     } else if (value == "D6") {
       mensagem = "Falsa. ";
@@ -334,7 +369,7 @@ $("input[name=questao6]").on("click", function () {
   }
 });
 // QUIZ QUESTÃO 7
-var resposta7 = "A7"; // Resposta correta
+var resposta7 = "B7"; // Resposta correta
 $("input[name=questao7]").on("click", function () {
   var value = "";
   // seleciona apenas o que foi checado
@@ -346,11 +381,11 @@ $("input[name=questao7]").on("click", function () {
       value += $(this).val();
     });
     // Altera cor mensagem da resposta
-    if (value !== "A7") {
+    if (value !== "B7") {
       $("#feedback7").addClass("resposta-incorreta");
       $("#feedback7").removeClass("resposta-correta");
       $("input[name=questao7]").css({ "background-color": "", border: "" });
-      $(this).css({ "background-color": "#F8067C" });
+      $(this).css({ "background-color": "#F8062C" });
     } else {
       $("#feedback7").removeClass("resposta-incorreta");
       $("#feedback7").addClass("resposta-correta");
@@ -358,19 +393,38 @@ $("input[name=questao7]").on("click", function () {
       $(this).css({ "background-color": "#0ABC3A" });
     }
 
-    if (value === "A7") {
-      $("#A7").addClass("resposta-correta");
-      $("#B7").removeClass("resposta-incorreta");
+    if (value === "C7") {
+      $("#A7").removeClass("resposta-incorreta");
+      $("#B7").removeClass("resposta-correta");
+      $("#C7").addClass("resposta-incorreta");
+      $("#D7").removeClass("resposta-incorreta");
+    } else if (value === "A7") {
+      $("#A7").addClass("resposta-incorreta");
+      $("#B7").removeClass("resposta-correta");
+      $("#C7").removeClass("resposta-incorreta");
+      $("#D7").removeClass("resposta-incorreta");
     } else if (value === "B7") {
-      $("#A7").removeClass("resposta-correta");
-      $("#B7").addClass("resposta-incorreta");
+      $("#A7").removeClass("resposta-incorreta");
+      $("#B7").addClass("resposta-correta");
+      $("#C7").removeClass("resposta-incorreta");
+      $("#D7").removeClass("resposta-incorreta");
+    } else if (value === "D7") {
+      $("#A7").removeClass("resposta-incorreta");
+      $("#B7").removeClass("resposta-correta");
+      $("#C7").removeClass("resposta-incorreta");
+      $("#D7").addClass("resposta-incorreta");
     }
 
     var mensagem = "";
 
     if (resposta7 == value) {
-      mensagem = "Correta.  ";
-    } else if (value == "B7") {
+      mensagem =
+        "Correta. O ciclo envolve múltiplos hospedeiros e vetores, dificultando o controle da doença.  ";
+    } else if (value == "A7") {
+      mensagem = "Falsa. ";
+    } else if (value == "C7") {
+      mensagem = "Falsa. ";
+    } else if (value == "D7") {
       mensagem = "Falsa. ";
     }
 
@@ -381,7 +435,7 @@ $("input[name=questao7]").on("click", function () {
   }
 });
 // QUIZ QUESTÃO 8
-var resposta8 = "C8"; // Resposta correta
+var resposta8 = "A8"; // Resposta correta
 $("input[name=questao8]").on("click", function () {
   var value = "";
   // seleciona apenas o que foi checado
@@ -393,7 +447,7 @@ $("input[name=questao8]").on("click", function () {
       value += $(this).val();
     });
     // Altera cor mensagem da resposta
-    if (value !== "C8") {
+    if (value !== "A8") {
       $("#feedback8").addClass("resposta-incorreta");
       $("#feedback8").removeClass("resposta-correta");
       $("input[name=questao8]").css({ "background-color": "", border: "" });
@@ -406,37 +460,18 @@ $("input[name=questao8]").on("click", function () {
     }
 
     if (value === "A8") {
-      $("#A8").addClass("resposta-incorreta");
+      $("#A8").addClass("resposta-correta");
       $("#B8").removeClass("resposta-incorreta");
-      $("#C8").removeClass("resposta-correta");
-      $("#D8").removeClass("resposta-incorreta");
-    } else if (value === "C8") {
-      $("#A8").removeClass("resposta-incorreta");
-      $("#B8").removeClass("resposta-incorreta");
-      $("#C8").addClass("resposta-correta");
-      $("#D8").removeClass("resposta-incorreta");
     } else if (value === "B8") {
-      $("#A8").removeClass("resposta-incorreta");
+      $("#A8").removeClass("resposta-correta");
       $("#B8").addClass("resposta-incorreta");
-      $("#C8").removeClass("resposta-correta");
-      $("#D8").removeClass("resposta-incorreta");
-    } else if (value === "D8") {
-      $("#A8").removeClass("resposta-incorreta");
-      $("#B8").removeClass("resposta-incorreta");
-      $("#C8").removeClass("resposta-correta");
-      $("#D8").addClass("resposta-incorreta");
     }
-
     var mensagem = "";
 
     if (resposta8 == value) {
       mensagem =
-        "Correta.";
-    } else if (value == "A8") {
-      mensagem = "Falsa. ";
+        "Correta. A conscientização da população é essencial para reduzir a transmissão da doença.";
     } else if (value == "B8") {
-      mensagem = "Falsa. ";
-    } else if (value == "D8") {
       mensagem = "Falsa. ";
     }
 
