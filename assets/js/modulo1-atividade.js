@@ -185,8 +185,8 @@ $("input[name=questao3]").on("click", function () {
       $("#C3").removeClass("resposta-incorreta");
       $("#D3").removeClass("resposta-incorreta");
     } else if (value === "B3") {
-      $("#A3").removeClass("resposta-incorreta");
-      $("#B3").addClass("resposta-correta");
+      $("#A3").removeClass("resposta-correta");
+      $("#B3").addClass("resposta-incorreta");
       $("#C3").removeClass("resposta-incorreta");
       $("#D3").removeClass("resposta-incorreta");
     } else if (value === "D3") {
