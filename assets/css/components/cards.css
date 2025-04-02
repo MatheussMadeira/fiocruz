@@ -1,14 +1,15 @@
 .cards {
   justify-content: center;
-  min-height: 890px;
+  min-height: 950px;
   max-height: 690px;
   min-width: 390px;
   max-width: 390px;
   position: relative;
-  margin: 65px 0px;
+  margin: 80px 0px;
   background-color: #05314a;
   font-weight: bold;
-  border-radius: 6px;
+  padding-right: 50px;
+  border-left: 20px solid white;
 
   & p {
     margin: 0px 0px 18px 0px !important;
