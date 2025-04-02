@@ -175,23 +175,23 @@ $("input[name=questao3]").on("click", function () {
     }
 
     if (value === "C3") {
-      $("#A3").removeClass("resposta-correta");
-      $("#B3").removeClass("resposta-incorreta");
+      $("#A3").removeClass("resposta-incorreta");
+      $("#B3").removeClass("resposta-correta");
       $("#C3").addClass("resposta-incorreta");
       $("#D3").removeClass("resposta-incorreta");
     } else if (value === "A3") {
-      $("#A3").addClass("resposta-correta");
-      $("#B3").removeClass("resposta-incorreta");
+      $("#A3").addClass("resposta-incorreta");
+      $("#B3").removeClass("resposta-correta");
       $("#C3").removeClass("resposta-incorreta");
       $("#D3").removeClass("resposta-incorreta");
     } else if (value === "B3") {
-      $("#A3").removeClass("resposta-correta");
-      $("#B3").addClass("resposta-incorreta");
+      $("#A3").removeClass("resposta-incorreta");
+      $("#B3").addClass("resposta-correta");
       $("#C3").removeClass("resposta-incorreta");
       $("#D3").removeClass("resposta-incorreta");
     } else if (value === "D3") {
-      $("#A3").removeClass("resposta-correta");
-      $("#B3").removeClass("resposta-incorreta");
+      $("#A3").removeClass("resposta-incorreta");
+      $("#B3").removeClass("resposta-correta");
       $("#C3").removeClass("resposta-incorreta");
       $("#D3").addClass("resposta-incorreta");
     }
@@ -201,7 +201,7 @@ $("input[name=questao3]").on("click", function () {
     if (resposta3 == value) {
       mensagem =
         "Correta. As leishmanioses recebem pouco investimento para controle e tratamento, sendo classificadas como doenças tropicais negligenciadas. ";
-    } else if (value == "B3") {
+    } else if (value == "A3") {
       mensagem = "Falsa. ";
     } else if (value == "C3") {
       mensagem = "Falsa. ";
