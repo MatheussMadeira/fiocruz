@@ -19,7 +19,7 @@ b {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
   margin-bottom: 30px;
   margin-top: 50px;
@@ -27,14 +27,14 @@ h1 {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 28px;
   font-weight: bold;
   margin-bottom: 30px;
   margin-top: 50px;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
   margin-bottom: 30px;
   margin-top: 50px;
@@ -69,6 +69,7 @@ a {
 
 p {
   margin-bottom: 30px;
+  font-size: 18px;
 }
 
 .listaTexto {
@@ -78,6 +79,7 @@ p {
 p.indice {
   margin-bottom: -35px;
   margin-top: 50px;
+  font-size: 20px;
   color: #00abcb;
   font-weight: bold;
   font-family: "Prelo Bold";
