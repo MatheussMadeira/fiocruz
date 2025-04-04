@@ -1,99 +1,105 @@
 #sidebar,
 #content {
-    transition: 0.6s;
+  transition: 0.6s;
 }
 
 nav#menuLateral {
-    background-color: #C40F17;
-    color: white;
-    padding-top: 32px;
-    padding-left: 8px;
-    width: 16.667%;
-    height: 100vh;
-    position: fixed;
-    z-index: 3;
-    overflow: auto;
-    display: block;
+  background-color: #ffdec0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: #f77f00;
+  padding-top: 32px;
+  padding-left: 8px;
+  width: 16.667%;
+  height: 100vh;
+  position: fixed;
+  z-index: 3;
+  overflow: auto;
+  display: block;
 
-    &::-webkit-scrollbar {
-        width: 4px;
-        background: #F4F4F4;
-    }
+  &::-webkit-scrollbar {
+    width: 4px;
+    background: #f4f4f4;
+  }
 }
 
 .listaMenu {
-    padding: 0;
-    margin: 0;
-    padding-bottom: 80px;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 80px;
 }
 
 .iconeMenu::before {
-    font-family: "Font Awesome 5 Free";
-    content: '\f111';
-    font-weight: 900;
-    font-size: 4px !important;
-    height: 4px;
-    width: 4px;
-    position: absolute;
-    margin-left: 26px;
-    margin-top: 8px;
+  font-family: "Font Awesome 5 Free";
+  content: "\f111";
+  font-weight: 900;
+  font-size: 4px !important;
+  height: 4px;
+  width: 4px;
+  position: absolute;
+  margin-left: 26px;
+  margin-top: 8px;
+  color: #f77f00;
 }
 
 .listaMenu a {
-    text-decoration: none;
-    color: white;
-    padding: 10px 20px;
-    display: block;
-    cursor: pointer;
-    font-size: 14px;
-    padding-left: 2.2rem;
+  text-decoration: none;
+  color: #f77f00;
+  padding: 10px 20px;
+  display: block;
+  cursor: pointer;
+  font-size: 17px;
+  padding-left: 2.2rem;
 }
 
 .listaMenu .subItem {
-    padding-top: 0 !important;
+  padding-top: 0 !important;
+  color: #f77f00;
 }
 
 .introducao {
-    padding-top: 0px !important;
+  padding-top: 0px !important;
 }
 
 span.tituloLista {
-    margin: 0px;
-    font-weight: bold;
-    padding: 22px 0 22px 12px;
-    cursor: pointer;
+  margin: 0px;
+  color: #f77f00;
+  font-weight: bold;
+  padding: 22px 0 22px 12px;
+  cursor: pointer;
 }
 
 a.tituloLista {
-    padding-top: 22px;
-    margin: 0px;
-    font-weight: bold;
-    padding-left: 12px;
+  padding-top: 22px;
+  margin: 0px;
+  font-weight: bold;
+  padding-left: 12px;
+  color: #f77f00;
 }
 
 a.tituloItem,
 span.tituloItem {
-    font-weight: bold;
-    padding-left: 20px;
+  font-weight: bold;
+  padding-left: 20px;
+  color: #f77f00;
 }
 
 span.tituloItem {
-    margin: -4px 0 0 0;
+  margin: -4px 0 0 0;
 
-    & a {
-        padding: 0 !important;
-        font-size: 16px;
-    }
+  & a {
+    padding: 0 !important;
+    font-size: 16px;
+  }
 }
 
 span.textoItem {
-    margin-left: 34px;
+  margin-left: 34px;
 }
 
 a.tituloItem {
-    margin: -14px 0 0 0;
+  margin: -14px 0 0 0;
 }
 
 .logoMenu {
-    padding: 0px 12px 42px 12px;
+  padding: 0px 12px 42px 12px;
 }

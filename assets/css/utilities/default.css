@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 
 @font-face {
-  font-family: "Prelo Book";
-  src: url(../fonts/Prelo-Book.ttf) format("truetype");
-  font-family: "Prelo Bold";
-  src: url(../fonts/Prelo-Bold.ttf) format("truetype");
+  font-family: "Codec Pro";
+  src: url("../../fonts/CodecPro-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Codec Pro Bold";
+  src: url("../../fonts/Codec\ Pro\ Bold.ttf") format("truetype");
 }
 svg {
   background: transparent;
@@ -12,11 +14,14 @@ svg {
 body,
 header,
 footer {
-  font-family: "Prelo Book", sans-serif;
+  font-family: "Codec Pro", sans-serif;
   font-size: 17px;
   letter-spacing: 1px;
 }
-
+.desabilitado {
+  color: #ccc; 
+  cursor: not-allowed;
+}
 .imagem,
 .video {
   line-height: 1.2;

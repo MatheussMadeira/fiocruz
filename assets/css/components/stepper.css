@@ -14,7 +14,7 @@
 }
 
 .item {
-  background-color: #fff;
+  background-color: white;
   border-radius: 100%;
   width: 14px;
   height: 14px;
@@ -31,4 +31,5 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  color: #c40f17;
 }

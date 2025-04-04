@@ -51,7 +51,7 @@
 }
 
 #botaoAvancar {
-  background-color: #c40f17;
+  background-color: #f77f00;
   /* border-radius: 25px; */
   color: white;
   width: 260px;
@@ -70,8 +70,8 @@
 #botaoVoltar {
   background-color: white;
   /* border-radius: 25px; */
-  border: 1px solid #c40f17;
-  color: #c40f17;
+  border: 1px solid #f77f00;
+  color: #f77f00;
   width: 260px;
   height: 40px;
   display: flex;
@@ -123,7 +123,7 @@
 #sidebarButton {
   position: fixed;
   color: white;
-  background-color: #c40f17;
+  background-color: #f77f00;
   border-radius: 0 0 5px 0;
   padding: 0px !important;
   margin-left: 16.667%;

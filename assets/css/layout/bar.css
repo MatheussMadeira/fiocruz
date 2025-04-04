@@ -1,5 +1,5 @@
 .barraStepperConteudo {
-    background-color: #C40F17;
+    background-color: ;
     width: 3.5px;
     margin-left: -14px;
 }
@@ -10,7 +10,7 @@
 }
 
 .itemConteudo {
-    border: solid 3.5px #C40F17;
+    border: solid 3.5px;
     background-color: white;
     border-radius: 100%;
     width: 25px;
@@ -24,6 +24,6 @@ span.tituloItemConteudo {
     padding-left: 20px;
 
     & b {
-        color: #C40F17;
+        color: #f77f00;
     }
 }

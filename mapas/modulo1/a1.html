@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -57,6 +57,7 @@
     <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.5/dist/browser/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.5/dist/index.js"></script>
+
     <script>
       (() => {
         setTimeout(() => {
@@ -68,19 +69,16 @@
             document.body.append(F);
         });
       })();
-    </script>
-    <script>
-      ((b, L, T, D) => {
-        const H = b();
-        window.mm = H.Markmap.create(
-          "svg#mindmap",
-          (L || H.deriveOptions)(D),
-          T
-        );
-      })(
-        () => window.markmap,
-        null,
-        {
+
+      (() => {
+        const { markmap: x, mm: K } = window;
+
+        // Inicializa o mapa mental com o primeiro nível visível e os outros fechados
+        const options = {
+          expandAll: false, // Inicialmente todos os nós estão fechados
+        };
+
+        const H = x.Markmap.create("svg#mindmap", options, {
           content: "Leishmanioses",
           children: [
             {
@@ -205,9 +203,11 @@
             },
           ],
           payload: { tag: "h1", lines: "1,2" },
-        },
-        null
-      );
+        });
+
+        // Expande apenas o primeiro nó, deixando os outros fechados
+        window.mm.expand([0]); // Expande o primeiro nó apenas
+      })();
     </script>
   </body>
 </html>
