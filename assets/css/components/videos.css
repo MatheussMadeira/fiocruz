@@ -28,3 +28,33 @@
     height: 56.25%;
   }
 }
+.video-index {
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 1200px) {
+    position: relative;
+    width: 100%; /* A largura será 100% do seu contêiner pai */
+    padding-bottom: 100%; /* Define a altura como igual à largura, criando um quadrado */
+    overflow: hidden;
+  }
+}
+.iframe-index {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  top: 0;
+  left: 22%;
+  @media (max-width: 1200px) {
+    position: absolute;
+    top: 0;
+    left: 11%;
+    width: 80%;
+    height: 45%;
+  }
+}
