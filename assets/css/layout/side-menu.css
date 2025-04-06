@@ -6,7 +6,7 @@
 nav#menuLateral {
   background-color: #ffdec0;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  color: #f77f00;
+  color: black;
   padding-top: 32px;
   padding-left: 8px;
   width: 16.667%;
@@ -38,12 +38,12 @@ nav#menuLateral {
   position: absolute;
   margin-left: 26px;
   margin-top: 8px;
-  color: #f77f00;
+  color: black;
 }
 
 .listaMenu a {
   text-decoration: none;
-  color: #f77f00;
+  color: black;
   padding: 10px 20px;
   display: block;
   cursor: pointer;
@@ -53,7 +53,7 @@ nav#menuLateral {
 
 .listaMenu .subItem {
   padding-top: 0 !important;
-  color: #f77f00;
+  color: black;
 }
 
 .introducao {
@@ -62,7 +62,7 @@ nav#menuLateral {
 
 span.tituloLista {
   margin: 0px;
-  color: #f77f00;
+  color: black;
   font-weight: bold;
   padding: 22px 0 22px 12px;
   cursor: pointer;
@@ -73,14 +73,14 @@ a.tituloLista {
   margin: 0px;
   font-weight: bold;
   padding-left: 12px;
-  color: #f77f00;
+  color: black;
 }
 
 a.tituloItem,
 span.tituloItem {
   font-weight: bold;
   padding-left: 20px;
-  color: #f77f00;
+  color: black;
 }
 
 span.tituloItem {

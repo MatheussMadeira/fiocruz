@@ -1,14 +1,12 @@
 .cards {
-  justify-content: center;
-  min-height: 1090px;
-  max-height: 690px;
-  min-width: 420px;
-  max-width: 390px;
-  position: relative;
-  margin: 80px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   background-color: #05314a;
+  height: 110vh;
+  width: 95%;
   font-weight: bold;
-  border-left: 20px solid white;
+  margin-bottom: 100px;
 
   & p {
     margin: 0px 0px 18px 0px !important;
@@ -23,6 +21,10 @@
 
   & a {
     text-decoration: none;
+  }
+  @media (max-width: 1200px) {
+    width: 60%;
+    height: 80vh;
   }
 }
 
@@ -41,15 +43,14 @@
 .cards .cards-body {
   padding: 18px 24px;
   max-height: 100%;
-  flex: 1;
 }
 
 .cards .cards-header {
   border-bottom: 1px solid white;
-  display: flex;
   justify-content: center;
-  height: 250px;
-  align-items: center;
+  display: flex;
+  height: 27vh;
+  width: 100%;
 }
 
 .tabela {

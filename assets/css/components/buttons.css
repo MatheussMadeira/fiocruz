@@ -33,7 +33,7 @@
 
 #botaoComecar {
   background-color: #05314a;
-  color: #ffdec0;
+  color: white;
   padding: 8px;
   min-width: 200px;
 }
@@ -81,11 +81,11 @@
 }
 
 .botaoMenuHome {
-  color: white;
+  color: #05314a;
   text-decoration: none;
 
   &:hover {
-    color: white;
+    color: #05314a;
   }
 }
 
