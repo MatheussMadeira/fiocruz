@@ -1,12 +1,18 @@
-.cards {
+.all-cards {
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  background-color: white;
+  gap: 50px;
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.cards {
   background-color: #05314a;
-  height: 110vh;
-  width: 95%;
-  font-weight: bold;
-  margin-bottom: 100px;
+  margin-top: 0px;
+  width: 100%;
+  padding-top: 50px;
+  margin-bottom: 50px;
 
   & p {
     margin: 0px 0px 18px 0px !important;
@@ -24,7 +30,6 @@
   }
   @media (max-width: 1200px) {
     width: 60%;
-    height: 80vh;
   }
 }
 
@@ -48,9 +53,12 @@
 .cards .cards-header {
   border-bottom: 1px solid white;
   justify-content: center;
+  align-items: center;
   display: flex;
-  height: 27vh;
   width: 100%;
+  margin-top: 0px;
+  padding-top: 0px;
+  height: 20vh;
 }
 
 .tabela {
