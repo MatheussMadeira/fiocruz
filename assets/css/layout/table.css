@@ -1,0 +1,62 @@
+/* Resetando margens e padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos gerais para o corpo */
+body {
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+/* Adicionando responsividade */
+.table-container {
+  width: 100%;
+  overflow-x: auto; /* Permite rolar horizontalmente quando a tabela ultrapassar o limite da tela */
+  margin: 20px 0; /* Adiciona margem superior e inferior */
+}
+
+table {
+  width: 100%; /* Tabela ocupa 100% da largura disponível */
+  border-collapse: collapse; /* Remove espaços entre as células da tabela */
+}
+
+th,
+td {
+  padding: 12px 10px; /* Ajusta o padding para dar mais espaço às células */
+  text-align: center; /* Centraliza o texto dentro das células */
+  border: 1px solid white; /* Borda para as células */
+}
+
+/* Estilizando cabeçalhos */
+th {
+  background-color: #f77f00;
+  color: white;
+}
+
+/* Estilizando linhas alternadas */
+tr:nth-child(even) {
+  background-color: #ffdec0;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+  table {
+    font-size: 12px; /* Reduz o tamanho da fonte para dispositivos menores */
+  }
+  table i,
+  span {
+    font-size: 12px;
+  }
+
+  th,
+  td {
+    padding: 8px 5px; /* Menos padding para economizar espaço */
+  }
+
+  tr {
+    font-size: 12px; /* Tamanho menor para o texto */
+  }
+}

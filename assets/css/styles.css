@@ -15,6 +15,7 @@
 @import "./layout/smartphone.css";
 @import "./layout/sup-menu.css";
 @import "./layout/tab-content.css";
+@import "./layout/table.css";
 
 /* Components */
 @import "./components/accordions.css";

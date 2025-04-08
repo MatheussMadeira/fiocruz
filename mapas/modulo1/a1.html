@@ -32,6 +32,17 @@
     />
   </head>
   <body>
+    <div class="sidebar-mobile">
+      <button class="button-side" onclick="window.history.back()">
+        Voltar
+      </button>
+      <button
+        class="button-side"
+        onclick="window.location.href='../../index.html' "
+      >
+        Pagina Inicial
+      </button>
+    </div>
     <main class="content">
       <img
         src="../../assets/images/home/LOGOMARCA.svg"
@@ -41,43 +52,22 @@
       <svg id="mindmap"></svg>
     </main>
     <div class="container" id="mobile-container">
-      <aside class="sidebar" style="background-color: #ffdec0">
+      <aside class="sidebar">
         <img
           src="../../assets/images/home/Untitled design (2) (1).png"
           alt="Logo"
           class="logo"
         />
-        <button
-          class="button-side"
-          onclick="window.history.back()"
-          style="border: 1px solid black; color: black"
-        >
+        <button class="button-side" onclick="window.history.back()">
           Voltar
         </button>
         <button
           class="button-side"
-          style="border: 1px solid black; color: black"
           onclick="window.location.href='../../index.html' "
         >
           Página Inicial
         </button>
       </aside>
-      <div>
-        <button
-          class="button-side"
-          onclick="window.history.back()"
-          style="border: 1px solid black; color: black"
-        >
-          Voltar
-        </button>
-        <button
-          class="button-side"
-          style="border: 1px solid black; color: black"
-          onclick="window.location.href='../../index.html' "
-        >
-          Pagina Inicial
-        </button>
-      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
@@ -101,8 +91,7 @@
 
         // Inicializa o mapa mental com o primeiro nível visível e os outros fechados
         const options = {
-          expandAll: false, // Inicialmente todos os nós estão fechados
-          scale: 1.5, // Altere o valor de scale para controlar o zoom inicial (1 é o zoom padrão)
+          expandAll: false, // Inicialmente todos os nós estão fechados // Altere o valor de scale para controlar o zoom inicial (1 é o zoom padrão)
         };
 
         const H = x.Markmap.create("svg#mindmap", options, {

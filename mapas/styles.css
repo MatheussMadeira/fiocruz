@@ -11,7 +11,7 @@
 /* SIDEBAR LATERAL */
 .sidebar {
   width: 200px; /* Define a largura fixa da sidebar */
-  background-color: #c40f17;
+  background-color: #ffdec0;
   color: white;
   display: flex;
   flex-direction: column;
@@ -38,8 +38,8 @@
   padding: 10px;
   margin: 10px 0;
   background-color: white;
-  color: #c40f17;
-  border: none;
+  color: black;
+  border: 1px solid black;
   border-radius: 4px;
   font-size: 14px;
   font-weight: bold;
@@ -63,6 +63,9 @@
 .top-image {
   display: block;
   margin: 0 auto;
+  @media (max-width: 980px) {
+    display: none;
+  }
 }
 
 /* MAPA MENTAL */
@@ -87,7 +90,19 @@
   transform: scale(1.5); /* Aumenta o tamanho */
   transform-origin: center; /* Mantém o centro como referência */
   width: 100%;
+  height: 100vh;
 }
 body {
   overflow: hidden;
+}
+.sidebar-mobile {
+  display: none;
+  @media (max-width: 980px) {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }

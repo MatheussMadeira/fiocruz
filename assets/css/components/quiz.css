@@ -1,0 +1,11 @@
+.quiz iframe {
+  width: 100%; /* Garantir que o iframe ocupe toda a largura da tela */
+  height: 100vh; /* Ajuste a altura para a tela cheia */
+  transition: all 0.3s ease-in-out; /* Suaviza a transição para o modo paisagem */
+}
+
+/* Adiciona um estilo especial para quando o conteúdo estiver em fullscreen */
+body[style*="rotate(90deg)"] iframe {
+  width: 100vh; /* Largura 100% da altura da tela (modo paisagem) */
+  height: 100vw; /* Altura 100% da largura da tela */
+}
