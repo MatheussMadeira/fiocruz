@@ -99,7 +99,8 @@ document.addEventListener("DOMContentLoaded", function () {
   );
   const linkQuiz = document.querySelector('a[href="../quiz.html"]');
 
-  if (moduloAtual === 4 && aulaAtual === 4) {
+  const quizNumero = parseInt(aula.getAttribute("data-quiz"));
+  if (moduloAtual === 4 && quizNumero === 1) {
     if (linkEncerramento) {
       linkEncerramento.classList.remove("desabilitado");
       linkEncerramento.style.pointerEvents = "auto"; // Habilita o clique
