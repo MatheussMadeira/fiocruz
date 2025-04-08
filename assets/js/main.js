@@ -107,12 +107,6 @@ $(window).on("resize", function () {
 
 /*Collapse Sidebar*/
 $(".toggle-sidebar").click(function () {
-  $("#sidebar").toggleClass("esconder"); // Adiciona/Remove a classe 'esconder' que oculta o sidebar
-  $("#content").toggleClass("col-md-12 col-md-10"); // Alterna entre ocupar toda a largura ou apenas uma parte
-  $("#sidebarButton").toggleClass("open"); // Altera a classe do botão de alternância
-  return false; // Impede o comportamento padrão do clique
-});
-$(".toggle-sidebar").click(function () {
   $("#sidebar").toggleClass("esconder");
   $("#content").toggleClass("col-md-12 col-md-10");
   $("#sidebarButton").toggleClass("open");

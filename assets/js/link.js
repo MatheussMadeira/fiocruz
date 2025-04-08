@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Função para obter o número da aula e do módulo a partir da URL
+  // Função para obter o número do módulo atual
   function obterModuloAtual() {
     const url = window.location.href; // Obtém a URL atual
     const regexAula = /modulo(\d+)-aula(\d+)/; // Expressão regular para capturar módulo e aula
@@ -22,9 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
     return moduloAtual; // Retorna o módulo atual
   }
 
-  // Obtenha o módulo atual
-  const moduloAtual = obterModuloAtual();
-
   // Função para obter o número da aula a partir da URL
   function obterAulaAtual() {
     const url = window.location.href; // Obtém a URL atual
@@ -41,7 +38,16 @@ document.addEventListener("DOMContentLoaded", function () {
     return aulaAtual; // Retorna a aula atual
   }
 
-  // Obtenha a aula atual
+  // Últimas aulas de cada módulo, conforme sua descrição
+  const ultimaAulaPorModulo = {
+    1: 9, // Módulo 1: Última aula é a 9
+    2: 8, // Módulo 2: Última aula é a 8
+    3: 6, // Módulo 3: Última aula é a 6
+    4: 4, // Módulo 4: Última aula é a 4
+  };
+
+  // Obtenha o módulo atual e a aula atual
+  const moduloAtual = obterModuloAtual();
   const aulaAtual = obterAulaAtual();
 
   // Obtenha todos os links das aulas
@@ -53,44 +59,96 @@ document.addEventListener("DOMContentLoaded", function () {
     const moduloNumero = parseInt(aula.getAttribute("data-modulo")); // Número do módulo no link
     const isQuiz = aula.classList.contains("quiz"); // Verifica se é um link de quiz
 
-    // Se a aula estiver no módulo atual e for anterior ou igual à aula atual
-    if (moduloNumero === moduloAtual && aulaNumero <= aulaAtual) {
-      // Habilitar o link para a aula anterior ou atual
-      aula.classList.remove("desabilitado"); // Remove a classe desabilitada
+    // Se o módulo atual é o mesmo do link, e a aula é anterior ou igual à aula atual, libere o link
+    if (
+      moduloNumero < moduloAtual ||
+      (moduloNumero === moduloAtual && aulaNumero <= aulaAtual)
+    ) {
+      aula.classList.remove("desabilitado");
       aula.style.pointerEvents = "auto"; // Habilita o clique
     } else if (moduloNumero === moduloAtual && aulaNumero === aulaAtual + 1) {
-      // Habilitar o link para a próxima aula
-      aula.classList.remove("desabilitado"); // Remove a classe desabilitada
-      aula.style.pointerEvents = "auto"; // Habilita o clique
-    } else if (moduloNumero === moduloAtual && aulaNumero > aulaAtual + 1) {
-      // Desabilitar os links das aulas futuras dentro do módulo atual
-      aula.classList.add("desabilitado"); // Adiciona a classe desabilitada
-      aula.style.pointerEvents = "none"; // Desabilita o clique
-    } else if (moduloNumero === moduloAtual + 1 && aulaNumero === 1) {
-      // Quando a última aula do módulo atual for completada, habilitar a primeira aula do próximo módulo
+      // Se a aula for a próxima da atual (aula X + 1)
       aula.classList.remove("desabilitado");
-      aula.style.pointerEvents = "auto"; // Habilita o clique
-    }
-
-    // Permitir clicar em aulas de módulos anteriores (não desabilitar)
-    else if (moduloNumero < moduloAtual) {
-      aula.classList.remove("desabilitado"); // Remove a classe desabilitada
       aula.style.pointerEvents = "auto"; // Habilita o clique
     } else {
-      // Se estiver em um módulo diferente, desabilita todas as aulas do outro módulo
       aula.classList.add("desabilitado");
-      aula.style.pointerEvents = "none";
+      aula.style.pointerEvents = "none"; // Desabilita o clique
     }
 
-    // Verifica se é o quiz e se o módulo foi concluído
-    if (isQuiz && moduloNumero === moduloAtual && aulaNumero === aulaAtual) {
-      // Habilitar o link do quiz apenas se a última aula do módulo foi concluída
-      aula.classList.remove("desabilitado");
-      aula.style.pointerEvents = "auto"; // Habilita o clique
-    } else if (isQuiz && moduloNumero === moduloAtual) {
-      // Desabilitar o quiz se não for após a última aula
-      aula.classList.add("desabilitado");
-      aula.style.pointerEvents = "none";
+    // Se a aula for a última do módulo atual, liberar a primeira aula do próximo módulo
+    if (
+      moduloNumero === moduloAtual &&
+      aulaNumero === ultimaAulaPorModulo[moduloNumero]
+    ) {
+      const proximoModulo = moduloNumero + 1;
+      if (ultimaAulaPorModulo[proximoModulo]) {
+        const primeiraAulaProximoModulo = document.querySelector(
+          `.subItem[data-modulo="${proximoModulo}"][data-aula="1"]`
+        );
+        if (primeiraAulaProximoModulo) {
+          primeiraAulaProximoModulo.classList.remove("desabilitado");
+          primeiraAulaProximoModulo.style.pointerEvents = "auto"; // Habilita o clique
+        }
+      }
     }
   });
+
+  // Lógica para habilitar os links de encerramento e quiz, apenas se o usuário estiver na aula 4 do módulo 4
+  const linkEncerramento = document.querySelector(
+    'a[href="../encerramento.html"]'
+  );
+  const linkQuiz = document.querySelector('a[href="../quiz.html"]');
+
+  if (moduloAtual === 4 && aulaAtual === 4) {
+    if (linkEncerramento) {
+      linkEncerramento.classList.remove("desabilitado");
+      linkEncerramento.style.pointerEvents = "auto"; // Habilita o clique
+    }
+    if (linkQuiz) {
+      linkQuiz.classList.remove("desabilitado");
+      linkQuiz.style.pointerEvents = "auto"; // Habilita o clique
+    }
+  } else {
+    if (linkEncerramento) {
+      linkEncerramento.classList.add("desabilitado");
+      linkEncerramento.style.pointerEvents = "none"; // Desabilita o clique
+    }
+    if (linkQuiz) {
+      linkQuiz.classList.add("desabilitado");
+      linkQuiz.style.pointerEvents = "none"; // Desabilita o clique
+    }
+  }
+
+  // Lógica para liberar as aulas do próximo módulo após o quiz
+  const quizLink =
+    window.location.pathname.includes("modulo") &&
+    window.location.pathname.includes("quiz");
+  if (quizLink) {
+    const proximoModulo = moduloAtual + 1;
+    if (ultimaAulaPorModulo[moduloAtual]) {
+      const primeiraAulaProximoModulo = document.querySelector(
+        `.subItem[data-modulo="${proximoModulo}"][data-aula="1"]`
+      );
+      if (primeiraAulaProximoModulo) {
+        primeiraAulaProximoModulo.classList.remove("desabilitado");
+        primeiraAulaProximoModulo.style.pointerEvents = "auto"; // Habilita o clique
+      }
+    }
+  }
+
+  // Liberar as aulas anteriores quando o usuário estiver no quiz
+  if (quizLink) {
+    aulas.forEach((aula) => {
+      const aulaNumero = parseInt(aula.getAttribute("data-aula"));
+      const moduloNumero = parseInt(aula.getAttribute("data-modulo"));
+      // Liberar todas as aulas anteriores e de módulos anteriores
+      if (
+        moduloNumero < moduloAtual ||
+        (moduloNumero === moduloAtual && aulaNumero <= aulaAtual)
+      ) {
+        aula.classList.remove("desabilitado");
+        aula.style.pointerEvents = "auto"; // Habilita o clique
+      }
+    });
+  }
 });
