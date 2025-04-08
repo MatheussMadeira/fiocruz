@@ -32,29 +32,37 @@
     />
   </head>
   <body>
+    <div class="sidebar-mobile">
+      <button class="button-side" onclick="window.history.back()">
+        Voltar
+      </button>
+      <button
+        class="button-side"
+        onclick="window.location.href='../../index.html' "
+      >
+        Pagina Inicial
+      </button>
+    </div>
     <main class="content">
       <img
         src="../../assets/images/home/LOGOMARCA.svg"
         class="top-image"
-        style="height: 200px"
+        style="height: 20vh"
       />
       <svg id="mindmap"></svg>
     </main>
-    <div class="container">
-      <aside class="sidebar" style="background-color: #ffdec0">
+    <div class="container" id="mobile-container">
+      <aside class="sidebar">
         <img
           src="../../assets/images/home/Untitled design (2) (1).png"
           alt="Logo"
           class="logo"
         />
-        <button
-          onclick="window.history.back()"
-          style="border: 1px solid black; color: black"
-        >
+        <button class="button-side" onclick="window.history.back()">
           Voltar
         </button>
         <button
-          style="border: 1px solid black; color: black"
+          class="button-side"
           onclick="window.location.href='../../index.html' "
         >
           Página Inicial
