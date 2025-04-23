@@ -1,0 +1,268 @@
+/* -------------------------------------------------
+
+TIMELINE HORIZONTAL 2
+
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline-horizontal2 {
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.timeline-horizontal2 .box-title {
+	height: 160px;
+	overflow-y: auto;
+	scrollbar-width: thin;
+	margin-bottom: 0;
+}
+
+.timeline-horizontal2 .box-title p {
+	font-style: normal;
+	font-size: 0.85rem;
+	margin-bottom: 1rem;
+}
+
+.timeline-horizontal2 .box-title i {
+	font-size: 0.85rem;
+}
+
+.timeline-horizontal2 .box-title h4 {
+	color: var(--primary-color);
+}
+
+.timeline-horizontal2 .box-title h4 i {
+	font-style: normal;
+	font-size: 1.25rem;
+	margin-right: 0.5rem;
+	vertical-align: middle;
+}
+
+.timeline-horizontal2 ol {
+	font-size: 0;
+	width: 100vw;
+	/* padding: 228px 0; */
+	padding: 220px 120px;
+	transition: all 0.5s;
+	/* overflow-x: auto;
+  scrollbar-width: thin;
+  overflow-y: hidden; */
+}
+
+/*A pseudoclasse ::-webkit é para customizar a scrollbar nos navegadores:
+Chrome, Safari, Opera, Edge */
+
+.timeline-horizontal2 .box-title::-webkit-scrollbar {
+	width: 8px;
+	background-color: var(--color-light);
+}
+
+.timeline-horizontal2 ol::-webkit-scrollbar {
+	height: 12px;
+	background-color: #f1f1f1;
+}
+
+.timeline-horizontal2 .box-title::-webkit-scrollbar-thumb,
+.timeline-horizontal2 ol::-webkit-scrollbar-thumb {
+	background-color: var(--secondary-color);
+}
+
+.timeline-horizontal2 ol li {
+	position: relative;
+	display: inline-block;
+	list-style-type: none;
+	/* width: 160px; */
+	width:calc(20vw);
+	height: 3px;
+	background: var(--secondary-color);
+}
+
+.timeline-horizontal2 ol li:last-child {
+	width: 200px;
+}
+
+.timeline-horizontal2 ol li:not(:first-child) {
+	margin-left: 14px;
+}
+
+.timeline-horizontal2 ol li:not(:last-child)::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: calc(100% + 1px);
+	bottom: 0;
+	width: 12px;
+	height: 12px;
+	transform: translateY(-50%);
+	border-radius: 50%;
+	background: var(--secondary-color);
+}
+
+.timeline-horizontal2 ol li.end::after {
+	background: transparent;
+}
+.timeline-horizontal2 ol li:last-child {
+	margin-left: 0;
+}
+
+.timeline-horizontal2 ol li div {
+	position: absolute;
+	/* left: calc(100% + 7px);
+	width: 280px; */
+	width: 20vw;
+	padding: 15px;
+	font-size: 1rem;
+	white-space: normal;
+	color: black;
+	background: white;
+}
+
+.timeline-horizontal2 ol li div::before {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 0;
+	height: 0;
+}
+
+.timeline-horizontal2 ol li:nth-child(odd) div {
+	top: -16px;
+	transform: translateY(-100%);
+}
+
+.timeline-horizontal2 ol li:nth-child(odd) div::before {
+	top: 100%;
+	border-width: 8px 8px 0 0;
+	border-color: white transparent transparent transparent;
+}
+
+.timeline-horizontal2 ol li:nth-child(even) div {
+	top: calc(100% + 16px);
+}
+
+.timeline-horizontal2 ol li:nth-child(even) div::before {
+	top: -8px;
+	border-color: transparent transparent transparent white;
+}
+
+.timeline-horizontal2 time {
+	display: block;
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+
+/* TIMELINE ARROWS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline-horizontal2 .arrows .arrow.arrow__prev {
+	left: 0;
+}
+
+.timeline-horizontal2 .arrows .arrow.arrow__next {
+	right: 0;
+}
+
+.timeline-horizontal2 .arrows .disabled img,
+.timeline-horizontal2 .arrows .disabled svg {
+	opacity: 0.25;
+	fill: var(--text-color-light);
+}
+
+.timeline-horizontal2 .arrows img,
+.timeline-horizontal2 .arrows svg {
+	width: 45px;
+	height: 45px;
+	fill: var(--primary-color);
+}
+
+.timeline-horizontal2 .arrows button:hover svg {
+	fill: var(--primary-color-light);
+}
+
+.timeline-horizontal2 .arrows button:active svg {
+	fill: var(--primary-color-dark);
+}
+
+.timeline-horizontal2 .arrows .arrow {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	height: inherit;
+	width: 130px;
+	position: absolute;
+	height: 100%;
+	top: 0;
+}
+
+.timeline-horizontal2 .arrows .arrow.arrow__prev {
+	background-image: linear-gradient(90deg, var(--secondary-color-extra-light) 40%, rgba(0, 0, 0, 0) 100%);
+}
+
+.timeline-horizontal2 .arrows .arrow.arrow__next {
+	background-image: linear-gradient(-90deg, var(--secondary-color-extra-light) 40%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 991px) {
+	.timeline-horizontal2 .box-title {
+		margin-bottom: 25px;
+	}
+
+	.timeline-horizontal2 ol,
+	.timeline-horizontal2 ol li {
+		width: auto;
+	}
+
+	.timeline-horizontal2 ol {
+		padding: 0;
+		transform: none !important;
+	}
+
+	.timeline-horizontal2 ol li {
+		display: block;
+		height: auto;
+		background: transparent;
+	}
+
+	.timeline-horizontal2 ol li:first-child {
+		margin-top: 25px;
+	}
+
+	.timeline-horizontal2 ol li:not(:first-child) {
+		margin-left: auto;
+	}
+
+	.timeline-horizontal2 ol li div {
+		width: 94%;
+		height: auto !important;
+		margin: 0 auto 25px;
+	}
+
+	.timeline-horizontal2 ol li div {
+		position: static;
+	}
+
+	.timeline-horizontal2 ol li:nth-child(odd) div {
+		transform: none;
+	}
+
+	.timeline-horizontal2 ol li:nth-child(odd) div::before,
+	.timeline-horizontal2 ol li:nth-child(even) div::before {
+		left: 50%;
+		top: 100%;
+		transform: translateX(-50%);
+		border: none;
+		border-left: 6px solid var(--laranja);
+		height: 25px;
+	}
+
+	.timeline-horizontal2 ol li:last-child,
+	.timeline-horizontal2 ol li:nth-last-child(2) div::before,
+	.timeline-horizontal2 ol li:not(:last-child)::after,
+	.timeline-horizontal2 .arrows {
+		display: none;
+	}
+}

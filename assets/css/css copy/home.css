@@ -1,0 +1,236 @@
+/* s */
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: #fbfbfb;
+}
+
+header {
+	position: relative;
+	background: var(--secondary-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header .header__title {
+	background-color: var(--secondary-color);
+	text-align: center;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	padding: 40px 10px;
+}
+
+header div {
+	height: 100%;
+}
+
+/* .header__title .logo {
+	display: inline-block;
+	padding: 15px 20px;
+	background-color: var(--primary-color-light);
+	border-radius: 0 0 0.5rem 0.5rem;
+	margin: 0 auto 10vw;
+}
+
+.header__title .logo img {
+	height: 60px;
+} */
+
+.header__title h1 {
+	font-size: 12vw;
+
+	line-height: 1.1;
+	letter-spacing: -3px;
+	margin: 0 auto;
+	color: #ffffff;
+	text-shadow: 0 5px 0 rgba(90, 55, 81, 0.25);
+}
+.header__title h1 span {
+	display: block;
+	font-size: 6vw;
+
+	line-height: 1.25;
+	letter-spacing: 0;
+	margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+	header {
+		/* height: 70vw; */
+		background: url(../images/home/tarja-capa.jpg);
+		background-size: cover;
+		background-position: top center;
+	}
+	.header__title h1 {
+		font-size: 60px;
+	}
+	.header__title h1 span {
+		font-size: 20px;
+		margin-top: 30px;
+		line-height: 1.1;
+	}
+}
+
+@media (min-width: 992px) {
+	header {
+		height: 500px;
+	}
+	header .header__title {
+		padding: 60px 40px;
+	}
+	.header__title h1 {
+		font-size: 72px;
+	}
+	.header__title h1 span {
+		font-size: 36px;
+	}
+}
+@media (min-width: 1200px) {
+	header .header__title {
+		padding: 60px 120px;
+	}
+}
+
+.main {
+	background: #fbfbfb url(../images/home/section-bg.png);
+	background-repeat: no-repeat;
+	background-position-y: 20%;
+	background-position-x: center;
+	background-size: 200%;
+}
+
+#course-program hr {
+	border-color: var(--secondary-color);
+}
+
+#course-program .card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 30px 0;
+	align-items: normal;
+	border: 1px solid var(--secondary-color);
+	box-shadow: 0 16px 60px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	margin-bottom: 30px;
+}
+#course-program .card .card-header {
+	flex: 1 1 auto;
+	border: none;
+	background: none;
+	padding: 0;
+	margin: 0;
+}
+
+#course-program .card .card-header :first-child {
+	margin-bottom: 0.75rem;
+	font-size: 1.15rem;
+}
+#course-program .card .card-header :nth-child(2) {
+	color: var(--dark-color);
+	margin-bottom: 0;
+	font-size: 1.25rem;
+}
+#course-program .card .card-body {
+	border-top: 1px solid var(--secondary-color-light);
+	border-bottom: 1px solid var(--secondary-color-light);
+	padding: 20px 0;
+	font-size: 1.2rem;
+	flex: 1 1 auto;
+}
+#course-program .card .card-body span {
+	color: var(--secondary-color-dark);
+	font-weight: 600;
+}
+#course-program .card .card-body :last-child {
+	margin-bottom: 0;
+}
+#course-program .card .card-footer {
+	padding: 0;
+	margin: 0;
+	border: none;
+	background: none;
+	flex: 1 1 auto;
+	text-align: center;
+}
+
+@media (min-width: 768px) {
+	#course-program .card {
+		flex-direction: row;
+		gap: 0 20px;
+		align-items: center;
+	}
+
+	#course-program .card .card-header {
+		flex: 1 1 20%;
+	}
+	#course-program .card .card-header :first-child {
+		margin-bottom: 0.75rem;
+		font-size: 1.15rem;
+	}
+	#course-program .card .card-header :nth-child(2) {
+		color: var(--dark-color);
+		margin-bottom: 0;
+		font-size: 1.25rem;
+	}
+	#course-program .card .card-body {
+		border: none;
+		border-right: 1px solid var(--secondary-color-light);
+		border-left: 1px solid var(--secondary-color-light);
+		padding: 0 20px;
+		font-size: 1.2rem;
+		flex: 1 1 60%;
+	}
+	#course-program .card .card-body span {
+		color: var(--secondary-color-dark);
+		font-weight: 600;
+	}
+	#course-program .card .card-body :last-child {
+		margin-bottom: 0;
+	}
+	#course-program .card .card-footer {
+		padding: 0;
+		margin: 0;
+		border: none;
+		background: none;
+		flex: 1 1 20%;
+		text-align: center;
+	}
+}
+.card-destaque {
+	border: 1px solid var(--secondary-color);
+}
+.card-destaque p {
+	font-size: inherit;
+}
+
+.presentation .bg-secondary-light {
+	background-color: rgb(227, 211, 211, 0.3) !important;
+}
+
+.presentation .table-responsive th {
+	vertical-align: middle;
+	border-bottom: 1px solid #d2a6a6;
+}
+
+.presentation.bg-section {
+	background: #f8fafc url(../images/home/section-bg.png);
+}
+
+@media (min-width: 768px) {
+	.main {
+		background-position-y: 0;
+		background-size: 200%;
+		transform: none;
+	}
+}
+@media (min-width: 992px) {
+	.main {
+		background-position-y: 0;
+		background-size: 100%;
+	}
+}
