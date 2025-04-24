@@ -12,9 +12,9 @@
   text-decoration: none;
 }
 .button-primary:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-color-light);
   color: #ffffff;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--secondary-color-light);
   text-decoration: none;
 }
 
