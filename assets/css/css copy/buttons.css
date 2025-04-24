@@ -21,9 +21,7 @@
 .button-primary:focus {
   text-decoration: none;
 }
-.button-primary a {
-  text-decoration: none;
-}
+
 
 .button-secondary {
   display: inline-block;

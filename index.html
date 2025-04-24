@@ -30,9 +30,14 @@
     <link rel="stylesheet" href="./assets/css/css copy/style.css" />
     <link rel="stylesheet" href="./assets/css/css copy/home.css" />
     <link rel="stylesheet" href="./assets/css/css copy/animate.min.css" />
+    <link rel="stylesheet" href="./assets/css/css/recursos-visuais/boxes.css" />
     <style>
       h1 {
         font-size: 34px;
+      }
+      .homeGifs {
+        display: flex;
+        flex-direction: column;
       }
 
       header {
@@ -115,41 +120,75 @@
     <div class="">
       <!-- Apresentação -->
       <div class="col-md-12" id="content">
-        <div class="row centro">
-          <div
-            style="
-              width: 100%;
-              padding-top: 150px;
-              height: auto;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              padding-bottom: 40px;
-            "
-          >
-            <img
-              style="max-width: 100%"
-              src="./assets/images/home/Modalidade Autoinstrucional (4).png"
-            />
-          </div>
-        </div>
-        <div class="video-index">
-          <iframe
-            src="https://www.youtube.com/embed/M6ZjrO_QOJ8?si=CbQtKzd8moOKMAmQ"
-            controls
-            allowfullscreen
-            class="iframe-index"
-          ></iframe>
-        </div>
-        <div class="margin-video-index"></div>
         <div class="main mb-5" style="background-color: #ffffff">
           <section id="course-program">
+            <div class="row centro">
+              <div class="homeGifs">
+                <div class="row justify-content-center">
+                  <div class="col-12 col-md-10 col-lg-8 mb-2 text-center">
+                    <h2
+                      class="heading__title h3"
+                      style="
+                        font-size: 3rem;
+                        color: var(--secondary-color-light);
+                        padding-bottom: 20px;
+                        border-bottom: 2.5px solid var(--primary-color-light);
+                      "
+                    >
+                      Estrutura do curso
+                    </h2>
+                  </div>
+                </div>
+                <div class="">
+                  <div class="col-11 col-md-10 col-lg-8">
+                    <div class="row justify-content-center">
+                      <div class="col-12 col-md-4 col-lg-4 mb-5 text-center">
+                        <img
+                          src="./assets/images/home/interface1.gif"
+                          class="icone mb-4"
+                          style="height: 120px"
+                          alt=""
+                        />
+                        <p><strong>Modalidade Autoinstrucional</strong></p>
+                      </div>
+                      <div class="col-12 col-md-4 col-lg-4 mb-3 text-center">
+                        <img
+                          src="./assets/images/home/relogio1.gif"
+                          class="icone mb-4"
+                          style="height: 120px"
+                          alt=""
+                        />
+                        <p><strong>30 horas de carga horária</strong></p>
+                      </div>
+                      <div class="col-12 col-md-4 col-lg-4 mb-3 text-center">
+                        <img
+                          src="./assets/images/home/cardapio1.gif"
+                          class="icone mb-4"
+                          style="height: 120px"
+                          alt=""
+                        />
+                        <p><strong>3 módulos</strong></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="video-index">
+              <iframe
+                src="https://www.youtube.com/embed/M6ZjrO_QOJ8?si=CbQtKzd8moOKMAmQ"
+                controls
+                allowfullscreen
+                class="iframe-index"
+              ></iframe>
+            </div>
+            <div class="margin-video-index"></div>
             <div class="container">
               <div class="row justify-content-center">
                 <div class="col-12">
                   <div class="card">
                     <div class="card-header">
-                      <h5>Módulo 1</h5>
+                      <h5>MÓDULO 1</h5>
                       <h4>O que são as leishmanioses?</h4>
                     </div>
                     <div class="card-body">
@@ -196,7 +235,7 @@
                 <div class="col-12">
                   <div class="card">
                     <div class="card-header">
-                      <h5>Módulo 2</h5>
+                      <h5>MÓDULO 2</h5>
                       <h4>Patogenia e manifestações clínicas</h4>
                     </div>
                     <div class="card-body">
@@ -246,7 +285,7 @@
                   </div>
                   <div class="card">
                     <div class="card-header">
-                      <h5>Módulo 3</h5>
+                      <h5>MÓDULO 3</h5>
                       <h4>
                         Fatores físicos e sociais que contribuem para a mudança
                         do cenário
@@ -290,7 +329,7 @@
                   </div>
                   <div class="card">
                     <div class="card-header">
-                      <h5>Módulo 4</h5>
+                      <h5>MÓDULO 4</h5>
                       <h4>Conceito de Saúde Única</h4>
                     </div>
                     <div class="card-body">
@@ -324,6 +363,38 @@
               </div>
             </div>
           </section>
+          <div
+            class="row justify-content-center pt-5 mb-5"
+            style="padding-bottom: 50px"
+          >
+            <div class="col-12 col-md-10 col-lg-8">
+              <div class="card-box card border-0 shadow">
+                <div class="box-title">
+                  <span
+                    class="h5"
+                    style="
+                      border-bottom: 1px solid var(--primary-color-light);
+                      color: var(--secondary-color-light);
+                    "
+                  >
+                    <span
+                      class="box-title__icone material-symbols-rounded"
+                      aria-hidden="true"
+                      >priority_high</span
+                    >
+                    Atenção
+                  </span>
+                  <div class="boxes-content">
+                    <p>
+                      Recomendamos que o curso seja realizado linearmente, pois
+                      a sequência das aulas facilita o entendimento sobre o
+                      material apresentado.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="row" style="width: 100%; min-height: 60px">
