@@ -42,21 +42,3 @@ tr:nth-child(even) {
 }
 
 /* Responsividade para telas pequenas */
-@media (max-width: 768px) {
-  table {
-    font-size: 12px; /* Reduz o tamanho da fonte para dispositivos menores */
-  }
-  table i,
-  span {
-    font-size: 12px;
-  }
-
-  th,
-  td {
-    padding: 8px 5px; /* Menos padding para economizar espaço */
-  }
-
-  tr {
-    font-size: 12px; /* Tamanho menor para o texto */
-  }
-}
