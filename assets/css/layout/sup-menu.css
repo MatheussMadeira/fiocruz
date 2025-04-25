@@ -1,31 +1,27 @@
 .tituloModulo {
-    justify-content: space-between;
-    max-height: 360px;
+  justify-content: space-between;
+  max-height: 360px;
 }
 
 .logo {
-    margin: 1% 0% 1% 5%;
-    max-width: 30%;
+  margin: 1% 0% 1% 5%;
+  max-width: 30%;
 }
 
 .navbar {
-    background-color: #2F6C48;
+  background-color: #2f6c48;
 }
 
 .navbar-nav {
-    margin-right: 5%;
+  margin-right: 5%;
 }
 
 .navbar-nav li {
-    margin-right: 40px;
-    margin-left: 20px;
+  margin-right: 40px;
+  margin-left: 20px;
 }
 
 .navbar-nav li a {
-    color: white;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline !important;
+  color: white;
+  text-decoration: none;
 }

@@ -10,18 +10,24 @@
   color: #ffffff !important;
   border: 1px solid var(--primary-color);
   text-decoration: none;
+  @media (max-width: 990px) {
+    font-size: 1.2rem;
+  }
 }
 .button-primary:hover {
   background-color: var(--secondary-color-light);
   color: #ffffff;
-  border: 1px solid var(--secondary-color-light);
+  border: none;
+  text-decoration: none;
+  transition: background-color 0.5s ease;
+}
+.button-primary a:hover {
   text-decoration: none;
 }
 
 .button-primary:focus {
   text-decoration: none;
 }
-
 
 .button-secondary {
   display: inline-block;
