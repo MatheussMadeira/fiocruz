@@ -27,997 +27,537 @@
     />
     <link href="./assets/css/styles.css" rel="stylesheet" />
   </head>
+  <style>
+    h1 {
+      color: var(--secondary-color-light);
+      font-weight: bolder;
+      font-size: 2.7rem;
+    }
+    .glossario-section {
+      border-bottom: 2px solid var(--secondary-color-light);
+      padding: 30px;
+    }
+    #first-section:hover {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-top: 4px solid var(--secondary-color-light);
+    }
+    #last-section:hover {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    .glossario-section:hover {
+      border: 4px solid var(--secondary-color-light);
+      border-top: 2px solid var(--secondary-color-light);
+    }
+    .glossario-section:focus {
+      border: none;
+    }
 
+    .glossario-header {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: var(--secondary-color-light);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .glossario-class {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 0px;
+    }
+    .glossario-content {
+      list-style: none;
+      display: none;
+      padding-left: 0;
+    }
+
+    .glossario-content li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .glossario-content ::before {
+      font-weight: bold;
+      color: #ff7f50; /* ou outro que combine com seu layout */
+    }
+
+    .tituloLista {
+      font-weight: bold;
+    }
+    .toggle-symbol {
+      float: right;
+      color: var(--primary-color-light);
+    }
+  </style>
   <body>
     <!-- Toolbar -->
-    <header
-      style="
-        display: flex;
-        justify-content: center;
-        background-color: white;
-        height: 550px;
-      "
-    >
-      <img
-        src="assets/images/home/LOGOMARCA.svg"
-        class="img-fluid"
-        alt="Capa do curso"
-        style="max-width: 100%; height: auto"
-      />
-    </header>
 
-    <div class="row" id="row-main">
+    <div class="row centro" id="row-main">
       <!-- Sidebar -->
-      <div class="col-md-2" id="sidebar">
-        <!-- Botão p/ Recolher Sidebar-->
-        <span class="toggle-sidebar" id="sidebarButton"
-          ><i class="fas fa-chevron-left"></i
-        ></span>
-
-        <!-- Botão Secundário p/ Recolher Sidebar -->
-
-        <nav id="menuLateral">
-          <ul class="listaMenu">
-            <li>
-              <div class="row">
-                <div class="sectionTitle">
-                  <img
-                    src="./assets/images/home/Untitled design (2) (1).png"
-                    class="img-fluid logoMenu"
-                    alt="Logo Campus Virtual"
-                  />
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="row">
-                <div class="sectionTitle">
-                  <a
-                    href="index.html"
-                    class="tituloLista"
-                    style="padding-top: 0 !important"
-                    ><i class="fas fa-home"></i>PÁGINA INICIAL</a
-                  >
-                </div>
-              </div>
-            </li>
-
-            <div class="accordionMenu" id="headingModulo1">
-              <div class="row">
-                <div class="sectionTitle">
-                  <span
-                    class="tituloLista collapsed"
-                    data-toggle="collapse"
-                    data-target="#collapseModulo1"
-                    aria-expanded="false"
-                    aria-controls="collapseModulo1"
-                    >Módulo 1<i class="fas fa-caret-up caretDown"></i
-                  ></span>
-                </div>
-              </div>
-
-              <div
-                id="collapseModulo1"
-                class="collapse"
-                aria-labelledby="headingModulo1"
-              >
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 1</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a href="./modulo1/modulo1-aula1.html" class="subItem"
-                        >Conceito de leishmaniose</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 2</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a href="./modulo1/modulo1-aula2.html" class="subItem"
-                        >Distribuição das leishmanioses no Brasil</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 3</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a href="./modulo1/modulo1-aula3.html" class="subItem"
-                        >Incidência e Prevalência</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 4</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a href="./modulo1/modulo1-aula4.html" class="subItem"
-                        >Aspectos dos vetores e reservatórios- Ciclos de
-                        transmissão</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 5</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a href="./modulo1/modulo1-aula5.html" class="subItem"
-                        >Conceito de leishmaniose</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 6</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a href="./modulo1/modulo1-aula6.html" class="subItem"
-                        >Conceito de leishmaniose</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 7</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a href="./modulo1/modulo1-aula7.html" class="subItem"
-                        >Conceito de leishmaniose</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div
-                      class="barraStepper active"
-                      style="background-color: #c40f17"
-                    >
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem"
-                        ><a
-                          href="./modulo1/modulo1-atividade.html"
-                          data-quiz="true"
-                          >Quiz Módulo 1</a
-                        ></span
-                      >
-                    </div>
-                  </div>
-                </li>
-              </div>
-            </div>
-
-            <div class="accordionMenu" id="headingModulo2">
-              <div class="row">
-                <div class="sectionTitle">
-                  <span
-                    class="tituloLista collapsed"
-                    data-toggle="collapse"
-                    data-target="#collapseModulo2"
-                    aria-expanded="false"
-                    aria-controls="collapseModulo2"
-                    >Módulo 2<i class="fas fa-caret-up caretDown"></i
-                  ></span>
-                </div>
-              </div>
-              <div
-                id="collapseModulo2"
-                class="collapse"
-                aria-labelledby="headingModulo2"
-              >
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 1</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a href="./modulo2/modulo2-aula1.html" class="subItem"
-                        >Período de incubação e primeiros sintomas (homem e
-                        cão)</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 2</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a href="./modulo2/modulo2-aula2.html" class="subItem"
-                        >Sinais e sintomas comuns (homem e cão)</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 3</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a href="./modulo2/modulo2-aula3.html" class="subItem"
-                        >Rede de assistência pública para prevenção,
-                        diagnóstico, tratamento e controle das leishmanioses em
-                        humanos e caninos</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 4</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a href="./modulo2/modulo2-aula4.html" class="subItem"
-                        >Rede de assistência pública para prevenção,
-                        diagnóstico, tratamento e controle das leishmanioses em
-                        humanos e caninos</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 5</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a href="./modulo2/modulo2-aula5.html" class="subItem"
-                        >Rede de assistência pública para prevenção,
-                        diagnóstico, tratamento e controle das leishmanioses em
-                        humanos e caninos</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 6</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a href="./modulo2/modulo2-aula6.html" class="subItem"
-                        >Rede de assistência pública para prevenção,
-                        diagnóstico, tratamento e controle das leishmanioses em
-                        humanos e caninos</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 7</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a href="./modulo2/modulo2-aula7.html" class="subItem"
-                        >Rede de assistência pública para prevenção,
-                        diagnóstico, tratamento e controle das leishmanioses em
-                        humanos e caninos</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 8</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a href="./modulo2/modulo2-aula8.html" class="subItem"
-                        >Rede de assistência pública para prevenção,
-                        diagnóstico, tratamento e controle das leishmanioses em
-                        humanos e caninos</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper" style="background-color: #c40f17">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem"
-                        ><a
-                          href="./modulo2/modulo2-atividade.html"
-                          data-quiz="true"
-                          >Quiz Módulo 2</a
-                        ></span
-                      >
-                    </div>
-                  </div>
-                </li>
-              </div>
-            </div>
-
-            <div class="accordionMenu" id="headingModulo3">
-              <div class="row">
-                <div class="sectionTitle">
-                  <span
-                    class="tituloLista collapsed"
-                    data-toggle="collapse"
-                    data-target="#collapseModulo3"
-                    aria-expanded="false"
-                    aria-controls="collapseModulo3"
-                    >Módulo 3<i class="fas fa-caret-up caretDown"></i
-                  ></span>
-                </div>
-              </div>
-              <div
-                id="collapseModulo3"
-                class="collapse"
-                aria-labelledby="headingModulo3"
-              >
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 1</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a href="./modulo3/modulo3-aula1.html" class="subItem"
-                        >Abordagem ecológica e social das leishmanioses</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 2</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a href="./modulo3/modulo3-aula2.html" class="subItem"
-                        >Medidas de prevenção e controle da doença</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 3</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a href="./modulo3/modulo3-aula3.html" class="subItem"
-                        >Medidas de prevenção e controle da doença</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 4</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a href="./modulo3/modulo3-aula4.html" class="subItem"
-                        >Medidas de prevenção e controle da doença</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 5</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a href="./modulo3/modulo3-aula5.html" class="subItem"
-                        >Medidas de prevenção e controle da doença</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper" style="background-color: #c40f17">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem"
-                        ><a
-                          href="./modulo3/modulo3-atividade.html"
-                          data-quiz="true"
-                          >Quiz Módulo 3</a
-                        ></span
-                      >
-                    </div>
-                  </div>
-                </li>
-              </div>
-            </div>
-
-            <div class="accordionMenu" id="headingModulo4">
-              <div class="row">
-                <div class="sectionTitle">
-                  <span
-                    class="tituloLista collapsed"
-                    data-toggle="collapse"
-                    data-target="#collapseModulo4"
-                    aria-expanded="false"
-                    aria-controls="collapseModulo4"
-                    >Módulo 4<i class="fas fa-caret-up caretDown"></i
-                  ></span>
-                </div>
-              </div>
-
-              <div
-                id="collapseModulo4"
-                class="collapse"
-                aria-labelledby="headingModulo4"
-              >
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 1</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a href="./modulo4/modulo4-aula1.html" class="subItem"
-                        >Conceito de Saúde Única</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 2</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a href="./modulo4/modulo4-aula2.html" class="subItem"
-                        >Intersetorialidade nas ações de enfrentamento às
-                        leishmanioses</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 3</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a href="./modulo4/modulo4-aula3.html" class="subItem"
-                        >Participação cidadã nas ações de enfrentamento às
-                        leishmanioses</a
-                      >
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <div class="row">
-                    <div class="barraStepper" style="background-color: #c40f17">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem"
-                        ><a href="./modulo4/modulo4-quiz.html" data-quiz="true"
-                          >Quiz Módulo 4</a
-                        ></span
-                      >
-                    </div>
-                  </div>
-                </li>
-              </div>
-            </div>
-            <li>
-              <div class="row">
-                <div class="sectionTitle">
-                  <a class="tituloLista" role="button" href="./quiz.html">
-                    🖋 QUIZ FINAL</a
-                  >
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="row">
-                <div class="sectionTitle">
-                  <a
-                    class="tituloLista"
-                    role="button"
-                    href="./encerramento.html"
-                    >ENCERRAMENTO</a
-                  >
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="row">
-                <div class="sectionTitle">
-                  <a
-                    class="tituloLista"
-                    role="button"
-                    href="./material-complementar.html"
-                    ><i class="fas fa-book"></i>APOSTILA</a
-                  >
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="row">
-                <div class="sectionTitle">
-                  <a class="tituloLista" role="button" href="./creditos.html"
-                    ><i class="fas fa-list"></i>CRÉDITOS</a
-                  >
-                </div>
-              </div>
-            </li>
-          </ul>
-        </nav>
-      </div>
 
       <!-- Conteúdo Principal -->
-      <div class="col-md-10" id="content">
-        <div class="conteudo">
-          <h1>GLOSSÁRIO</h1>
-          <ul style="list-style: none">
-            <li style="padding-top: 25px">
-              <b>🔬 A</b>
-              <ul style="list-style: square">
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Agente etiológico</span> – Organismo
-                  responsável por causar uma doença. No caso da leishmaniose, o
-                  agente etiológico é um protozoário do gênero Leishmania.
-                </li>
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Amastigota</span> – Forma
-                  intracelular do protozoário Leishmania, sem flagelo,
-                  encontrada dentro dos macrófagos no hospedeiro mamífero.
-                </li>
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Anergia</span> – Estado de ausência
-                  ou fraqueza de resposta imunológica a um determinado antígeno,
-                  o que pode favorecer a disseminação da leishmaniose.
-                </li>
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Anticorpo</span> – Proteína
-                  produzida pelo sistema imunológico para combater agentes
-                  invasores, como vírus e protozoários.
-                </li>
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Antígeno</span> – Substância que
-                  estimula a resposta imunológica e a produção de anticorpos.
-                </li>
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Antropozoonose</span> – Doença que
-                  pode ser transmitida de animais para humanos. A leishmaniose é
-                  um exemplo desse tipo de doença.
-                </li>
-              </ul>
-            </li>
-            <li style="padding-top: 25px">
-              <b>🦠 B</b>
-              <ul style="list-style: square">
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Biópsia </span> – Procedimento
-                  médico no qual uma pequena amostra de tecido é retirada do
-                  corpo para análise laboratorial. Pode ser usada para
-                  diagnosticar a leishmaniose tegumentar.
-                </li>
-              </ul>
-            </li>
-            <li style="padding-top: 25px">
-              <b>🦟 C</b>
-              <ul style="list-style: square">
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Cadeia de transmissão </span> –
-                  Sequência de eventos necessários para que um agente infeccioso
-                  passe de um hospedeiro para outro, mantendo a circulação da
-                  doença na população. .
-                </li>
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Ciclo biológico </span> – Conjunto
-                  de estágios pelos quais um organismo passa ao longo de sua
-                  vida. O ciclo da Leishmania envolve um vetor (flebotomíneo) e
-                  um hospedeiro vertebrado (humanos ou animais).
-                </li>
-                <li style="padding-top: 15px">
-                  <span class="tituloLista"
-                    >Coinfecção (Leishmaniose e HIV)</span
+      <div
+        style="
+          width: 100%;
+          padding: 30px;
+
+          display: flex;
+          flex-direction: column;
+        "
+      >
+        <div class="text-center">
+          <div>
+            <h1
+              style="
+                color: var(--secondary-color-light);
+                font-size: 4.5rem;
+                font-weight: bolder;
+                border-bottom: 2px solid var(--primary-color-light);
+                padding-bottom: 20px;
+              "
+            >
+              Glossário
+            </h1>
+          </div>
+          <div id="glossario" class="glossario-class">
+            <div class="glossario-section" id="first-section">
+              <div class="glossario-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus toggle-symbol"></i> A
+              </div>
+              <ul class="glossario-content" style="list-style: none">
+                <li>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: left;
+                    "
                   >
-                  – Condição em que um paciente está simultaneamente infectado
-                  por Leishmania e pelo vírus da imunodeficiência humana (HIV),
-                  o que agrava a evolução da leishmaniose devido à
-                  imunossupressão.
+                    <h1>Agente etiológico</h1>
+                    <p>
+                      Organismo responsável por causar uma doença. No caso da
+                      leishmaniose, o agente etiológico é um protozoário do
+                      gênero Leishmania.
+                    </p>
+                  </div>
                 </li>
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Controle vetorial</span> – Conjunto
-                  de ações para reduzir ou eliminar a população de insetos
-                  transmissores de doenças, como o flebotomíneo no caso da
-                  leishmaniose.
+                <li>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: left;
+                    "
+                  >
+                    <h1>Amastigota</h1>
+                    <p>
+                      Forma intracelular do protozoário Leishmania, sem flagelo,
+                      encontrada dentro dos macrófagos no hospedeiro mamífero.
+                    </p>
+                  </div>
                 </li>
-              </ul>
-            </li>
-            <li style="padding-top: 25px">
-              <b>🧬 D</b>
-              <ul style="list-style: square">
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Diagnóstico molecular </span> –
-                  Método de detecção da presença do DNA do agente infeccioso no
-                  organismo, como a técnica de PCR para identificar Leishmania.
+                <li>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: left;
+                    "
+                  >
+                    <h1>Anergia</h1>
+                    <p>
+                      Estado de ausência ou fraqueza de resposta imunológica a
+                      um determinado antígeno, o que pode favorecer a
+                      disseminação da leishmaniose.
+                    </p>
+                  </div>
                 </li>
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Diagnóstico parasitológico</span> –
-                  Técnica laboratorial que busca visualizar o parasita
-                  diretamente em tecidos ou fluidos do paciente, como em
-                  esfregaços de lesões cutâneas.
+                <li>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: left;
+                    "
+                  >
+                    <h1>Anticorpo</h1>
+                    <p>
+                      Proteína produzida pelo sistema imunológico para combater
+                      agentes invasores.
+                    </p>
+                  </div>
                 </li>
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Doença Negligenciada</span>
-                  – Doença que afeta populações economicamente vulneráveis e
-                  recebe pouco investimento em pesquisa e tratamento. A
-                  leishmaniose está entre as principais doenças negligenciadas
-                  do mundo.
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Antígeno</h1>
+                    <p>Substância que estimula a produção de anticorpos</p>
+                  </div>
                 </li>
-              </ul>
-            </li>
-            <li style="padding-top: 25px">
-              <b>🌎 E</b>
-              <ul>
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Epidemiologia</span>
-                  – Estudo da distribuição, frequência e fatores determinantes
-                  de doenças em populações humanas
-                </li>
-              </ul>
-            </li>
-            <li style="padding-top: 25px">
-              <b>🏥 H</b>
-              <ul style="list-style: square">
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Hematofagia</span> – Hábito
-                  alimentar de certos insetos de se nutrirem de sangue. No caso
-                  da leishmaniose, apenas as fêmeas dos flebotomíneos são
-                  hematófagas e transmitem a doença.
-                </li>
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Hiperergia</span> – Resposta
-                  imunológica exagerada, que pode causar reações inflamatórias
-                  intensas, como ocorre em alguns casos de leishmaniose
-                  tegumentar.
-                </li>
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Hospedeiro</span>
-                  – Organismo que abriga um parasita. O ser humano pode ser um
-                  hospedeiro acidental da Leishmania.
-                </li>
-              </ul>
-            </li>
-            <li style="padding-top: 25px">
-              <b>💉 I</b>
-              <ul>
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Imunidade</span>
-                  – Capacidade do organismo de se defender contra infecções.
-                  Pode ser inata (presente desde o nascimento) ou adquirida
-                  (desenvolvida após exposição a patógenos ou vacinação).
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Antropozoonose</h1>
+                    <p>Doença transmitida de animais para humanos.</p>
+                  </div>
                 </li>
               </ul>
-            </li>
-            <li style="padding-top: 25px">
-              <b>🦠 L</b>
-              <ul style="list-style: square">
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Leishmania</span> – Gênero de
-                  protozoários parasitas que causam as diferentes formas de
-                  leishmaniose.
-                </li>
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Leishmaniose Cutânea</span> – Forma
-                  da doença que afeta a pele, causando lesões ulceradas. Também
-                  chamada de leishmaniose tegumentar localizada.
-                </li>
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Leishmaniose Difusa</span> –
-                  Variante rara da leishmaniose tegumentar, caracterizada por
-                  múltiplas lesões na pele sem tendência à cicatrização
-                  espontânea.
-                </li>
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Leishmaniose Mucosa</span> – Forma
-                  da leishmaniose tegumentar que acomete as mucosas do nariz,
-                  boca e garganta, podendo causar deformidades.
-                </li>
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Leishmaniose Tegumentar</span> –
-                  Conjunto de manifestações clínicas da leishmaniose que afetam
-                  a pele e mucosas.
-                </li>
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Leishmaniose Tegumentar</span> –
-                  Forma grave da leishmaniose, que afeta órgãos internos como
-                  fígado, baço e medula óssea. Se não tratada, pode levar ao
-                  óbito.
+            </div>
+
+            <div class="glossario-section">
+              <div class="glossario-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus toggle-symbol"></i> B
+              </div>
+              <ul class="glossario-content" style="list-style: square">
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Biópsia</h1>
+                    <p>
+                      Procedimento médico para retirar uma amostra de tecido
+                      para análise.
+                    </p>
+                  </div>
                 </li>
               </ul>
-            </li>
-            <li style="padding-top: 25px">
-              <b>🔬 M</b>
-              <ul style="list-style: square">
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Macrófagos </span> – Células do
-                  sistema imunológico responsáveis por "engolir" e destruir
-                  patógenos. São os principais alvos da Leishmania no corpo
-                  humano.
+            </div>
+
+            <div class="glossario-section">
+              <div class="glossario-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus toggle-symbol"></i> C
+              </div>
+              <ul class="glossario-content" style="list-style: square">
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Cadeia de transmissão</h1>
+                    <p>
+                      Sequência de eventos que mantém a circulação da doença.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Ciclo biológico</h1>
+                    <p>
+                      Estágios da vida de um organismo. No caso da Leishmania,
+                      envolve vetor e hospedeiro.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Coinfecção (Leishmaniose e HIV)</h1>
+                    <p>
+                      Presença simultânea das duas infecções, agravando o quadro
+                      clínico.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Controle vetorial</h1>
+                    <p>
+                      Medidas para combater os vetores transmissores da doença.
+                    </p>
+                  </div>
                 </li>
               </ul>
-            </li>
-            <li style="padding-top: 25px">
-              <b>🔍 P</b>
-              <ul style="list-style: square">
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Parasita </span> – Organismo que
-                  depende de outro para sobreviver, causando danos ao
-                  hospedeiro. Leishmania é um parasita intracelular obrigatório.
+            </div>
+
+            <div class="glossario-section">
+              <div class="glossario-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus toggle-symbol"></i> D
+              </div>
+              <ul class="glossario-content">
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Diagnóstico molecular</h1>
+                    <p>Detecta o DNA do parasita (ex: PCR).</p>
+                  </div>
                 </li>
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Patogenia </span> – Processo pelo
-                  qual um agente infeccioso causa uma doença no organismo do
-                  hospedeiro.
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Diagnóstico parasitológico</h1>
+                    <p>Visualiza o parasita diretamente em amostras.</p>
+                  </div>
                 </li>
-                <li style="padding-top: 15px">
-                  <span class="tituloLista"
-                    >PCR (Reação em Cadeia da Polimerase)
-                  </span>
-                  – Técnica laboratorial usada para detectar material genético
-                  de patógenos, como Leishmania, em amostras clínicas..
-                </li>
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Prevenção </span> – Medidas adotadas
-                  para evitar a transmissão de uma doença, como o uso de
-                  repelentes contra flebotomíneos e controle de reservatórios
-                  animais.
-                </li>
-              </ul>
-            </li>
-            <li style="padding-top: 25px">
-              <b>🐕 R</b>
-              <ul style="list-style: square">
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Reservatórios </span> – Animais que
-                  hospedam o parasita e possibilitam sua transmissão para novos
-                  hospedeiros. Na leishmaniose visceral, cães domésticos são os
-                  principais reservatórios urbanos.
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Doença Negligenciada</h1>
+                    <p>
+                      Doença com pouco investimento em tratamento e pesquisa.
+                    </p>
+                  </div>
                 </li>
               </ul>
-            </li>
-            <li style="padding-top: 25px">
-              <b>🦟 V</b>
-              <ul style="list-style: square">
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Vetores </span>
-                  – Técnica laboratorial usada para detectar material genético
-                  de patógenos, como Leishmania, em amostras clínicas..
-                </li>
-                <li style="padding-top: 15px">
-                  <span class="tituloLista">Prevenção </span> – Medidas adotadas
-                  para evitar a transmissão de uma doença, como o uso de
-                  repelentes contra flebotomíneos e controle de reservatórios
-                  animais.
+            </div>
+
+            <div class="glossario-section">
+              <div class="glossario-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus toggle-symbol"></i> E
+              </div>
+              <ul class="glossario-content">
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Epidemiologia</h1>
+                    <p>
+                      Estudo da distribuição e fatores das doenças nas
+                      populações.
+                    </p>
+                  </div>
                 </li>
               </ul>
-            </li>
-          </ul>
-        </div>
-        <!-- Botões de navegação -->
-        <div class="row centro" id="botao">
-          <a
-            style="text-decoration: none; margin-bottom: 80px"
-            onclick="window.history.back()"
-            class="btn btn-sm"
-            id="botaoVoltar"
-            role="button"
-            alt="Voltar"
-          >
-            <strong>VOLTAR</strong></a
-          >
-        </div>
-      </div>
-      <!-- Rodapé -->
-      <footer id="rodape">
-        <div class="row-main">
-          <div class="col-md-12 centro">
-            <img
-              class="img-fluid centro"
-              src="assets/images/rodape/Untitled design.png"
-              alt="Rodapé"
-            />
+            </div>
+
+            <div class="glossario-section">
+              <div class="glossario-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus toggle-symbol"></i> H
+              </div>
+              <ul class="glossario-content">
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Hematofagia</h1>
+                    <p>
+                      Alimentação baseada em sangue. Só as fêmeas do vetor o
+                      fazem.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Hiperergia</h1>
+                    <p>
+                      Resposta imune exagerada, pode causar inflamações severas.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Hospedeiro</h1>
+                    <p>Organismo que abriga o parasita.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="glossario-section">
+              <div class="glossario-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus toggle-symbol"></i> I
+              </div>
+              <ul class="glossario-content">
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Imunidade</h1>
+                    <p>Capacidade de defesa do organismo.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="glossario-section">
+              <div class="glossario-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus toggle-symbol"></i> L
+              </div>
+              <ul class="glossario-content">
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Leishmania</h1>
+                    <p>Protozoário causador da leishmaniose.</p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Leishmaniose Cutânea</h1>
+                    <p>Lesões na pele.</p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Leishmaniose Difusa</h1>
+                    <p>Lesões múltiplas e sem cicatrização.</p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Leishmaniose Mucosa</h1>
+                    <p>Acomete mucosas do nariz, boca e garganta.</p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Leishmaniose Tegumentar</h1>
+                    <p>Conjunto de manifestações da pele e mucosas.</p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Leishmaniose Visceral</h1>
+                    <p>Forma grave que afeta órgãos internos.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="glossario-section">
+              <div class="glossario-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus toggle-symbol"></i> M
+              </div>
+              <ul class="glossario-content">
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Macrófagos</h1>
+                    <p>Células que fagocitam agentes infecciosos.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="glossario-section">
+              <div class="glossario-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus toggle-symbol"></i> P
+              </div>
+              <ul class="glossario-content">
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Parasita</h1>
+                    <p>Organismo que vive às custas de outro.</p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Patogenia</h1>
+                    <p>Processo pelo qual um agente infeccioso causa doença.</p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>PCR</h1>
+                    <p>Técnica laboratorial de detecção genética.</p>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Prevenção</h1>
+                    <p>Medidas para evitar a transmissão.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="glossario-section">
+              <div class="glossario-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus toggle-symbol"></i> R
+              </div>
+              <ul class="glossario-content">
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Reservatórios</h1>
+                    <p>
+                      Animais que hospedam o parasita e participam da cadeia de
+                      transmissão.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="glossario-section" id="last-section">
+              <div class="glossario-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus toggle-symbol"></i> V
+              </div>
+              <ul class="glossario-content">
+                <li>
+                  <div
+                    style="display: flex; flex-direction: column; width: 100%"
+                  >
+                    <h1>Vetores</h1>
+                    <p>Insetos que transmitem o parasita.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </footer>
+        <!-- Botões de navegação -->
+      </div>
+      <!-- Rodapé -->
     </div>
     <!-- Arquivos JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script>
+      function toggleSection(header) {
+        const content = header.nextElementSibling;
+        const symbol = header.querySelector(".toggle-symbol");
+
+        if (content.style.display === "none" || content.style.display === "") {
+          content.style.display = "flex";
+          symbol.classList.remove("fa-plus");
+          symbol.classList.add("fa-minus");
+        } else {
+          content.style.display = "none";
+          symbol.classList.remove("fa-minus");
+          symbol.classList.add("fa-plus");
+        }
+      }
+    </script>
   </body>
 </html>

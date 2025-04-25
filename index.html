@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="./assets/css/css/recursos-visuais/boxes.css" />
     <style>
       dialog {
-        width: 80%;
+        width: 50%;
         height: 80%;
         max-width: 80%;
         max-height: 80%;
@@ -53,7 +53,7 @@
       }
 
       dialog::backdrop {
-        background-color: rgb(0 0 0 / 0.3);
+        background-color: rgb(0 0 0 / 0.7);
       }
       button {
         padding: 10px 20px;
@@ -67,15 +67,17 @@
         background-color: #007bff;
         color: #fff;
       }
-      button#closeDialog {
+      button.closeDialog {
         background-color: var(--primary-color);
         border: none;
         color: white;
+        width: 12%;
+        height: 6vh;
         border-radius: 10px;
         outline: none;
         text-decoration: none;
       }
-      #closeDialog:hover {
+      .closeDialog:hover {
         background-color: var(--secondary-color-light);
       }
       h1 {
@@ -448,41 +450,25 @@
             <a
               class="botaoMenuHome"
               role="button"
-              id="openGlossario"
+              id="openCreditos"
               style="cursor: pointer !important"
-              ><b class="hoverDefining"
-                ><i class="fas fa-file-alt"></i>GLOSSÁRIO</b
-              ></a
             >
-            <dialog id="dialogGlossario">
-              <div id="dialogContent">Carregando...</div>
-              <button id="closeDialog">Fechar</button>
+              <b class="hoverDefining"><i class="fas fa-list"></i>CREDITOS</b>
+            </a>
+            <dialog id="dialogCreditos">
+              <div id="dialogCreditosContent">Carregando...</div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: flex-end;
+                  margin-top: 10px;
+                "
+              >
+                <button class="closeDialog">Fechar</button>
+              </div>
             </dialog>
           </div>
-          <script>
-            document
-              .getElementById("openGlossario")
-              .addEventListener("click", async () => {
-                const dialog = document.getElementById("dialogGlossario");
-                dialog.showModal();
 
-                try {
-                  const response = await fetch("creditos.html");
-                  const content = await response.text();
-                  document.getElementById("dialogContent").innerHTML = content;
-                } catch {
-                  document.getElementById("dialogContent").textContent =
-                    "Erro ao carregar o conteúdo.";
-                }
-              });
-
-            document
-              .getElementById("closeDialog")
-              .addEventListener("click", () => {
-                const dialog = document.getElementById("dialogGlossario");
-                dialog.close(); // Garante que o método close() está sendo chamado
-              });
-          </script>
           <div class="col-md-4 centro" style="background-color: #f77f00">
             <a
               class="botaoMenuHome"
@@ -496,12 +482,24 @@
           <div class="col-md-4 centro" style="background-color: #ffdec0">
             <a
               class="botaoMenuHome"
-              href="creditos.html"
+              role="button"
+              id="openGlossario"
               style="cursor: pointer !important"
-              ><b class="hoverDefining"
-                ><i class="fas fa-list"></i>CRÉDITOS</b
-              ></a
             >
+              <b class="hoverDefining"><i class="fas fa-list"></i>GLOSSÁRIO</b>
+            </a>
+            <dialog id="dialogGlossario">
+              <div id="dialogGlossarioContent">Carregando...</div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: flex-end;
+                  margin-top: 10px;
+                "
+              >
+                <button class="closeDialog">Fechar</button>
+              </div>
+            </dialog>
           </div>
         </div>
 
@@ -524,6 +522,76 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
       <script src="./assets/js/main.js"></script>
+      <script>
+        // Função genérica para abrir e carregar conteúdo em um dialog
+        function configurarDialog(botaoId, dialogId, contentId, arquivoHtml) {
+          const botao = document.getElementById(botaoId);
+          const dialog = document.getElementById(dialogId);
+          const content = document.getElementById(contentId);
+
+          botao.addEventListener("click", async () => {
+            dialog.showModal();
+            try {
+              const response = await fetch(arquivoHtml);
+              const texto = await response.text();
+              content.innerHTML = texto;
+            } catch (err) {
+              content.textContent = "Erro ao carregar o conteúdo.";
+            }
+          });
+
+          // Fechar clicando no botão 'Fechar'
+          dialog.querySelector(".closeDialog").addEventListener("click", () => {
+            dialog.close();
+          });
+
+          // Fechar clicando fora da caixa (backdrop)
+          dialog.addEventListener("click", (event) => {
+            const rect = dialog.getBoundingClientRect();
+            if (
+              event.clientX < rect.left ||
+              event.clientX > rect.right ||
+              event.clientY < rect.top ||
+              event.clientY > rect.bottom
+            ) {
+              dialog.close();
+            }
+          });
+        }
+
+        // Configura os dois diálogos
+        configurarDialog(
+          "openGlossario",
+          "dialogGlossario",
+          "dialogGlossarioContent",
+          "glossario.html"
+        );
+        configurarDialog(
+          "openCreditos",
+          "dialogCreditos",
+          "dialogCreditosContent",
+          "creditos.html"
+        );
+      </script>
+      <script>
+        function toggleSection(header) {
+          const content = header.nextElementSibling;
+          const symbol = header.querySelector(".toggle-symbol");
+
+          if (
+            content.style.display === "none" ||
+            content.style.display === ""
+          ) {
+            content.style.display = "block";
+            symbol.classList.remove("fa-plus");
+            symbol.classList.add("fa-minus");
+          } else {
+            content.style.display = "none";
+            symbol.classList.remove("fa-minus");
+            symbol.classList.add("fa-plus");
+          }
+        }
+      </script>
     </div>
   </body>
 </html>
