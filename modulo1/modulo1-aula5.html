@@ -2,7 +2,93 @@
 <html lang="pt-br">
   <head>
     <meta charset="utf-8" />
-
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+      }
+      a {
+        text-decoration: none;
+      }
+      .main-container {
+        /* mesma largura da sidebar */
+        width: calc(100% - 350px); /* ocupa o resto da tela */
+        @media (max-width: 990px) {
+          width: 100%;
+        }
+      }
+      #botaoVoltar:hover,
+      #botaoAvancar:hover {
+        text-decoration: underline;
+      }
+      dialog {
+        width: 50%;
+        height: 85%;
+        max-width: 80%;
+        max-height: 80%;
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 8px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        z-index: 1000;
+        outline: none;
+        overflow: auto;
+        @media (max-width: 1280px) {
+          width: 620px;
+        }
+      }
+      dialog {
+        @media (max-width: 768px) {
+          width: 78%;
+        }
+      }
+      dialog::backdrop {
+        background-color: rgb(0 0 0 / 0.7);
+      }
+      button.closeDialog {
+        font-size: 1rem;
+        border: none;
+        border-radius: 6px;
+        background-color: var(--primary-color);
+        color: white;
+        width: 100%;
+        height: 6vh;
+        outline: none;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size: 100%;
+        text-align: center;
+      }
+      .closeDialog:hover {
+        background-color: var(--secondary-color-light);
+      }
+      button.closeDialog {
+        font-size: 1rem;
+        border: none;
+        border-radius: 6px;
+        background-color: #ff7000;
+        color: white;
+        width: 100%;
+        height: 6vh;
+        outline: none;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size: 100%;
+        text-align: center;
+      }
+      .closeDialog:hover {
+        background-color: #05314a;
+      }
+    </style>
     <title>Leishmanioses</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="../assets/js/link.js"></script>
@@ -26,1426 +112,323 @@
       href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
     />
     <link href="../assets/css/styles.css" rel="stylesheet" />
+    <link href="../assets/css/utilities/fonts.css" rel="stylesheet" />
+    <link href="../assets/css/css/fonts.css" rel="stylesheet" />
+    <link href="../assets/css/css/header.css" rel="stylesheet" />
+    <link href="../assets/css/css/sidebar.css" rel="stylesheet" />
   </head>
 
   <body>
     <!-- Toolbar -->
-    <header
-      style="
-        display: flex;
-        justify-content: center;
-        background-color: white;
-        height: 45vh;
-        margin-bottom: 50px;
-      "
-    >
-      <img
-        src="../assets/images/home/LOGOMARCA.svg"
-        class="img-fluid"
-        alt="Capa do curso"
-        style="max-width: 90%; height: auto"
-      />
-    </header>
 
-    <div class="row" id="row-main">
-      <!-- Sidebar -->
-      <div class="col-md-2" id="sidebar">
-        <!-- Botão p/ Recolher Sidebar-->
-        <span class="toggle-sidebar" id="sidebarButton"
-          ><i class="fas fa-chevron-left"></i
-        ></span>
-
-        <nav id="menuLateral">
-          <ul class="listaMenu">
-            <li>
-              <div class="row">
-                <div class="sectionTitle">
-                  <img
-                    src="../assets/images/home/Untitled design (2) (1).png"
-                    class="img-fluid logoMenu"
-                    alt="Logo Campus Virtual"
-                  />
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="row">
-                <div class="sectionTitle">
-                  <a
-                    href="../index.html"
-                    class="tituloLista"
-                    style="padding-top: 0 !important"
-                    ><i class="fas fa-home"></i>PÁGINA INICIAL</a
-                  >
-                </div>
-              </div>
-            </li>
-
-            <div class="accordionMenu" id="headingModulo1">
-              <div class="row">
-                <div class="sectionTitle">
-                  <span
-                    class="tituloLista"
-                    data-toggle="collapse"
-                    data-target="#collapseModulo1"
-                    aria-expanded="false"
-                    aria-controls="collapseModulo1"
-                    >Módulo 1<i class="fas fa-caret-up caretDown"></i
-                  ></span>
-                </div>
-              </div>
-
-              <div
-                id="collapseModulo1"
-                class="collapse show"
-                aria-labelledby="headingModulo1"
+    <!-- Sidebar -->
+    <div style="display: flex; flex-direction: row">
+      <div class="sidebar" role="navigation" id="sidebar">
+        <div class="sidebar__inner">
+          <section class="sidebar__header">
+            <section class="sidebar__section py-0">
+              <img
+                src="../assets/images/logos/LOGO 4 (300 x 130 px).png"
+                alt="Campus Virtual Fiocruz"
+                width="100%"
+              />
+            </section>
+            <h1>
+              leishmanioses:
+              <span>e eu com isso?</span>
+            </h1>
+          </section>
+          <hr />
+          <section class="sidebar__section py-2">
+            <a
+              href="../index.html"
+              class="sidebar__btn"
+              tabindex="0"
+              role="link"
+            >
+              <span class="material-symbols-rounded" aria-hidden="true"
+                >home</span
+              >Página inicial
+            </a>
+          </section>
+          <nav class="sidebar__section sidebar__section--contrast pb-0">
+            <span class="h6 pre-title">Aulas do módulo 1:</span>
+            <div class="sidebar__topic-list pb-4">
+              <a
+                href="./modulo1-aula1.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status="completed"
+                ></span
+                >Conceito de leishmaniose</a
               >
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 1</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo1/modulo1-aula1.html"
-                        class="subItem"
-                        data-aula="1"
-                        data-modulo="1"
-                        >Conceito de leishmaniose</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 2</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo1/modulo1-aula2.html"
-                        class="subItem"
-                        data-aula="2"
-                        data-modulo="1"
-                        >As espécies do protozoário, seus vetores e suas
-                        manifestações clínicas no homem</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 3</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo1/modulo1-aula3.html"
-                        class="subItem"
-                        data-aula="3"
-                        data-modulo="1"
-                        >Distribuição geográfica das leishmanioses</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 4</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo1/modulo1-aula4.html"
-                        class="subItem"
-                        data-aula="4"
-                        data-modulo="1"
-                        >Cadeia de transmissão</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 5</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo1/modulo1-aula5.html"
-                        class="subItem"
-                        data-aula="5"
-                        data-modulo="1"
-                        >Vetores</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 6</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo1/modulo1-aula6.html"
-                        class="subItem"
-                        data-aula="6"
-                        data-modulo="1"
-                        >Reservatórios</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 7</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo1/modulo1-aula7.html"
-                        class="subItem"
-                        data-aula="7"
-                        data-modulo="1"
-                        >Ciclo biológico da <i>Leishmania</i></a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper" style="background-color: #c40f17">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem"
-                        ><a
-                          href="../modulo1/modulo1-quiz.html"
-                          data-aula="5"
-                          data-modulo="1"
-                          class="subItem"
-                          data-quiz="true"
-                          >Quiz Módulo 1</a
-                        ></span
-                      >
-                    </div>
-                  </div>
-                </li>
-              </div>
-            </div>
 
-            <div class="accordionMenu" id="headingModulo2">
-              <div class="row">
-                <div class="sectionTitle">
-                  <span
-                    class="tituloLista collapsed"
-                    data-toggle="collapse"
-                    data-target="#collapseModulo2"
-                    aria-expanded="false"
-                    aria-controls="collapseModulo2"
-                    >Módulo 2<i class="fas fa-caret-up caretDown"></i
-                  ></span>
-                </div>
-              </div>
-              <div
-                id="collapseModulo2"
-                class="collapse"
-                aria-labelledby="headingModulo2"
+              <a
+                href="modulo1-aula2.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status="completed"
+                ></span
+                >As espécies do protozoário, seus vetores e suas manifestações
+                clínicas no homem</a
               >
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 1</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo2/modulo2-aula1.html"
-                        data-aula="1"
-                        data-modulo="2"
-                        class="subItem"
-                        >Patogenia geral</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 2</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo2/modulo2-aula2.html"
-                        data-aula="2"
-                        data-modulo="2"
-                        class="subItem"
-                        >Diagnóstico laboratorial da leishmaniose tegumentar</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 3</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo2/modulo2-aula3.html"
-                        data-aula="3"
-                        data-modulo="2"
-                        class="subItem"
-                        >Diagnóstico da leishmaniose visceral humana</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 4</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo2/modulo2-aula4.html"
-                        data-aula="4"
-                        data-modulo="2"
-                        class="subItem"
-                        >Diagnóstico da leishmaniose visceral canina</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 5</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo2/modulo2-aula5.html"
-                        data-aula="5"
-                        data-modulo="2"
-                        class="subItem"
-                        >Tratamento</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 6</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo2/modulo2-aula6.html"
-                        data-aula="6"
-                        data-modulo="2"
-                        class="subItem"
-                        >Vigilância epidemiológica do cão
-                      </a>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 7</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo2/modulo2-aula7.html"
-                        data-aula="7"
-                        data-modulo="2"
-                        class="subItem"
-                        >Importância do manejo ambiental</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 8</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo2/modulo2-aula8.html"
-                        data-aula="8"
-                        data-modulo="2"
-                        class="subItem"
-                        >Controle do reservatório canino e eutanásia dos animais
-                        infectados</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper" style="background-color: #c40f17">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem"
-                        ><a
-                          href="../modulo2/modulo2-quiz.html"
-                          data-aula="9"
-                          class="subItem"
-                          data-modulo="2"
-                          data-quiz="true"
-                          >Quiz Módulo 2</a
-                        ></span
-                      >
-                    </div>
-                  </div>
-                </li>
-              </div>
-            </div>
 
-            <div class="accordionMenu" id="headingModulo3">
-              <div class="row">
-                <div class="sectionTitle">
-                  <span
-                    class="tituloLista collapsed"
-                    data-toggle="collapse"
-                    data-target="#collapseModulo3"
-                    aria-expanded="false"
-                    aria-controls="collapseModulo3"
-                    >Módulo 3<i class="fas fa-caret-up caretDown"></i
-                  ></span>
-                </div>
-              </div>
-              <div
-                id="collapseModulo3"
-                class="collapse"
-                aria-labelledby="headingModulo3"
+              <a
+                href="modulo1-aula3.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status="completed"
+                ></span
+                >Distribuição geográfica das leishmanioses</a
               >
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 1</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo3/modulo3-aula1.html"
-                        data-aula="2"
-                        data-modulo="3"
-                        class="subItem"
-                        >Fatores físicos e sociais que contribuem para a mudança
-                        do cenário</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 2</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo3/modulo3-aula2.html"
-                        data-aula="2"
-                        data-modulo="3"
-                        class="subItem"
-                        >Processo de urbanização</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 3</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo3/modulo3-aula3.html"
-                        data-aula="3"
-                        data-modulo="3"
-                        class="subItem"
-                        >Ciclos de transmissão das leishmanioses</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 4</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo3/modulo3-aula4.html"
-                        data-aula="4"
-                        data-modulo="3"
-                        class="subItem"
-                        >Medidas de controle das leishmanioses
-                      </a>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 5</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo3/modulo3-aula5.html"
-                        data-aula="5"
-                        data-modulo="3"
-                        class="subItem"
-                        >Medidas de prevenção das leishmanioses</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper" style="background-color: #c40f17">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem"
-                        ><a
-                          href="../modulo3/modulo3-quiz.html"
-                          data-aula="6"
-                          class="subItem"
-                          data-modulo="3"
-                          data-quiz="true"
-                          >Quiz Módulo 3</a
-                        ></span
-                      >
-                    </div>
-                  </div>
-                </li>
-              </div>
-            </div>
-
-            <div class="accordionMenu" id="headingModulo4">
-              <div class="row">
-                <div class="sectionTitle">
-                  <span
-                    class="tituloLista collapsed"
-                    data-toggle="collapse"
-                    data-target="#collapseModulo4"
-                    aria-expanded="false"
-                    aria-controls="collapseModulo4"
-                    >Módulo 4<i class="fas fa-caret-up caretDown"></i
-                  ></span>
-                </div>
-              </div>
-
-              <div
-                id="collapseModulo4"
-                class="collapse"
-                aria-labelledby="headingModulo4"
+              <a
+                href="modulo1-aula4.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status="completed"
+                ></span
+                >Cadeia de transmissão</a
               >
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 1</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo4/modulo4-aula1.html"
-                        data-aula="1"
-                        data-modulo="4"
-                        class="subItem"
-                        >Conceito de Saúde Única</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 2</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo4/modulo4-aula2.html"
-                        data-aula="2"
-                        data-modulo="4"
-                        class="subItem"
-                        >Intersetorialidade nas ações de enfrentamento às
-                        leishmanioses</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 3</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo4/modulo4-aula3.html"
-                        data-aula="3"
-                        data-modulo="4"
-                        class="subItem"
-                        >Participação cidadã nas ações de enfrentamento às
-                        leishmanioses</a
-                      >
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <div class="row">
-                    <div class="barraStepper" style="background-color: #c40f17">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem"
-                        ><a
-                          href="../modulo4/modulo4-quiz.html"
-                          data-aula="4"
-                          class="subItem"
-                          data-modulo="4"
-                          data-quiz="true"
-                          >Quiz Módulo 4</a
-                        ></span
-                      >
-                    </div>
-                  </div>
-                </li>
-              </div>
+              <a
+                href="modulo1-aula5.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status="selected"
+                ></span
+                >Código de transmissão das leishmanioses
+              </a>
+              <a
+                href="modulo1-aula6.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status=""
+                ></span
+                >Vetores</a
+              >
+              <a
+                href="modulo1-aula7.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status=""
+                ></span
+                >Ciclo biológico da<i>&nbspLeishmania</i></a
+              >
+              <a
+                href="modulo1-quiz.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status=""
+                >
+                </span>
+                Quiz</a
+              >
             </div>
-            <li>
-              <div class="row">
-                <div class="sectionTitle">
-                  <a class="tituloLista" role="button" href="../quiz.html">
-                    🖋 QUIZ FINAL</a
-                  >
-                </div>
+          </nav>
+
+          <section class="sidebar__section classes">
+            <span class="h6 pre-title">Outros Módulos:</span>
+            <a
+              href="../modulo1/aula1.html"
+              tabindex="0"
+              role="link"
+              class="sidebar__btn"
+            >
+              2. Sinais, sintomas, diagnóstico e tratamento</a
+            >
+            <!-- <a href="../modulo2/introducao.html" tabindex="0" role="link" class="sidebar__btn"> 2. Manifestações clínicas, diagnóstico e tratamento</a> -->
+            <a
+              href="../modulo3/aula1.html"
+              tabindex="0"
+              role="link"
+              class="sidebar__btn"
+            >
+              3. Prevenção e Vigilância em saúde</a
+            >
+          </section>
+          <hr />
+
+          <section class="sidebar__section py-2">
+            <a class="sidebar__btn" role="link" id="openGlossario">
+              <span class="material-symbols-rounded">book</span> Bibliografia</a
+            >
+            <dialog id="dialogGlossario">
+              <div id="dialogGlossarioContent">Carregando...</div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: flex-end;
+                  align-items: center;
+                  margin-top: 10px;
+                "
+              >
+                <button class="closeDialog">Fechar</button>
               </div>
-            </li>
-            <li>
-              <div class="row">
-                <div class="sectionTitle">
-                  <a
-                    class="tituloLista"
-                    role="button"
-                    href="../encerramento.html"
-                    >ENCERRAMENTO</a
-                  >
-                </div>
+            </dialog>
+          </section>
+          <section class="sidebar__section py-2">
+            <a
+              href=""
+              class="sidebar__btn"
+              tabindex="0"
+              role="link"
+              data-bs-toggle="modal"
+              data-bs-target="#modal-material-complementar"
+            >
+              <span class="material-symbols-rounded">library_books</span>
+              Material Complementar</a
+            >
+          </section>
+          <section class="sidebar__section py-2">
+            <a class="sidebar__btn" role="link" id="openCreditos"
+              ><span class="material-symbols-rounded">
+                format_list_bulleted</span
+              >
+              Créditos</a
+            >
+            <dialog id="dialogCreditos">
+              <div id="dialogCreditosContent">Carregando...</div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: flex-end;
+                  align-items: center;
+                  margin-top: 10px;
+                "
+              >
+                <button class="closeDialog">Fechar</button>
               </div>
-            </li>
-            <li>
-              <div class="row">
-                <div class="sectionTitle">
-                  <a class="tituloLista" role="button" href="../glossario.html"
-                    ><i class="fas fa-file-alt"></i>GLOSSÁRIO</a
-                  >
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="row">
-                <div class="sectionTitle">
-                  <a
-                    class="tituloLista"
-                    role="button"
-                    href="../material-complementar.html"
-                    ><i class="fas fa-book"></i>APOSTILA</a
-                  >
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="row">
-                <div class="sectionTitle">
-                  <a class="tituloLista" role="button" href="../creditos.html"
-                    ><i class="fas fa-list"></i>CRÉDITOS</a
-                  >
-                </div>
-              </div>
-            </li>
-          </ul>
-        </nav>
+            </dialog>
+          </section>
+          <section class="sidebar__section py-2">
+            <a
+              href=""
+              class="sidebar__btn"
+              tabindex="0"
+              role="link"
+              data-bs-toggle="modal"
+              data-bs-target="#modal-material-complementar"
+            >
+              <span class="material-symbols-rounded">exit_to_app</span>
+              Encerramento</a
+            >
+          </section>
+          <section class="sidebar__section py-2">
+            <a
+              href=""
+              class="sidebar__btn"
+              tabindex="0"
+              role="link"
+              data-bs-toggle="modal"
+              data-bs-target="#modal-material-complementar"
+            >
+              <span class="material-symbols-rounded">quiz</span>
+              Quiz Final</a
+            >
+          </section>
+        </div>
       </div>
 
       <!-- Conteúdo principal -->
-      <div class="col-md-10" id="content">
+      <div class="main-container" id="mainContent">
+        <header class="header py-5">
+          <div class="header__inner">
+            <div class="header__title">
+              <div class="container">
+                <div class="row">
+                  <div
+                    class="col-12 col-md-10 col-lg-11 animate__animated animate__fadeIn"
+                    style="animation-delay: 0.5s"
+                  >
+                    <h2 style="font-size: 60px; color: white">
+                      <span class="h4">Módulo 1</span>
+                      O que são as leishmanioses
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
         <div class="conteudo">
-          <div class="margin-video"></div>
-          <p class="indice">Módulo 1 | Aula 5</p>
-
-          <h1 style="padding-top: 15px">Vetores</h1>
-          <div class="div-video">
-            <iframe
-              src="https://www.youtube.com/embed/p_x-SyqqOsY?si=CuLgq-ruz78AhyEJ"
-              controls
-              allowfullscreen
-              class="iframe-video"
-            ></iframe>
-          </div>
-          <div style="margin-top: -20%"></div>
-          <!-- Objetivos -->
-
-          <h2>Conceito</h2>
-
-          <p>Vetores são organismos capazes de transmitir um patógeno.</p>
-
-          <h2>Vetor biológico</h2>
-
-          <p>
-            Um vetor biológico é um organismo que serve de local para a
-            multiplicação de um agente causador de doenças e o transmite a outro
-            ser vivo que pode não estar infectado,
-          </p>
-
-          <h2>Importância médica dos flebotomíneos</h2>
-          <p>
-            Os flebotomíneos são importantes vetores de patógenos ao homem,
-            responsáveis pela transmissão de diversos agravos, causados por
-            bactérias e vírus, mas principalmente transmitem as leishmanioses
-            que são um grupo de doenças infectoparasitárias causadas por
-            protozoários.
-          </p>
-
-          <h2>Classificação taxonômica dos flebotomíneos</h2>
-          <p>
-            Os flebotomíneos pertencem a ordem <i>Diptera</i>, família
-            <i>Psychodidae</i>, subfamília <i>Phlebotominae</i> e são
-            distribuídos em vários gêneros.
-          </p>
-
-          <h2>Patógenos transmitidos pelos flebotomíneos</h2>
-          <ul style="padding-left: 20px; font-size: 16px; line-height: 1.6">
-            <li style="margin-bottom: 15px">Bactéria - <i>Bartonella</i></li>
-            <li style="margin-bottom: 15px">
-              Protozoário - <i><i>Leishmania</i></i>
-            </li>
-            <li style="margin-bottom: 15px">Protozoário - Arbovírus</li>
-          </ul>
-
-          <h2>Características dos flebotomíneos</h2>
-          <h3>Nomes populares</h3>
-          <p>
-            Os flebotomíneos são conhecidos popularmente como mosquito-palha,
-            tatuquira, cangalhinha, birigui, entre outros, dependendo da região
-            geográfica.
-          </p>
-          <h3>Tamanho do corpo (características do corpo)</h3>
-          <p>
-            Os flebotomíneos são insetos de tamanho pequeno, cor castanha ou
-            amarelada, medindo de 2 a 3 mm, corpo coberto de cerdas, delgado e
-            com pernas longas e finas.
-          </p>
-          <h3>Diferença morfológica entre machos e fêmeas</h3>
-          <p>
-            Os machos e fêmeas de flebotomíneos se diferenciam pelos últimos
-            segmentos abdominais (Figura 5).
-          </p>
-          <p>
-            Nos machos, existe um conjunto de estruturas bem desenvolvidas e
-            ornamentadas (na extremidade do abdômen), enquanto na fêmea a
-            genitália é arredondada. O aparelho bucal dos machos é mais curto, e
-            nas fêmeas, é longo e adaptado para picar e sugar.
-          </p>
-          <!--Imagem 1-->
-          <div
+          <p class="indice">Aula 5</p>
+          <h1 style="padding-top: 15px; font-size: 4rem; color: #05314a">
+            Código de transmissão das leishmanioses
+          </h1>
+          <hr
             style="
-              display: flex;
-              text-align: center;
-              align-items: center;
-              width: 100%;
-              justify-content: center;
+              display: block;
+              width: 40px;
+              height: 3px;
+              background: #ff7000;
+              border: none;
+              opacity: 0.7;
+              margin: 0;
+              border-radius: 10px;
+              margin-bottom: 30px;
             "
-          >
-            <div class="col-md-7 imagem">
-              <img
-                src="../assets/images/modulo1/aula 5/mod1foto5.JPG"
-                class="img-fluid"
-              />
-              <div>
-                <small>
-                  <strong>Figura 5.</strong> Flebotomíneos: (a) macho e (b)
-                  fêmea, com destaque para genitália, evidenciando o dimorfismo
-                  sexual. A seta indica a espermateca (estrutura do sistema
-                  reprodutivo das fêmeas). Este material é disponibilizado como
-                  recurso educacional aberto para fins acadêmicos e científicos,
-                  respeitando os devidos créditos.
-                  <i
-                    >Fonte: Fiocruz Minas/ Victória Pereira e Fabiana Lara e
-                    Eunice Galati/USP.</i
-                  >
-                </small>
-              </div>
-            </div>
-          </div>
-          <div
-            class="row centro"
-            style="display: flex; align-items: center; padding-bottom: 30px"
-          ></div>
-          <h3>Hábitos de voo</h3>
+          />
           <p>
-            Os flebotomíneos possuem voo saltado e mantêm as asas eretas quando
-            estão em repouso.
+            Depois de compreender o ciclo biológico básico, nesta aula vamos
+            avançar para um olhar mais técnico: o "código de transmissão". Quais
+            são os padrões, os comportamentos dos vetores, as características
+            dos hospedeiros e os fatores ambientais que codificam o sucesso da
+            transmissão? Vamos discutir conceitos de competência vetorial,
+            infecção subclínica e outros elementos críticos que ajudam a
+            explicar por que e como as leishmanioses se mantêm em diferentes
+            ecossistemas. Esta aula marca um aprofundamento na visão sistêmica
+            que iniciamos desde a Aula 1.
           </p>
-          <h3>Hematofagia das fêmeas e alimentação do macho</h3>
-          <p>
-            As fêmeas de flebotomíneos necessitam de sangue de vertebrados para
-            a maturação dos seus ovários. Internamente, a fêmea apresenta um
-            conjunto de estruturas chamado cibário, associado à alimentação de
-            sangue e utilizado como caráter taxonômico. (Figura 6).
-          </p>
-          <p>
-            Os machos se alimentam apenas de açúcares (néctar de flores, frutos
-            e outros sucos de plantas), e a fêmea também necessita destes
-            açúcares antes ou após a alimentação sanguínea, como fonte de
-            nutrientes.
-          </p>
-          <!--Imagem 2-->
-          <div
+          <hr
             style="
-              display: flex;
-              text-align: center;
-              align-items: center;
-              width: 100%;
-              justify-content: center;
+              display: block;
+              width: 40px;
+              height: 3px;
+              background: #ff7000;
+              border: none;
+              opacity: 0.7;
+              margin: 0;
+              border-radius: 10px;
+              margin-bottom: 30px;
             "
-          >
-            <div class="col-md-7 imagem">
-              <img
-                src="../assets/images/modulo1/aula 5/mod1foto6.JPG"
-                class="img-fluid"
-              />
-              <div>
-                <small>
-                  <strong>Figura 6.</strong>Fêmea alimentada.
-                  <i>Fonte: Fiocruz Minas/Victória Pereira e Fabiana Lara</i>
-                </small>
-              </div>
-            </div>
-          </div>
-          <h3>Locais de abrigos e descanso em áreas silvestres e urbanas</h3>
-          <p>
-            Os flebotomíneos têm hábitos crepusculares e noturnos, permanecendo
-            durante o dia em locais protegidos. Na natureza, muitas espécies se
-            abrigam nos espaços entre as folhas caídas e o solo, tocas de
-            animais e buracos nos troncos das árvores. Nos ambientes urbanos, os
-            abrigos de animais(Figura 7), como galinheiros e pocilgas, são os
-            locais mais frequentemente utilizados como refúgio pelos
-            flebotomíneos.
-          </p>
-          <!--Imagem 3-->
-          <div class="row centro">
-            <div class="col-md-7 imagem">
-              <img
-                src="../assets/images/modulo1/aula 5/mod1foto7.JPG"
-                class="img-fluid"
-              />
-              <div>
-                <small>
-                  <strong>Figura 7.</strong>Ambientes de criadouros e abrigos
-                  naturais de flebotomíneos em áreas urbanas e periurbanas.
-                  <i>Fonte: Eunice Galati - USP</i>
-                </small>
-              </div>
-            </div>
-          </div>
-
-          <h3>Criadouros naturais</h3>
-          <p>
-            Os flebotomíneos colocam seus ovos em locais ricos em matéria
-            orgânica, onde as formas imaturas se desenvolvem. Algumas espécies
-            se desenvolvem sob pedras, fendas de rochas, na base ou buraco de
-            árvores, sob pedras, currais e chiqueiros. O local de criação na
-            natureza é muito difícil de ser encontrado, e mesmo nos locais
-            considerados como criadouros, o número de formas imaturas
-            encontradas é pequeno, mesmo que haja uma alta densidade de adultos
-            nesses locais terrestres
-          </p>
-
-          <h2>Ciclo Biológico dos flebotomíneos</h2>
-
-          <p>
-            Os flebotomíneos são insetos holometábolos, ou seja, têm um ciclo de
-            vida completo. Isso inclui a fase de ovo, seguida por uma fase
-            larval com quatro estádios, pupa e o adulto.
-          </p>
-          <p>
-            A duração do ciclo de ovo a adulto, depende das condições de
-            temperatura, umidade e da disponibilidade de alimento. A temperatura
-            ótima para a maioria das espécies varia de 25º a 27ºC.
-          </p>
-          <div class="row centro">
-            <p class="tituloLista">Fases de vida dos flebotomíneos.</p>
-          </div>
-          <!--Imagem 4-->
-          <div class="row centro">
-            <div class="col-md-7 imagem">
-              <img
-                src="../assets/images/modulo1/aula 5/mod1foto8.JPG"
-                class="img-fluid"
-              />
-              <div>
-                <small>
-                  <strong>Figura 8.</strong> Fases de vida dos flebotomíneos. O
-                  ciclo de desenvolvimento dos flebotomíneos inclui as seguintes
-                  fases: ovos (a) – 6 a 17 dias, larva 1 (b) – L1, larva 2 (c) –
-                  L2, larva 3 (d) – L3, larva 4 (e) – L4 e pupa (f) – 10 a 14
-                  dias. Fonte: Os autores. <i>Fonte: Os autores</i>
-                </small>
-              </div>
-            </div>
-          </div>
-          <p>
-            <b><strong>Adulto alado</strong></b>
-          </p>
-          <p>
-            Quando os machos e as fêmeas de flebotomíneos emergem da pupa, eles
-            se mantêm pouco ativos e precisam de pelo menos 24 horas para o
-            endurecimento da quitina, e ainda o desenvolvimento da genitália dos
-            machos. Somente as fêmeas de flebotomíneos necessitam de sangue para
-            a maturação dos ovários, e ao realizar a alimentação nos
-            hospedeiros, as fêmeas podem transmitir os protozoários do gênero
-            <i>Leishmania</i>. Alguns fatores são determinantes para a
-            longevidade dos flebotomíneos, mas a umidade é um dos que mais
-            afetam a sobrevivência. O tempo de vida dos adultos é em média de 20
-            dias, em laboratório.
-          </p>
-          <p>
-            <b><strong>Ovo</strong></b>
-          </p>
-          <p>
-            Os ovos são de forma elipsóide, e logo após a postura, se apresentam
-            esbranquiçados, e em algumas horas tornam-se castanhos escuros. Uma
-            fêmea faz, em média, uma postura de 40 ovos e pode ser feita
-            isoladamente ou em pequenos grupos de ovos; estes ficam aderidos ao
-            substrato.
-          </p>
-          <!--Imagem 5-->
-          <div class="row centro">
-            <div class="col-md-7 imagem">
-              <img
-                src="../assets/images/modulo1/aula 5/mod1foto9.JPG"
-                class="img-fluid"
-              />
-              <div>
-                <small>
-                  <strong>Figura 9.</strong> Ovos aderidos no substrato<i
-                    >Fonte: Fiocruz Minas (colônia IRR).</i
-                  >
-                </small>
-              </div>
-            </div>
-          </div>
-          <p>
-            <b><strong>Larva</strong></b>
-          </p>
-          <p>
-            As larvas compreendem 4 estádios: L1, L2, L3 e L4 (Figura 10). As de
-            1º estádio possuem um par de cerdas caudais, e as demais, dois
-            pares. As modificações do último segmento do abdômen, tem
-            importância na locomoção e fixação da larva para realizar a muda.
-            Elas são pequenas, esbranquiçadas, de aspecto vermiforme, e se
-            alimentam após a eclosão, de restos de matéria orgânica, carcaças de
-            adultos e cascas de ovos.
-          </p>
-          <!--Imagem 6-->
-          <div
-            style="
-              display: flex;
-              text-align: center;
-              align-items: center;
-              width: 100%;
-              justify-content: center;
-            "
-          >
-            <div class="col-md-7 imagem">
-              <img
-                src="../assets/images/modulo1/aula 5/mod1foto10.JPG"
-                class="img-fluid"
-              />
-              <div>
-                <small>
-                  <strong>Figura 10.</strong> Larva L2 (esquerda) e L3
-                  (direita).<i>Fonte: Fiocruz Minas (colônia IRR).</i>
-                </small>
-              </div>
-            </div>
-          </div>
-          <p>
-            <b><strong>Pupa</strong></b>
-          </p>
-          <p>
-            A pupa é esbranquiçada ou amarelada, e à medida que se aproxima a
-            eclosão do adulto, ela se torna escura (Figura 11). Ela não se
-            locomove, fica fixa ao substrato por meio da exúvia e somente faz
-            movimentos de extensão e flexão do corpo. É possível observar cerdas
-            no tegumento, e vestígios do adulto podem ser vistos, como os seus
-            olhos, quando está próximo ao momento da eclosão.
-          </p>
-          <!--Imagem 7-->
-          <div
-            style="
-              display: flex;
-              text-align: center;
-              align-items: center;
-              width: 100%;
-              justify-content: center;
-            "
-          >
-            <div class="col-md-7 imagem">
-              <img
-                src="../assets/images/modulo1/aula 5/mod1foto11.JPG"
-                class="img-fluid"
-              />
-              <div>
-                <small>
-                  <strong>Figura 11.</strong> Pupa.
-                  <i>Fonte: Fiocruz Minas (colônia IRR).</i>
-                </small>
-              </div>
-            </div>
-          </div>
-          <h3>Em condições de laboratório</h3>
-          <h3>Criação em laboratório</h3>
-          <div class="div-video">
-            <iframe
-              src="https://www.youtube.com/embed/Uxw-OXuj91k?si=5Xq9uVoBzbNZqGQv"
-              controls
-              allowfullscreen
-              class="iframe-video"
-            ></iframe>
-          </div>
-          <div style="margin-top: -20%"></div>
-          <p>
-            A criação de colônias de flebotomíneos e a sua manutenção em
-            condições controladas em laboratórios, é importante devido à
-            dificuldade de encontrar seus criadouros na natureza. Em condições
-            de laboratório, podem ser estudados o ciclo vital e aspectos da
-            biologia e fisiologia dos flebotomíneos, sob aprovação do Comitê de
-            Ética Animal.
-          </p>
-          <p>
-            <b><strong>Captura de flebotomíneos no campo</strong></b>
-          </p>
-          <p>
-            Os adultos são capturados no campo, normalmente utilizando
-            armadilhas luminosas CDC (Figura 12), e as gaiolas de um tecido de
-            trama fina transparente, acopladas a uma armação de metal em formato
-            cúbico, são transportadas no interior de um saco plástico com um
-            algodão umedecido, para a colônia do grupo TFL no IRR/Fiocruz Minas.
-          </p>
-          <!--Imagem 8-->
-          <div
-            style="
-              display: flex;
-              text-align: center;
-              align-items: center;
-              width: 100%;
-              justify-content: center;
-            "
-          >
-            <div class="col-md-7 imagem">
-              <img
-                src="../assets/images/modulo1/aula 5/mod1foto12.JPG"
-                class="img-fluid"
-              />
-              <div>
-                <small>
-                  <strong>Figura 12.</strong> Armadilha luminosa instalada em
-                  campo.
-                  <i>Fonte: os autores.</i>
-                </small>
-              </div>
-            </div>
-          </div>
-          <p>
-            <b><strong>Alimentação de flebotomíneos</strong></b>
-          </p>
-          <p>
-            Após um período de descanso de 24 horas, um hamster é anestesiado e
-            colocado no interior da gaiola, com machos e fêmeas, para a
-            alimentação sanguínea das fêmeas dos flebotomíneos (Figura 13).
-          </p>
-          <!--Imagem 9-->
-          <div class="row centro">
-            <div class="col-md-7 imagem">
-              <img
-                src="../assets/images/modulo1/aula 5/mod1foto13.JPG"
-                class="img-fluid"
-              />
-              <div>
-                <small>
-                  <strong>Figura 13.</strong> Alimentação sanguínea de
-                  flebotomíneos em hamster.
-                  <i>Fonte: Fiocruz Minas (colônia IRR).</i>
-                </small>
-              </div>
-            </div>
-          </div>
-          <p>
-            <b><strong>Confinamento</strong></b>
-          </p>
-          <p>
-            Após 24h, no interior de estufas “BOD’s” com temperatura (25 a 28ºC)
-            e umidade controladas (acima de 80%), as fêmeas alimentadas são
-            colocadas em potes com o fundo de gesso, cobertos com um tecido de
-            malha fina para oviposição. Os potes são colocados no interior de
-            caixas plásticas com um papel filtro umedecido no fundo e ficam no
-            interior das BOD’s. Em cada pote é colocado um algodão embebido com
-            açúcar mascavo a 50% para garantir a sobrevida das fêmeas.
-          </p>
-          <!--Imagem 10-->
-          <div class="row centro">
-            <div class="col-md-7 imagem">
-              <img
-                src="../assets/images/modulo1/aula 5/mod1foto14.JPG"
-                class="img-fluid"
-              />
-              <div>
-                <small>
-                  <strong>Figura 14</strong> Potes de gesso e caixas usadas para
-                  o confinamento de flebotomíneos.
-                  <i>Fonte: Fiocruz Minas (colônia IRR).</i>
-                </small>
-              </div>
-            </div>
-          </div>
-          <p>
-            <b><strong>Lavagem de ovos</strong></b>
-          </p>
-          <p>
-            Assim que as fêmeas realizam a oviposição e morrem, são coletadas e
-            identificadas, os ovos da mesma espécie são submetidos a uma lavagem
-            para evitar a proliferação de micro-organismos. Estes são
-            transferidos dos potes de oviposição com auxílio de um borrifador
-            para uma peneira de malha fina, e submetidos à seguinte passagem:
-            hipoclorito a 1%, 3 minutos; álcool a 70%, 3 minutos e 3 lavagens
-            com água tipo 1. Após a lavagem, os ovos são transferidos para os
-            potes com gesso para eclosão, e mantidos nas mesmas caixas dentro
-            das BOD’s com umidade e temperatura controladas.
-          </p>
-          <div class="row centro">
-            <h3>
-              Assista a vídeo-aula sobre o tema para aprofundar ainda mais o seu
-              conhecimento!
-            </h3>
-          </div>
-          <!--Imagem 11-->
-          <div class="row centro">
-            <div class="col-md-7 imagem">
-              <img
-                src="../assets/images/modulo1/aula 5/mod1foto15.JPG"
-                class="img-fluid"
-              />
-              <div>
-                <small>
-                  <strong>Figura 15</strong> Representação da lavagem dos ovos.
-                  <i>Fonte: Os autores</i>
-                </small>
-              </div>
-            </div>
-          </div>
-          <p>
-            <b><strong>Manutenção da colônia</strong></b>
-          </p>
-          <p>
-            Os potes no interior das caixas plásticas são vistoriados
-            diariamente para a retirada de fungos, ácaros e observação do
-            aparecimento das primeiras larvas. Assim que a L1 eclode, a ração é
-            adicionada. Existem várias fórmulas de ração que são empregadas na
-            alimentação das larvas; usamos no laboratório fezes de coelho e
-            ração de coelho. O período de eclosão dos adultos varia dependendo
-            da espécie de flebotomíneo; para Lu. longipalpis, varia entre 5 e 8
-            dias.
-          </p>
-          <h2>
-            Critérios para incriminar flebotomíneos como transmissores de
-            leishmanioses
-          </h2>
-          <p>
-            Os critérios para incriminar uma espécie como vetor são:
-            antropofilia; distribuição espacial em concordância com a ocorrência
-            de casos humanos da doença; atração por mamíferos reservatórios de
-            <i>Leishmania</i>; os insetos infectados experimentalmente por
-            <i>Leishmania</i>
-            devem manter todas as etapas do desenvolvimento do parasito em
-            condições de laboratório; capacidade dos flebotomíneos de se
-            infectarem e transmitirem o parasito, através da picada, de hamster
-            para hamster.
-          </p>
-          <h2>Espécies incriminadas como vetores de LV</h2>
-          <p>
-            No Brasil, as espécies relacionadas com a transmissão da LV são
-            <i>Lutzomyia longipalpis e Lutzomyia cruzi</i>, sendo esta última,
-            encontrada no Mato Grosso do Sul. Recentemente, foi comprovada a
-            competência vetorial de <i>Migonemyia migonei</i>, sendo possível
-            sua participação na transmissão em áreas com ausência de
-            <i>Lutzomyia longipalpis e/ou Lutzomyia cruzi.</i>
-          </p>
-          <h2>Espécies incriminadas como vetores de LT</h2>
-          <p>
-            No Brasil, os vetores comprovados da LTA são:
-            <i
-              >Bichromomyia flaviscutellata, Nyssomyia whitmani, Nyssomyia
-              umbratilis, Nyssomyia intermedia, Psychodopygus wellcomei e Mi.
-              migonei</i
-            >. Outras espécies como
-            <i>Nyssomyia neivai e Pintomyia fischeri</i> têm sido encontradas
-            frequentemente em áreas de transmissão da doença e em ambientes
-            domiciliares, mas seu papel ainda não foi comprovado como vetores.
-          </p>
-          <h2>Métodos de captura e preservação dos flebotomíneos</h2>
-          <p>
-            Existem várias técnicas de captura e preservação dos flebotomíneos,
-            dependendo dos objetivos da investigação. Nos locais onde os dados
-            sobre esses insetos são escassos, é importante a utilização de
-            diferentes métodos de captura, para identificar a variedade de
-            espécies presente.
-          </p>
-          <h3>Técnicas de captura</h3>
-          <ul
-            style="
-              padding-left: 20px;
-              font-size: 16px;
-              line-height: 1.6;
-              list-style: none;
-            "
-          >
-            <li>
-              <p>
-                <b><strong>Durante o dia</strong></b>
-              </p>
-              <p>
-                Procurar os insetos em tocas de animais, cavernas, nas folhas de
-                arbustos e árvores, ou em fendas em rochas e em árvores.
-              </p>
-              <p>
-                Utilizar capturadores manuais de sucção (como o capturador de
-                Castro) para pegar os insetos nas superfícies onde estão
-                pousados ou repousando.
-              </p>
-            </li>
-            <li>
-              <p>
-                <b><strong>Durante a noite</strong></b>
-              </p>
-              <p>
-                Utilizar capturadores manuais e lanternas em ambientes internos
-                e ao redor de casas, considerando locais que abrigam animais
-                domésticos, como em currais, galinheiros e chiqueiros.
-              </p>
-              <p>
-                Utilizar armadilhas luminosas em áreas urbanas, rurais ou de
-                mata, aproveitando o fototropismo (atração pela luz) positivo
-                destes insetos.
-              </p>
-              <p>
-                Existem vários tipos de armadilhas utilizadas para captura de
-                flebotomíneos de acordo com a investigação a ser realizada.
-                Algumas delas são:
-              </p>
-              <ul
-                style="
-                  padding-left: 20px;
-                  font-size: 16px;
-                  line-height: 1.6;
-                  list-style-type: square;
-                "
-              >
-                <li style="margin-bottom: 15px">Iscas luminosas;</li>
-                <li style="margin-bottom: 15px">Iscas animais;</li>
-                <li style="margin-bottom: 15px">Papéis adesivos.</li>
-              </ul>
-            </li>
-          </ul>
-          <h3>Preservação do material capturado</h3>
-          <p>Para preservar os flebotomíneos capturados:</p>
-
-          <p>
-            Os flebotomíneos podem ser mortos através de congelamento em gelo
-            seco (CO2) ou freezer a -20ºC.
-          </p>
-          <p>
-            O material coletado poderá ser mantido seco ou em álcool etílico
-            70%, até o momento da preparação para identificação taxonômica.
-          </p>
-
-          <p>
-            Essas técnicas ajudam a garantir que os dados coletados sejam
-            preservados para a pesquisa.
-          </p>
-
-          <!-- Autor -->
+          />
         </div>
+
         <!-- Botões de navegação -->
-        <div class="row botao" style="display: flex; flex-direction: column">
+        <div class="row botao" style="display: flex" id="buttons-hover">
           <a
-            href="../mapas/modulo1/a2.html"
+            href="../mapas/modulo1/a1.html"
             class="btn btn-sm"
             id="botaoVoltar"
             role="button"
@@ -1455,7 +438,7 @@
             <strong>Mapa Mental</strong></a
           >
           <a
-            href="../paginaTextoApio/textoApoio.html?modulo=1&aula=5"
+            href="../paginaTextoApio/textoApoio.html?modulo=1&aula=1"
             class="btn btn-sm"
             id="botaoVoltar"
             role="button"
@@ -1480,7 +463,7 @@
           "
         >
           <a
-            href="../modulo1/modulo1-aula4.html"
+            href="modulo1-aula4.html"
             class="btn btn-sm"
             id="botaoVoltar"
             role="button"
@@ -1503,7 +486,7 @@
         </div>
 
         <!-- Rodapé -->
-        <footer id="rodape">
+        <footer>
           <div class="row-main">
             <div class="col-md-12 centro">
               <img
@@ -1522,6 +505,81 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/quiz.js"></script>
+    <script>
+      // Aguarda o carregamento completo do DOM antes de executar qualquer código JavaScript
+      document.addEventListener("DOMContentLoaded", function () {
+        // Função genérica para abrir e carregar conteúdo em um diálogo
+        function configurarDialog(botaoId, dialogId, contentId, arquivoHtml) {
+          const botao = document.getElementById(botaoId);
+          const dialog = document.getElementById(dialogId);
+          const content = document.getElementById(contentId);
+
+          // Verifica se o botão e o diálogo existem
+          if (botao && dialog && content) {
+            botao.addEventListener("click", async () => {
+              dialog.showModal();
+              try {
+                const response = await fetch(arquivoHtml);
+                const texto = await response.text();
+                content.innerHTML = texto;
+              } catch (err) {
+                content.textContent = "Erro ao carregar o conteúdo.";
+              }
+            });
+
+            // Fechar clicando no botão 'Fechar'
+            dialog
+              .querySelector(".closeDialog")
+              .addEventListener("click", () => {
+                dialog.close();
+              });
+
+            // Fechar clicando fora da caixa (backdrop)
+            dialog.addEventListener("click", (event) => {
+              const rect = dialog.getBoundingClientRect();
+              if (
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom
+              ) {
+                dialog.close();
+              }
+            });
+          }
+        }
+
+        // Configura os dois diálogos
+        configurarDialog(
+          "openCreditos",
+          "dialogCreditos",
+          "dialogCreditosContent",
+          "../creditos.html"
+        );
+        configurarDialog(
+          "openGlossario",
+          "dialogGlossario",
+          "dialogGlossarioContent",
+          "../glossario.html"
+        );
+      });
+    </script>
+
+    <script>
+      function toggleSection(header) {
+        const content = header.nextElementSibling;
+        const symbol = header.querySelector(".toggle-symbol");
+
+        if (content.style.display === "none" || content.style.display === "") {
+          content.style.display = "block";
+          symbol.classList.remove("fa-plus");
+          symbol.classList.add("fa-minus");
+        } else {
+          content.style.display = "none";
+          symbol.classList.remove("fa-minus");
+          symbol.classList.add("fa-plus");
+        }
+      }
+    </script>
   </body>
 </html>

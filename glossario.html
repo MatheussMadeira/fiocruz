@@ -28,27 +28,41 @@
     <link href="./assets/css/styles.css" rel="stylesheet" />
   </head>
   <style>
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: Amatic SC, sans-serif;
+    }
+    h2 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      margin-top: 50px;
+    }
     h1 {
-      color: var(--secondary-color-light);
+      color: #05314a;
       font-weight: bolder;
       font-size: 2.7rem;
+      margin: 0.67em 0;
     }
     .glossario-section {
-      border-bottom: 2px solid var(--secondary-color-light);
+      border-bottom: 2px solid #05314a;
       padding: 30px;
     }
     #first-section:hover {
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
-      border-top: 4px solid var(--secondary-color-light);
+      border-top: 4px solid #05314a;
     }
     #last-section:hover {
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
     }
     .glossario-section:hover {
-      border: 4px solid var(--secondary-color-light);
-      border-top: 2px solid var(--secondary-color-light);
+      border: 4px solid #05314a;
+      border-top: 2px solid #05314a;
+      transition: border 0.1s ease, transform 0.1s ease;
     }
     .glossario-section:focus {
       border: none;
@@ -58,7 +72,7 @@
       cursor: pointer;
       font-weight: bold;
       font-size: 1.2em;
-      color: var(--secondary-color-light);
+      color: #05314a;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -91,7 +105,7 @@
     }
     .toggle-symbol {
       float: right;
-      color: var(--primary-color-light);
+      color: #ffdec0;
     }
   </style>
   <body>
@@ -179,11 +193,7 @@
                 </li>
                 <li>
                   <div
-                    style="
-                      display: flex;
-                      flex-direction: column;
-                      justify-content: left;
-                    "
+                    style="display: flex; flex-direction: column; width: 100%"
                   >
                     <h1>Anticorpo</h1>
                     <p>

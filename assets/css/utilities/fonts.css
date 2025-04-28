@@ -9,6 +9,12 @@
   font-family: "Codec Pro Bold";
   src: url("../../fonts/Codec\ Pro\ Bold.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Josefin Sans Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/JosefinSans-Bold.ttf");
+}
 
 h3 {
   color: #05314a;
