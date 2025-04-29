@@ -2,7 +2,93 @@
 <html lang="pt-br">
   <head>
     <meta charset="utf-8" />
-
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+      }
+      a {
+        text-decoration: none;
+      }
+      .main-container {
+        /* mesma largura da sidebar */
+        width: calc(100% - 350px); /* ocupa o resto da tela */
+        @media (max-width: 990px) {
+          width: 100%;
+        }
+      }
+      #botaoVoltar:hover,
+      #botaoAvancar:hover {
+        text-decoration: underline;
+      }
+      dialog {
+        width: 50%;
+        height: 85%;
+        max-width: 80%;
+        max-height: 80%;
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 8px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        z-index: 1000;
+        outline: none;
+        overflow: auto;
+        @media (max-width: 1280px) {
+          width: 620px;
+        }
+      }
+      dialog {
+        @media (max-width: 768px) {
+          width: 78%;
+        }
+      }
+      dialog::backdrop {
+        background-color: rgb(0 0 0 / 0.7);
+      }
+      button.closeDialog {
+        font-size: 1rem;
+        border: none;
+        border-radius: 6px;
+        background-color: var(--primary-color);
+        color: white;
+        width: 100%;
+        height: 6vh;
+        outline: none;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size: 100%;
+        text-align: center;
+      }
+      .closeDialog:hover {
+        background-color: var(--secondary-color-light);
+      }
+      button.closeDialog {
+        font-size: 1rem;
+        border: none;
+        border-radius: 6px;
+        background-color: #ff7000;
+        color: white;
+        width: 100%;
+        height: 6vh;
+        outline: none;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size: 100%;
+        text-align: center;
+      }
+      .closeDialog:hover {
+        background-color: #05314a;
+      }
+    </style>
     <title>Leishmanioses</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="../assets/js/link.js"></script>
@@ -26,1316 +112,395 @@
       href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
     />
     <link href="../assets/css/styles.css" rel="stylesheet" />
+    <link href="../assets/css/utilities/fonts.css" rel="stylesheet" />
+    <link href="../assets/css/css/fonts.css" rel="stylesheet" />
+    <link href="../assets/css/css/header.css" rel="stylesheet" />
+    <link href="../assets/css/css/sidebar.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/css copy/animate.min.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/css/css/recursos-visuais/boxes.css"
+    />
   </head>
 
   <body>
     <!-- Toolbar -->
-    <header
-      style="
-        display: flex;
-        justify-content: center;
-        background-color: white;
-        height: 45vh;
-        margin-bottom: 50px;
-      "
-    >
-      <img
-        src="../assets/images/home/LOGOMARCA.svg"
-        class="img-fluid"
-        alt="Capa do curso"
-        style="max-width: 90%; height: auto"
-      />
-    </header>
 
-    <div class="row" id="row-main">
-      <!-- Sidebar -->
-      <div class="col-md-2" id="sidebar">
-        <!-- Botão p/ Recolher Sidebar-->
-        <span class="toggle-sidebar" id="sidebarButton"
-          ><i class="fas fa-chevron-left"></i
-        ></span>
-
-        <nav id="menuLateral">
-          <ul class="listaMenu">
-            <li>
-              <div class="row">
-                <div class="sectionTitle">
-                  <img
-                    src="../assets/images/home/Untitled design (2) (1).png"
-                    class="img-fluid logoMenu"
-                    alt="Logo Campus Virtual"
-                  />
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="row">
-                <div class="sectionTitle">
-                  <a
-                    href="../index.html"
-                    class="tituloLista"
-                    style="padding-top: 0 !important"
-                    ><i class="fas fa-home"></i>PÁGINA INICIAL</a
-                  >
-                </div>
-              </div>
-            </li>
-
-            <div class="accordionMenu" id="headingModulo1">
-              <div class="row">
-                <div class="sectionTitle">
-                  <span
-                    class="tituloLista collapsed"
-                    data-toggle="collapse"
-                    data-target="#collapseModulo1"
-                    aria-expanded="false"
-                    aria-controls="collapseModulo1"
-                    >Módulo 1<i class="fas fa-caret-up caretDown"></i
-                  ></span>
-                </div>
-              </div>
-
-              <div
-                id="collapseModulo1"
-                class="collapse"
-                aria-labelledby="headingModulo1"
+    <!-- Sidebar -->
+    <div style="display: flex; flex-direction: row">
+      <div class="sidebar" role="navigation" id="sidebar">
+        <div class="sidebar__inner">
+          <section class="sidebar__header">
+            <section class="sidebar__section py-0">
+              <img
+                src="../assets/images/logos/LOGO 4 (300 x 130 px).png"
+                alt="Campus Virtual Fiocruz"
+                width="100%"
+              />
+            </section>
+            <h1>
+              leishmanioses:
+              <span>e eu com isso?</span>
+            </h1>
+          </section>
+          <hr />
+          <section class="sidebar__section py-2">
+            <a
+              href="../index.html"
+              class="sidebar__btn"
+              tabindex="0"
+              role="link"
+            >
+              <span class="material-symbols-rounded" aria-hidden="true"
+                >home</span
+              >Página inicial
+            </a>
+          </section>
+          <nav class="sidebar__section sidebar__section--contrast pb-0">
+            <span class="h6 pre-title">Aulas do módulo 2:</span>
+            <div class="sidebar__topic-list pb-4">
+              <a
+                href="./modulo2-aula1.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status="completed"
+                ></span
+                >Patogênese e manifestações Clínicas</a
               >
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 1</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo1/modulo1-aula1.html"
-                        class="subItem"
-                        data-aula="1"
-                        data-modulo="1"
-                        >Conceito de leishmaniose</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 2</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo1/modulo1-aula2.html"
-                        class="subItem"
-                        data-aula="2"
-                        data-modulo="1"
-                        >As espécies do protozoário, seus vetores e suas
-                        manifestações clínicas no homem</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 3</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo1/modulo1-aula3.html"
-                        class="subItem"
-                        data-aula="3"
-                        data-modulo="1"
-                        >Distribuição geográfica das leishmanioses</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 4</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo1/modulo1-aula4.html"
-                        class="subItem"
-                        data-aula="4"
-                        data-modulo="1"
-                        >Cadeia de transmissão</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 5</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo1/modulo1-aula5.html"
-                        class="subItem"
-                        data-aula="5"
-                        data-modulo="1"
-                        >Vetores</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 6</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo1/modulo1-aula6.html"
-                        class="subItem"
-                        data-aula="6"
-                        data-modulo="1"
-                        >Reservatórios</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 7</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo1/modulo1-aula7.html"
-                        class="subItem"
-                        data-aula="7"
-                        data-modulo="1"
-                        >Ciclo biológico da <i>Leishmania</i></a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div
-                      class="barraStepper active"
-                      style="background-color: #c40f17"
-                    >
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem"
-                        ><a
-                          href="../modulo1/modulo1-quiz.html"
-                          data-aula="8"
-                          data-modulo="1"
-                          data-quiz="true"
-                          >Quiz Módulo 1</a
-                        ></span
-                      >
-                    </div>
-                  </div>
-                </li>
-              </div>
-            </div>
 
-            <div class="accordionMenu" id="headingModulo2">
-              <div class="row">
-                <div class="sectionTitle">
-                  <span
-                    class="tituloLista"
-                    data-toggle="collapse"
-                    data-target="#collapseModulo2"
-                    aria-expanded="false"
-                    aria-controls="collapseModulo2"
-                    >Módulo 2<i class="fas fa-caret-up caretDown"></i
-                  ></span>
-                </div>
-              </div>
-              <div
-                id="collapseModulo2"
-                class="collapse show"
-                aria-labelledby="headingModulo2"
+              <a
+                href="modulo2-aula2.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status="selected"
+                ></span
+                >Diagnóstico laboratorial da leishmaniose tegumentar</a
               >
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 1</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo2/modulo2-aula1.html"
-                        data-aula="1"
-                        data-modulo="2"
-                        class="subItem"
-                        >Patogenia geral</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 2</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo2/modulo2-aula2.html"
-                        data-aula="2"
-                        data-modulo="2"
-                        class="subItem"
-                        >Diagnóstico laboratorial da leishmaniose tegumentar</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 3</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo2/modulo2-aula3.html"
-                        data-aula="3"
-                        data-modulo="2"
-                        class="subItem"
-                        >Diagnóstico da leishmaniose visceral humana</a
-                      >
-                    </div>
-                  </div>
-                </li>
 
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 4</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo2/modulo2-aula4.html"
-                        data-aula="4"
-                        data-modulo="2"
-                        class="subItem"
-                        >Diagnóstico da leishmaniose visceral canina</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 5</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo2/modulo2-aula5.html"
-                        data-aula="5"
-                        data-modulo="2"
-                        class="subItem"
-                        >Tratamento</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 6</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo2/modulo2-aula6.html"
-                        data-aula="6"
-                        data-modulo="2"
-                        class="subItem"
-                        >Vigilância epidemiológica do cão
-                      </a>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 7</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo2/modulo2-aula7.html"
-                        data-aula="7"
-                        data-modulo="2"
-                        class="subItem"
-                        >Importância do manejo ambiental</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 8</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo2/modulo2-aula8.html"
-                        data-aula="8"
-                        data-modulo="2"
-                        class="subItem"
-                        >Controle do reservatório canino e eutanásia dos animais
-                        infectados</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper" style="background-color: #c40f17">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem"
-                        ><a
-                          href="../modulo2/modulo2-quiz.html"
-                          data-aula="9"
-                          class="subItem"
-                          data-modulo="2"
-                          data-quiz="true"
-                          >Quiz Módulo 2</a
-                        ></span
-                      >
-                    </div>
-                  </div>
-                </li>
-              </div>
-            </div>
-
-            <div class="accordionMenu" id="headingModulo3">
-              <div class="row">
-                <div class="sectionTitle">
-                  <span
-                    class="tituloLista collapsed"
-                    data-toggle="collapse"
-                    data-target="#collapseModulo3"
-                    aria-expanded="false"
-                    aria-controls="collapseModulo3"
-                    >Módulo 3<i class="fas fa-caret-up caretDown"></i
-                  ></span>
-                </div>
-              </div>
-              <div
-                id="collapseModulo3"
-                class="collapse"
-                aria-labelledby="headingModulo3"
+              <a
+                href="modulo2-aula3.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status=""
+                ></span
+                >Diagnóstico da leishmaniose visceral humana</a
               >
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 1</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo3/modulo3-aula1.html"
-                        data-aula="2"
-                        data-modulo="3"
-                        class="subItem"
-                        >Fatores físicos e sociais que contribuem para a mudança
-                        do cenário</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 2</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo3/modulo3-aula2.html"
-                        data-aula="2"
-                        data-modulo="3"
-                        class="subItem"
-                        >Processo de urbanização</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 3</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo3/modulo3-aula3.html"
-                        data-aula="3"
-                        data-modulo="3"
-                        class="subItem"
-                        >Ciclos de transmissão das leishmanioses</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 4</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo3/modulo3-aula4.html"
-                        data-aula="4"
-                        data-modulo="3"
-                        class="subItem"
-                        >Medidas de controle das leishmanioses
-                      </a>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 5</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo3/modulo3-aula5.html"
-                        data-aula="5"
-                        data-modulo="3"
-                        class="subItem"
-                        >Medidas de prevenção das leishmanioses</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper" style="background-color: #c40f17">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem"
-                        ><a
-                          href="../modulo3/modulo3-quiz.html"
-                          data-aula="6"
-                          class="subItem"
-                          data-modulo="3"
-                          data-quiz="true"
-                          >Quiz Módulo 3</a
-                        ></span
-                      >
-                    </div>
-                  </div>
-                </li>
-              </div>
-            </div>
-
-            <div class="accordionMenu" id="headingModulo4">
-              <div class="row">
-                <div class="sectionTitle">
-                  <span
-                    class="tituloLista collapsed"
-                    data-toggle="collapse"
-                    data-target="#collapseModulo4"
-                    aria-expanded="false"
-                    aria-controls="collapseModulo4"
-                    >Módulo 4<i class="fas fa-caret-up caretDown"></i
-                  ></span>
-                </div>
-              </div>
-
-              <div
-                id="collapseModulo4"
-                class="collapse"
-                aria-labelledby="headingModulo4"
+              <a
+                href="modulo2-aula4.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status=""
+                ></span
+                >Diagnóstico da leishmaniose visceral canina</a
               >
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 1</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo4/modulo4-aula1.html"
-                        data-aula="1"
-                        data-modulo="4"
-                        class="subItem"
-                        >Conceito de Saúde Única</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 2</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo4/modulo4-aula2.html"
-                        data-aula="2"
-                        data-modulo="4"
-                        class="subItem"
-                        >Intersetorialidade nas ações de enfrentamento às
-                        leishmanioses</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 3</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo4/modulo4-aula3.html"
-                        data-aula="3"
-                        data-modulo="4"
-                        class="subItem"
-                        >Participação cidadã nas ações de enfrentamento às
-                        leishmanioses</a
-                      >
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <div class="row">
-                    <div class="barraStepper" style="background-color: #c40f17">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem"
-                        ><a
-                          href="../modulo4/modulo4-quiz.html"
-                          data-aula="4"
-                          class="subItem"
-                          data-modulo="4"
-                          data-quiz="true"
-                          >Quiz Módulo 4</a
-                        ></span
-                      >
-                    </div>
-                  </div>
-                </li>
-              </div>
+              <a
+                href="modulo2-aula5.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status=""
+                ></span
+                >Tratamento
+              </a>
+              <a
+                href="modulo2-aula6.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status=""
+                ></span
+                >Vigilância epidemiológica do cão</a
+              >
+              <a
+                href="modulo2-aula7.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status=""
+                ></span>
+                Importância do meio ambiente</a
+              >
+              <a
+                href="modulo2-aula8.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status=""
+                ></span
+                >Controle do reservatório canino e eutanásia dos animais
+                infectados</a
+              >
+              <a
+                href="modulo2-quiz.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status=""
+                >
+                </span>
+                Quiz</a
+              >
             </div>
-            <li>
-              <div class="row">
-                <div class="sectionTitle">
-                  <a class="tituloLista" role="button" href="../quiz.html">
-                    🖋 QUIZ FINAL</a
-                  >
-                </div>
+          </nav>
+
+          <section class="sidebar__section classes">
+            <span class="h6 pre-title">Outros Módulos:</span>
+            <a
+              href="../modulo1/modulo1-aula1.html"
+              tabindex="0"
+              role="link"
+              class="sidebar__btn"
+            >
+              1. O que são as leishmanioses</a
+            >
+            <!-- <a href="../modulo2/introducao.html" tabindex="0" role="link" class="sidebar__btn"> 2. Manifestações clínicas, diagnóstico e tratamento</a> -->
+            <a
+              href="../modulo3/modulo3-aula1.html"
+              tabindex="0"
+              role="link"
+              class="sidebar__btn"
+            >
+              3. Fatores físicos e sociais que contribuem para a manutenção e
+              dispersão da doença</a
+            >
+            <a
+              href="../modulo4/modulo4-aula1.html"
+              tabindex="0"
+              role="link"
+              class="sidebar__btn"
+            >
+              4. Estratégias para o controle das leishmanioses: diagnóstico,
+              tratamento e Saúde Única</a
+            >
+          </section>
+          <hr />
+
+          <section class="sidebar__section py-2">
+            <a class="sidebar__btn" role="link" id="openGlossario">
+              <span class="material-symbols-rounded">book</span> Bibliografia</a
+            >
+            <dialog id="dialogGlossario">
+              <div id="dialogGlossarioContent">Carregando...</div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: flex-end;
+                  align-items: center;
+                  margin-top: 10px;
+                "
+              >
+                <button class="closeDialog">Fechar</button>
               </div>
-            </li>
-            <li>
-              <div class="row">
-                <div class="sectionTitle">
-                  <a
-                    class="tituloLista"
-                    role="button"
-                    href="../encerramento.html"
-                    >ENCERRAMENTO</a
-                  >
-                </div>
+            </dialog>
+          </section>
+          <section class="sidebar__section py-2">
+            <a
+              href=""
+              class="sidebar__btn"
+              tabindex="0"
+              role="link"
+              data-bs-toggle="modal"
+              data-bs-target="#modal-material-complementar"
+            >
+              <span class="material-symbols-rounded">library_books</span>
+              Material Complementar</a
+            >
+          </section>
+          <section class="sidebar__section py-2">
+            <a class="sidebar__btn" role="link" id="openCreditos"
+              ><span class="material-symbols-rounded">
+                format_list_bulleted</span
+              >
+              Créditos</a
+            >
+            <dialog id="dialogCreditos">
+              <div id="dialogCreditosContent">Carregando...</div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: flex-end;
+                  align-items: center;
+                  margin-top: 10px;
+                "
+              >
+                <button class="closeDialog">Fechar</button>
               </div>
-            </li>
-            <li>
-              <div class="row">
-                <div class="sectionTitle">
-                  <a class="tituloLista" role="button" href="../glossario.html"
-                    ><i class="fas fa-file-alt"></i>GLOSSÁRIO</a
-                  >
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="row">
-                <div class="sectionTitle">
-                  <a
-                    class="tituloLista"
-                    role="button"
-                    href="../material-complementar.html"
-                    ><i class="fas fa-book"></i>APOSTILA</a
-                  >
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="row">
-                <div class="sectionTitle">
-                  <a class="tituloLista" role="button" href="../creditos.html"
-                    ><i class="fas fa-list"></i>CRÉDITOS</a
-                  >
-                </div>
-              </div>
-            </li>
-          </ul>
-        </nav>
+            </dialog>
+          </section>
+          <section class="sidebar__section py-2">
+            <a
+              href=""
+              class="sidebar__btn"
+              tabindex="0"
+              role="link"
+              data-bs-toggle="modal"
+              data-bs-target="#modal-material-complementar"
+            >
+              <span class="material-symbols-rounded">exit_to_app</span>
+              Encerramento</a
+            >
+          </section>
+          <section class="sidebar__section py-2">
+            <a
+              href=""
+              class="sidebar__btn"
+              tabindex="0"
+              role="link"
+              data-bs-toggle="modal"
+              data-bs-target="#modal-material-complementar"
+            >
+              <span class="material-symbols-rounded">quiz</span>
+              Quiz Final</a
+            >
+          </section>
+        </div>
       </div>
 
       <!-- Conteúdo principal -->
-      <div class="col-md-10" id="content">
+      <div class="main-container" id="mainContent">
+        <header class="header py-5">
+          <div class="header__inner">
+            <div class="header__title">
+              <div class="container">
+                <div class="row">
+                  <div
+                    class="col-12 col-md-10 col-lg-11 animate__animated animate__fadeIn"
+                    style="animation-delay: 0.5s"
+                  >
+                    <h2 style="font-size: 60px; color: white">
+                      <span class="h4">Módulo 2</span>
+                      Patogênese e Manifestações Clínicas
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
         <div class="conteudo">
-          <div class="margin-video"></div>
-          <p class="indice">Módulo 2 | Aula 2</p>
-
-          <h1 style="padding-top: 15px">
+          <p class="indice">Aula 2</p>
+          <h1 style="padding-top: 15px; font-size: 4rem; color: #05314a">
             Diagnóstico laboratorial da leishmaniose tegumentar
           </h1>
-          <div class="div-video">
-            <iframe
-              src="https://www.youtube.com/embed/7DQ72G9VzsY?si=YwBmaj255g329JVR"
-              controls
-              allowfullscreen
-              class="iframe-video"
-            ></iframe>
-          </div>
-          <div style="margin-top: -20%"></div>
+          <hr
+            style="
+              display: block;
+              width: 40px;
+              height: 3px;
+              background: #ff7000;
+              border: none;
+              opacity: 0.7;
+              margin: 0;
+              border-radius: 10px;
+              margin-bottom: 30px;
+            "
+          />
+          <p>
+            Após entender como a doença se manifesta no organismo, é fundamental
+            saber como diagnosticá-la corretamente. Iniciamos com a leishmaniose
+            tegumentar, uma forma que atinge pele e mucosas e apresenta desafios
+            particulares para o diagnóstico. Vamos explorar os métodos
+            laboratoriais disponíveis — como a visualização direta do parasita,
+            testes moleculares e sorológicos —, suas vantagens, limitações e
+            indicações específicas. Esta aula nos mostra como o conhecimento
+            clínico e laboratorial se entrelaçam na abordagem do paciente.
+          </p>
+          <hr
+            style="
+              display: block;
+              width: 40px;
+              height: 3px;
+              background: #ff7000;
+              border: none;
+              opacity: 0.7;
+              margin: 0;
+              border-radius: 10px;
+              margin-bottom: 30px;
+            "
+          />
 
-          <!-- Objetivos -->
-          <p>
-            Conhecer a patogenia e as manifestações clínicas das diferentes
-            leishmanioses é muito importante para que profissionais de saúde
-            reconheçam ou suspeitem de um caso da doença. Entretanto, o
-            diagnóstico clínico ou a suspeita da doença deve sempre ter
-            confirmação pelo diagnóstico laboratorial.
-          </p>
-          <p>
-            As abordagens laboratoriais utilizadas para o diagnóstico da
-            leishmaniose tegumentar são variadas e dependem de vários fatores:
-            tipo de lesão apresentada pelo paciente, estrutura laboratorial e
-            profissionais disponíveis, localização das lesões, entre outros. O
-            profissional médico é quem vai identificar e solicitar a melhor
-            prova diagnóstica a ser realizada para cada paciente.
-          </p>
-          <p>
-            No entanto, os testes precisam apresentar características relevantes
-            para serem de fato efetivos e auxiliarem o médico e o paciente. A
-            lista abaixo apresenta as características desejáveis em um teste
-            diagnostico ideal, bem como as características que um pesquisador
-            avalia quando estuda um teste para diagnóstico de doenças.
-          </p>
-          <p class="tituloLista">O teste diagnóstico ideal</p>
-          <ul>
-            <li style="padding-top: 15px">
-              Resposta correta: <span style="color: green">positivo</span> nos
-              indivíduos doentes e <span style="color: red">negativo</span> nos
-              indivíduos não-doentes;
-            </li>
-            <li style="padding-top: 15px">Rápido;</li>
-            <li style="padding-top: 15px">Seguro;</li>
-            <li style="padding-top: 15px">Simples;</li>
-            <li style="padding-top: 15px">Inócuo;</li>
-            <li style="padding-top: 15px">Confiável;</li>
-            <li style="padding-top: 15px">De baixo custo.</li>
-          </ul>
-          <p class="tituloLista">O que avaliar em um diagnóstico?</p>
-          <ul>
-            <li style="padding-top: 15px">
-              Reprodutibilidade (repetibilidade);
-            </li>
-            <li style="padding-top: 15px">Acurácia (exatidão, precisão);</li>
-            <li style="padding-top: 15px">
-              Especificidade (capacidade de ser específico);
-            </li>
-            <li style="padding-top: 15px">
-              Valores preditivos (avaliação da eficácia de um teste
-              diagnóstico);
-            </li>
-            <li style="padding-top: 15px">
-              Razão de verossimilhança (avaliação do desempenho de um teste
-              diagnóstico).
-            </li>
-          </ul>
-          <p class="tituloLista">Levando-se em conta:</p>
-          <ul>
-            <li style="padding-top: 15px">Prevalência da doença em estudo;</li>
-            <li style="padding-top: 15px">
-              Possíveis erros do teste (sistemático e aleatório);
-            </li>
-            <li style="padding-top: 15px">
-              Vieses (amostral, mensuração e publicação);
-            </li>
-            <li style="padding-top: 15px">
-              Utilização em série ou em paralelo.
-            </li>
-          </ul>
-          <h2>Diagnóstico parasitológico da leishmaniose tegumentar</h2>
-          <p>
-            Uma das formas de se diagnosticar a LT, por laboratório, é através
-            do diagnóstico parasitológico.
-          </p>
-          <p>
-            O diagnóstico parasitológico permite a identificação visual da
-            <i>Leishmania</i>, baseado no exame ao microscópio de secreções e
-            fragmentos de tecido. Os métodos parasitológicos possuem a grande
-            vantagem de apresentar elevada
-            <span> especificidade analítica.</span>
-          </p>
-          <p>
-            Na LT, os parasitos encontram-se, principalmente, no interior de
-            células do sistema imune que estão na pele, os macrófagos. Por isso,
-            quando o médico considera que a ferida de um paciente pode ser LT,
-            ele o encaminha para um serviço de referência do SUS, onde serão
-            realizados os exames específicos, visando à visualização do parasito
-            ou de partes dele. Pode ser através de:
-          </p>
-          <ul>
-            <li style="padding-top: 15px">
-              <strong>Biópsia – </strong>Retirada de um fragmento mínimo de
-              lesão tanto para visualização após impressão em lâmina de
-              microscopia (“imprint”), como para inclusão em parafina para exame
-              histopatológico e imuno-hisquímico após colorações específicas,
-              diagnóstico molecular, como também para cultura e isolamento de
-              parasitos multiplicados no meio de cultura. O conjunto desses
-              métodos pode levar à determinação de gênero e espécie da
-              <i>Leishmania</i> até variantes e subvariantes da espécie;
-            </li>
-            <li style="padding-top: 15px">
-              <strong>Escarificação – </strong>Retirada de células e exsudato
-              inflamatório da lesão (secreção da lesão) com um bisturi (lâmina
-              de uso ambulatorial), sem provocar sangramento;
-            </li>
-            <li style="padding-top: 15px">
-              <strong
-                >Aspirado do tecido da borda das lesões (punção aspirativa) – </strong
-              >O material coletado é destinado a exame de cultura, para
-              isolamento do parasito, sendo semeado em meio de cultura onde deve
-              se multiplicar, para posterior observação em microscópio e
-              submissão a métodos bioquímicos de identificação de gênero e
-              espécie.
-            </li>
-          </ul>
-          <div class="row centro" style="padding-bottom: 30px">
-            <img
-              src="../assets/images/modulo2/aula2/Você sabia o que é um conjunto de doenças (6).png"
-              class="balloons"
-            />
-          </div>
-          <div class="row centro">
-            <p class="tituloLista" style="padding-bottom: 15px">
-              “Imprint” por aposição (carimbo) e esfregaço por escarificação em
-              lâmina.
-            </p>
-          </div>
-          <p>
-            Na técnica do “imprint”, o fragmento de pele retirado da ferida é
-            utilizado para “carimbar” lâminas de vidro de microscopia (Figura
-            20). O que limita a utilização da técnica de “imprint” é a
-            necessidade de um ambiente ambulatorial e uso de anestésicos para a
-            realização da biópsia. Este procedimento só pode ser realizado por
-            médicos e dada a ausência desses profissionais treinados em diversas
-            localidades do Brasil, isso se torna um importante limitador. Já o
-            esfregaço por escarificação em lâmina é uma técnica que apresenta
-            inúmeros pontos positivos. Nessa técnica um bisturi é utilizado para
-            escarificar, levemente, a lesão procurando retirar apenas a secreção
-            sem provocar sangramento. O material coletado é espalhado em uma
-            lâmina de vidro. É uma técnica barata, de fácil manipulação, podendo
-            ser realizada por diferentes profissionais de saúde como
-            enfermeiros, técnicos de enfermagem e de análises clínicas, desde
-            que bem treinados.
-          </p>
-          <p>
-            Após coleta do material “imprint” ou escarificação, as lâminas
-            seguem para coloração porque as células não possuem coloração
-            suficiente para serem vistas ao microscópio. Por isso, antes da
-            visualização é necessário corar essas lâminas.
-          </p>
-          <div class="row centro" style="padding-bottom: 30px">
-            <img
-              src="../assets/images/modulo2/aula2/Você sabia o que é um conjunto de doenças (8).png"
-              class="balloons"
-            />
-          </div>
-          <!--Imagem 1-->
-          <div class="row centro">
-            <div class="col-md-7 imagem">
-              <img
-                src="../assets/images/modulo2/aula2/mod2foto5.jpg"
-                class="img-fluid"
-              />
-              <div>
-                <small>
-                  <strong>Figura 20.</strong> Representação esquemática de uma
-                  célula eucariótica, destacando suas principais estruturas:
-                  núcleo (contendo o material genético) e nucléolo (responsável
-                  pela produção de ribossomos); ribossomos (síntese de
-                  proteínas); retículo endoplasmático (rugoso e liso, para
-                  síntese e transporte de proteínas e lipídios); complexo de
-                  Golgi (processamento e distribuição de moléculas);
-                  mitocôndrias (produção de energia); lisossomos (digestão
-                  intracelular); vacúolo (armazenamento de substâncias);
-                  centrossomo (organização dos microtúbulos e participação na
-                  divisão celular); membrana plasmática (delimitação e controle
-                  de trocas com o ambiente); citoplasma (matriz que abriga os
-                  organelas); e citoesqueleto (suporte estrutural e movimentação
-                  celular).
-                </small>
+          <div class="col-12 col-md-10 col-lg-8">
+            <div class="card-box card border-0 shadow">
+              <div class="box-title">
+                <span
+                  class="h5"
+                  style="
+                    border-bottom: 1px solid var(--primary-color-light);
+                    color: var(--secondary-color-light);
+                  "
+                >
+                  <span
+                    class="box-title__icone material-symbols-rounded"
+                    aria-hidden="true"
+                    >add</span
+                  >
+                  Pense sobre...
+                </span>
+                <div class="boxes-content">
+                  <p>Mas o que é um conjunto de doenças?</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="row centro" style="padding-bottom: 30px">
-            <img
-              src="../assets/images/modulo2/aula2/Você sabia o que é um conjunto de doenças (9).png"
-              class="balloons"
-            />
-          </div>
-          <p>
-            Esta coloração é realizada com corantes líquidos que permitem
-            distinguir os limites celulares, o núcleo e o citoplasma. Na leitura
-            das lâminas o profissional procura identificar as formas amastigota
-            (Figura 21), do parasito. Você se lembra da morfologia de uma
-            amastigota, não é demais reforçar né?
-          </p>
-          <!--Imagem 2-->
-          <div class="row centro">
-            <div class="col-md-7 imagem">
-              <img
-                src="../assets/images/modulo2/aula2/mod2foto6.jpg"
-                class="img-fluid"
-              />
-              <div>
-                <small>
-                  <strong>Figura 21.</strong> Esquema representativo da
-                  morfologia de uma amastigota, forma intracelular de parasitos
-                  do gênero <i>Leishmania</i>. Destaca o núcleo, o cinetoplasto
-                  (estrutura mitocondrial com DNA circular), a membrana
-                  plasmática (delimitando a célula), e o flagelo residual não
-                  externo, característico desta forma evolutiva. A amastigota é
-                  adaptada para sobrevivência no interior de macrófagos do
-                  hospedeiro mamífero. <strong><i>Fonte:</i></strong
-                  >SmartServier licenciada <a>CC-BY-4.0.</a>
-                </small>
+
+            <div style="margin-top: 30px" class="card-box card border-0 shadow">
+              <div class="box-title">
+                <span
+                  class="h5"
+                  style="
+                    border-bottom: 1px solid var(--primary-color-light);
+                    color: var(--secondary-color-light);
+                  "
+                >
+                  <span
+                    class="box-title__icone material-symbols-rounded"
+                    aria-hidden="true"
+                    >add</span
+                  >
+                  Pense sobre...
+                </span>
+                <div class="boxes-content">
+                  <p>Mas o que é um conjunto de doenças?</p>
+                </div>
               </div>
             </div>
-          </div>
-          <p class="tituloLista">O esquema abaixo resume o procedimento:</p>
-          <!--Imagem 3-->
-          <div class="row centro">
-            <div class="col-md-7 imagem">
-              <img
-                src="../assets/images/modulo2/aula2/mod2foto7.jpg"
-                class="img-fluid"
-              />
-              <div>
-                <small>
-                  <strong>Figura 22.</strong> Procedimento de “imprinting”:
-                  demonstração do fragmento de tecido, direção e sentido do
-                  corte, fragmentos resultantes, forma correta de pinçar o
-                  fragmento, técnica para realizar os carimbos e a disposição
-                  final dos carimbos na lâmina. Este material é disponibilizado
-                  como recurso educacional aberto, destinado a fins acadêmicos e
-                  científicos. <strong><i>Fonte:</i></strong
-                  >os autores.
-                </small>
-              </div>
-            </div>
-          </div>
-          <p>
-            A visualização de apenas uma amastigota com as estruturas e contorno
-            de membrana, núcleo e cinetoplasto, é suficiente para fechar o
-            diagnóstico. No entanto, é necessário um profissional muito bem
-            treinado para a leitura das lâminas. Resultados falso-positivos
-            representam um grave risco para os pacientes, pois farão com que ele
-            seja tratado desnecessariamente, com medicamentos muito tóxicos.
-          </p>
-          <p>
-            É importante dizer que a <strong>sensibilidade analítica</strong> da
-            técnica é variável, pois depende de vários fatores, como a espécie
-            de <i>Leishmania</i> presente, o local de coleta do fragmento na
-            ferida, o tempo de evolução da ferida, uma vez que lesões recentes,
-            com menos de 6 meses de evolução, apresentam elevada quantidade de
-            parasitos e, como já mencionado, a experiência do microscopista.
-          </p>
-          <div class="row centro">
-            <p class="tituloLista">
-              Técnica de cultura de fragmento de biópsia e de cultura de
-              aspirado de lesão
-            </p>
-          </div>
-          <p>
-            Nesta técnica, o fragmento obtido da biópsia, ou parte dele, é
-            cortado em pequenos pedaços e colocado em tubos contendo um meio de
-            cultura onde as formas amastigotas (sem flagelo) se transformam em
-            promastigotas (com flagelo), para se avaliar se haverá o crescimento
-            de <i>Leishmania</i>. Se houver multiplicação do parasito, significa
-            que ele estava presente na lesão.
-          </p>
-          <div class="row centro" style="padding-bottom: 40px">
-            <img
-              src="../assets/images/modulo2/aula2/Você sabia o que é um conjunto de doenças (12).png"
-              class="baloons-little"
-            />
-          </div>
-
-          <p>
-            Os tubos contendo meio de cultura são manipulados em cabines de
-            segurança biológica e acondicionados em estufas próprias para o
-            cultivo de parasitos. No meio de cultura, as formas amastigotas se
-            transformam em promastigotas.
-          </p>
-          <div class="row centro" style="padding-bottom: 40px">
-            <img
-              src="../assets/images/modulo2/aula2/Você sabia o que é um conjunto de doenças (13).png"
-              class="baloons-little"
-            />
-          </div>
-          <p>
-            As promastigotas apresentam movimentação ativa e utilizam o flagelo
-            para deslocar as células. Uma curiosidade é que o flagelo está à
-            frente do movimento, como que puxando as células, e não atrás como
-            uma hélice de navio.
-          </p>
-          <div class="row centro" style="padding-bottom: 40px">
-            <img
-              src="../assets/images/modulo2/aula2/Você sabia o que é um conjunto de doenças (14).png"
-              class="baloons-little"
-            />
-          </div>
-
-          <p>
-            Outra técnica em que é utilizada juntamente com meio de cultura é a
-            cultura de aspirado de lesão. Pode ser realizada com seringa
-            contendo soro fisiológico e agulha que é introduzida na borda da
-            lesão, injetando soro fisiológico e aspirando restos de tecido e
-            inoculando o aspirado em tubo convencional de cultura. Uma técnica
-            inovadora quanto à biossegurança é a punção aspirativa à vácuo
-            (Figura 23). Nesta técnica o meio de cultura é colocado em um tubo
-            de coleta de sangue com tampa plástica. Através de uma seringa,
-            perfura-se a tampa plástica e é feito vácuo no interior do tubo
-            coletor. Posteriormente, com o suporte do canhão é realizada a
-            inserção da agulha nas bordas da ferida. Quando o canhão é
-            totalmente encaixado e a agulha perfura a tampa plástica do tubo, o
-            vácuo promove a aspiração da secreção da ferida.
-          </p>
-          <p>
-            Esta técnica de coleta foi desenvolvida por pesquisadores
-            brasileiros, da Fiocruz, e apresenta grande praticidade na coleta
-            não invasiva de material para diagnóstico da LT.
-          </p>
-
-          <div class="row centro" style="padding-bottom: 50px">
-            <img
-              src="../assets/images/modulo2/aula2/Você sabia o que é um conjunto de doenças (10).png"
-              class="balloons"
-            />
-          </div>
-          <!--Imagem 4-->
-          <div class="row centro">
-            <div class="col-md-7 imagem">
-              <img
-                src="../assets/images/modulo2/aula2/mod2foto8.jpg"
-                class="img-fluid"
-              />
-              <div>
-                <small>
-                  <strong>Figura 23.</strong> Procedimento de coleta de amostra
-                  clínica para diagnóstico de leishmaniose. Ilustração do uso de
-                  um tubo de coleta a vácuo contendo meio NNN e solução salina
-                  com antibiótico. A agulha de coleta é acoplada ao canhão sem
-                  perfurar a tampa do tubo. A imagem à direita representa uma
-                  lesão cutânea, possível local de coleta da amostra.
-                </small>
-              </div>
-            </div>
-          </div>
-          <p>
-            Essas técnicas (Figura 23) apresentam algumas desvantagens, como o
-            alto custo, contaminações frequentes, além de serem trabalhosas e
-            necessitarem de profissional treinado. Da mesma forma, apresentam
-            sensibilidade baixa, o que, por vezes, torna seu uso questionado.
-          </p>
-          <p>
-            As técnicas de cultura são pouco utilizadas na rotina do
-            diagnóstico, no entanto, são de extrema importância na pesquisa. As
-            técnicas de cultura permitem o crescimento de grande número de
-            parasitos para uso em estudos, por exemplo, para infecção de cobaias
-            (estudo in vivo), para desenvolvimento e teste de medicamentos,
-            vacinas e estudos in vitro, para avaliar a toxicidade de fármacos,
-            assim como testes moleculares para classificação taxonômica dos
-            parasitos.
-          </p>
-          <p>
-            Um detalhe! Foi possível compreender a diferença entre estudos
-            <span> in vivo</span> e <span> in vitro</span>? Será que vale
-            conferir no GLOSSÁRIO?
-          </p>
-          <div class="row centro">
-            <p class="tituloLista">
-              Demonstração prática do método indireto – isolamento
-            </p>
-          </div>
-          <!--Imagem 5-->
-          <div class="row centro">
-            <div class="col-md-7 imagem">
-              <img
-                src="../assets/images/modulo2/aula2/mod2foto9.jpg"
-                class="img-fluid"
-              />
-              <div>
-                <small>
-                  <strong>Figura 24.</strong> Demonstração prática do método
-                  indireto para isolamento de <i>Leishmania</i>. Sequência das
-                  etapas laboratoriais do procedimento de isolamento da
-                  <i>Leishmania</i>, abrangendo coleta, processamento e cultivo
-                  do material biológico. (a) Amostra biológica armazenada em
-                  tubo. (b) Transferência da amostra para placa de Petri. (c)
-                  Fragmentação do material com auxílio de bisturi. (d)
-                  Manipulação do fragmento biológico com pinça. (e)
-                  Transferência do fragmento para tubo de cultura. (f) Incubação
-                  dos tubos com meio de cultivo. (g) Processamento adicional do
-                  material biológico. (h) Preparação da lâmina para análise
-                  microscópica. (i) Fixação da amostra na lâmina. (j) Observação
-                  de formas parasitárias ao microscópio.<strong
-                    ><i>Fonte:</i></strong
-                  >os autores.
-                </small>
-              </div>
-            </div>
-          </div>
-
-          <h2>Diagnóstico molecular da leishmaniose tegumentar</h2>
-          <p>
-            O principal método de diagnóstico molecular da LT é a reação em
-            cadeia da enzima polimerase (PCR) que consiste na amplificação in
-            vitro de material genético do parasito (sequências de DNA ou RNA). A
-            grande vantagem da PCR é sua capacidade de detectar DNA de
-            <i>Leishmania</i> mesmo em lesões mais antigas, com mais de 6 meses
-            de evolução, onde tem poucos parasitos. Na PCR convencional (PCRc) a
-            amplificação do material genético do parasito é visualizada a partir
-            de eletroforese em gel. Já na PCR em tempo real (RT-PCR), pode-se
-            fazer o acompanhamento em tempo real da amplificação e quantificação
-            do material genético do parasito, dispensando a eletroforese. Nesse
-            caso usa-se sondas fluorescentes associada com um equipamento
-            conhecido como termociclador com sensor para captação da
-            fluorescência gerada.
-          </p>
-          <p>
-            O material genético de <i>Leishmania</i> mais utilizado no
-            diagnóstico molecular é a sequência do DNA do cinetoplasto (kDNA).
-            Para identificação das espécies tem sido utilizada a análise de
-            isoenzimas de <i>Leishmania</i> e a análise de polimorfismo genético
-            a partir da PCR-RFLP. A análise por isoenzimas é baseada na variação
-            na mobilidade eletroforética de enzimas isoladas de
-            <i>Leishmania</i>. A técnica PCR- RFLP é considerada como uma boa
-            alternativa para a caracterização das espécies de <i>Leishmania</i>,
-            por ser menos trabalhosa e ter resultados mais rápidos.
-          </p>
-          <p>
-            As amostras utilizadas no diagnóstico molecular da LT são obtidas,
-            geralmente, por procedimentos invasivos, através de biópsia da
-            lesão. Recentemente, métodos não invasivos de coleta de amostras,
-            como o uso de swab (tipo cotonete), estão sendo avaliados e os
-            estudos estão demonstrando bons resultados. A utilização de técnicas
-            de coleta não invasiva possui a vantagem de ser de fácil execução e
-            proporcionar maior conforto para os pacientes.
-          </p>
-          <h2>Sistema Único de Saúde x Leishmaniose Tegumentar</h2>
-          <p>
-            A leishmaniose tegumentar é integralmente atendida pelo SUS –
-            Sistema Único de Saúde, desde o diagnóstico até o tratamento e
-            seguimento pós cura. As instâncias do SUS envolvidas em cada etapa
-            de atendimento são:
-          </p>
-          <ul>
-            <li style="padding-top: 15px">
-              Unidades de atenção primária, onde o paciente é avaliado em
-              consulta médica/enfermagem, na qual será feita anamnese e
-              avaliação de possíveis lesões cutâneas ou mucosas;
-            </li>
-            <li style="padding-top: 15px">
-              Consulta com especialista (dermatologista e/ou
-              otorrinolaringologista), caso exista a suspeita de LT. Esses
-              profissionais médicos são habilitados e experientes para coleta de
-              biópsias, caso necessário, prescrição de medicamentos e
-              solicitação de outros exames complementares.
-            </li>
-          </ul>
-          <p>
-            Caso o diagnóstico seja positivo, o paciente é tratado, com
-            medicamentos específicos também fornecidos pelo SUS, gratuitamente.
-            O médico irá orientá-lo para a melhor conduta durante e após o
-            tratamento.
-          </p>
-          <!--Imagem 6-->
-
-          <!-- Autor -->
-        </div>
-        <div class="row centro">
-          <div class="col-md-7 imagem">
-            <img
-              src="../assets/images/modulo2/aula2/mod2foto10.jpg"
-              id="img-vocesabia"
-            />
           </div>
         </div>
+
         <!-- Botões de navegação -->
-        <div class="row botao" style="display: flex; flex-direction: column">
+        <div class="row botao" style="display: flex" id="buttons-hover">
           <a
-            href="../mapas/modulo2/a2.html"
+            href="../mapas/modulo1/a1.html"
             class="btn btn-sm"
             id="botaoVoltar"
             role="button"
@@ -1345,7 +510,7 @@
             <strong>Mapa Mental</strong></a
           >
           <a
-            href="../paginaTextoApio/textoApoio.html?modulo=2&aula=2"
+            href="../paginaTextoApio/textoApoio.html?modulo=1&aula=1"
             class="btn btn-sm"
             id="botaoVoltar"
             role="button"
@@ -1354,6 +519,7 @@
             <strong>Texto de Apoio</strong></a
           >
         </div>
+
         <div
           class="row botao"
           style="
@@ -1392,7 +558,7 @@
         </div>
 
         <!-- Rodapé -->
-        <footer id="rodape">
+        <footer>
           <div class="row-main">
             <div class="col-md-12 centro">
               <img
@@ -1411,5 +577,81 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="../assets/js/main.js"></script>
+    <script>
+      // Aguarda o carregamento completo do DOM antes de executar qualquer código JavaScript
+      document.addEventListener("DOMContentLoaded", function () {
+        // Função genérica para abrir e carregar conteúdo em um diálogo
+        function configurarDialog(botaoId, dialogId, contentId, arquivoHtml) {
+          const botao = document.getElementById(botaoId);
+          const dialog = document.getElementById(dialogId);
+          const content = document.getElementById(contentId);
+
+          // Verifica se o botão e o diálogo existem
+          if (botao && dialog && content) {
+            botao.addEventListener("click", async () => {
+              dialog.showModal();
+              try {
+                const response = await fetch(arquivoHtml);
+                const texto = await response.text();
+                content.innerHTML = texto;
+              } catch (err) {
+                content.textContent = "Erro ao carregar o conteúdo.";
+              }
+            });
+
+            // Fechar clicando no botão 'Fechar'
+            dialog
+              .querySelector(".closeDialog")
+              .addEventListener("click", () => {
+                dialog.close();
+              });
+
+            // Fechar clicando fora da caixa (backdrop)
+            dialog.addEventListener("click", (event) => {
+              const rect = dialog.getBoundingClientRect();
+              if (
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom
+              ) {
+                dialog.close();
+              }
+            });
+          }
+        }
+
+        // Configura os dois diálogos
+        configurarDialog(
+          "openCreditos",
+          "dialogCreditos",
+          "dialogCreditosContent",
+          "../creditos.html"
+        );
+        configurarDialog(
+          "openGlossario",
+          "dialogGlossario",
+          "dialogGlossarioContent",
+          "../glossario.html"
+        );
+      });
+    </script>
+
+    <script>
+      function toggleSection(header) {
+        const content = header.nextElementSibling;
+        const symbol = header.querySelector(".toggle-symbol");
+
+        if (content.style.display === "none" || content.style.display === "") {
+          content.style.display = "block";
+          symbol.classList.remove("fa-plus");
+          symbol.classList.add("fa-minus");
+        } else {
+          content.style.display = "none";
+          symbol.classList.remove("fa-minus");
+          symbol.classList.add("fa-plus");
+        }
+      }
+    </script>
   </body>
 </html>
