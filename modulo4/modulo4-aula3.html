@@ -2,8 +2,96 @@
 <html lang="pt-br">
   <head>
     <meta charset="utf-8" />
-    <title>Leishmaniose</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+      }
+      a {
+        text-decoration: none;
+      }
+      .main-container {
+        /* mesma largura da sidebar */
+        width: calc(100% - 350px); /* ocupa o resto da tela */
+        @media (max-width: 990px) {
+          width: 100%;
+        }
+      }
+      #botaoVoltar:hover,
+      #botaoAvancar:hover {
+        text-decoration: underline;
+      }
+      dialog {
+        width: 50%;
+        height: 85%;
+        max-width: 80%;
+        max-height: 80%;
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 8px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        z-index: 1000;
+        outline: none;
+        overflow: auto;
+        @media (max-width: 1280px) {
+          width: 620px;
+        }
+      }
+      dialog {
+        @media (max-width: 768px) {
+          width: 78%;
+        }
+      }
+      dialog::backdrop {
+        background-color: rgb(0 0 0 / 0.7);
+      }
+      button.closeDialog {
+        font-size: 1rem;
+        border: none;
+        border-radius: 6px;
+        background-color: var(--primary-color);
+        color: white;
+        width: 100%;
+        height: 6vh;
+        outline: none;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size: 100%;
+        text-align: center;
+      }
+      .closeDialog:hover {
+        background-color: var(--secondary-color-light);
+      }
+      button.closeDialog {
+        font-size: 1rem;
+        border: none;
+        border-radius: 6px;
+        background-color: #ff7000;
+        color: white;
+        width: 100%;
+        height: 6vh;
+        outline: none;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size: 100%;
+        text-align: center;
+      }
+      .closeDialog:hover {
+        background-color: #05314a;
+      }
+    </style>
+    <title>Leishmanioses</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="../assets/js/link.js"></script>
     <link
       rel="icon"
       type="image/x-icon"
@@ -24,977 +112,387 @@
       href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
     />
     <link href="../assets/css/styles.css" rel="stylesheet" />
+    <link href="../assets/css/utilities/fonts.css" rel="stylesheet" />
+    <link href="../assets/css/css/fonts.css" rel="stylesheet" />
+    <link href="../assets/css/css/header.css" rel="stylesheet" />
+    <link href="../assets/css/css/sidebar.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/css copy/animate.min.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/css/css/recursos-visuais/boxes.css"
+    />
   </head>
 
   <body>
     <!-- Toolbar -->
-    <header
-      style="
-        display: flex;
-        justify-content: center;
-        background-color: white;
-        height: 45vh;
-        margin-bottom: 50px;
-      "
-    >
-      <img
-        src="../assets/images/home/LOGOMARCA.svg"
-        class="img-fluid"
-        alt="Capa do curso"
-        style="max-width: 90%; height: auto"
-      />
-    </header>
 
-    <div class="row" id="row-main">
-      <!-- Sidebar -->
-      <div class="col-md-2" id="sidebar">
-        <!-- Botão p/ Recolher Sidebar-->
-        <span class="toggle-sidebar" id="sidebarButton"
-          ><i class="fas fa-chevron-left"></i
-        ></span>
+    <!-- Sidebar -->
+    <div style="display: flex; flex-direction: row">
+      <div class="sidebar" role="navigation" id="sidebar">
+        <div class="sidebar__inner">
+          <section class="sidebar__header">
+            <section class="sidebar__section py-0">
+              <img
+                src="../assets/images/logos/LOGO 4 (300 x 130 px).png"
+                alt="Campus Virtual Fiocruz"
+                width="100%"
+              />
+            </section>
+            <h1>
+              leishmanioses:
+              <span>e eu com isso?</span>
+            </h1>
+          </section>
+          <hr />
+          <section class="sidebar__section py-2">
+            <a
+              href="../index.html"
+              class="sidebar__btn"
+              tabindex="0"
+              role="link"
+            >
+              <span class="material-symbols-rounded" aria-hidden="true"
+                >home</span
+              >Página inicial
+            </a>
+          </section>
+          <nav class="sidebar__section sidebar__section--contrast pb-0">
+            <span class="h6 pre-title">Aulas do módulo 4:</span>
+            <div class="sidebar__topic-list pb-4">
+              <a
+                href="./modulo4-aula1.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status="completed"
+                ></span>
+                Ações de controle da leishmaniose no Brasil segundo o Ministério
+                da Saúde
+              </a>
 
-        <!-- Botão Secundário p/ Recolher Sidebar -->
-
-        <nav id="menuLateral">
-          <ul class="listaMenu">
-            <li>
-              <div class="row">
-                <div class="sectionTitle">
-                  <img
-                    src="../assets/images/home/Untitled design (2) (1).png"
-                    class="img-fluid logoMenu"
-                    alt="Logo Campus Virtual"
-                  />
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="row">
-                <div class="sectionTitle">
-                  <a
-                    href="../index.html"
-                    class="tituloLista"
-                    style="padding-top: 0 !important"
-                    ><i class="fas fa-home"></i>PÁGINA INICIAL</a
-                  >
-                </div>
-              </div>
-            </li>
-
-            <div class="accordionMenu" id="headingModulo1">
-              <div class="row">
-                <div class="sectionTitle">
-                  <span
-                    class="tituloLista collapsed"
-                    data-toggle="collapse"
-                    data-target="#collapseModulo1"
-                    aria-expanded="false"
-                    aria-controls="collapseModulo1"
-                    >Módulo 1<i class="fas fa-caret-up caretDown"></i
-                  ></span>
-                </div>
-              </div>
-
-              <div
-                id="collapseModulo1"
-                class="collapse"
-                aria-labelledby="headingModulo1"
+              <a
+                href="modulo4-aula2.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status="completed"
+                ></span
+                >Abordagens de diagnóstico e tratamento</a
               >
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 1</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo1/modulo1-aula1.html"
-                        class="subItem"
-                        data-aula="1"
-                        data-modulo="1"
-                        >Conceito de leishmaniose</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 2</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo1/modulo1-aula2.html"
-                        class="subItem"
-                        data-aula="2"
-                        data-modulo="1"
-                        >Distribuição das leishmanioses no Brasil</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 3</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo1/modulo1-aula3.html"
-                        class="subItem"
-                        data-aula="3"
-                        data-modulo="1"
-                        >Incidência e Prevalência</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 4</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo1/modulo1-aula4.html"
-                        class="subItem"
-                        data-aula="4"
-                        data-modulo="1"
-                        >Aspectos dos vetores e reservatórios- Ciclos de
-                        transmissão</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 5</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo1/modulo1-aula5.html"
-                        class="subItem"
-                        data-aula="5"
-                        data-modulo="1"
-                        >Conceito de leishmaniose</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 6</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo1/modulo1-aula6.html"
-                        class="subItem"
-                        data-aula="6"
-                        data-modulo="1"
-                        >Conceito de leishmaniose</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 7</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo1/modulo1-aula7.html"
-                        class="subItem"
-                        data-aula="7"
-                        data-modulo="1"
-                        >Conceito de leishmaniose</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div
-                      class="barraStepper active"
-                      style="background-color: #c40f17"
-                    >
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem"
-                        ><a
-                          href="../modulo1/modulo1-quiz.html"
-                          data-aula="8"
-                          data-modulo="1"
-                          data-quiz="true"
-                          >Quiz Módulo 1</a
-                        ></span
-                      >
-                    </div>
-                  </div>
-                </li>
-              </div>
-            </div>
 
-            <div class="accordionMenu" id="headingModulo2">
-              <div class="row">
-                <div class="sectionTitle">
-                  <span
-                    class="tituloLista collapsed"
-                    data-toggle="collapse"
-                    data-target="#collapseModulo2"
-                    aria-expanded="false"
-                    aria-controls="collapseModulo2"
-                    >Módulo 2<i class="fas fa-caret-up caretDown"></i
-                  ></span>
-                </div>
-              </div>
-              <div
-                id="collapseModulo2"
-                class="collapse"
-                aria-labelledby="headingModulo2"
+              <a
+                href="modulo4-aula3.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status="selected"
+                ></span>
+                Saúde Única, Leishmanioses e a Interdisciplinaridade</a
               >
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 1</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo2/modulo2-aula1.html"
-                        data-aula="1"
-                        data-modulo="2"
-                        class="subItem"
-                        >Período de incubação e primeiros sintomas (homem e
-                        cão)</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 2</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo2/modulo2-aula2.html"
-                        data-aula="2"
-                        data-modulo="2"
-                        class="subItem"
-                        >Sinais e sintomas comuns (homem e cão)</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 3</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo2/modulo2-aula3.html"
-                        data-aula="3"
-                        data-modulo="2"
-                        class="subItem"
-                        >Rede de assistência pública para prevenção,
-                        diagnóstico, tratamento e controle das leishmanioses em
-                        humanos e caninos</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 4</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo2/modulo2-aula4.html"
-                        data-aula="4"
-                        data-modulo="2"
-                        class="subItem"
-                        >Rede de assistência pública para prevenção,
-                        diagnóstico, tratamento e controle das leishmanioses em
-                        humanos e caninos</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 5</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo2/modulo2-aula5.html"
-                        data-aula="5"
-                        data-modulo="2"
-                        class="subItem"
-                        >Rede de assistência pública para prevenção,
-                        diagnóstico, tratamento e controle das leishmanioses em
-                        humanos e caninos</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 6</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo2/modulo2-aula6.html"
-                        data-aula="6"
-                        data-modulo="2"
-                        class="subItem"
-                        >Rede de assistência pública para prevenção,
-                        diagnóstico, tratamento e controle das leishmanioses em
-                        humanos e caninos</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 7</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo2/modulo2-aula7.html"
-                        data-aula="7"
-                        data-modulo="2"
-                        class="subItem"
-                        >Rede de assistência pública para prevenção,
-                        diagnóstico, tratamento e controle das leishmanioses em
-                        humanos e caninos</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 8</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo2/modulo2-aula8.html"
-                        data-aula="8"
-                        data-modulo="2"
-                        class="subItem"
-                        >Rede de assistência pública para prevenção,
-                        diagnóstico, tratamento e controle das leishmanioses em
-                        humanos e caninos</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper" style="background-color: #c40f17">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem"
-                        ><a
-                          href="../modulo2/modulo2-quiz.html"
-                          data-aula="9"
-                          class="subItem"
-                          data-modulo="2"
-                          data-quiz="true"
-                          >Quiz Módulo 2</a
-                        ></span
-                      >
-                    </div>
-                  </div>
-                </li>
-              </div>
-            </div>
 
-            <div class="accordionMenu" id="headingModulo3">
-              <div class="row">
-                <div class="sectionTitle">
-                  <span
-                    class="tituloLista"
-                    data-toggle="collapse"
-                    data-target="#collapseModulo3"
-                    aria-expanded="false"
-                    aria-controls="collapseModulo3"
-                    >Módulo 3<i class="fas fa-caret-up caretDown"></i
-                  ></span>
-                </div>
-              </div>
-              <div
-                id="collapseModulo3"
-                class="collapse show"
-                aria-labelledby="headingModulo3"
+              <a
+                href="modulo4-quiz.html"
+                tabindex="0"
+                role="link"
+                class="sidebar__btn sidebar__list-item"
+                ><span
+                  class="material-symbols-rounded"
+                  aria-label="Tópico não concluído"
+                  status=""
+                >
+                </span>
+                Quiz</a
               >
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 1</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo3/modulo3-aula1.html"
-                        data-aula="2"
-                        data-modulo="3"
-                        class="subItem"
-                        >Abordagem ecológica e social das leishmanioses</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 2</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo3/modulo3-aula2.html"
-                        data-aula="2"
-                        data-modulo="3"
-                        class="subItem"
-                        >Medidas de prevenção e controle da doença</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 3</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo3/modulo3-aula3.html"
-                        data-aula="3"
-                        data-modulo="3"
-                        class="subItem"
-                        >Medidas de prevenção e controle da doença</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 4</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo3/modulo3-aula4.html"
-                        data-aula="4"
-                        data-modulo="3"
-                        class="subItem"
-                        >Medidas de prevenção e controle da doença</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 5</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo3/modulo3-aula5.html"
-                        data-aula="5"
-                        data-modulo="3"
-                        class="subItem"
-                        >Medidas de prevenção e controle da doença</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper" style="background-color: #c40f17">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem"
-                        ><a
-                          href="../modulo3/modulo3-quiz.html"
-                          data-aula="6"
-                          class="subItem"
-                          data-modulo="3"
-                          data-quiz="true"
-                          >Quiz Módulo 3</a
-                        ></span
-                      >
-                    </div>
-                  </div>
-                </li>
-              </div>
             </div>
+          </nav>
 
-            <div class="accordionMenu" id="headingModulo4">
-              <div class="row">
-                <div class="sectionTitle">
-                  <span
-                    class="tituloLista"
-                    data-toggle="collapse"
-                    data-target="#collapseModulo4"
-                    aria-expanded="false"
-                    aria-controls="collapseModulo4"
-                    >Módulo 4<i class="fas fa-caret-up caretDown"></i
-                  ></span>
-                </div>
-              </div>
+          <section class="sidebar__section classes">
+            <span class="h6 pre-title">Outros Módulos:</span>
+            <a
+              href="../modulo1/modulo1-aula1.html"
+              tabindex="0"
+              role="link"
+              class="sidebar__btn"
+            >
+              1. O que são as leishmanioses</a
+            >
+            <!-- <a href="../modulo2/introducao.html" tabindex="0" role="link" class="sidebar__btn"> 2. Manifestações clínicas, diagnóstico e tratamento</a> -->
+            <a
+              href="../modulo2/modulo2-aula1.html"
+              tabindex="0"
+              role="link"
+              class="sidebar__btn"
+            >
+              2. Patogênese e Manifestações Clínicas</a
+            >
+            <a
+              href="../modulo3/modulo3-aula1.html"
+              tabindex="0"
+              role="link"
+              class="sidebar__btn"
+            >
+              3. Fatores físicos e sociais que contribuem para a manutenção e
+              dispersão da doenças</a
+            >
+          </section>
+          <hr />
 
+          <section class="sidebar__section py-2">
+            <a class="sidebar__btn" role="link" id="openGlossario">
+              <span class="material-symbols-rounded">book</span> Bibliografia</a
+            >
+            <dialog id="dialogGlossario">
+              <div id="dialogGlossarioContent">Carregando...</div>
               <div
-                id="collapseModulo4"
-                class="collapse show"
-                aria-labelledby="headingModulo4"
+                style="
+                  display: flex;
+                  justify-content: flex-end;
+                  align-items: center;
+                  margin-top: 10px;
+                "
               >
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 1</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo4/modulo4-aula1.html"
-                        data-aula="1"
-                        data-modulo="4"
-                        class="subItem"
-                        >Conceito de Saúde Única</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper active">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 2</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper active"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo4/modulo4-aula2.html"
-                        data-aula="2"
-                        data-modulo="4"
-                        class="subItem"
-                        >Intersetorialidade nas ações de enfrentamento às
-                        leishmanioses</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row">
-                    <div class="barraStepper">
-                      <div class="item active"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem">Aula 3</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="barraStepper"></div>
-                    <div class="sectionTitle">
-                      <div class="iconeMenu"></div>
-                      <a
-                        href="../modulo4/modulo4-aula3.html"
-                        data-aula="2"
-                        data-modulo="4"
-                        data-quiz="1"
-                        class="subItem"
-                        >Participação cidadã nas ações de enfrentamento às
-                        leishmanioses</a
-                      >
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <div class="row">
-                    <div class="barraStepper" style="background-color: #c40f17">
-                      <div class="item"></div>
-                    </div>
-                    <div class="sectionTitle">
-                      <span class="tituloItem"
-                        ><a
-                          href="../modulo4/modulo4-quiz.html"
-                          data-aula="4"
-                          class="subItem"
-                          data-modulo="4"
-                          data-quiz="true"
-                          >Quiz Módulo 4</a
-                        ></span
-                      >
-                    </div>
-                  </div>
-                </li>
+                <button class="closeDialog">Fechar</button>
               </div>
-            </div>
-            <li>
-              <div class="row">
-                <div class="sectionTitle">
-                  <a class="tituloLista" role="button" href="../quiz.html">
-                    🖋 QUIZ FINAL</a
-                  >
-                </div>
+            </dialog>
+          </section>
+          <section class="sidebar__section py-2">
+            <a
+              href=""
+              class="sidebar__btn"
+              tabindex="0"
+              role="link"
+              data-bs-toggle="modal"
+              data-bs-target="#modal-material-complementar"
+            >
+              <span class="material-symbols-rounded">library_books</span>
+              Material Complementar</a
+            >
+          </section>
+          <section class="sidebar__section py-2">
+            <a class="sidebar__btn" role="link" id="openCreditos"
+              ><span class="material-symbols-rounded">
+                format_list_bulleted</span
+              >
+              Créditos</a
+            >
+            <dialog id="dialogCreditos">
+              <div id="dialogCreditosContent">Carregando...</div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: flex-end;
+                  align-items: center;
+                  margin-top: 10px;
+                "
+              >
+                <button class="closeDialog">Fechar</button>
               </div>
-            </li>
-            <li>
-              <div class="row">
-                <div class="sectionTitle">
-                  <a
-                    class="tituloLista"
-                    role="button"
-                    href="../encerramento.html"
-                    >ENCERRAMENTO</a
-                  >
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="row">
-                <div class="sectionTitle">
-                  <a
-                    class="tituloLista"
-                    role="button"
-                    href="../referencias.html"
-                    ><i class="fas fa-file-alt"></i>Referências</a
-                  >
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="row">
-                <div class="sectionTitle">
-                  <a
-                    class="tituloLista"
-                    role="button"
-                    href="../material-complementar.html"
-                    ><i class="fas fa-book"></i>APOSTILA</a
-                  >
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="row">
-                <div class="sectionTitle">
-                  <a class="tituloLista" role="button" href="../creditos.html"
-                    ><i class="fas fa-list"></i>CRÉDITOS</a
-                  >
-                </div>
-              </div>
-            </li>
-          </ul>
-        </nav>
+            </dialog>
+          </section>
+          <section class="sidebar__section py-2">
+            <a
+              href=""
+              class="sidebar__btn"
+              tabindex="0"
+              role="link"
+              data-bs-toggle="modal"
+              data-bs-target="#modal-material-complementar"
+            >
+              <span class="material-symbols-rounded">exit_to_app</span>
+              Encerramento</a
+            >
+          </section>
+          <section class="sidebar__section py-2">
+            <a
+              href=""
+              class="sidebar__btn"
+              tabindex="0"
+              role="link"
+              data-bs-toggle="modal"
+              data-bs-target="#modal-material-complementar"
+            >
+              <span class="material-symbols-rounded">quiz</span>
+              Quiz Final</a
+            >
+          </section>
+        </div>
       </div>
 
       <!-- Conteúdo principal -->
-      <div class="col-md-10" id="content">
+      <div class="main-container" id="mainContent">
+        <header class="header py-5">
+          <div class="header__inner">
+            <div class="header__title">
+              <div class="container">
+                <div class="row">
+                  <div
+                    class="col-12 col-md-10 col-lg-11 animate__animated animate__fadeIn"
+                    style="animation-delay: 0.5s"
+                  >
+                    <h2 style="font-size: 60px; color: white">
+                      <span class="h4">Módulo 4</span>
+                      Estratégias para o controle das leishmanioses:
+                      diagnóstico, tratamento e Saúde Única
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
         <div class="conteudo">
-          <div class="margin-video"></div>
-          <p class="indice">Módulo 4 | Aula 3</p>
-
-          <h1 style="padding-top: 15px">
-            Participação cidadã nas ações de enfrentamento às leishmanioses
+          <p class="indice">Aula 3</p>
+          <h1 style="padding-top: 15px; font-size: 3rem; color: #05314a">
+            Abordagens de diagnóstico e tratamento
           </h1>
-          <div class="div-video">
-            <iframe
-              src="https://www.youtube.com/embed/ngr6kahA52M?si=ytgqn5iMolcpvm1I"
-              controls
-              allowfullscreen
-              class="iframe-video"
-            ></iframe>
-          </div>
-          <div style="margin-top: -20%"></div>
-          <!-- Objetivos -->
+
+          <hr
+            style="
+              display: block;
+              width: 40px;
+              height: 3px;
+              background: #ff7000;
+              border: none;
+              opacity: 0.7;
+              margin: 0;
+              border-radius: 10px;
+              margin-bottom: 30px;
+            "
+          />
           <p>
-            As leishmanioses, especialmente nas formas que ocorrem nas áreas
-            urbanas, representam um relevante desafio para a saúde pública no
-            Brasil. Com sua capacidade de provocar surtos e alta letalidade na
-            forma visceral se não tratada, a doença exige estratégias de combate
-            bem articuladas e participativas.
+            Encerrando nossa trajetória, damos um passo além da técnica para
+            olhar a leishmaniose sob o prisma da complexidade: a partir da Saúde
+            Única. Esta aula convida à reflexão crítica e integradora, onde os
+            conhecimentos acumulados nos módulos anteriores se articulam em uma
+            visão ampla, transdisciplinar e comprometida com a promoção da saúde
+            em todas as suas dimensões. Discutiremos como pensar e agir de forma
+            conectada entre humanos, animais e meio ambiente, reconhecendo que
+            só assim poderemos enfrentar as leishmanioses de maneira eficaz,
+            ética e sustentável.
+          </p>
+          <hr
+            style="
+              display: block;
+              width: 40px;
+              height: 3px;
+              background: #ff7000;
+              border: none;
+              opacity: 0.7;
+              margin: 0;
+              border-radius: 10px;
+              margin-bottom: 30px;
+            "
+          />
+          <p>
+            Encerramos este último módulo com a proposta de olhar para a
+            leishmaniose como mais do que uma doença infecciosa: ela é um
+            reflexo das interações entre ambientes degradados, desigualdades
+            sociais e lacunas nas políticas públicas. Neste módulo, avançamos do
+            conhecimento técnico para a articulação entre ciência, saúde
+            coletiva e ética — refletindo sobre o papel de cada um de nós na
+            construção de respostas mais integradas e sustentáveis.
           </p>
           <p>
-            Nos últimos anos, a distribuição dos casos de leishmaniose no Brasil
-            mudou. Até a década de 90, cerca de 90% dos casos notificados
-            ocorriam na região Nordeste Hoje, há um aumento significativo de
-            casos em outras regiões do país, como Norte, Sudeste e Centro-Oeste.
+            Discutimos estratégias de controle, os desafios no diagnóstico e
+            tratamento, e culminamos com a abordagem de Saúde Única, que nos
+            convida a pensar de forma ampla e colaborativa. Entendemos que a
+            saúde não se faz apenas com medicamentos ou diagnósticos precisos,
+            mas com ações que considerem os territórios, os saberes diversos, a
+            interdependência entre espécies e a justiça social.
           </p>
-          <div class="row centro" style="padding-bottom: 30px">
-            <img
-              src="../assets/images/modulo4/aula3/Você sabia o que é um conjunto de doenças (24).png "
-              class="balloons"
-            />
-          </div>
           <p>
-            O Programa de Vigilância e Controle das Leishmanioses (PVCL) destaca
-            que a doença se espalha facilmente devido à complexa ecologia e
-            epidemiologia do seu vetor, que é capaz de se adaptar a diferentes
-            ambientes, incluindo áreas urbanas. A presença de cães infectados
-            nas cidades contribui para a continuidade do ciclo de transmissão.
-            Além disso, a ocupação urbana desordenada, a falta de saneamento
-            básico e condições insalubres agravam a situação.
+            Este encerramento marca não apenas o fim de um módulo, mas a
+            consolidação de uma jornada de aprendizagem crítica e
+            transformadora. Esperamos que você leve consigo não só o
+            conhecimento adquirido, mas também o compromisso de aplicá-lo com
+            sensibilidade, rigor científico e consciência social.
           </p>
-          <p class="tituloLista">Importância da responsabilidade e diálogo</p>
           <p>
-            Em vez de culpar os indivíduos, é crucial promover um senso de
-            responsabilidade e estimular o diálogo entre a ciência e o
-            conhecimento popular (Figura 38). Cada comunidade tem seu conjunto
-            de saberes e percepções que pode contribuir para a criação de
-            estratégias eficazes de controle da leishmaniose, considerando seus
-            interesses, necessidades e visões de mundo.
+            As leishmanioses ainda representam um grande desafio — e é por isso
+            que formar profissionais preparados, informados e engajados é uma
+            das estratégias mais poderosas para enfrentá-las.
           </p>
-          <p class="tituloLista">Mobilização social e comunicação eficaz</p>
-          <p>
-            A mobilização social é essencial para mudar comportamentos e
-            prevenir a doença. Isso requer uma comunicação contínua e eficaz
-            entre a população e os profissionais de saúde. A compreensão e
-            percepção dos cidadãos sobre a prevenção e controle das
-            leishmanioses são tão importantes quanto o conhecimento clínico e
-            epidemiológico da doença.
-          </p>
-          <!--Imagem 1-->
-          <div class="row centro">
-            <div class="col-md-7 imagem">
-              <img
-                src="../assets/images/modulo4/aula3/mod4foto6.jpg"
-                class="img-fluid"
-              />
-              <div>
-                <small>
-                  <strong>Figura 38.</strong> Diálogo sobre as leishmanioses com
-                  as comunidades do sítio Xixá (área rural) e centro com
-                  escolares (área urbana), município de Timbaúba-PE.
-                  <strong><i>Fonte:</i></strong
-                  >os autores.
-                </small>
+          <hr
+            style="
+              display: block;
+              width: 40px;
+              height: 3px;
+              background: #ff7000;
+              border: none;
+              opacity: 0.7;
+              margin: 0;
+              border-radius: 10px;
+              margin-bottom: 30px;
+            "
+          />
+          <div class="col-12 col-md-10 col-lg-8">
+            <div class="card-box card border-0 shadow">
+              <div class="box-title">
+                <span
+                  class="h5"
+                  style="
+                    border-bottom: 1px solid var(--primary-color-light);
+                    color: var(--secondary-color-light);
+                  "
+                >
+                  <span
+                    class="box-title__icone material-symbols-rounded"
+                    aria-hidden="true"
+                    >add</span
+                  >
+                  Pense sobre...
+                </span>
+                <div class="boxes-content">
+                  <p>Mas o que é um conjunto de doenças?</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 30px" class="card-box card border-0 shadow">
+              <div class="box-title">
+                <span
+                  class="h5"
+                  style="
+                    border-bottom: 1px solid var(--primary-color-light);
+                    color: var(--secondary-color-light);
+                  "
+                >
+                  <span
+                    class="box-title__icone material-symbols-rounded"
+                    aria-hidden="true"
+                    >add</span
+                  >
+                  Pense sobre...
+                </span>
+                <div class="boxes-content">
+                  <p>Mas o que é um conjunto de doenças?</p>
+                </div>
               </div>
             </div>
           </div>
-          <p>
-            No relatório da última reunião de peritos sobre LV realizada em
-            2010, já se destacou a importância da mobilização social no sentido
-            de mudar comportamentos da população destacando o diálogo permanente
-            entre população e profissionais de saúde, utilizando estratégias
-            eficazes de comunicação.
-          </p>
-          <p class="tituloLista">Reconhecendo os problemas locais</p>
-          <p>
-            Quando a população consegue reconhecer e entender seus problemas de
-            saúde, as ações de controle passam a "fazer sentido" e são mais
-            bem-sucedidas. É importante envolver os cidadãos em formatos
-            participativos e dialógicos, onde eles possam colaborar ativamente
-            com os profissionais de saúde e outros atores relevantes (Figura
-            39).
-          </p>
-          <!--Imagem 2-->
-          <div class="row centro">
-            <div class="col-md-7 imagem">
-              <img
-                src="../assets/images/modulo4/aula3/mod4foto7.jpg"
-                class="img-fluid"
-              />
-              <div>
-                <small>
-                  <strong>Figura 39.</strong> Comunidade participando da
-                  instalação e recolhimento de armadilhas para captura de
-                  insetos vetores dos parasitos causadores das leishmanioses;
-                  <strong><i>Fonte:</i></strong
-                  >Acervo Dr. Luiz Alves e Dr. Fábio Brayner
-                </small>
-              </div>
-            </div>
-          </div>
-          <p class="tituloLista">Construindo soluções locais</p>
-          <p>
-            Somente com a combinação de conhecimentos, habilidades e recursos de
-            diversas pessoas e organizações, as comunidades podem entender a
-            natureza dos problemas e desenvolver soluções eficazes que sejam
-            viáveis localmente.
-          </p>
-          <p class="tituloLista">Reconhecendo os problemas locais</p>
-          <p>
-            Termos como "engajamento comunitário", "parceria" e "colaboração"
-            podem ter significados diferentes para pessoas diferentes. Isso pode
-            criar expectativas variadas e, muitas vezes, mal-entendidas sobre o
-            envolvimento comunitário. Além disso, projetos de curto prazo ou com
-            recursos limitados podem frustrar os participantes e reduzir a
-            motivação.
-          </p>
-          <p>
-            Termos como "engajamento comunitário", "parceria" e "colaboração"
-            podem ter significados diferentes para pessoas diferentes. Isso pode
-            criar expectativas variadas e, muitas vezes, mal-entendidas sobre o
-            envolvimento comunitário. Além disso, projetos de curto prazo ou com
-            recursos limitados podem frustrar os participantes e reduzir a
-            motivação.
-          </p>
-          <!-- Autor -->
         </div>
+
         <!-- Botões de navegação -->
-        <div class="row botao">
+        <div class="row botao" style="display: flex" id="buttons-hover">
+          <a
+            href="../mapas/modulo4/a3.html"
+            class="btn btn-sm"
+            id="botaoVoltar"
+            role="button"
+            alt="Voltar"
+            style="border: none; color: white; background-color: #f77f00"
+          >
+            <strong>Mapa Mental</strong></a
+          >
           <a
             href="../paginaTextoApio/textoApoio.html?modulo=4&aula=3"
             class="btn btn-sm"
@@ -1005,6 +503,7 @@
             <strong>Texto de Apoio</strong></a
           >
         </div>
+
         <div
           class="row botao"
           style="
@@ -1020,7 +519,7 @@
           "
         >
           <a
-            href="./modulo4-aula2.html"
+            href="modulo4-aula2.html"
             class="btn btn-sm"
             id="botaoVoltar"
             role="button"
@@ -1031,7 +530,7 @@
             ></a
           >
           <a
-            href="./modulo4-quiz.html"
+            href="modulo4-quiz.html"
             class="btn btn-sm"
             id="botaoAvancar"
             role="button"
@@ -1043,7 +542,7 @@
         </div>
 
         <!-- Rodapé -->
-        <footer id="rodape">
+        <footer>
           <div class="row-main">
             <div class="col-md-12 centro">
               <img
@@ -1062,5 +561,81 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="../assets/js/main.js"></script>
+    <script>
+      // Aguarda o carregamento completo do DOM antes de executar qualquer código JavaScript
+      document.addEventListener("DOMContentLoaded", function () {
+        // Função genérica para abrir e carregar conteúdo em um diálogo
+        function configurarDialog(botaoId, dialogId, contentId, arquivoHtml) {
+          const botao = document.getElementById(botaoId);
+          const dialog = document.getElementById(dialogId);
+          const content = document.getElementById(contentId);
+
+          // Verifica se o botão e o diálogo existem
+          if (botao && dialog && content) {
+            botao.addEventListener("click", async () => {
+              dialog.showModal();
+              try {
+                const response = await fetch(arquivoHtml);
+                const texto = await response.text();
+                content.innerHTML = texto;
+              } catch (err) {
+                content.textContent = "Erro ao carregar o conteúdo.";
+              }
+            });
+
+            // Fechar clicando no botão 'Fechar'
+            dialog
+              .querySelector(".closeDialog")
+              .addEventListener("click", () => {
+                dialog.close();
+              });
+
+            // Fechar clicando fora da caixa (backdrop)
+            dialog.addEventListener("click", (event) => {
+              const rect = dialog.getBoundingClientRect();
+              if (
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom
+              ) {
+                dialog.close();
+              }
+            });
+          }
+        }
+
+        // Configura os dois diálogos
+        configurarDialog(
+          "openCreditos",
+          "dialogCreditos",
+          "dialogCreditosContent",
+          "../creditos.html"
+        );
+        configurarDialog(
+          "openGlossario",
+          "dialogGlossario",
+          "dialogGlossarioContent",
+          "../glossario.html"
+        );
+      });
+    </script>
+
+    <script>
+      function toggleSection(header) {
+        const content = header.nextElementSibling;
+        const symbol = header.querySelector(".toggle-symbol");
+
+        if (content.style.display === "none" || content.style.display === "") {
+          content.style.display = "block";
+          symbol.classList.remove("fa-plus");
+          symbol.classList.add("fa-minus");
+        } else {
+          content.style.display = "none";
+          symbol.classList.remove("fa-minus");
+          symbol.classList.add("fa-plus");
+        }
+      }
+    </script>
   </body>
 </html>
