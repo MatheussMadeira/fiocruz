@@ -14,7 +14,6 @@ body {
 /* Adicionando responsividade */
 .table-container {
   width: 100%;
-  overflow-x: auto; /* Permite rolar horizontalmente quando a tabela ultrapassar o limite da tela */
   margin: 20px 0; /* Adiciona margem superior e inferior */
 }
 

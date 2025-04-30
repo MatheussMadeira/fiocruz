@@ -3,6 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <style>
+      #buttons-hover {
+        padding-top: 35rem;
+        @media (max-width: 980px) {
+          padding-top: 0;
+        }
+      }
       html,
       body {
         margin: 0;
@@ -121,6 +127,7 @@
       rel="stylesheet"
       href="../assets/css/css/recursos-visuais/boxes.css"
     />
+    <link rel="stylesheet" href="../assets/css/css copy/colors.css" />
   </head>
 
   <body>
@@ -308,7 +315,7 @@
 
           <section class="sidebar__section py-2">
             <a class="sidebar__btn" role="link" id="openGlossario">
-              <span class="material-symbols-rounded">book</span> Bibliografia</a
+              <span class="material-symbols-rounded">book</span> Glossario</a
             >
             <dialog id="dialogGlossario">
               <div id="dialogGlossarioContent">Carregando...</div>
@@ -326,7 +333,7 @@
           </section>
           <section class="sidebar__section py-2">
             <a
-              href=""
+              href="../material-complementar.html"
               class="sidebar__btn"
               tabindex="0"
               role="link"
@@ -334,7 +341,7 @@
               data-bs-target="#modal-material-complementar"
             >
               <span class="material-symbols-rounded">library_books</span>
-              Material Complementar</a
+              Apostila</a
             >
           </section>
           <section class="sidebar__section py-2">
@@ -411,7 +418,7 @@
         <div class="conteudo">
           <p class="indice">Aula 3</p>
           <h1 style="padding-top: 15px; font-size: 4rem; color: #05314a">
-            Diagnóstico laboratorial da leishmaniose tegumentar
+            DIAGNÓSTICO DA LEISHMANIOSE VISCERAL HUMANA
           </h1>
           <hr
             style="
@@ -452,7 +459,10 @@
           />
 
           <div class="col-12 col-md-10 col-lg-8">
-            <div class="card-box card border-0 shadow">
+            <div
+              class="card-box card border-0 shadow"
+              style="border-radius: 20px"
+            >
               <div class="box-title">
                 <span
                   class="h5"
@@ -474,7 +484,10 @@
               </div>
             </div>
 
-            <div style="margin-top: 30px" class="card-box card border-0 shadow">
+            <div
+              class="card-box card border-0 shadow"
+              style="border-radius: 20px; margin-top: 30px"
+            >
               <div class="box-title">
                 <span
                   class="h5"

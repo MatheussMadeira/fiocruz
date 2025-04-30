@@ -3,6 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <style>
+      #buttons-hover {
+        padding-top: 20rem;
+        @media (max-width: 980px) {
+          padding-top: 0;
+        }
+      }
       html,
       body {
         margin: 0;
@@ -117,6 +123,11 @@
     <link href="../assets/css/css/header.css" rel="stylesheet" />
     <link href="../assets/css/css/sidebar.css" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/css/css copy/animate.min.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/css/css/recursos-visuais/boxes.css"
+    />
+    <link rel="stylesheet" href="../assets/css/css copy/colors.css" />
   </head>
 
   <body>
@@ -292,7 +303,7 @@
 
           <section class="sidebar__section py-2">
             <a class="sidebar__btn" role="link" id="openGlossario">
-              <span class="material-symbols-rounded">book</span> Bibliografia</a
+              <span class="material-symbols-rounded">book</span> Glossario</a
             >
             <dialog id="dialogGlossario">
               <div id="dialogGlossarioContent">Carregando...</div>
@@ -310,7 +321,7 @@
           </section>
           <section class="sidebar__section py-2">
             <a
-              href=""
+              href="../material-complementar.html"
               class="sidebar__btn"
               tabindex="0"
               role="link"
@@ -318,7 +329,7 @@
               data-bs-target="#modal-material-complementar"
             >
               <span class="material-symbols-rounded">library_books</span>
-              Material Complementar</a
+              Apostila</a
             >
           </section>
           <section class="sidebar__section py-2">
@@ -435,6 +446,34 @@
               margin-bottom: 30px;
             "
           />
+          <div
+            class="card-box card border-0 shadow"
+            style="border-radius: 20px"
+          >
+            <div class="box-title">
+              <span
+                class="h5"
+                style="
+                  border-bottom: 1px solid var(--primary-color-light);
+                  color: var(--secondary-color-light);
+                "
+              >
+                <span
+                  class="box-title__icone material-symbols-rounded"
+                  aria-hidden="true"
+                  >add</span
+                >
+                Pense sobre...
+              </span>
+              <div class="boxes-content">
+                <p>
+                  Será que até o final do curso você conseguirá criar hipóteses
+                  para explicar a maior ocorrência de casos de leishmanioses na
+                  região nordeste do Brasil?
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Botões de navegação -->

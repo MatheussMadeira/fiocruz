@@ -3,6 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <style>
+      #buttons-hover {
+        padding-top: 37rem;
+        @media (max-width: 980px) {
+          padding-top: 0;
+        }
+      }
       html,
       body {
         margin: 0;
@@ -292,7 +298,7 @@
 
           <section class="sidebar__section py-2">
             <a class="sidebar__btn" role="link" id="openGlossario">
-              <span class="material-symbols-rounded">book</span> Bibliografia</a
+              <span class="material-symbols-rounded">book</span> Glossario</a
             >
             <dialog id="dialogGlossario">
               <div id="dialogGlossarioContent">Carregando...</div>
@@ -310,7 +316,7 @@
           </section>
           <section class="sidebar__section py-2">
             <a
-              href=""
+              href="../material-complementar.html"
               class="sidebar__btn"
               tabindex="0"
               role="link"
@@ -318,7 +324,7 @@
               data-bs-target="#modal-material-complementar"
             >
               <span class="material-symbols-rounded">library_books</span>
-              Material Complementar</a
+              Apostila</a
             >
           </section>
           <section class="sidebar__section py-2">
@@ -409,7 +415,6 @@
               margin-bottom: 30px;
             "
           />
-          <div class="conteudo">
             <div class="quiz">
               <h1></h1>
               <div style="width: 100%">
@@ -443,22 +448,7 @@
                 </div>
               </div>
             </div>
-          </div> 
   
-  
-          <hr
-            style="
-              display: block;
-              width: 40px;
-              height: 3px;
-              background: #ff7000;
-              border: none;
-              opacity: 0.7;
-              margin: 0;
-              border-radius: 10px;
-              margin-bottom: 30px;
-            "
-          />
         </div>
 
         <!-- Botões de navegação -->
@@ -466,18 +456,27 @@
 
         <div
           class="row botao"
-          style="
-            border-top: 2px solid transparent;
-            border-image: linear-gradient(
-              95deg,
-              rgba(255, 255, 255, 1) 0%,
-              rgba(247, 127, 0, 1) 50%,
-              rgba(255, 255, 255, 1) 100%
-            );
-            border-image-slice: 1;
-            border-radius: 15px;
-          "
+          id="buttons-hover"
+         
         >
+        <hr
+            style="
+              display: block;
+              width: 100%;
+              height: 2px;
+              background: linear-gradient(
+                95deg,
+                rgba(255, 255, 255, 1) 0%,
+                rgba(247, 127, 0, 1) 50%,
+                rgba(255, 255, 255, 1) 100%
+              );
+              border: none;
+              opacity: 0.7;
+              margin: 0;
+              border-radius: 10px;
+              margin-bottom: 30px;
+            "
+          />
           <a
             href="modulo1-aula7.html"
             class="btn btn-sm"
