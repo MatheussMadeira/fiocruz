@@ -195,18 +195,7 @@
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (max-width: 638px) {
-  .sidebar.open + .sidebar__inner {
-    position: fixed;
-    width: 550px;
-  }
-  .sidebar.open + .sidebar__header {
-    width: 40%;
-  }
-  .sidebar.open + .main-container {
-    width: 100%;
-  }
-}
+
 @media (max-width: 991.9px) {
   .sidebar {
     width: calc(100vw - 25%);
