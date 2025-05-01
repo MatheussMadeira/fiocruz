@@ -10,7 +10,7 @@
       type="image/x-icon"
       href="../../assets/images/home/IconSite.png"
     />
-
+    <script src="../popup.js"></script>
     <link href="../../assets/css/utilities/normalize.css" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -32,6 +32,40 @@
     />
   </head>
   <body>
+    <div
+      id="popup"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #c40f17;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        z-index: 1000;
+      "
+    >
+      <span
+        >💡 Clique nas bolinhas do mapa mental para interagir e explorar mais
+        informações!</span
+      >
+      <button
+        onclick="closePopup()"
+        style="
+          margin-left: 15px;
+          background-color: white;
+          color: black;
+          border: none;
+          padding: 8px 10px;
+          cursor: pointer;
+          border-radius: 5px;
+        "
+      >
+        Fechar
+      </button>
+    </div>
     <div class="sidebar-mobile">
       <button class="button-side" onclick="window.history.back()">
         Voltar
@@ -54,19 +88,17 @@
     <div class="container" id="mobile-container">
       <aside class="sidebar">
         <img
-          src="../../assets/images/home/Untitled design (2) (1).png"
+          src="../../assets/images/logos/LOGO 4 (300 x 130 px).png"
           alt="Logo"
           class="logo"
         />
-        <button class="button-side" onclick="window.history.back()">
-          Voltar
-        </button>
-        <button
+        <a class="button-side" onclick="window.history.back()"> Voltar </a>
+        <a
           class="button-side"
           onclick="window.location.href='../../index.html' "
         >
           Página Inicial
-        </button>
+        </a>
       </aside>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>

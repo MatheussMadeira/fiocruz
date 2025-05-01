@@ -140,3 +140,10 @@ p.tituloLista {
 .imagem-mapeada {
   max-width: 100%;
 }
+
+.title-module {
+  font-size: 4rem;
+  @media (max-width: 612px) {
+    font-size: 10vw;
+  }
+}

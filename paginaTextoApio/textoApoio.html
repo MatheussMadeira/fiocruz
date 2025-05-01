@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Coloque o CSS antes de qualquer JavaScript -->
-    <link href="../assets/css/styles.css" />
+    <link href="../assets/css/styles.css" rel="stylesheet" />
     <link href="../mapas/styles.css" />
+    <link href="../assets/css/utilities/normalize.css" rel="stylesheet" />
 
     <script type="module" src="./botaoPDF.js"></script>
     <link
@@ -27,6 +28,7 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
     />
+    <link rel="stylesheet" src="../mapas/styles.css" />
 
     <style>
       /* Resetando margens e padding */
@@ -38,18 +40,18 @@
 
       /* Estilos gerais para o corpo */
       body {
-        display: flex;
-        flex-direction: column; /* Por padrão, o menu ficará abaixo do PDF */
+        display: flex; /* Por padrão, o menu ficará abaixo do PDF */
         height: 100vh;
         background-color: #ffffff;
       }
 
-      /* Estilos para o menu */
       .menu {
-        background-color: #ffdec0;
+        background-color: #c40f17;
         color: white;
-        padding: 20px;
         width: 100%;
+        text-align: center;
+        justify-content: center;
+        display: flex;
       }
 
       .menu ul {
@@ -59,17 +61,36 @@
 
       .menu ul li {
         padding: 10px 0;
+        width: 100%;
       }
-
+      .menu ul li:hover {
+        color: #fff;
+        text-decoration: none;
+        background-color: #e56a7b;
+        border: none;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+      .menu ul li img {
+        pointer-events: none;
+        max-width: 100%;
+        height: auto;
+        padding-right: 20px;
+        margin-bottom: 20px;
+      }
       .menu ul li a {
         color: white;
         text-decoration: none;
-        font-size: 18px;
+        cursor: pointer;
+        font-family: "Codec Pro", sans-serif;
+        display: block;
+        font-weight: bold;
+        padding: 6px 0 6px 0;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
       }
-
-      .menu ul li a:hover {
-        background-color: #555;
-        padding: 5px;
+      .menu ul li a :hover {
+        color: #fff; /* Pode manter o comportamento do texto */
+        background-color: transparent;
       }
 
       /* Estilos para o conteúdo (PDF) */
@@ -88,18 +109,6 @@
       }
 
       /* Estilos dos botões */
-      .button-side {
-        width: 100%;
-        padding: 10px;
-        margin: 10px 0;
-        background-color: white;
-        color: black;
-        border: 1px solid black;
-        border-radius: 4px;
-        font-size: 14px;
-        font-weight: bold;
-        cursor: pointer;
-      }
 
       /* Ajustes para telas maiores */
       @media (min-width: 980px) {
@@ -108,8 +117,9 @@
         }
 
         .menu {
-          width: 15%; /* Menu ocupa 15% da largura */
+          width: 380px; /* Menu ocupa 15% da largura */
           height: 100vh;
+          padding-top: 20px;
         }
 
         .content {
@@ -150,27 +160,25 @@
   <body style="background-color: #ffffff">
     <div class="menu" id="menu-mobile">
       <ul>
-        <li>
+        <li style="pointer-events: none">
           <img
-            src="../assets/images/home/Untitled design (2) (1).png"
+            src="../assets/images/logos/LOGO 4 (300 x 130 px).png"
             alt="Logo"
             class="logo"
             id="logo-mobile"
-            style="width: 100%"
+            style="max-width: 100%; height: auto; margin-bottom: 20px"
           />
         </li>
         <li>
-          <button onclick="window.history.back()" class="button-side">
-            Voltar
-          </button>
+          <a onclick="window.history.back()" class="button-side"> Voltar </a>
         </li>
         <li>
-          <button
+          <a
             class="button-side"
             onclick="window.location.href='../index.html' "
           >
             Página Inicial
-          </button>
+          </a>
         </li>
       </ul>
     </div>

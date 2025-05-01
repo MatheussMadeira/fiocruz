@@ -39,7 +39,15 @@
         font-weight: 700;
         font-size: 3px;
       }
-
+      .heading__title {
+        font-size: 4rem;
+        @media (max-width: 840px) {
+          font-size: 3rem;
+        }
+        @media (max-width: 576px) {
+          font-size: 2rem;
+        }
+      }
       dialog {
         width: 50%;
         height: 85%;
@@ -198,7 +206,6 @@
                     <h2
                       class="heading__title h3"
                       style="
-                        font-size: 3rem;
                         color: var(--secondary-color-light);
                         padding-bottom: 20px;
                         border-bottom: 2.5px solid var(--primary-color-light);
