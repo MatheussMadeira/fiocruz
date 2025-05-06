@@ -13,22 +13,31 @@ body {
 
 /* Adicionando responsividade */
 .table-container {
-  font-size: 2vw;
-  width: 0px;
+  width: 100%;
   margin: 20px 0; /* Adiciona margem superior e inferior */
+  @media (max-width: 650px) {
+    font-size: 2vw;
+  }
 }
 
 table {
-  width: 10px; /* Tabela ocupa 100% da largura disponível */
-  border-collapse: collapse; /* Remove espaços entre as células da tabela */
+  width: 100%; /* Tabela ocupa 100% da largura disponível */
+  border-collapse: collapse;
+  @media (max-width: 650px) {
+    padding-right: 20px;
+  }
 }
 table span {
-  font-size: 3vw;
+  font-size: 18px;
+  @media (max-width: 650px) {
+    font-size: 3vw;
+  }
 }
 
 th,
 td {
-  padding: 12px 10px; /* Ajusta o padding para dar mais espaço às células */ /* Centraliza o texto dentro das células */
+  padding: 12px 10px;
+  text-align: center; /* Ajusta o padding para dar mais espaço às células */ /* Centraliza o texto dentro das células */
   border: 1px solid white; /* Borda para as células */
 }
 

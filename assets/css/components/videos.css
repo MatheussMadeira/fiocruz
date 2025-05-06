@@ -1,6 +1,7 @@
 .div-video {
   width: 100%;
   position: relative;
+  margin-top: 3rem;
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
