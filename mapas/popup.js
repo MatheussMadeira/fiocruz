@@ -5,5 +5,13 @@ window.onload = function () {
 
 // Função para fechar o popup
 function closePopup() {
-  document.getElementById("popup").style.display = "none";
+  const popup = document.getElementById("popup");
+  const sidebar = document.querySelector(".sidebar");
+
+  // Fechar o popup
+  popup.style.display = "none";
+
+  // Ajustar a margem superior da sidebar para ocupar o espaço vazio
+  const popupHeight = popup.offsetHeight; // Altura do popup
+  sidebar.style.marginTop = `0px`; // Subtrai a altura do popup
 }
