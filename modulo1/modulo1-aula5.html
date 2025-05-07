@@ -89,7 +89,7 @@
         background-color: #05314a;
       }
       #buttons-hover {
-        padding-top: 35rem;
+        padding-top: 30rem;
         @media (max-width: 980px) {
           padding-top: 0;
         }
@@ -222,7 +222,7 @@
                   aria-label="Tópico não concluído"
                   status="selected"
                 ></span
-                >Código de transmissão das leishmanioses
+                >Vetores das leishmanioses
               </a>
               <a
                 href="modulo1-aula6.html"
@@ -234,20 +234,9 @@
                   aria-label="Tópico não concluído"
                   status=""
                 ></span
-                >Vetores</a
+                >Ciclo do flebotomíneo</a
               >
-              <a
-                href="modulo1-aula7.html"
-                tabindex="0"
-                role="link"
-                class="sidebar__btn sidebar__list-item"
-                ><span
-                  class="material-symbols-rounded"
-                  aria-label="Tópico não concluído"
-                  status=""
-                ></span
-                >Ciclo biológico da<i>&nbspLeishmania</i></a
-              >
+
               <a
                 href="modulo1-quiz.html"
                 tabindex="0"
@@ -399,7 +388,7 @@
         <div class="conteudo">
           <p class="indice">Aula 5</p>
           <h1 style="padding-top: 15px; font-size: 4rem; color: #05314a">
-            Código de transmissão das leishmanioses
+            VETORES DAS LEISHMANIOSES
           </h1>
           <hr
             style="
@@ -415,15 +404,15 @@
             "
           />
           <p>
-            Depois de compreender o ciclo biológico básico, nesta aula vamos
-            avançar para um olhar mais técnico: o "código de transmissão". Quais
-            são os padrões, os comportamentos dos vetores, as características
-            dos hospedeiros e os fatores ambientais que codificam o sucesso da
-            transmissão? Vamos discutir conceitos de competência vetorial,
-            infecção subclínica e outros elementos críticos que ajudam a
-            explicar por que e como as leishmanioses se mantêm em diferentes
-            ecossistemas. Esta aula marca um aprofundamento na visão sistêmica
-            que iniciamos desde a Aula 1.
+            Após termos compreendido o ciclo e os códigos que regem a
+            transmissão, é hora de nos aprofundarmos nos agentes transmissores:
+            os vetores. Os flebotomíneos possuem uma biologia complexa e
+            fascinante, que influencia diretamente o risco de transmissão da
+            leishmaniose. Conhecer suas características morfológicas,
+            comportamentais e ecológicas nos permitirá entender melhor a
+            dinâmica da infecção e visualizar estratégias mais eficazes de
+            controle. Nesta aula, o vetor deixa de ser apenas um intermediário
+            para se tornar um personagem central da nossa história.
           </p>
           <hr
             style="
@@ -439,6 +428,37 @@
             "
           />
         </div>
+        <div
+          class="col-11 col-md-10 col-lg-8"
+          style="
+            max-width: 100%;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          "
+        >
+          <p class="text-muted text-center">
+            <span
+              class="material-symbols-rounded"
+              style="transform: rotateX(180deg)"
+              >touch_app</span
+            >
+            Clique no botão abaixo para visualizar a informação
+          </p>
+          <a class="button-video" onclick="openVideo()">
+            Assista a vídeo-aula sobre o tema:
+          </a>
+        </div>
+        <div class="div-video">
+          <iframe
+            src="https://educare.fiocruz.br/file-storage/VJA3pxfC"
+            controls
+            allowfullscreen
+            class="iframe-video"
+          ></iframe>
+        </div>
+        <div id="margin-video"></div>
 
         <!-- Botões de navegação -->
         <div class="row botao" style="display: flex" id="buttons-hover">
@@ -531,6 +551,7 @@
         </div>
       </div>
     </div>
+    <script type="text/javascript" src="../assets/js/video.js"></script>
     <script type="text/javascript" src="../assets/js/sidebar.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>

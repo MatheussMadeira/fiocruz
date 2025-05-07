@@ -1,22 +1,34 @@
-window.onload = function () {
-  document.querySelector(".div-video").style.display = "none";
-  const videoDiv = document.querySelector(".div-video");
-  videoDiv.style.opacity = "0"; // Esconde o vídeo inicialmente
-  videoDiv.style.visibility = "hidden"; // Mantém o vídeo invisível
-};
-function openVideo() {
-  const videoDiv = document.querySelector(".div-video");
 
-  if (videoDiv.style.display === "none" || videoDiv.style.display === "") {
-    videoDiv.style.display = "block";
-  } else {
-    videoDiv.style.display = "none";
-  }
-  if (videoDiv.style.opacity === "0") {
-    videoDiv.style.opacity = "1"; // Exibe o vídeo com opacidade
-    videoDiv.style.visibility = "visible"; // Torna o vídeo visível
-  } else {
-    videoDiv.style.opacity = "0"; // Oculta o vídeo
-    videoDiv.style.visibility = "hidden"; // Torna o vídeo invisível
-  }
+const videoDiv = document.querySelector(".div-video");
+const marginVideo = document.getElementById("margin-video");
+
+const videoDiv2 = document.querySelector(".div-video2");
+const marginVideo2 = document.getElementById("margin-video2");
+window.onload = function () {
+  [videoDiv, videoDiv2].forEach((div) => {
+    div.style.display = "none";
+    div.style.opacity = "0";
+    div.style.visibility = "hidden";
+  });
+  marginVideo.style.marginTop = "0px";
+  marginVideo2.style.marginTop = "0px";
+};
+
+function toggleVideo(videoElement, marginElement) {
+  const isHidden =
+    videoElement.style.display === "none" || videoElement.style.display === "";
+
+  videoElement.style.display = isHidden ? "block" : "none";
+  videoElement.style.opacity = isHidden ? "1" : "0";
+  videoElement.style.visibility = isHidden ? "visible" : "hidden";
+
+  marginElement.style.marginTop = isHidden ? "-5%" : "0px";
+}
+
+function openVideo() {
+  toggleVideo(videoDiv, marginVideo);
+}
+
+function openVideo2() {
+  toggleVideo(videoDiv2, marginVideo2);
 }
