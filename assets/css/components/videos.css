@@ -1,6 +1,9 @@
 .div-video {
   width: 100%;
   position: relative;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease, visibility 1s ease;
   margin-top: 3rem;
   padding-bottom: 56.25%;
   height: 0;
@@ -70,4 +73,24 @@
   @media (max-width: 1200px) {
     margin-top: -30%;
   }
+}
+.button-video {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  color: #05314a !important;
+  font-weight: 300;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.button-video:hover {
+  background-color: #ff7000;
+  color: white !important;
+  text-decoration: none;
+  font-weight: 300;
+  transition: background-color 0.5s ease;
 }
