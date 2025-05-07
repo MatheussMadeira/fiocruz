@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <style>
       #buttons-hover {
-        padding-top: 42rem;
+        padding-top: 10rem;
         @media (max-width: 980px) {
           padding-top: 0;
         }
@@ -217,20 +217,8 @@
                   aria-label="Tópico não concluído"
                   status="selected"
                 ></span
-                >Medidas de controle das leishmanioses</a
+                >Medidas de controle e prevenção das leishmanioses</a
               >
-              <a
-                href="modulo3-aula5.html"
-                tabindex="0"
-                role="link"
-                class="sidebar__btn sidebar__list-item"
-                ><span
-                  class="material-symbols-rounded"
-                  aria-label="Tópico não concluído"
-                  status=""
-                ></span
-                >Medidas de prevencao das leishmanioses
-              </a>
 
               <a
                 href="modulo3-quiz.html"
@@ -383,7 +371,7 @@
         <div class="conteudo">
           <p class="indice">Aula 4</p>
           <h1 style="padding-top: 15px; font-size: 3rem; color: #05314a">
-            Medidas de controle das leishmanioses
+            MEDIDAS DE CONTROLE E PREVENÇÃO DAS LEISHMANIOSES
           </h1>
           <hr
             style="
@@ -392,21 +380,30 @@
               height: 3px;
               background: #ff7000;
               border: none;
-              opacity: 0.7;
               margin: 0;
               border-radius: 10px;
               margin-bottom: 30px;
             "
           />
           <p>
-            Encadeando a discussão sobre os ciclos de transmissão, agora focamos
-            nas ações práticas: as medidas de controle das leishmanioses. Vamos
-            estudar estratégias como o controle vetorial, o manejo ambiental,
-            campanhas educativas e programas de vigilância ativa, avaliando suas
-            efetividades e limitações. A partir do entendimento da realidade
-            epidemiológica de cada região, refletiremos sobre como implementar
-            ações de forma integrada, ética e sustentável — sempre respeitando a
-            complexidade do problema
+            O controle das leishmanioses exige estratégias articuladas que
+            envolvem a vigilância de vetores e reservatórios, o diagnóstico
+            precoce e o tratamento adequado dos casos humanos. Nesta aula, vamos
+            abordar as principais medidas de prevenção e controle, discutindo
+            tanto as ações individuais quanto as políticas públicas voltadas à
+            contenção da transmissão. A importância da educação em saúde, do
+            manejo ambiental e do uso de medidas de proteção individual também
+            será destacada como parte de uma abordagem integrada e sustentável.
+          </p>
+          <p>
+            O cão doméstico é o principal reservatório da Leishmania infantum
+            nas áreas urbanas, desempenhando um papel central na cadeia de
+            transmissão da leishmaniose visceral. Nesta parte da aula, vamos
+            explorar como se dá a vigilância epidemiológica canina, abordando os
+            protocolos de triagem, diagnóstico e notificação, bem como o debate
+            sobre as estratégias de manejo, incluindo a eutanásia e o tratamento
+            de cães infectados. Compreender essa dimensão é essencial para ações
+            eficazes em saúde pública.
           </p>
           <hr
             style="
@@ -415,12 +412,82 @@
               height: 3px;
               background: #ff7000;
               border: none;
-              opacity: 0.7;
               margin: 0;
               border-radius: 10px;
               margin-bottom: 30px;
             "
           />
+          <div
+            class="col-11 col-md-10 col-lg-8"
+            style="
+              max-width: 100%;
+              margin-top: 30px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            "
+          >
+            <p class="text-muted text-center">
+              <span
+                class="material-symbols-rounded"
+                style="transform: rotateX(180deg)"
+                >touch_app</span
+              >
+              Clique no botão abaixo para visualizar a informação
+            </p>
+            <a class="button-video" onclick="openVideo()">
+              Assista a vídeo-aula sobre o tema:
+            </a>
+          </div>
+          <div class="div-video">
+            <iframe
+              src="https://educare.fiocruz.br/file-storage/LjLHSdij"
+              controls
+              allowfullscreen
+              class="iframe-video"
+            ></iframe>
+          </div>
+          <div id="margin-video" style="margin-bottom: 30px"></div>
+          <p>
+            Complementando a abordagem sobre reservatórios, nesta parte vamos
+            aprofundar as medidas de controle da doença, focando na redução da
+            população de vetores, no uso de inseticidas, nas barreiras físicas e
+            na gestão ambiental. Discutiremos também o papel das campanhas
+            educativas e das tecnologias emergentes no controle das
+            leishmanioses, reforçando a importância da atuação intersetorial e
+            da vigilância contínua.
+          </p>
+          <div
+            class="col-11 col-md-10 col-lg-8"
+            style="
+              max-width: 100%;
+              margin-top: 30px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            "
+          >
+            <p class="text-muted text-center">
+              <span
+                class="material-symbols-rounded"
+                style="transform: rotateX(180deg)"
+                >touch_app</span
+              >
+              Clique no botão abaixo para visualizar a informação
+            </p>
+            <a class="button-video" onclick="openVideo2()">
+              Assista a vídeo-aula sobre o tema:
+            </a>
+          </div>
+          <div class="div-video2">
+            <iframe
+              src="https://educare.fiocruz.br/file-storage/ID-fnqg5"
+              controls
+              allowfullscreen
+              class="iframe-video"
+            ></iframe>
+          </div>
+          <div id="margin-video2"></div>
         </div>
 
         <!-- Botões de navegação -->
@@ -478,14 +545,14 @@
             ></a
           >
           <a
-            href="modulo3-aula5.html"
+            href="modulo3-quiz.html"
             class="btn btn-sm"
             id="botaoAvancar"
             role="button"
             style="margin-right: 30px"
             alt="Avançar"
           >
-            <strong>Módulo 3 Aula 5<i class="fas fa-chevron-right"></i></strong
+            <strong>Quiz Módulo 3 <i class="fas fa-chevron-right"></i></strong
           ></a>
         </div>
 
