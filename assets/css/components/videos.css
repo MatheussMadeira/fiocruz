@@ -38,6 +38,21 @@
     overflow: hidden;
   }
 }
+.div-video3 {
+  width: 100%;
+  position: relative;
+  margin-top: 3rem;
+  padding-bottom: 56.25%;
+  height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 980px) {
+    position: relative;
+    width: 100%; /* A largura será 100% do seu contêiner pai */
+    padding-bottom: 100%; /* Define a altura como igual à largura, criando um quadrado */
+  }
+}
 
 .iframe-video {
   position: absolute;
