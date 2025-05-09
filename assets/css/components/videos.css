@@ -1,13 +1,9 @@
 .div-video {
   width: 100%;
   position: relative;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 1s ease, visibility 1s ease;
   margin-top: 3rem;
   padding-bottom: 56.25%;
   height: 0;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,19 +11,14 @@
     position: relative;
     width: 100%; /* A largura será 100% do seu contêiner pai */
     padding-bottom: 100%; /* Define a altura como igual à largura, criando um quadrado */
-    overflow: hidden;
   }
 }
 .div-video2 {
   width: 100%;
   position: relative;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 1s ease, visibility 1s ease;
   margin-top: 3rem;
   padding-bottom: 56.25%;
   height: 0;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
