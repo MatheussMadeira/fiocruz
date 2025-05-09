@@ -100,7 +100,8 @@
     margin-top: -30%;
   }
 }
-.button-video {
+.button-video,
+.button-video2 {
   display: block;
   align-items: center;
   justify-content: center;
@@ -113,7 +114,9 @@
   cursor: pointer;
   border-radius: 5px;
 }
-.button-video:hover {
+
+.button-video:hover,
+.button-video2:hover {
   background-color: #ff7000;
   color: white !important;
   text-decoration: none;
